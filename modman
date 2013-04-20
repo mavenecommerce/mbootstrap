@@ -3,9 +3,10 @@ app/design/frontend/bootstrap/default/layout						app/design/frontend/bootstrap/
 app/design/frontend/bootstrap/default/locale						app/design/frontend/bootstrap/default/locale
 app/design/frontend/bootstrap/default/template						app/design/frontend/bootstrap/default/template
 app/etc/modules/EcomDev_Cms.xml								app/etc/modules/EcomDev_Cms.xml
+skin/frontend/base/default/bootstrap/bootstrap						skin/frontend/base/default/bootstrap/bootstrap
 skin/frontend/bootstrap/default/favicon.ico						skin/frontend/bootstrap/default/favicon.ico
 skin/frontend/bootstrap/default/fonts/Font-Awesome/css					skin/frontend/bootstrap/default/fonts/Font-Awesome/css
-skin/frontend/bootstrap/default/fonts/Font-Awesome/font					skin/frontend/bootstrap/default/fonts/Font-Awesome/font					
+skin/frontend/bootstrap/default/fonts/Font-Awesome/font					skin/frontend/bootstrap/default/fonts/Font-Awesome/font
 skin/frontend/bootstrap/default/fonts/Font-Awesome/less					skin/frontend/bootstrap/default/fonts/Font-Awesome/less
 skin/frontend/bootstrap/default/fonts/Font-Awesome/sass					skin/frontend/bootstrap/default/fonts/Font-Awesome/sass
 skin/frontend/bootstrap/default/images							skin/frontend/bootstrap/default/images
