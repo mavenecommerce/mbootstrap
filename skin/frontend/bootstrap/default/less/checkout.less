@@ -1,0 +1,359 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// One Page Checkout
+// --------------------------------------------------
+.opc {
+	.reset-list;
+
+	> li {
+		> .step-title {
+			margin: 0 0 @baseLineHeight;
+		    position: relative;
+		    
+			border-bottom: 2px solid @grayLighter;
+
+	        .clearfix();
+
+			> h2 {
+				font-size: @fontSizeLarge * 1.25;
+		        font-weight: normal;
+
+				float: left;
+		        margin: 0 0 0 @baseLineHeight * 1.5 + 10;
+		        
+		        line-height: @baseLineHeight * 1.5;
+
+		        color: @grayLight;
+			}
+			> a {
+				float: right;
+				display: none;
+
+				.opacity(10);
+                .transition(opacity 0.25s ease-in-out;)
+			}
+			> .number {
+				font-size: @fontSizeLarge * 1.25;
+		        font-weight: bold;
+
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: @baseLineHeight * 1.5;
+				height: @baseLineHeight * 1.5;
+
+		        line-height: @baseLineHeight * 1.5;
+		        text-align: center;
+		        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+
+		        background: @grayLighter;
+		        color: @white;
+
+		        .border-radius(2px 2px 0 0);
+			}
+
+			&:hover {
+				> a {
+					.opacity(100);
+				}
+			}
+		}
+		
+		> .step {
+			margin: @baseLineHeight 0;
+			
+			.form-list {}
+
+			.buttons-set {
+				line-height: @baseLineHeight * 1.5;
+
+				.clearfix();
+
+				> p.required {
+					float: left;
+					margin: 0;
+
+					line-height: inherit;
+				}
+				> .btn,
+				> .btn-group {
+					float: right;
+				}
+				> .please-wait {
+					float: right;
+					margin-right: @gridGutterWidth;
+				}
+			}
+
+			.sp-methods {
+				margin: 0;
+
+				> dt {}
+				> dd {
+					> ul {
+						list-style: none;
+						
+						> li {
+							margin-bottom: @baseLineHeight/2;
+
+							> label {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+
+			form {
+				margin-bottom: 0;
+			}
+		}
+		
+		&.sections {}
+		
+		&.allow {
+			> .step-title {
+				> h2 {
+					color: @textColor;
+					cursor: pointer;
+				}
+				> .number {
+					text-shadow: none;
+
+					color: @green;
+				}
+				> a {
+					display: inline;
+				}
+			}
+		}
+		
+		&.active {
+			> .step-title {
+				> .number {
+					text-shadow: none;
+
+					color: @black;
+				}
+				> h2 {
+					cursor: default;
+				}
+				> a {
+					display: none;
+				}
+			}
+		}
+
+		&#opc-login {
+			#checkout-step-login {
+				h3 {
+					font-size: @fontSizeLarge;
+	                font-weight: normal;
+
+	                margin: 0;
+				}
+
+				h4 {
+					font-size: @baseFontSize;
+	                
+	                margin: 0;
+				}
+
+				.buttons-set {
+					.required {
+						float: none;
+					}
+				}
+
+				.registered-users {
+					.buttons-set {
+						line-height: @baseLineHeight * 2 + 4;
+
+						.btn {
+							float: none;
+							margin-right: @gridGutterWidth / 2;
+						}
+					}
+				}
+				.new-users {}
+			}
+		}
+		
+		&#opc-billing {
+			#checkout-step-billing {}
+		}
+		
+		&#opc-shipping {
+			#checkout-step-shipping {}
+		}
+		&#opc-shipping_method {
+			#checkout-step-shipping_method {
+				.sp-methods {
+					> dt {}
+					> dd {}
+					ul {
+						li {}
+					}
+				}
+				.gift-messages {}
+				.gift-messages-form {}
+			}
+		}
+		&#opc-payment {
+			#checkout-step-payment {}
+		}
+		&#opc-review {
+			#checkout-review-table {
+				tfoot {
+					tr {
+						font-weight: bold;
+
+						.price {
+							font-size: @baseFontSize;
+						}
+						
+						&.last {
+							font-size: @fontSizeLarge;
+							font-weight: bold;
+
+							.price {
+								font-size: inherit;
+								font-weight: inherit;
+							}
+						}
+					}
+				}
+
+				.product-name {
+					font-weight: normal;
+
+					margin: 0;
+
+					line-height: @baseLineHeight;
+				}
+				
+				.cart-price {
+					> .price {
+						font-size: @baseFontSize;
+						font-weight: normal;
+					}
+				}
+			}
+
+			#checkout-review-submit {
+				.buttons-set {
+					line-height: @baseLineHeight * 2 + 4;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.opc {
+		> li {
+			> .step-title {
+				> a {
+					.opacity(100);
+	                .transition(none)
+				}
+			}
+		}
+	}
+}
+
+
+
+// Block - Progress
+// -------------------------
+.opc-block-progress {
+	.block-title {
+		> strong {
+			> span {}
+		}
+	}
+	
+	.block-content {
+		> dl {
+			margin: 0;
+
+			> dt {
+				font-weight: normal;
+
+				margin-bottom: @baseLineHeight/2;
+
+				color: @grayLight;
+				
+				.clearfix();
+
+				> a {
+					font-weight: normal;
+
+					float: right;
+					margin-left: @gridGutterWidth/4;
+				}
+
+				> .separator {
+					display: none;
+				}
+
+				&.complete {
+					font-weight: bold;
+
+					padding: 3px 10px;
+
+					background: @grayLighter;
+
+					color: @textColor;
+
+					.border-radius(@borderRadiusSmall);
+				}
+			}
+			> dd {
+				> address {}
+				
+				&.complete {
+					margin-bottom: @baseLineHeight;
+
+					.price {
+						font-size: @baseFontSize;
+					}
+				}
+			}
+		} 
+	}
+}
+
+
+// Multiple Addresses Checkout
+// --------------------------------------------------
+// Multiple Progress
+// -------------------------
+.checkout-progress {
+	> li {
+		> span {}
+		&.first {}
+		&.last {}
+		&.active {}
+	}
+}
+
+
+// Multiple Checkout
+// -------------------------
+.multiple-checkout {
+	.page-title {}
+	h2 {}
+}
+
+
+// Checkout Success
+// --------------------------------------------------
+.checkout-success {} /* need add as container */
+
+

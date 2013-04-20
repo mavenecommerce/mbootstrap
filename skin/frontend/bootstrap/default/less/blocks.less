@@ -1,0 +1,484 @@
+/* PROJECT_NAME project elements styles */
+
+// Bootstrap Core variables and mixins
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+/* @group Buttons set */
+
+	.buttons-set {}
+
+/* @end */
+
+/* @group Combobox */
+
+	/*
+	.combobox>(.combobox__label)+(.combo>(.combo__header>.combo__header__title+i.combo__header__button)+(.combo__dropdown>ul.combo__dropdown__list>li.combo__dropdown__item*3>a[href="#"]))
+	*/
+
+	.combobox {
+		display: inline-block;
+		}
+
+		/* label */
+		.combobox__label {
+			vertical-align: middle;
+			}
+
+		/* combo */
+		.combo {
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+
+			text-align: left;
+			vertical-align: middle;
+			}
+
+		/*
+		_opened
+		*/
+		.combo_opened {}
+
+			/* header */
+			.combo__header {
+				position: relative;
+				z-index: 1;
+				}
+				.combo__header__title {}
+				.combo__header__button {
+					display: block;
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					right: 0;
+
+					cursor: pointer;
+					}
+
+			/* dropdown */
+			.combo__dropdown {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				top: 100%;
+				left: -1px;
+				right: -1px;
+
+				background: #fff;
+				}
+			.combo_opened .combo__dropdown {
+				display: block;
+				}
+				.combo__dropdown__list {
+					padding: 0 0 1px;
+					}
+					.combo__dropdown__item {
+						margin: 1px 1px 0;
+						}
+						.combo__dropdown__item a {
+							display: block;
+							padding: 0 7px;
+
+							text-decoration: none !important;
+							}
+						.combo__dropdown__item a:hover {}
+
+					/*
+					_selected
+					*/
+					.combo__dropdown__item.selected {}
+
+/* @end */
+
+
+
+
+
+/* @group Category */
+
+	.category-view {}
+
+		.category-image {}
+			.category-image > img {}
+
+/* @end */
+
+/* @group Pager */
+
+	.pager-wrapper {
+
+		/* amount */
+		> .amount {}
+
+		/* limiter */
+		> .limiter {
+			> label {}
+			> select {}
+		}
+		
+		/* pages */
+		> .pages {
+			> strong {}
+			> ol {
+				> li {
+					> a {}
+					&.active {}
+				}
+			}
+		}
+	}
+
+/* @end */
+
+/* @group Sorter */
+
+	.sorter {
+
+		/* view mode */
+		.view-mode {}
+
+		/* sort by */
+		> .sort-by {
+			> label {}
+			> select {}
+			> a {
+				> img {}
+			}
+		}
+
+		> .link-feed {}
+	}
+
+/* @end */
+
+
+
+/* @group Ratings */
+
+	.ratings {}
+
+		.ratings strong {}
+
+		/* links */
+		.ratings .rating-links {}
+			.ratings .rating-links .separator {}
+
+		.ratings dt {}
+		.ratings dd {}
+
+		/* starts */
+		.ratings .rating-box {}
+		.rating-box,
+		.rating-box .rating {}
+			.rating-box .rating {}
+
+		/* amount */
+		.ratings .amount {}
+
+	/* ratings table */
+	.ratings-table {}
+
+		/* label */
+		.ratings-table th {}
+
+		/* rating */
+		.ratings-table td {}
+			.ratings-table .rating-box {}
+
+/* @end */
+
+/* @group Products elements */
+
+	/* image */
+	.product-image {}
+		.product-image > img {}
+			.product-image > a {}
+				.product-image > a > img {}
+
+	/* name */
+	.product-name {}
+		.product-name a {}
+
+	/* item options */
+	.item-options {}
+		.item-options dt {}
+		.item-options dd {}
+
+/* @end */
+
+/* @group Product view */
+
+	.product-view {}
+
+		/* essential */
+		.product-essential {}
+
+			.product-shop {}
+
+				.product-shop > .product-name {}
+				.product-shop > .email-friend {}
+				.product-shop > .add-to-box {}
+				.product-shop > .short-description {}
+
+			.product-img-box {}
+				.product-img-box > .product-image {}
+				.product-img-box > .zoom-notice {}
+				.product-img-box > .zoom {}
+
+				.more-views {}
+					.more-views > h2 {}
+					.more-views > ul {}
+						.more-views > ul > li {}
+							.more-views > ul > li > a {}
+								.more-views > ul > li > a > img {}
+
+		/* collateral */
+		.product-collateral {}
+
+/* @end */
+
+/* @group Product tabs */
+
+	.product-tabs {}
+
+		.product-tabs > li {}
+
+			.product-tabs > li > a {}
+
+			/*
+			_first
+			*/
+			.product-tabs > .first {}
+
+			/*
+			_last
+			*/
+			.product-tabs > .last {}
+
+			/*
+			_active
+			*/
+			.product-tabs > .active {}
+
+	.product-tabs-content {}
+
+/* @end */
+
+/* @group Product reviews */
+
+	.box-reviews {}
+
+		/* title */
+		.box-reviews h2 {}
+
+		/* reviews list */
+		.box-reviews dl {}
+
+			/* review header */
+			.box-reviews dt {}
+
+				/* title */
+				.box-reviews dt a {}
+
+				/* author */
+				.box-reviews dt span {}
+
+			/* review message */
+			.box-reviews dd {}
+
+				/* rating */
+				.box-reviews dd .ratings-table {}
+
+				/* post date */
+				.box-reviews dd .date {}
+
+/* @end */
+
+/* @group Data table */
+
+	/* Data Table */
+	.data-table {}
+
+		.data-table .odd  {}
+		.data-table .even {}
+
+		.data-table tr.odd:hover,
+		.data-table tr.even:hover {}
+
+		.data-table td.last,
+		.data-table th.last {}
+
+		.data-table tr.last th,
+		.data-table tr.last td {}
+
+			.data-table th {}
+			.data-table td {}
+
+		/* thead */
+		.data-table thead {}
+			.data-table thead th {}
+			.data-table thead th.wrap {}
+
+				.data-table thead th a,
+				.data-table thead th a:hover {}
+
+			.data-table thead th .tax-flag {}
+
+		/* tfoot */
+		.data-table tfoot {}
+
+			.data-table tfoot tr {}
+			.data-table tfoot tr.first {}
+
+				.data-table tfoot td {}
+					.data-table tfoot strong {}
+
+		/* tbody */
+		.data-table tbody {}
+
+			.data-table tbody tr {}
+			.data-table tbody tr.first {}
+
+				.data-table tbody th,
+				.data-table tbody td {}
+
+
+		/* Bundle products tables */
+		.data-table tbody.odd tr {}
+		.data-table tbody.even tr {}
+
+			.data-table tbody.odd tr td,
+			.data-table tbody.even tr td {}
+
+			.data-table tbody.odd tr.border td,
+			.data-table tbody.even tr.border td {}
+
+				.data-table tbody td .option-label {}
+				.data-table tbody td .option-value {}
+
+/* @end */
+
+/* @group Cart */
+
+	.cart {}
+
+		/* title */
+		.cart .page-title {}
+			.cart .page-title > h1 {}
+
+		/* cart table */
+		.cart-table {}
+
+			/* global elements */
+			.cart-table tr {}
+				.cart-table th {}
+				.cart-table td {}
+
+			.cart-table tr.first {}
+			.cart-table tr.last {}
+			.cart-table tr.odd {}
+			.cart-table tr.even {}
+
+				/* td */
+				.cart-table td.last {}
+
+
+			/* head section */
+			.cart-table thead {}
+				.cart-table th {}
+
+			/* foot section */
+			.cart-table tfoot {}
+				.cart-table tfoot td {}
+
+			/* body section */
+			.cart-table tbody {}
+				.cart-table tbody td {}
+
+
+		/* collaterals */
+		.cart-collaterals {}
+			.cart-collaterals > .col2-set {}
+
+			/* Shopping Cart Totals */
+			.cart-collaterals > .totals {}
+
+/* @end */
+
+/* @group Site map */
+
+	.page-sitemap {}
+
+		/* title */
+		.page-sitemap .page-title {}
+
+		/* top links */
+		.page-sitemap .sitemap_top_links {}
+
+		/*
+		.pager
+		*/
+		.page-sitemap .pager {}
+
+		/* sitemap list */
+		.page-sitemap .sitemap {}
+			.page-sitemap .sitemap li {}
+
+			.page-sitemap .sitemap li.level-0 {}
+
+				.page-sitemap .sitemap a {}
+				.page-sitemap .sitemap li.level-0 a {}
+
+		/* links */
+		.page-sitemap .links {}
+
+			.page-sitemap .links a {}
+			.page-sitemap .links a:hover {}
+
+
+
+
+/* @end */
+
+/* @group Static text :: STD */
+
+	.std {}
+
+/* @end */
+
+/* @group Inline Clear */
+
+	.inline-fix:after {
+		display: block;
+		clear: both;
+
+		content: "";
+		}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

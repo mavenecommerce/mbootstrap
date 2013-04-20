@@ -1,0 +1,327 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "mixins";
+
+// Block
+// --------------------------------------------------
+.block {
+    margin: 0 0 @baseLineHeight;
+    
+    padding: @gridGutterWidth / 4;
+
+    background: url(../images/blocks/block/background.png);
+
+    .border-radius(@borderRadiusSmall - 1);
+
+    > .block-title {
+        
+        padding: @gridGutterWidth / 2;
+
+        line-height: @baseLineHeight;
+
+        #translucent > .background(@black, 0.1);
+
+        > a {}
+
+        > strong {
+            font-size: @fontSizeLarge;
+            
+            color: #fff;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.50);
+
+            > span {}
+        }
+    }
+
+    .block-content {
+        padding: @baseLineHeight / 2;
+
+        background: @white;
+
+        > .block-subtitle {
+            font-weight: bold;
+
+            color: lighten(@textColor, 40%);
+        }
+
+        > .empty {
+            margin-bottom: 0;
+        }
+
+        > .actions {
+            margin-top: @baseLineHeight;
+        }
+    }
+
+    form {
+        margin-bottom: 0;
+    }
+
+}
+
+
+// Block - Layered Navigation
+// -------------------------
+.block-layered-nav {
+
+    > .block-title {
+        > strong {
+            > span {}
+        }
+    }
+
+    > .block-content {
+        > .currently {
+            margin: 0 0 @baseLineHeight;
+
+            > .nav-list {
+                padding: 0;
+
+                .currently__list {
+                    > li {
+                        > span {
+                            color: @textColor;
+
+                            &.title {}
+                            &.value {
+                                text-transform: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > .block-subtitle {}
+
+        > .nav-list {
+            padding: 0;
+
+            .amount {
+                font-weight: normal;
+            }
+            
+            .price {
+                font-size: @baseFontSize;
+            }
+        }
+        > .actions {}
+    }
+}
+
+
+
+// Block - Subscribe
+// -------------------------
+.block-subscribe {
+    .block-title {}
+    .block-content {
+        .form-subscribe-header {}
+        .actions {}
+    }
+}
+
+
+
+
+
+// Block - Poll
+// -------------------------
+.block-poll {
+    .poll-answers {
+        .reset-list;
+
+        > .item {
+            margin: 0 0 @baseLineHeight / 2;
+
+            > .votes {}
+            > .answer {}
+        }
+    }
+}
+
+
+// Block - Reorder
+// -------------------------
+.block-reorder {
+    .reorder-list {
+        margin-bottom: @baseLineHeight;
+
+        > .item {
+            margin-bottom: @baseLineHeight / 2;
+            position: relative;
+
+            > [type="checkbox"] {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            > .product-name {
+                display: block;
+                padding-left: @gridGutterWidth;
+            }
+        }
+    }
+}
+
+
+// Block - List
+// -------------------------
+.block-list {
+    .block-content {
+        > ol {
+            > .item {
+                position: relative;
+                
+                > .btn-remove {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    .opacity(10);
+                    .transition(opacity 0.25s ease-in-out;)
+                }
+
+                &:hover {
+                    > .btn-remove {
+                        .opacity(100);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Block - Compare
+// -------------------------
+.block-compare {}
+
+
+// Block - Wishlist
+// -------------------------
+.block-wishlist {
+    .block-cart;
+}
+
+// Block - Cart sidebar
+// -------------------------
+.block-cart {
+    .block-title {}
+    .block-content {
+
+        .summary {
+            padding: @baseLineHeight/2;
+
+            background-color: @grayLighter;
+
+            .border-radius(2px);
+        }
+        .action {
+            margin: @baseLineHeight/2 0 @baseLineHeight;
+
+            text-align: right;
+        }
+
+        .block-subtitle {}
+
+        .thumbnails {
+            > .item {
+                float: none;
+                overflow: hidden;
+
+                > .thumbnail {
+                    float: left;
+                    margin-right: @gridGutterWidth / 2;
+                }
+
+                > .caption {
+                    overflow: hidden;
+
+                    > .actions {
+                        float: right;
+                        margin-top: 2px;
+
+                        .opacity(10);
+                        .transition(opacity 0.25s ease-in-out;)
+                    }
+
+                    .price {
+                        font-size: @baseFontSize;
+                    }
+                }
+
+                &:hover {
+                    > .caption {
+                        .actions {
+                            .opacity(100);
+                        }
+                    }
+                }
+
+                &.last {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .empty {}
+    }
+}
+
+@media (max-width: 767px) {
+    .block-cart {
+        .block-content {
+            .thumbnails {
+                > .item {
+
+                    > .caption {
+                        .actions {
+                            .opacity(100);
+                            .transition(none);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Block - Related
+// -------------------------
+.block-related {}
+
+    /* title */
+    .block-related .block-title {}
+        .block-related .block-title > strong {}
+
+    /* content */
+    .block-related .block-content {}
+        .block-related .block-content > .block-subtitle {}
+
+        .block-related .mini-product-list {}
+            .block-related .mini-product-list .item {}
+
+            .block-related .mini-products-list .item {}
+            .block-related .mini-products-list .item.odd {}
+            .block-related .mini-products-list .item.even {}
+            .block-related .mini-products-list .item.last {}
+
+                .block-related .mini-product-list .item input[type="checkbox"] {}
+
+                .block-related .mini-product-list .product {}
+
+                    .block-related .mini-product-list .product > :link {}
+                    .block-related .mini-product-list .product-details {}
+
+                        .block-related .mini-product-list .product-name {}
+
+                        /*
+                        .link-wishlist
+                        */
+                        .block-related .mini-product-list .link-wishlist {}

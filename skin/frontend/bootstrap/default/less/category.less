@@ -1,0 +1,116 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Category products
+// --------------------------------------------------
+.category-products {}
+
+
+// Products grid
+// -------------------------
+.products-grid {
+    > .item {
+        .product-name,
+        .ratings,
+        .price-box,
+        .availability {
+            margin-bottom: @baseLineHeight / 2;
+        }
+
+        .product-image {
+            display: block;
+        }
+        .product-name {
+            font-size: @baseFontSize;
+
+            min-height: @baseLineHeight * 2;
+
+            line-height: @baseLineHeight;
+        }
+        .ratings {}
+        .price-box {
+            min-height: @baseLineHeight * 2;
+        }
+        .availability {}
+        .actions {}
+    }
+}
+
+@media (max-width: 767px) {
+    .products-grid {
+        .product-image {
+            > img {
+                width: 100%;
+            }
+        }
+    
+    }
+}
+
+
+// Products list
+// -------------------------
+.products-list {
+    > .item {
+        .product-name,
+        .ratings,
+        .price-box,
+        .availability,
+        .desc {
+            margin-bottom: @baseLineHeight / 2;
+        }
+
+        .product-image {
+            display: block;
+            float: left;
+
+            text-align: center;
+        }
+        
+        .caption {
+            margin-left: 320px;
+        }
+
+        .product-name {
+            font-size: @baseFontSize;
+
+            line-height: @baseLineHeight;
+        }
+        .ratings {}
+        .price-box {}
+        .desc {}
+        .availability {}
+        .actions {}
+    }
+}
+
+@media (max-width: 767px) {
+    .products-list {
+        > .item {
+            .product-image {
+                float: none;
+            }
+            .caption {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+// Product elements
+// -------------------------
+.product-name {
+    font-size: @baseFontSize;
+
+    margin-top: 0;
+
+    line-height: @baseLineHeight;
+}
+
+.product-image {
+    > img {}
+}

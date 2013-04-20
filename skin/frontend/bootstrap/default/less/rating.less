@@ -1,0 +1,31 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Rating
+// --------------------------------------------------
+.ratings {
+    > .rating-box {
+        display: inline-block;
+        width: 80px;
+
+        vertical-align: text-top;
+
+        background: url(../images/blocks/rating/star.png) 0 100%;
+
+        .rating {
+            height: 16px;
+
+            background: url(../images/blocks/rating/star.png);
+        }
+    }
+    > .amount {
+        display: inline-block;
+        margin-left: @gridGutterWidth / 2;
+    }
+
+    > .rating-links {}
+}

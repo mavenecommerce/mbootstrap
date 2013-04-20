@@ -1,0 +1,85 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Page title
+// --------------------------------------------------
+.page-title {
+    margin: 0 -@gridGutterWidth/2 @baseLineHeight;
+    padding: 0 0 2px;
+    background: url(../images/blocks/block/background.png);
+
+    > h1,
+    > h2 {
+        font-size: @fontSizeLarge * 2 + 1;
+        font-weight: normal;
+
+        margin: 0;
+        padding: 0 @gridGutterWidth/2 floor(@baseLineHeight/3);
+
+        line-height: @baseLineHeight * 2;
+
+        background: rgba(255, 255, 255, 0.60);
+    }
+
+    &.title-buttons {
+        position: relative;
+        
+        > .btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        > .btn-group {
+            position: absolute;
+            top: @baseLineHeight / 2;
+            right: @gridGutterWidth / 2;
+        }
+    }
+    &.category-title {}
+}
+
+@media (min-width: 1200px) {
+    .page-title {
+        margin-left: -@gridGutterWidth1200/2;
+        margin-right: -@gridGutterWidth1200/2;
+        > h1 {
+            padding-left: @gridGutterWidth1200/2;
+            padding-right: @gridGutterWidth1200/2;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .page-title {
+        margin-left: -@gridGutterWidth768/2;
+        margin-right: -@gridGutterWidth768/2;
+        > h1,
+        > h2 {
+            padding-left: @gridGutterWidth768/2;
+            padding-right: @gridGutterWidth768/2;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .page-title {
+        &.title-buttons {
+            > .btn-group {
+                position: static;
+                margin: @baseLineHeight/2;
+            }
+        }
+    }
+}
+
+// Sub title
+// -------------------------
+.sub-title {
+    font-size: @fontSizeLarge;
+    font-weight: normal;
+}

@@ -1,0 +1,109 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Price
+// --------------------------------------------------
+
+.price {
+    font-size: @fontSizeLarge;
+    font-weight: bold;
+
+    color: darken(@green, 15%);
+}
+
+.price-box {
+    .price {}
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+// Regular price
+// -------------------------
+.regular-price {
+    .price {}
+}
+
+
+// Old price
+// -------------------------
+.old-price {
+    .price-label {}
+    .price {}
+}
+        
+
+// Special price
+// -------------------------
+.special-price {
+    .price-label {}
+    .price {}
+}
+        
+
+// From-To price
+// -------------------------
+.price-box {
+    .price-from {
+        margin-right: @gridGutterWidth / 2;
+    }
+    .price-from,
+    .price-to {
+        display: inline-block;
+    }
+}
+
+
+// Minimal price (as low as)
+// -------------------------
+.minimal-price {
+    .price-label {}
+}
+
+.minimal-price-link {
+    white-space: nowrap;
+    
+    .label {}
+    .price {}
+}
+        
+
+// Excluding tax
+// -------------------------
+.price-excluding-tax {
+    .label {}
+    .price {}
+}
+
+
+// Including tax
+// -------------------------
+.price-including-tax {
+    .label {}
+    .price {}
+}
+ 
+
+// Configured price
+// -------------------------
+.configured-price {
+    .price-label {}
+    .price {}
+}
+
+
+// Bundle price
+// -------------------------
+.price-box-bundle {
+    .price-box {
+        margin-bottom: 0 !important; // need for PDP
+
+        .price-from {}
+        .price-to {}
+    }
+}

@@ -1,0 +1,54 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Toolbar
+// --------------------------------------------------
+
+.toolbar { 
+    margin-bottom: @baseLineHeight;
+    
+    > .pager-wrapper {
+        > .amount {
+            line-height: @baseLineHeight + 10;
+        }
+        
+        .limiter {}
+        
+        .sort-by {
+            white-space: nowrap;
+        }
+    }
+    > .sorter {
+        margin-top: @baseLineHeight / 2;
+
+        .view-mode {}
+    }
+}
+
+
+@media (max-width: 767px) {
+    .toolbar {
+        .limiter {
+            display: inline-block;
+            margin-bottom: @baseLineHeight / 2;
+        }
+
+        .sort-by {
+            display: inline-block;
+        }
+    }
+}
+
+
+// Tolbar at bottom
+// -------------------------
+.toolbar-bottom {
+    .pager-wrapper,
+    .view-mode .btn {
+        display: none;
+    }
+}

@@ -1,0 +1,31 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Messages/Notifications
+// --------------------------------------------------
+.messages {
+    margin: 0 0 @baseLineHeight;
+
+    list-style: none;
+
+    border: 1px solid red;
+
+    .border-radius(3px);
+
+    > li {
+        > ul {
+            > li {
+                > span {}
+            }
+        }
+    }
+
+    > .error-msg {}
+    > .success-msg {}
+    > .note-msg {}
+    > .notice-msg {}
+}

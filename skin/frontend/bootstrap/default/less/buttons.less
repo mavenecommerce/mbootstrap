@@ -1,0 +1,43 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Buttons
+// --------------------------------------------------
+.btn {
+    &.btn-cart {}
+    
+    &.btn-compare {}
+    &.btn-wishlist {}
+    
+    &.btn-proceed-checkout {}
+    &.btn-checkout {}
+    &.btn-remove {
+        color: #f00;
+    }
+    &.btn-update {}
+    &.btn-empty {}
+    &.btn-continue {}
+}
+
+.btn-remove {
+    color: #f00;
+}
+
+// Buttons set
+// -------------------------
+.buttons-set {
+    line-height: @baseLineHeight * 1.5;
+
+    > .required {}
+}
+
+
+// Inline block buttons set
+// -------------------------
+.iblock {
+    display: inline-block;
+}

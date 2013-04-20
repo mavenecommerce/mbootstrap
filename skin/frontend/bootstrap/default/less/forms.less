@@ -1,0 +1,483 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Forms
+// --------------------------------------------------
+
+
+// Input box
+// -------------------------
+.input-box {
+	margin-bottom: @baseLineHeight / 2;
+	min-width: @gridColumnWidth;
+
+	> input,
+	> select,
+	> textarea {
+		margin-bottom: 0;
+
+		.input-block-level();
+	}
+}
+
+
+// Required info
+// -------------------------
+p.required {
+	margin-bottom: @baseLineHeight/4;
+
+	line-height: @baseLineHeight;
+	color: #f00;
+
+	> em {
+		font-style: normal;
+	}
+}
+label.required {
+	> em {
+		font-style: normal;
+
+		margin-left: 0.25em;
+		margin-left: 0.25rem;
+
+		color: #f00;
+	}
+}
+
+
+// Validation notification
+// -------------------------
+.validation-advice {
+	color: #f00;
+}
+
+// Fieldset
+// -------------------------
+.fieldset {
+	> .legend {
+		font-size: @fontSizeLarge;
+        font-weight: normal;
+
+        margin: 0;
+	}
+
+	.form-list {}
+}
+	
+
+// Forms-list
+// -------------------------
+.form-list {
+	list-style: none;
+
+	&.reset {
+		.reset-list;
+	}
+
+	li {
+		margin-bottom: @baseLineHeight / 2;
+
+		label {
+			&.required {
+				> em {
+					font-style: normal;
+
+					margin-right: 0.25em;
+					margin-right: 0.25rem;
+
+					color: #f00;
+				}
+			}
+		}
+
+		.input-box {
+			margin-bottom: 0;
+		}
+
+		&.control {}
+
+		&.fields {
+			margin-bottom: 0;
+
+			.field {
+				margin-bottom: @baseLineHeight / 2;
+			}
+
+			&.address {
+				.field {
+					+ .field {
+						margin-top: @baseLineHeight * 1.25; // label height + label margin-bottom
+
+						+ .field {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+		&.wide {}
+
+		&.additional-row {}
+	}
+	
+	ul {
+		&.reset {
+			.reset-list;
+		}
+	}
+}
+		
+		/* additional row */
+		.form-list li.additional-row { }
+		.form-list li.additional-row .btn-remove { }
+		
+		.form-list .input-range input.input-text { }
+		
+		/* Customer */
+		.form-list .customer-name-prefix .input-box,
+		.form-list .customer-name-suffix .input-box,
+		.form-list .customer-name-prefix-suffix .input-box,
+		.form-list .customer-name-prefix-middlename .input-box,
+		.form-list .customer-name-middlename-suffix .input-box,
+		.form-list .customer-name-prefix-middlename-suffix .input-box {  }
+		
+		.form-list .name-prefix { }
+			.form-list .name-prefix select { }
+			.form-list .name-prefix input.input-text { }
+		
+		.form-list .name-suffix { }
+			.form-list .name-suffix select { }
+			.form-list .name-suffix input.input-text { }
+		
+		.form-list .name-middlename { }
+			.form-list .name-middlename input.input-text { }
+		
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname,
+		.form-list .customer-name-prefix-middlename .name-firstname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-prefix-middlename .name-firstname input.input-text { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-name-prefix .name-firstname,
+		.form-list .customer-name-middlename .name-firstname { }
+		
+		.form-list .customer-name-suffix .name-lastname,
+		.form-list .customer-name-middlename .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-lastname { }
+		
+		.form-list .customer-name-prefix .name-firstname input.input-text,
+		.form-list .customer-name-suffix .name-lastname input.input-text,
+		.form-list .customer-name-middlename .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-dob .dob-month,
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob input.input-text { }
+		.form-list .customer-dob label { }
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-month { }
+		.form-list .customer-dob .dob-day input.input-text,
+		.form-list .customer-dob .dob-month input.input-text { }
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob .dob-year input.input-text { }
+
+
+
+
+/* PROJECT_NAME project elements styles */
+
+/* @group Checkbox */
+/*
+	input[type="checkbox"] { 
+		display: block;
+		position: absolute;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+		
+		overflow: hidden;
+		}
+
+	input[type="checkbox"] + label { }
+	
+	input[type="checkbox"] + label:before { 
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		margin-right: 3px;
+		
+		content: '';
+		vertical-align: text-bottom;
+		
+		background: url(../images/elements/forms/checkbox.png);
+		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAAcklEQVQ4jWM4d+50BBD/JxJHMIAYr1+/JgpfvHj+/6iGIayB5KQxjQQN0waBp+/cufO/paWFOA0gxTo6OmAMYqNoSE9P/79//36cijFsiIiI+M/Pzw/WhE0xVifBNGFTjNMPIE3YFOP1NDbFFMUDSUkDAE2Z8cOx5CO+AAAAAElFTkSuQmCC") no-repeat;
+		}
+
+	input[type="checkbox"]:checked { }
+	input[type="checkbox"]:checked + label { }
+	input[type="checkbox"]:checked + label:before { 
+		background-position: 0 -12px;
+		}
+*/
+/* @end */
+
+
+
+/* @group Radio button */
+/*
+	input[type="radio"] { 
+		display: block;
+		position: absolute;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+		
+		overflow: hidden;
+		}
+
+	input[type="radio"] + label { 
+		vertical-align: bottom;
+		}
+	
+	input[type="radio"] + label:before { 
+		display: inline-block;
+		width: 17px;
+		height: 17px;
+		margin-right: 3px;
+		
+		content: '';
+		vertical-align: middle;
+		
+		background: url(../images/elements/forms/radiobutton.png) no-repeat;
+		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAiCAYAAAC5gzL5AAABRUlEQVR42rWUQc6CMBCFjYeDM+hSLyIcyY0nICxMNHFhDKzEH4NwAlfjfIlNtAZLLf/iZdLOvMcwbd+k67o37HbbqWKuWCuuiruifq5n5F/rRWRiCywVcjodparO0jSNtG0rRNbsk6fOFjECq8NhL3Vdi657QZ466o2IEViQ4IsUukAd9fAQMTPQL/xRMBjUw4OPyJx/JeELePAR2Vwu1U8i8OAjcjWz8MXt1iDSIXLnGNn8BcxlrE7CZzLa6YTfk/AbG/523K+Y6UMkul/xp5/Mnv7RQiJ+8xNIFtympIAMPkS8TKlHxH+wlsg/mlJRFJJlGdHflGg5TVOJ41iiKCKyZn+4KSVJAtkGQsNMqSxL04EN9sk7TYkZQOgDeYcpBXRiz4R/95pJ6Om4TYnW8zwnOu5J4I0d/e0AL1P6ZgWDTMn2kwfOeXAQF8GPLAAAAABJRU5ErkJggg==") no-repeat;
+		}
+	
+	input[type="radio"]:checked { }
+	input[type="radio"]:checked + label { }
+	input[type="radio"]:checked + label:before { 
+		background-position: 0 -17px;
+		}
+*/
+/* @end */
+
+/* @group Select box */
+	
+	.select-box { 
+		overflow: hidden;
+		
+		line-height: normal;
+		
+		background: #ebebeb url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAXCAYAAAD6FjQuAAAAaUlEQVR42u3TsQ2AQAiFYQa4MZjKhWwtmOMS93AMl7BCSF5xMWoFxoLiD3nVV0Gq+lmFFVbYcyLC1vYSR2LeaulN3aJojK1jhLA5HEPziGFTFtas3SHcloahyTFcSsXQctn11IUV9hPsBBJWC764HO9VAAAAAElFTkSuQmCC") 100% 50% no-repeat;
+		border: 1px solid #cecece;
+		
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		}
+		.select-box > select { 
+			width: 100%;
+			overflow: hidden;
+			height: 23px;
+			padding: 3px 20px 3px 4px;
+			
+			border: none;
+			background: transparent;
+			color: #7d7d7d;
+			
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			-moz-appearance: window;
+			-webkit-appearance: none;
+			}
+	
+	/*
+	_multiple
+	*/
+	.select-box_multiple { 
+		background-image: none;
+		}
+		.select-box_multiple > select { 
+			height: auto;
+			}
+	
+/* @end */
+
+/* @group Form list */
+
+	.form-list { }
+	
+		.form-list li { }
+		
+			/* label */
+			.form-list label { }
+			.form-list label.required {}
+			.form-list label.required em { }
+			
+			/* input */
+			.form-list .input-box { }
+				.form-list input.input-text { }
+				.form-list textarea { }
+				.form-list select { }
+			
+			/* controls */
+			.form-list li.control { }
+				.form-list li.control label { }
+				.form-list li.control input.radio,
+				.form-list li.control input.checkbox { }
+				.form-list li.control .input-box { }
+
+		/* fields */
+		.form-list .fields { }
+			.form-list .fields .field { }
+			.form-list .fields .field:first-child { }
+		
+		/* wide */
+		.form-list li.wide { }
+			.form-list li.wide .input-box { }
+			.form-list li.wide input.input-text { }
+			.form-list li.wide textarea { }
+			.form-list li.wide select { }
+		
+		/* additional row */
+		.form-list li.additional-row { }
+		.form-list li.additional-row .btn-remove { }
+		
+		.form-list .input-range input.input-text { }
+		
+		/* Customer */
+		.form-list .customer-name-prefix .input-box,
+		.form-list .customer-name-suffix .input-box,
+		.form-list .customer-name-prefix-suffix .input-box,
+		.form-list .customer-name-prefix-middlename .input-box,
+		.form-list .customer-name-middlename-suffix .input-box,
+		.form-list .customer-name-prefix-middlename-suffix .input-box {  }
+		
+		.form-list .name-prefix { }
+			.form-list .name-prefix select { }
+			.form-list .name-prefix input.input-text { }
+		
+		.form-list .name-suffix { }
+			.form-list .name-suffix select { }
+			.form-list .name-suffix input.input-text { }
+		
+		.form-list .name-middlename { }
+			.form-list .name-middlename input.input-text { }
+		
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname,
+		.form-list .customer-name-prefix-middlename .name-firstname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-prefix-middlename .name-firstname input.input-text { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-name-prefix .name-firstname,
+		.form-list .customer-name-middlename .name-firstname { }
+		
+		.form-list .customer-name-suffix .name-lastname,
+		.form-list .customer-name-middlename .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-lastname { }
+		
+		.form-list .customer-name-prefix .name-firstname input.input-text,
+		.form-list .customer-name-suffix .name-lastname input.input-text,
+		.form-list .customer-name-middlename .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-lastname input.input-text { }
+		
+		.form-list .customer-dob .dob-month,
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob input.input-text { }
+		.form-list .customer-dob label { }
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-month { }
+		.form-list .customer-dob .dob-day input.input-text,
+		.form-list .customer-dob .dob-month input.input-text { }
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob .dob-year input.input-text { }
+	
+	/* validation */
+	.validation-advice { 
+		background: transparent;
+		}
+	
+	/* required note */
+	p.required { }
+		p.required > em { }
+	
+	/* form elements */
+	.fieldset { }
+		.fieldset .legend { }
+		
+		/*
+		.form-list
+		*/
+		.fieldset .form-list { }
+	
+/* @end */
+
+/* @group Inline Clear */
+
+	.inline-fix:after {
+		display: block;
+		clear: both;
+		
+		content: ""; 
+		}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

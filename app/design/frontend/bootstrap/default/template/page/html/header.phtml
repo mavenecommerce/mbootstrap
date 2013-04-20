@@ -1,0 +1,76 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<header class="header-container case" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="header container">
+
+        <div class="row">
+            <div class="i-logo span4">
+                <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a></h1>
+                <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a>
+                <?php endif?>
+            </div>
+
+            <div class="quick-access span8">
+                <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
+                <?php echo $this->getChildHtml('store_language') ?>
+                <?php echo $this->getChildHtml('topLinks_custom') ?>
+            </div>
+
+        </div>
+
+        <?php echo $this->getChildHtml('topContainer'); ?>
+
+    </div>
+</header>
+
+<nav class="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="<?php echo $this->getUrl(); ?>" itemprop="description"><span class="icon-home"></span> <?php echo $this->__("Home"); ?></a>
+
+            <div class="nav-collapse collapse navbar-responsive-collapse">
+
+                <?php echo $this->getChildHtml('topMenu') ?>
+                <div class="hidden-phone"><?php echo $this->getChildHtml('topSearch') ?></div>
+
+            </div>
+
+        </div>
+    </div>
+</nav>

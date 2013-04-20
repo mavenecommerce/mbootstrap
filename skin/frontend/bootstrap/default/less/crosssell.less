@@ -1,0 +1,39 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Crosssel
+// --------------------------------------------------
+.crosssell {
+    margin: @baseLineHeight 0;
+    
+    > h2 {
+        font-size: @baseFontSize;
+        
+        border-bottom: 2px solid @black;
+    }
+    > ul {
+        > .item {
+            .product-image {
+                > img {
+                    min-width: 100%;
+                }
+            }
+            .caption {
+                > .product-name {
+                    min-height: @baseLineHeight * 2;
+                    
+                    line-height: @baseLineHeight;
+                }
+
+                .price-box {
+                    min-height: @baseLineHeight * 2;
+                    margin-bottom: @baseLineHeight / 2;
+                }
+            }
+        }
+    }
+}

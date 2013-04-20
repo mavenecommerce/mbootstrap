@@ -1,0 +1,118 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Navigation
+// --------------------------------------------------
+.nav-container {}
+
+    .navbar {
+        margin-top: @baseLineHeight;
+    }
+
+    .nav { 
+
+        /* All Levels */ /* Style consistent throughout all nav levels */
+        li { 
+            a {
+                > span {}
+                &:hover{}
+            }
+            &.over {}
+            &.parent {}
+
+            /* 0 Level item */
+            &.level0 { 
+                position: relative;
+
+                .level-top {}
+
+                &.over {}
+                &.active {}
+
+                /* 1st Level list */
+                ul { 
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: @zindexDropdown;
+                    display: none; // none by default, but block on "open" of the menu
+                    float: left;
+                    min-width: 160px;
+                    padding: 5px 0;
+                    margin: 2px 0 0; // override default ul
+                    list-style: none;
+                    background-color: @dropdownBackground;
+                    border: 1px solid #ccc; // Fallback for IE7-8
+                    border: 1px solid @dropdownBorder;
+                    *border-right-width: 2px;
+                    *border-bottom-width: 2px;
+                    .border-radius(6px);
+                    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+                    -webkit-background-clip: padding-box;
+                    -moz-background-clip: padding;
+                    background-clip: padding-box;
+
+                    // Items within the dropdown menu
+                    > li {
+                        position: relative;
+
+                        > a {
+                            display: block;
+                            padding: 3px 20px;
+                            clear: both;
+                            font-weight: normal;
+                            line-height: @baseLineHeight;
+                            color: @dropdownLinkColor;
+                            white-space: nowrap;
+
+                            &:hover,
+                            &:focus {
+                                text-decoration: none;
+                                color: @dropdownLinkColorHover;
+                                #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+                            }                           
+                        }
+
+                        > ul {
+                            display: none;
+                            top: 0;
+                            left: 100%;
+                            margin-top: -6px;
+                            margin-left: -0px;
+                            .border-radius(0 6px 6px 6px);
+                        }
+
+                        &:hover {
+                            > ul {
+                                display: block;
+                            }
+                        }
+
+                        &.parent {
+                            > a:after {
+                                display: block;
+                                content: " ";
+                                float: right;
+                                width: 0;
+                                height: 0;
+                                border-color: transparent;
+                                border-style: solid;
+                                border-width: 5px 0 5px 5px;
+                                border-left-color: darken(@dropdownBackground, 20%);
+                                margin-top: 5px;
+                                margin-right: -10px;
+                            }
+                        }
+                    }
+
+                    &.shown-sub { 
+                        display: block;
+                    }
+                }
+            }
+        }
+    }

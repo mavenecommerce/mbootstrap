@@ -1,0 +1,347 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Account register/login area
+// --------------------------------------------------
+
+
+// Login form
+// -------------------------
+.account-login {
+    .page-title {}
+
+    .new-users {
+        .buttons-set {
+            line-height: @baseLineHeight * 2 + 4;
+
+            .clearfix();
+
+            .required {
+                float: left;
+                margin: auto;
+
+                line-height: inherit;
+            }
+            .btn {
+                float: right;
+            }
+        }
+    }
+    .registered-users {
+        .content {
+            padding: 0 @gridGutterWidth @gridGutterWidth;
+            
+            background: url(../images/blocks/block/background.png);
+
+            .border-radius(2px);
+
+            .form-list {}
+            
+            .buttons-set {
+                line-height: @baseLineHeight * 2 + 4;
+
+                .link-forgot {
+                    white-space: nowrap;
+                }
+            }
+        }
+            
+    }
+    form {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: @fontSizeLarge;
+        font-weight: normal;
+
+        margin: 0;
+    }
+}
+
+    .account__or {
+        font-size: @fontSizeLarge * 3;
+
+        line-height: 260px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: @grayLight;
+    }
+
+@media (min-width: 1200px) {
+    .account-login {
+        .registered-users {
+            .content {
+                padding-left: @gridGutterWidth1200;
+                padding-right: @gridGutterWidth1200;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .account-login {
+        .registered-users {
+            .content {
+                padding-left: @gridGutterWidth768;
+                padding-right: @gridGutterWidth768;
+            }
+        }
+    }
+
+    .account__or {
+        font-size: @fontSizeLarge * 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .account__or {
+        font-size: @fontSizeLarge * 2;
+            
+        line-height: @baseLineHeight * 2;
+    }
+}
+
+// Register form
+// -------------------------
+.account-create {
+    .page-title {}
+    .create-form {
+        .fieldset {
+            > h2 {
+                font-size: @fontSizeLarge;
+                font-weight: normal;
+
+                margin: 0;
+            }
+            .form-list {}
+        }
+    }
+}
+
+
+// Register form on Login page
+// -------------------------
+.account-create-login {}
+
+@media (max-width: 767px) {
+    .account-create-login {
+        .buttons-set.pull-right {
+            float: none;
+        }
+    }
+}
+
+
+// Block - Account navigation
+// -------------------------
+.block-account {
+    .block-title {}
+    .block-content { 
+        > ul {
+            > li {
+                > a {}
+                &.current {}
+            }
+        }
+    }
+}
+
+
+// Account Dashboard area
+// --------------------------------------------------
+
+
+// Dashboard
+// -------------------------
+.dashboard {
+    .dashboard__address {}
+}
+
+
+// My account
+// -------------------------
+.my-account {
+    h2 {
+        font-size: @fontSizeLarge;
+        font-weight: normal;
+    }
+}
+
+
+// Box
+// -------------------------
+.box-head {
+    
+    .clearfix();
+
+    > h2 { 
+        font-weight: normal;
+
+        float: left;
+    }
+    > a {
+        float: right;
+        margin-top: @baseLineHeight;
+    }
+}
+
+.box {
+    .box-title {
+        border-bottom: 2px solid @grayLighter;
+
+        .clearfix();
+
+        > h3 {
+            font-size: @fontSizeLarge;
+            font-weight: normal;
+        }
+        > a {
+            float: right;
+            margin-top: @baseLineHeight / 2;
+            
+            line-height: @baseLineHeight * 2;
+        }
+    }
+    
+    .box-content {
+        margin-top: @baseLineHeight;
+    }
+}
+
+
+// Box - Recent orders
+// -------------------------
+.box-recent {
+    .table {
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .price {
+        font-size: @baseFontSize;
+    }
+}
+
+
+// Addresses list
+// -------------------------
+.addresses-list {
+    .addresses-primary {}
+    .addresses-additional {}
+    
+    h2 {
+        border-bottom: 2px solid @grayLighter;
+    }
+
+    ol {
+        .reset-list;
+        h3 {
+            font-weight: normal;
+            font-size: @fontSizeLarge;
+
+            border-bottom: 1px solid @grayLighter;
+        }
+    }
+}
+
+
+// Orders history
+// -------------------------
+.orders-history {
+    
+    .table {
+        margin: @baseLineHeight 0;
+
+        td {
+            vertical-align: middle;
+        }
+        .price {
+            font-size: @baseFontSize;
+        }
+    }
+
+    .pager-wrapper {
+        margin-bottom: @baseLineHeight;
+    }
+}
+
+
+// View order details
+// -------------------------
+.order-view {
+    .order-info {}
+    .order-date {}
+    .order-info-box {}
+}
+
+.order-items {
+    .price {
+        font-size: @baseFontSize;
+    }
+    .table {
+        tfoot {
+            tr {
+                font-weight: bold;
+
+                .price {
+                    font-size: @baseFontSize;
+                }
+                
+                &.last {
+                    font-size: @fontSizeLarge;
+                    font-weight: bold;
+
+                    .price {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Wishlist
+// -------------------------
+.my-wishlist {
+    
+    .table {
+        tr {
+            .btn-remove {
+                .opacity(10);
+                .transition(opacity 0.25s ease-in-out;)
+            }
+
+            &:hover {
+                .btn-remove {
+                    .opacity(100);
+                }
+            }
+        }
+    }
+
+    .product-image {
+        display: block;
+        width: 100px;
+    }
+    
+    .product-name {}
+    .description {}
+
+    .cell_cart {
+        > .price-box {
+            margin-bottom: @baseLineHeight;
+
+            white-space: nowrap;
+        }
+        > .add-to-cart-alt {}
+    }
+}

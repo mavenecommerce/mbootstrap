@@ -1,0 +1,128 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Cart
+// --------------------------------------------------
+.cart {
+    .page-title {
+        .checkout-types {
+            .reset-list;
+            position: absolute;
+            top: 0;
+            right: @gridGutterWidth;
+        }
+    }
+
+    .cart-table {
+        tr {
+            th {}
+            td {
+                vertical-align: middle;
+
+                &.last {}
+            }
+
+            &.first {}
+            &.last {}
+
+            &.odd {}
+            &.even {}
+        }
+
+        thead {
+            th {}
+        }
+        tfoot {
+            td {}
+        }
+        tbody {
+            tr {
+                td {
+                    .product-name {
+                        line-height: @baseLineHeight;
+                    }
+
+
+                    .qty {
+                        margin: 0;
+                        min-width: @gridGutterWidth * 2.25;
+                    }
+
+                    .btn {
+                        .opacity(10);
+                        .transition(opacity 0.25s ease-in-out;)
+                    }
+
+                    .price {
+                        font-size: @baseFontSize;
+                    }
+
+                    &.cell_image {
+                        min-width: 100px;
+                    }
+                }
+
+                &:hover {
+                    .btn {
+                    .opacity(100);
+                    }
+                }
+            }
+        }
+    }
+
+    .totals { 
+        text-align: right;
+    }
+
+    .cart-collaterals {
+        h2 {
+            font-size: @fontSizeLarge;
+            font-weight: normal;
+
+            border-bottom: 2px solid @grayLighter;
+        }
+
+        .shipping {
+            .shipping-form {}
+            .sp-methods {
+                ul {
+                    .reset-list;
+
+                    .price {
+                        font-size: @baseFontSize;
+                    }
+                }
+            }
+        }
+
+        .checkout-types {
+            text-align: right;
+
+            .reset-list;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .cart {
+        .cart-table {
+            tbody {
+                tr {
+                    td {
+                        .btn {
+                            .opacity(100);
+                        }
+                        &.cell_image {
+                            max-width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

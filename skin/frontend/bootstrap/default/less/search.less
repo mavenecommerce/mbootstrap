@@ -1,0 +1,75 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "mixins";
+
+
+// Search
+// --------------------------------------------------
+
+// Search mini
+// -------------------------
+.navbar-search {
+    float: right;
+
+    .input-append,
+    .input-prepend {
+        margin-bottom: 0;
+    }
+}
+
+    .search-autocomplete {
+        padding: 3px 0;
+
+        background: @dropdownBackground;
+        border: 1px solid @dropdownBorder;
+
+        .box-sizing(border-box);
+        .border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+
+        > ul {
+            .reset-list;
+
+            > li {
+                padding: @paddingSmall;
+
+                color: @dropdownLinkColor;
+                cursor: pointer;
+
+                > .amount {
+                    font-size: @fontSizeMini;
+
+                    margin-right: 3px;
+                }
+
+                &:hover {
+                    background: @dropdownLinkBackgroundActive;
+
+                    color: @dropdownLinkColorHover;
+                }
+                &.odd {}
+                &.even {}
+                &.first {}
+                &.last {}
+                &.selected {
+                    background: @dropdownLinkBackgroundHover;
+
+                    color: @dropdownLinkColorHover;
+                }
+            }
+        }
+    }
+
+@media (max-width: 767px) {
+    .navbar-search {
+        float: none;
+        margin-top: @baseLineHeight / 2;
+    }
+}
+
+
+// Search result
+// -------------------------
+.search-result {}

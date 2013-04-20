@@ -1,0 +1,238 @@
+/* PROJECT_NAME project global styles */
+
+/* @group Default styles */
+
+	html {
+		font-size: 62.5%;
+		
+		background: #fff;
+		}
+		
+		body {
+			font: normal 12px/14px Arial, Helvetica, Geneva, sans-serif;
+			font: normal 1.2rem/1.4rem Arial, Helvetica, Geneva, sans-serif;
+			
+			margin: 0;
+			padding: 0;
+			
+			background: transparent;
+			color: #444;
+			}
+			
+			a {
+				color: #000;
+				}
+				a:hover { }
+			
+			/* for the button.button */
+			.button { 
+				border:0; padding:0; margin:0; background:transparent; overflow:visible; cursor:pointer; vertical-align:middle; 
+				}
+			.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
+			.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
+			
+			img { 
+				vertical-align: middle;
+				
+				border: 0;
+				}
+			
+			table {
+				border-collapse: collapse;
+				}
+				td,
+				th {
+					padding: 0;
+					
+					vertical-align: middle;
+					}
+			
+			ul,
+			ol,
+			dl { 
+				margin: 0;
+				padding: 0;
+				
+				list-style: none;
+				}
+				dt,
+				dd { 
+					margin: 0;
+					padding: 0;
+					}
+			
+			/* form elements */
+			input,
+			textarea { 
+				font: inherit;
+				
+				margin: 0;
+				}
+			fieldset { 
+				margin: 0;
+				padding: 0;
+				
+				border: 0;
+				}
+			
+			/* content */
+			h1, h2, h3, h4, h5, h6 { 
+				font: inherit;
+				
+				margin: 0;
+				padding: 0;
+				
+				line-height: normal;
+				}
+			p { 
+				font: inherit;
+				
+				margin: 0;
+				}
+
+			/* alignment */
+			.a-left 	{ text-align: left !important; }
+			.a-right 	{ text-align: right !important; }
+			.a-center 	{ text-align: center !important; }
+			.v-middle 	{ vertical-align: middle !important; }
+
+			/* floating */
+			.f-left 	{ float: left; }
+			.f-right 	{ float: right; }
+
+			/* global class */
+			.no-display { display: none; }
+			.nobr 		{ white-space: nowrap; }
+			
+			/* develompent styles */
+			.g-static-todo	{ background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKElEQVQ4jWP4//9/AxhbMPwnh81AiWaIARRoBrEZRr0w6oVRL1DHCwAj0BCbelWSywAAAABJRU5ErkJggg==") 0 0 repeat !important; }
+
+
+/* @end */
+
+/* @group Page Layout */
+
+	.wrapper {
+		min-width: 1000px;
+		min-width: 1000rem;
+		}
+		
+		.page {
+			width: 1000px;
+			width: 1000rem;
+			margin: 0 auto;
+			}
+			
+			/* Header Container */
+			.header-container { }
+				
+				/* header panel */
+				.header-panel { }
+				
+				/* header */
+				.header { }
+					
+					/* logo */
+					.header > .logo { }
+					.header > .branding { }
+						.branding > :link.logo { }
+						.branding > h1.logo { }
+							.branding > .logo > strong { }
+								.branding > .logo > strong > img { }
+					
+					/* quick-access */
+					.quick-access { }
+						
+						/* welcome message */
+						.welcome-msg { }
+
+						/* links */
+						.quick-access > .links { }
+							.quick-access > .links > li { }
+								.quick-access > .links > li > a { }
+							
+							/*
+							_first
+							*/
+							.quick-access > .links > .first { }
+							
+							/*
+							_last
+							*/
+							.quick-access > .links > .last { }
+						
+						/* languages */
+						.form-language { }
+							.form-language > label { }
+							.form-language > select { }
+			
+			/* Main Container */
+			.main-container {}
+				.main { }
+				
+				/*
+				_col2-left-layout
+				*/
+				.col2-left-layout { }
+					.col2-left-layout .main { }
+						.col2-left-layout .col-main { }
+						.col2-left-layout .col-left { }
+			
+			
+			/* Footer Container */
+			.footer-container { }
+				.footer { }
+
+/* @end */
+
+/* @group Layout set */
+
+	.col2-set { }
+		.col-1 { 
+			float: left;
+			}
+		.col-2 { 
+			float: right;
+			}
+
+/* @end */
+
+/* @group Inline Clear */
+
+	.inline-fix:after,
+	.main:after,
+	.col2-set:after {
+		display: block;
+		clear: both;
+		
+		content: ""; 
+		}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+//
+// Bootstrap Core variables and mixins
+// --------------------------------------------------
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+
+// Reset
+// --------------------------------------------------
+html {}
+    body {
+
+        font-family: "PT Sans", @baseFontFamily;
+        padding-top: 40px;
+
+        background: url(../images/background.png);
+        }
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 0;
+    }
+}
+
+
+// Extended rules
+// -------------------------
+.no-display {
+    display: none;
+}

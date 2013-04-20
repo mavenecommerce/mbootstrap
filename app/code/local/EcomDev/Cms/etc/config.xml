@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <EcomDev_Cms>
+            <version>0.1.0</version>
+        </EcomDev_Cms>
+    </modules>
+    <global>
+        <blocks>
+            <ecomdev_cms>
+                <class>EcomDev_Cms_Block</class>
+            </ecomdev_cms>
+        </blocks>
+        <models>
+            <ecomdev_cms>
+                <class>EcomDev_Cms_Model</class>
+            </ecomdev_cms>
+        </models>
+        <helpers>
+            <ecomdev_cms>
+                <class>EcomDev_Cms_Helper</class>
+            </ecomdev_cms>
+        </helpers>
+        <resources>
+            <ecomdev_cms_setup>
+                <setup>
+                    <module>EcomDev_Cms</module>
+                    <class>EcomDev_Cms_Model_Resource_Setup</class>
+                </setup>
+                <setup>
+                </setup>
+            </ecomdev_cms_setup>
+        </resources>
+    </global>
+</config>

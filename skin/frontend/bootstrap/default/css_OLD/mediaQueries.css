@@ -1,0 +1,68 @@
+/* PROJECT_NAME project MediaQueries styles */
+
+@media (max-width: 1154px) {
+	
+	body::before { 
+		font-weight: bold;
+		
+		display: block;
+		position: fixed;
+		z-index: 999;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 5px 0 4px;
+		
+		content: "Media Query from 960px to 1154px";
+		
+		text-align: center;
+		
+		background: rgba(0, 0, 0, 0.5);
+		}
+	
+	/* . */
+	
+}
+
+
+@media (max-width: 960px) {
+	
+	/* . */
+	
+}
+
+
+@media (max-width: 768px) {
+		
+	/* . */
+
+}
+
+
+@media (max-width: 480px) {
+	
+	/* . */
+	
+}
+
+
+@media (max-width: 360px) {
+	
+	/* . */
+	
+}
+
+
+@media (max-width: 340px) {
+	
+	/* . */
+	
+}
+
+
+@media (max-width: 320px) {
+	
+	/* . */
+	
+}
+/* @end */
