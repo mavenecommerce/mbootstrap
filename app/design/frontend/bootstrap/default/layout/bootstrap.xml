@@ -139,28 +139,6 @@
     </customer_logged_in>
 
     <!--
-    Load this update on every page when customer is logged out
-    -->
-
-    <customer_logged_out translate="label">
-        <reference name="root">
-
-            <reference name="header">
-                <reference name="top.links_custom">
-
-                    <action method="addLink" translate="label title" module="customer">
-                        <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
-                        <prepare/><urlParams/><position>1000</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="icon-lock"></i>]]></beforeText>
-                    </action>
-
-                </reference>
-            </reference>
-
-        </reference>
-    </customer_logged_out>
-
-    <!--
     Home page
     -->
 
