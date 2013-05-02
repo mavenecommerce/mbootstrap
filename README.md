@@ -1,3 +1,5 @@
+![EcomDev](http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png)
+
 # Magento-Bootstrap theme
 
 Magento-Bootstrap theme it is package fully based on Twitter Bootstrap framework.
