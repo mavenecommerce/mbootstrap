@@ -28,7 +28,7 @@ Current version: Alpha
 
 Really it is very-very easy to use :)
 
-Develope process as usual for Magento theme (more about front-end develope for Magento you can see on [Designer's Guide To Magento](http://www.magentocommerce.com/design_guide/articles/working-with-magento-themes))
+Develop process as usual for Magento theme (more about front-end develope for Magento you can see on [Designer's Guide To Magento](http://www.magentocommerce.com/design_guide/articles/working-with-magento-themes))
 
 ### Create your theme based on Magento-Bootstrap theme
 
