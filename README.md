@@ -1,4 +1,4 @@
-![EcomDev](http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png)
+<a href="http://www.ecomdev.org">![EcomDev](http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png)</a>
 
 # Magento-Bootstrap theme
 
