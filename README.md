@@ -17,7 +17,7 @@ Current version: Alpha
 
 ## How to install
 
-1. Clone `git clone git://github.com/EcomDev/magento-bootstrap.git` in your local project folder and install Magento
+1. `modman clone git@github.com:EcomDev/mbootstrap.git mboostrap`
 2. Open Admin Panel
     * go to **System -> Configuration**
     * open **Design** tab on left sidebar
