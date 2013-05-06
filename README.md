@@ -98,7 +98,7 @@ Magento-Bootstrap theme contains also developers tools:
 * run *less to css* compile
 * run file system watching program and compile *less to css* automatically
 
-For more information go *magento/skin/fronetnd/bootstrap/default* folder and read *Makefile* file
+For more information go *magento/skin/fronetnd/default/bootstrap* folder and read *Makefile* file
 
 ### Requirements
 
