@@ -5,23 +5,6 @@
 @import "../bootstrap/less/mixins.less";
 
 
-// Mixins
-// --------------------------------------------------
-.sub-title () {
-    font-size: @fontSizeLarge;
-    font-weight: normal;
-
-    margin-left: -@gridGutterWidth / 2;
-    margin-right: -@gridGutterWidth / 2;
-    padding-left: @gridGutterWidth / 2;
-    padding-right: @gridGutterWidth / 2;
-
-    line-height: @baseLineHeight;
-
-    border-bottom: 2px solid @grayLighter;
-}
-
-
 // Product view
 // --------------------------------------------------
 .product-view {
@@ -36,7 +19,7 @@
                 margin-bottom: @baseLineHeight;
             }
 
-            a.product-name {
+            .product-name {
                 > h1 {}
             }
 
@@ -72,10 +55,9 @@
         }
 
         .product-img-box {
-            .product-image { }
-            .more-views {
-                > h2 {
-                    .sub-title;
+            .product-image {
+                > img {
+                    max-width: 100%;
                 }
             }
         }
@@ -138,7 +120,17 @@
             margin-bottom: @baseLineHeight;
 
             > h2 {
-                .sub-title;
+                font-size: @fontSizeLarge;
+                font-weight: normal;
+
+                margin-left: -@gridGutterWidth / 2;
+                margin-right: -@gridGutterWidth / 2;
+                padding-left: @gridGutterWidth / 2;
+                padding-right: @gridGutterWidth / 2;
+
+                line-height: @baseLineHeight;
+
+                border-bottom: 2px solid @grayLighter;
             }
 
             &:first-child {
