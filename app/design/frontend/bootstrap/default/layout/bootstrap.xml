@@ -46,25 +46,38 @@
                 <action method="addItem"><type>skin_css</type><name>bootstrap/bootstrap/css/bootstrap.min.css</name><params>media="screen"</params></action>
                 <action method="addItem"><type>skin_css</type><name>bootstrap/bootstrap/css/bootstrap-responsive.min.css</name><params>media="screen"</params></action>
 
+
                 <!-- General styles -->
                 <action method="addItem"><type>skin_css</type><name>css/styles.css</name><params/></action>
+                <!--<action method="addItem"><type>skin_css</type><name>css/forms.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>css/blocks.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>css/my-account.css</name><params/></action>-->
                 <!--<action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>-->
+
+
+                <!-- @MediaQueries styles -->
+                <!--<action method="addItem"><type>skin_css</type><name>css/mediaQueries.css</name><params/></action>-->
+                <!--<action method="addItem"><type>skin_js</type><script>js/dev_mediaQueries.js</script></action>-->
+
 
                 <!-- IE styles -->
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lte IE 8</if></action>
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie9.css</name><params/><if>IE 9</if></action>
 
 
-                <!-- jQuery framework -->
-                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery-1.9.1.min.js</script></action>
-
-                <!-- Bootstrap framework scripts -->
-                <action method="addItem"><type>skin_js</type><script>bootstrap/bootstrap/js/bootstrap.min.js</script></action>
+                <!-- Add fontsquirrel fonts -->
+                <!--<action method="addItem"><type>skin_css</type><name>css/fonts/stylesheet.css</name><params/></action>-->
 
 
-                <!-- Custom fonts -->
-                <action method="addItem"><type>skin_css</type><name>fonts/Font-Awesome/css/font-awesome.min.css</name><params/></action>
-
+                <!-- Add Cufon fonts generator script -->
+                <!--<action method="addItem">
+                    <type>skin_js</type>
+                    <jsfile>js/cufon-yui.js</jsfile>
+                </action>
+                <action method="addItem">
+                    <type>skin_js</type>
+                    <jsfile>js/HelveticaNeue_Thin_100.font.js</jsfile>
+                </action>-->
 
                 <block type="core/text" name="google.webfonts">
                     <action method="setText"><text><![CDATA[<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>]]></text></action>
@@ -108,10 +121,16 @@
             </block>
 
             <reference name="footer">
-                <block type="core/template" name="page.company.organization" as="organization" template="page/assets/microdata/organization.phtml"/>
+                <block type="core/template" name="page.company.organization" as="organization" template="page/html/footer/organization.phtml"/>
             </reference>
 
-            <block type="core/text_list" name="before_body_end" as="before_body_end" />
+            <block type="page/html_head" name="before_body_end" as="before_body_end">
+                <!-- jQuery framework -->
+                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery-1.9.1.min.js</script></action>
+
+                <!-- Bootstrap framework scripts -->
+                <action method="addItem"><type>skin_js</type><script>bootstrap/bootstrap/js/bootstrap.min.js</script></action>
+            </block>
 
         </reference>
     </default>
