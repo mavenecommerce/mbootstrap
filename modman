@@ -13,6 +13,7 @@ skin/frontend/bootstrap/default/fonts/Font-Awesome/less					skin/frontend/bootst
 skin/frontend/bootstrap/default/fonts/Font-Awesome/sass					skin/frontend/bootstrap/default/fonts/Font-Awesome/sass
 skin/frontend/bootstrap/default/images							skin/frontend/bootstrap/default/images
 skin/frontend/bootstrap/default/js							skin/frontend/bootstrap/default/js
+skin/frontend/bootstrap/default/css							skin/frontend/bootstrap/default/css	
 skin/frontend/bootstrap/default/less							skin/frontend/bootstrap/default/less
 skin/frontend/bootstrap/default/Makefile						skin/frontend/bootstrap/default/Makefile
 skin/frontend/bootstrap/default/watcher.js						skin/frontend/bootstrap/default/watcher.js
