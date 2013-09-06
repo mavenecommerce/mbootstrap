@@ -1,56 +1,20 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Layout
 // --------------------------------------------------
 .wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: @gridRowWidth + @gridGutterWidth * 2;
+    //width: @gridRowWidth + @gridGutterWidth * 2;
 
     .case {
-        padding: @gridGutterWidth / 2;
+        //padding: @gridGutterWidth / 2;
 
-        background: @white;
+        //background: @white;
         border-style: solid;
-        border-width: @gridGutterWidth / 2;
-        #translucent > .border(@black, 0.075);
+        //border-width: @gridGutterWidth / 2;
+        //#translucent > .border(@black, 0.075);
 
-        .border-radius(@borderRadiusSmall - 1);
-    }
-}
-
-@media (min-width: 1200px) {
-    .wrapper {
-        width: @gridRowWidth1200 + @gridGutterWidth1200 * 2;
-        
-        .case {
-            padding: @gridGutterWidth1200 / 2;
-
-            border-width: @gridGutterWidth1200 / 2;
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-    .wrapper {
-        width: @gridRowWidth768 + @gridGutterWidth768 * 2;
-
-        .case {
-            padding: @gridGutterWidth768 / 2;
-
-            border-width: @gridGutterWidth768 / 2;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .wrapper {
-        width: auto;
+        //.border-radius(@border-radius-small - 1);
     }
 }
 
@@ -88,14 +52,14 @@
 
     .quick-access {
         .welcome-msg {
-            margin: 0 0 @baseLineHeight / 2;
+            margin: 0 0 @line-height-base / 2;
 
             text-align: right;
         }
 
         .form-language {
             float: right;
-            margin: 0 0 @baseLineHeight / 2;
+            margin: 0 0 @line-height-base / 2;
 
             > label {
                 margin: auto;
@@ -113,28 +77,6 @@
             > .first {}
             
             > .last {}
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .header-container {
-        .quick-access {
-            margin-top: @baseLineHeight / 2;
-            .welcome-msg {
-                text-align: center;
-            }
-
-            .form-language {
-                float: none;
-            }
-            .links {
-                float: none;
-
-                [class*="icon-"] {
-                    display: none;
-                }
-            }
         }
     }
 }
@@ -157,13 +99,13 @@
 // Footer Container
 // -------------------------
 .footer-container {
-    margin: @baseLineHeight 0 0;
+    margin: @line-height-base 0 0;
 
     .footer {
         color: @gray;
         
         .organization {
-            margin-bottom: @baseLineHeight;
+            margin-bottom: @line-height-base;
         }
 
         .copyright {}

@@ -1,11 +1,4 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-@import "mixins";
-
-
 // Search
 // --------------------------------------------------
 
@@ -23,51 +16,44 @@
     .search-autocomplete {
         padding: 3px 0;
 
-        background: @dropdownBackground;
-        border: 1px solid @dropdownBorder;
+        background: @dropdown-bg;
+        border: 1px solid @dropdown-border;
 
         .box-sizing(border-box);
-        .border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+        .border-radius(0 0 @border-radius-base @border-radius-base);
 
         > ul {
             .reset-list;
 
             > li {
-                padding: @paddingSmall;
+                padding: @padding-small-vertical @padding-small-horizontal;
 
-                color: @dropdownLinkColor;
+                color: @dropdown-link-color;
                 cursor: pointer;
 
                 > .amount {
-                    font-size: @fontSizeMini;
+                    font-size: @font-size-small;
 
                     margin-right: 3px;
                 }
 
                 &:hover {
-                    background: @dropdownLinkBackgroundActive;
+                    background: @dropdown-link-active-bg;
 
-                    color: @dropdownLinkColorHover;
+                    color: @dropdown-link-hover-color;
                 }
                 &.odd {}
                 &.even {}
                 &.first {}
                 &.last {}
                 &.selected {
-                    background: @dropdownLinkBackgroundHover;
+                    background: @dropdown-link-hover-bg;
 
-                    color: @dropdownLinkColorHover;
+                    color: @dropdown-link-hover-color;
                 }
             }
         }
     }
-
-@media (max-width: 767px) {
-    .navbar-search {
-        float: none;
-        margin-top: @baseLineHeight / 2;
-    }
-}
 
 
 // Search result

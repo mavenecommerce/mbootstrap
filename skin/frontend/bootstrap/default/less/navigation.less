@@ -1,16 +1,10 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Navigation
 // --------------------------------------------------
 .nav-container {}
 
     .navbar {
-        margin-top: @baseLineHeight;
+        margin-top: @line-height-base;
     }
 
     .nav { 
@@ -38,16 +32,16 @@
                     position: absolute;
                     top: 100%;
                     left: 0;
-                    z-index: @zindexDropdown;
+                    z-index: @zindex-dropdown;
                     display: none; // none by default, but block on "open" of the menu
                     float: left;
                     min-width: 160px;
                     padding: 5px 0;
                     margin: 2px 0 0; // override default ul
                     list-style: none;
-                    background-color: @dropdownBackground;
+                    background-color: @dropdown-bg;
                     border: 1px solid #ccc; // Fallback for IE7-8
-                    border: 1px solid @dropdownBorder;
+                    border: 1px solid @dropdown-border;
                     *border-right-width: 2px;
                     *border-bottom-width: 2px;
                     .border-radius(6px);
@@ -65,15 +59,15 @@
                             padding: 3px 20px;
                             clear: both;
                             font-weight: normal;
-                            line-height: @baseLineHeight;
-                            color: @dropdownLinkColor;
+                            line-height: @line-height-base;
+                            color: @dropdown-link-color;
                             white-space: nowrap;
 
                             &:hover,
                             &:focus {
                                 text-decoration: none;
-                                color: @dropdownLinkColorHover;
-                                #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+                                color: @dropdown-link-hover-color;
+                                //#gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
                             }                           
                         }
 
@@ -102,7 +96,7 @@
                                 border-color: transparent;
                                 border-style: solid;
                                 border-width: 5px 0 5px 5px;
-                                border-left-color: darken(@dropdownBackground, 20%);
+                                border-left-color: darken(@dropdown-bg, 20%);
                                 margin-top: 5px;
                                 margin-right: -10px;
                             }

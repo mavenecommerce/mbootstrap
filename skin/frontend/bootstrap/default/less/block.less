@@ -1,33 +1,27 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-@import "mixins";
-
 // Block
 // --------------------------------------------------
 .block {
-    margin: 0 0 @baseLineHeight;
+    margin: 0 0 @line-height-base;
     
-    padding: @gridGutterWidth / 4;
+    //padding: @gridGutterWidth / 4;
 
     background: url(../images/blocks/block/background.png);
 
-    .border-radius(@borderRadiusSmall - 1);
+    .border-radius(@border-radius-small - 1);
 
     > .block-title {
         
-        padding: @gridGutterWidth / 2;
+        //padding: @gridGutterWidth / 2;
 
-        line-height: @baseLineHeight;
+        line-height: @line-height-base;
 
-        #translucent > .background(@black, 0.1);
+        //#translucent > .background(@black, 0.1);
 
         > a {}
 
         > strong {
-            font-size: @fontSizeLarge;
+            font-size: @font-size-large;
             
             color: #fff;
             text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.50);
@@ -37,14 +31,14 @@
     }
 
     .block-content {
-        padding: @baseLineHeight / 2;
+        padding: @line-height-base / 2;
 
-        background: @white;
+        //background: @white;
 
         > .block-subtitle {
             font-weight: bold;
 
-            color: lighten(@textColor, 40%);
+            //color: lighten(@textColor, 40%);
         }
 
         > .empty {
@@ -52,7 +46,7 @@
         }
 
         > .actions {
-            margin-top: @baseLineHeight;
+            margin-top: @line-height-base;
         }
     }
 
@@ -75,7 +69,7 @@
 
     > .block-content {
         > .currently {
-            margin: 0 0 @baseLineHeight;
+            margin: 0 0 @line-height-base;
 
             > .nav-list {
                 padding: 0;
@@ -83,7 +77,7 @@
                 .currently__list {
                     > li {
                         > span {
-                            color: @textColor;
+                            //color: @textColor;
 
                             &.title {}
                             &.value {
@@ -105,7 +99,7 @@
             }
             
             .price {
-                font-size: @baseFontSize;
+                font-size: @font-size-base;
             }
         }
         > .actions {}
@@ -135,7 +129,7 @@
         .reset-list;
 
         > .item {
-            margin: 0 0 @baseLineHeight / 2;
+            margin: 0 0 @line-height-base / 2;
 
             > .votes {}
             > .answer {}
@@ -148,10 +142,10 @@
 // -------------------------
 .block-reorder {
     .reorder-list {
-        margin-bottom: @baseLineHeight;
+        margin-bottom: @line-height-base;
 
         > .item {
-            margin-bottom: @baseLineHeight / 2;
+            margin-bottom: @line-height-base / 2;
             position: relative;
 
             > [type="checkbox"] {
@@ -161,7 +155,7 @@
             }
             > .product-name {
                 display: block;
-                padding-left: @gridGutterWidth;
+                //padding-left: @gridGutterWidth;
             }
         }
     }
@@ -215,14 +209,14 @@
     .block-content {
 
         .summary {
-            padding: @baseLineHeight/2;
+            padding: @line-height-base/2;
 
-            background-color: @grayLighter;
+            //background-color: @grayLighter;
 
             .border-radius(2px);
         }
         .action {
-            margin: @baseLineHeight/2 0 @baseLineHeight;
+            margin: @line-height-base/2 0 @line-height-base;
 
             text-align: right;
         }
@@ -236,7 +230,7 @@
 
                 > .thumbnail {
                     float: left;
-                    margin-right: @gridGutterWidth / 2;
+                    //margin-right: @gridGutterWidth / 2;
                 }
 
                 > .caption {
@@ -251,7 +245,7 @@
                     }
 
                     .price {
-                        font-size: @baseFontSize;
+                        font-size: @font-size-base;
                     }
                 }
 
@@ -270,24 +264,6 @@
         }
 
         .empty {}
-    }
-}
-
-@media (max-width: 767px) {
-    .block-cart {
-        .block-content {
-            .thumbnails {
-                > .item {
-
-                    > .caption {
-                        .actions {
-                            .opacity(100);
-                            .transition(none);
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 

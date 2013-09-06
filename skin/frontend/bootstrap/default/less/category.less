@@ -1,10 +1,4 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Category products
 // --------------------------------------------------
 .category-products {}
@@ -18,36 +12,25 @@
         .ratings,
         .price-box,
         .availability {
-            margin-bottom: @baseLineHeight / 2;
+            margin-bottom: @line-height-base / 2;
         }
 
         .product-image {
             display: block;
         }
         .product-name {
-            font-size: @baseFontSize;
+            font-size: @font-size-base;
 
-            min-height: @baseLineHeight * 2;
+            min-height: @line-height-base * 2;
 
-            line-height: @baseLineHeight;
+            line-height: @line-height-base;
         }
         .ratings {}
         .price-box {
-            min-height: @baseLineHeight * 2;
+            min-height: @line-height-base * 2;
         }
         .availability {}
         .actions {}
-    }
-}
-
-@media (max-width: 767px) {
-    .products-grid {
-        .product-image {
-            > img {
-                width: 100%;
-            }
-        }
-    
     }
 }
 
@@ -61,7 +44,7 @@
         .price-box,
         .availability,
         .desc {
-            margin-bottom: @baseLineHeight / 2;
+            margin-bottom: @line-height-base / 2;
         }
 
         .product-image {
@@ -76,9 +59,9 @@
         }
 
         .product-name {
-            font-size: @baseFontSize;
+            font-size: @font-size-base;
 
-            line-height: @baseLineHeight;
+            line-height: @line-height-base;
         }
         .ratings {}
         .price-box {}
@@ -88,27 +71,15 @@
     }
 }
 
-@media (max-width: 767px) {
-    .products-list {
-        > .item {
-            .product-image {
-                float: none;
-            }
-            .caption {
-                margin-left: auto;
-            }
-        }
-    }
-}
 
 // Product elements
 // -------------------------
 .product-name {
-    font-size: @baseFontSize;
+    font-size: @font-size-base;
 
     margin-top: 0;
 
-    line-height: @baseLineHeight;
+    line-height: @line-height-base;
 }
 
 .product-image {

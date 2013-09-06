@@ -23,7 +23,7 @@
 #
 # Defaults
 # --------------------------------------------------
-THEME_LESS 		= ./less/styles.less
+THEME_LESS 		= ./less/mbootstrap.less
 THEME_CSS		= css/styles.css
 THEME_LESS_DIR	= less
 

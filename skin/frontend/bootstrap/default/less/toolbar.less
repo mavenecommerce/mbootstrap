@@ -1,19 +1,12 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Toolbar
 // --------------------------------------------------
-
 .toolbar { 
-    margin-bottom: @baseLineHeight;
+    margin-bottom: @line-height-base;
     
     > .pager-wrapper {
         > .amount {
-            line-height: @baseLineHeight + 10;
+            line-height: @line-height-base + 10;
         }
         
         .limiter {}
@@ -23,23 +16,9 @@
         }
     }
     > .sorter {
-        margin-top: @baseLineHeight / 2;
+        margin-top: @line-height-base / 2;
 
         .view-mode {}
-    }
-}
-
-
-@media (max-width: 767px) {
-    .toolbar {
-        .limiter {
-            display: inline-block;
-            margin-bottom: @baseLineHeight / 2;
-        }
-
-        .sort-by {
-            display: inline-block;
-        }
     }
 }
 

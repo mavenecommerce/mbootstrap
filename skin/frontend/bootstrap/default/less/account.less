@@ -1,10 +1,4 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Account register/login area
 // --------------------------------------------------
 
@@ -16,7 +10,7 @@
 
     .new-users {
         .buttons-set {
-            line-height: @baseLineHeight * 2 + 4;
+            line-height: @line-height-base * 2 + 4;
 
             .clearfix();
 
@@ -33,7 +27,7 @@
     }
     .registered-users {
         .content {
-            padding: 0 @gridGutterWidth @gridGutterWidth;
+            //padding: 0 @gridGutterWidth @gridGutterWidth;
             
             background: url(../images/blocks/block/background.png);
 
@@ -42,7 +36,7 @@
             .form-list {}
             
             .buttons-set {
-                line-height: @baseLineHeight * 2 + 4;
+                line-height: @line-height-base * 2 + 4;
 
                 .link-forgot {
                     white-space: nowrap;
@@ -56,7 +50,7 @@
     }
 
     h2 {
-        font-size: @fontSizeLarge;
+        font-size: @font-size-large;
         font-weight: normal;
 
         margin: 0;
@@ -64,48 +58,15 @@
 }
 
     .account__or {
-        font-size: @fontSizeLarge * 3;
+        font-size: @font-size-large * 3;
 
         line-height: 260px;
         text-align: center;
         text-transform: uppercase;
 
-        color: @grayLight;
+        //color: @grayLight;
     }
 
-@media (min-width: 1200px) {
-    .account-login {
-        .registered-users {
-            .content {
-                padding-left: @gridGutterWidth1200;
-                padding-right: @gridGutterWidth1200;
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-    .account-login {
-        .registered-users {
-            .content {
-                padding-left: @gridGutterWidth768;
-                padding-right: @gridGutterWidth768;
-            }
-        }
-    }
-
-    .account__or {
-        font-size: @fontSizeLarge * 2;
-    }
-}
-
-@media (max-width: 767px) {
-    .account__or {
-        font-size: @fontSizeLarge * 2;
-            
-        line-height: @baseLineHeight * 2;
-    }
-}
 
 // Register form
 // -------------------------
@@ -114,7 +75,7 @@
     .create-form {
         .fieldset {
             > h2 {
-                font-size: @fontSizeLarge;
+                font-size: @font-size-large;
                 font-weight: normal;
 
                 margin: 0;
@@ -128,14 +89,6 @@
 // Register form on Login page
 // -------------------------
 .account-create-login {}
-
-@media (max-width: 767px) {
-    .account-create-login {
-        .buttons-set.pull-right {
-            float: none;
-        }
-    }
-}
 
 
 // Block - Account navigation
@@ -168,7 +121,7 @@
 // -------------------------
 .my-account {
     h2 {
-        font-size: @fontSizeLarge;
+        font-size: @font-size-large;
         font-weight: normal;
     }
 }
@@ -187,30 +140,30 @@
     }
     > a {
         float: right;
-        margin-top: @baseLineHeight;
+        margin-top: @line-height-base;
     }
 }
 
 .box {
     .box-title {
-        border-bottom: 2px solid @grayLighter;
+        //border-bottom: 2px solid @grayLighter;
 
         .clearfix();
 
         > h3 {
-            font-size: @fontSizeLarge;
+            font-size: @font-size-large;
             font-weight: normal;
         }
         > a {
             float: right;
-            margin-top: @baseLineHeight / 2;
+            margin-top: @line-height-base / 2;
             
-            line-height: @baseLineHeight * 2;
+            line-height: @line-height-base * 2;
         }
     }
     
     .box-content {
-        margin-top: @baseLineHeight;
+        margin-top: @line-height-base;
     }
 }
 
@@ -225,7 +178,7 @@
     }
 
     .price {
-        font-size: @baseFontSize;
+        font-size: @font-size-base;
     }
 }
 
@@ -237,16 +190,16 @@
     .addresses-additional {}
     
     h2 {
-        border-bottom: 2px solid @grayLighter;
+        //border-bottom: 2px solid @grayLighter;
     }
 
     ol {
         .reset-list;
         h3 {
             font-weight: normal;
-            font-size: @fontSizeLarge;
+            font-size: @font-size-large;
 
-            border-bottom: 1px solid @grayLighter;
+            //border-bottom: 1px solid @grayLighter;
         }
     }
 }
@@ -257,18 +210,18 @@
 .orders-history {
     
     .table {
-        margin: @baseLineHeight 0;
+        margin: @line-height-base 0;
 
         td {
             vertical-align: middle;
         }
         .price {
-            font-size: @baseFontSize;
+            font-size: @font-size-base;
         }
     }
 
     .pager-wrapper {
-        margin-bottom: @baseLineHeight;
+        margin-bottom: @line-height-base;
     }
 }
 
@@ -283,7 +236,7 @@
 
 .order-items {
     .price {
-        font-size: @baseFontSize;
+        font-size: @font-size-base;
     }
     .table {
         tfoot {
@@ -291,11 +244,11 @@
                 font-weight: bold;
 
                 .price {
-                    font-size: @baseFontSize;
+                    font-size: @font-size-base;
                 }
                 
                 &.last {
-                    font-size: @fontSizeLarge;
+                    font-size: @font-size-large;
                     font-weight: bold;
 
                     .price {
@@ -338,7 +291,7 @@
 
     .cell_cart {
         > .price-box {
-            margin-bottom: @baseLineHeight;
+            margin-bottom: @line-height-base;
 
             white-space: nowrap;
         }

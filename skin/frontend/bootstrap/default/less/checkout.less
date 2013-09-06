@@ -1,10 +1,4 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // One Page Checkout
 // --------------------------------------------------
 .opc {
@@ -12,23 +6,23 @@
 
 	> li {
 		> .step-title {
-			margin: 0 0 @baseLineHeight;
+			margin: 0 0 @line-height-base;
 		    position: relative;
 		    
-			border-bottom: 2px solid @grayLighter;
+			//border-bottom: 2px solid @grayLighter;
 
 	        .clearfix();
 
 			> h2 {
-				font-size: @fontSizeLarge * 1.25;
+				font-size: @font-size-large * 1.25;
 		        font-weight: normal;
 
 				float: left;
-		        margin: 0 0 0 @baseLineHeight * 1.5 + 10;
+		        margin: 0 0 0 @line-height-base * 1.5 + 10;
 		        
-		        line-height: @baseLineHeight * 1.5;
+		        line-height: @line-height-base * 1.5;
 
-		        color: @grayLight;
+		        //color: @grayLight;
 			}
 			> a {
 				float: right;
@@ -38,21 +32,21 @@
                 .transition(opacity 0.25s ease-in-out;)
 			}
 			> .number {
-				font-size: @fontSizeLarge * 1.25;
+				font-size: @font-size-large * 1.25;
 		        font-weight: bold;
 
 				position: absolute;
 				left: 0;
 				bottom: 0;
-				width: @baseLineHeight * 1.5;
-				height: @baseLineHeight * 1.5;
+				width: @line-height-base * 1.5;
+				height: @line-height-base * 1.5;
 
-		        line-height: @baseLineHeight * 1.5;
+		        line-height: @line-height-base * 1.5;
 		        text-align: center;
 		        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
 
-		        background: @grayLighter;
-		        color: @white;
+		        //background: @grayLighter;
+		        //color: @white;
 
 		        .border-radius(2px 2px 0 0);
 			}
@@ -65,12 +59,12 @@
 		}
 		
 		> .step {
-			margin: @baseLineHeight 0;
+			margin: @line-height-base 0;
 			
 			.form-list {}
 
 			.buttons-set {
-				line-height: @baseLineHeight * 1.5;
+				line-height: @line-height-base * 1.5;
 
 				.clearfix();
 
@@ -86,7 +80,7 @@
 				}
 				> .please-wait {
 					float: right;
-					margin-right: @gridGutterWidth;
+					//margin-right: @gridGutterWidth;
 				}
 			}
 
@@ -99,7 +93,7 @@
 						list-style: none;
 						
 						> li {
-							margin-bottom: @baseLineHeight/2;
+							margin-bottom: @line-height-base/2;
 
 							> label {
 								margin-bottom: 0;
@@ -119,13 +113,13 @@
 		&.allow {
 			> .step-title {
 				> h2 {
-					color: @textColor;
+					//color: @textColor;
 					cursor: pointer;
 				}
 				> .number {
 					text-shadow: none;
 
-					color: @green;
+					//color: @green;
 				}
 				> a {
 					display: inline;
@@ -138,7 +132,7 @@
 				> .number {
 					text-shadow: none;
 
-					color: @black;
+					//color: @black;
 				}
 				> h2 {
 					cursor: default;
@@ -152,14 +146,14 @@
 		&#opc-login {
 			#checkout-step-login {
 				h3 {
-					font-size: @fontSizeLarge;
+					font-size: @font-size-large;
 	                font-weight: normal;
 
 	                margin: 0;
 				}
 
 				h4 {
-					font-size: @baseFontSize;
+					font-size: @font-size-base;
 	                
 	                margin: 0;
 				}
@@ -172,11 +166,11 @@
 
 				.registered-users {
 					.buttons-set {
-						line-height: @baseLineHeight * 2 + 4;
+						line-height: @line-height-base * 2 + 4;
 
 						.btn {
 							float: none;
-							margin-right: @gridGutterWidth / 2;
+							//margin-right: @gridGutterWidth / 2;
 						}
 					}
 				}
@@ -214,11 +208,11 @@
 						font-weight: bold;
 
 						.price {
-							font-size: @baseFontSize;
+							font-size: @font-size-base;
 						}
 						
 						&.last {
-							font-size: @fontSizeLarge;
+							font-size: @font-size-large;
 							font-weight: bold;
 
 							.price {
@@ -234,12 +228,12 @@
 
 					margin: 0;
 
-					line-height: @baseLineHeight;
+					line-height: @line-height-base;
 				}
 				
 				.cart-price {
 					> .price {
-						font-size: @baseFontSize;
+						font-size: @font-size-base;
 						font-weight: normal;
 					}
 				}
@@ -247,26 +241,12 @@
 
 			#checkout-review-submit {
 				.buttons-set {
-					line-height: @baseLineHeight * 2 + 4;
+					line-height: @line-height-base * 2 + 4;
 				}
 			}
 		}
 	}
 }
-
-@media (max-width: 767px) {
-	.opc {
-		> li {
-			> .step-title {
-				> a {
-					.opacity(100);
-	                .transition(none)
-				}
-			}
-		}
-	}
-}
-
 
 
 // Block - Progress
@@ -285,9 +265,9 @@
 			> dt {
 				font-weight: normal;
 
-				margin-bottom: @baseLineHeight/2;
+				margin-bottom: @line-height-base/2;
 
-				color: @grayLight;
+				//color: @grayLight;
 				
 				.clearfix();
 
@@ -295,7 +275,7 @@
 					font-weight: normal;
 
 					float: right;
-					margin-left: @gridGutterWidth/4;
+					//margin-left: @gridGutterWidth/4;
 				}
 
 				> .separator {
@@ -307,21 +287,21 @@
 
 					padding: 3px 10px;
 
-					background: @grayLighter;
+					//background: @grayLighter;
 
-					color: @textColor;
+					//color: @textColor;
 
-					.border-radius(@borderRadiusSmall);
+					.border-radius(@border-radius-small);
 				}
 			}
 			> dd {
 				> address {}
 				
 				&.complete {
-					margin-bottom: @baseLineHeight;
+					margin-bottom: @line-height-base;
 
 					.price {
-						font-size: @baseFontSize;
+						font-size: @font-size-base;
 					}
 				}
 			}

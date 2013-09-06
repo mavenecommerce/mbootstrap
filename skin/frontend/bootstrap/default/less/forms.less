@@ -1,10 +1,4 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Forms
 // --------------------------------------------------
 
@@ -12,15 +6,15 @@
 // Input box
 // -------------------------
 .input-box {
-	margin-bottom: @baseLineHeight / 2;
-	min-width: @gridColumnWidth;
+	margin-bottom: @line-height-base / 2;
+	//min-width: @gridColumnWidth;
 
 	> input,
 	> select,
 	> textarea {
 		margin-bottom: 0;
 
-		.input-block-level();
+		//.input-block-level();
 	}
 }
 
@@ -28,9 +22,9 @@
 // Required info
 // -------------------------
 p.required {
-	margin-bottom: @baseLineHeight/4;
+	margin-bottom: @line-height-base/4;
 
-	line-height: @baseLineHeight;
+	line-height: @line-height-base;
 	color: #f00;
 
 	> em {
@@ -59,7 +53,7 @@ label.required {
 // -------------------------
 .fieldset {
 	> .legend {
-		font-size: @fontSizeLarge;
+		font-size: @font-size-large;
         font-weight: normal;
 
         margin: 0;
@@ -79,7 +73,7 @@ label.required {
 	}
 
 	li {
-		margin-bottom: @baseLineHeight / 2;
+		margin-bottom: @line-height-base / 2;
 
 		label {
 			&.required {
@@ -104,13 +98,13 @@ label.required {
 			margin-bottom: 0;
 
 			.field {
-				margin-bottom: @baseLineHeight / 2;
+				margin-bottom: @line-height-base / 2;
 			}
 
 			&.address {
 				.field {
 					+ .field {
-						margin-top: @baseLineHeight * 1.25; // label height + label margin-bottom
+						margin-top: @line-height-base * 1.25; // label height + label margin-bottom
 
 						+ .field {
 							margin-top: 0;
