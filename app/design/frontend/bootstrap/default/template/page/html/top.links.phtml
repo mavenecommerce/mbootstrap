@@ -31,18 +31,20 @@
 ?>
 <?php $_links = $this->getLinks(); ?>
 <?php if(count($_links)>0): ?>
-<div class="clearfix"></div>
-<div class="links btn-group" <?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?> >
+<div class="links" <?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?> >
 
-    <?php foreach($_links as $_link): ?>
-        <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
-            <?php echo $_link->toHtml() ?>
-        <?php else: ?>
-            <a class="btn <?php echo $_link->getLiParams() ?>" href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>">
-                <?php echo $_link->getBeforeText() ?> <?php echo $_link->getLabel() ?> <?php echo $_link->getAfterText() ?>
-            </a>
-        <?php endif;?>
-    <?php endforeach; ?>
+    <div class="btn-group">
+        <?php foreach($_links as $_link): ?>
+            <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
+                <?php echo $_link->toHtml() ?>
+            <?php else: ?>
+                <a class="btn btn-default <?php echo $_link->getLiParams() ?>" href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>">
+                    <?php echo $_link->getBeforeText() ?> <?php echo $_link->getLabel() ?> <?php echo $_link->getAfterText() ?>
+                </a>
+            <?php endif;?>
+        <?php endforeach; ?>
+    </div>
 
 </div>
+<div class="clearfix"></div>
 <?php endif; ?>

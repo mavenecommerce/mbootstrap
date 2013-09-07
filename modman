@@ -1,19 +1,8 @@
-app/code/local/EcomDev/Cms								app/code/local/EcomDev/Cms
+app/code/local/EcomDev/Cms								    app/code/local/EcomDev/Cms
 app/code/local/EcomDev/Bootstrap							app/code/local/EcomDev/Bootstrap
-app/design/frontend/bootstrap/default/layout						app/design/frontend/bootstrap/default/layout
-app/design/frontend/bootstrap/default/locale						app/design/frontend/bootstrap/default/locale
-app/design/frontend/bootstrap/default/template						app/design/frontend/bootstrap/default/template
 app/etc/modules/EcomDev_Cms.xml								app/etc/modules/EcomDev_Cms.xml
-app/etc/modules/EcomDev_Bootstrap.xml							app/etc/modules/EcomDev_Bootstrap.xml
-skin/frontend/bootstrap/default/bootstrap/bootstrap					skin/frontend/bootstrap/default/bootstrap/bootstrap
-skin/frontend/bootstrap/default/favicon.ico						skin/frontend/bootstrap/default/favicon.ico
-skin/frontend/bootstrap/default/fonts/Font-Awesome/css					skin/frontend/bootstrap/default/fonts/Font-Awesome/css
-skin/frontend/bootstrap/default/fonts/Font-Awesome/font					skin/frontend/bootstrap/default/fonts/Font-Awesome/font
-skin/frontend/bootstrap/default/fonts/Font-Awesome/less					skin/frontend/bootstrap/default/fonts/Font-Awesome/less
-skin/frontend/bootstrap/default/fonts/Font-Awesome/sass					skin/frontend/bootstrap/default/fonts/Font-Awesome/sass
-skin/frontend/bootstrap/default/images							skin/frontend/bootstrap/default/images
-skin/frontend/bootstrap/default/js							skin/frontend/bootstrap/default/js
-skin/frontend/bootstrap/default/css							skin/frontend/bootstrap/default/css	
-skin/frontend/bootstrap/default/less							skin/frontend/bootstrap/default/less
-skin/frontend/bootstrap/default/Makefile						skin/frontend/bootstrap/default/Makefile
-skin/frontend/bootstrap/default/watcher.js						skin/frontend/bootstrap/default/watcher.js
+app/etc/modules/EcomDev_Bootstrap.xml						app/etc/modules/EcomDev_Bootstrap.xml
+
+
+app/design/frontend/bootstrap/default						app/design/frontend/bootstrap/default
+skin/frontend/bootstrap/default								skin/frontend/bootstrap/default

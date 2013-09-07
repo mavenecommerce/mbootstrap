@@ -25,8 +25,9 @@
  */
 ?>
 <?php if($crumbs && is_array($crumbs)): ?>
-<div class="span12">
-    <ul class="breadcrumb" itemprop="breadcrumb">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <ol class="breadcrumb" itemprop="breadcrumb">
+
         <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
             <li class="<?php echo $_crumbName ?>" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
             <?php if($_crumbInfo['link']): ?>
@@ -36,12 +37,9 @@
             <?php else: ?>
                 <span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span>
             <?php endif; ?>
-
-            <?php if(!$_crumbInfo['last']): ?>
-                <span class="divider">/ </span>
-            <?php endif; ?>
             </li>
         <?php endforeach; ?>
-    </ul>
+
+    </ol>
 </div>
 <?php endif; ?>

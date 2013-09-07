@@ -55,7 +55,8 @@ watchr.watch({
             console.log('an error occured:', err);
         },
         change: function(changeType,filePath,fileCurrentStat,filePreviousStat){
-            exec('lessc -x --yui-compress less/mbootstrap.less css/styles.css && growlnotify -m "Build complete." && printf "[' + changeType + ']\t\t"&& date "+\033[32m✔\033[39m Build complete | %H:%M:%S." ', execCallback);
+            exec('lessc -x --yui-compress less/mbootstrap.less css/mbootstrap.css && growlnotify -m "Build complete." && printf "[' + changeType + ']\t\t"&& date "+\033[32m✔\033[39m Build complete | %H:%M:%S." ', execCallback);
+            exec('lessc -x --yui-compress less/responsive/mbootstrap.responsive.less css/mbootstrap.responsive.css && growlnotify -m "Responsive build complete." && printf "[' + changeType + ']\t\t"&& date "+\033[32m✔\033[39m Build complete | %H:%M:%S." ', execCallback);
         }
     },
     next: function(err,watchers){

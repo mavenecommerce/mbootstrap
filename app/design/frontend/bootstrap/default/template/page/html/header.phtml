@@ -27,30 +27,86 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-<header class="header-container case" itemscope itemtype="http://schema.org/WPHeader">
+<header class="header-container" itemscope itemtype="http://schema.org/WPHeader">
     <div class="header container">
 
         <div class="row">
-            <div class="i-logo span4">
+            <div class="i-logo col-xs-12 col-sm-3 col-md-4 col-lg-4">
                 <?php if ($this->getIsHomePage()):?>
-                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a></h1>
+                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a></h1>
                 <?php else:?>
-                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a>
                 <?php endif?>
             </div>
 
-            <div class="quick-access span8">
-                <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
-                <?php echo $this->getChildHtml('store_language') ?>
-                <?php echo $this->getChildHtml('topLinks_custom') ?>
-            </div>
+            <div class="quick-access col-sx-12 col-sm-9 col-md-8 col-lg-8">
+                <div class="i-top-bar">
+                    <div class="top-bar">
+                        <div class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></div>
 
+                        <?php echo $this->getChildHtml('store_language') ?>
+                    </div>
+
+                    <?php echo $this->getChildHtml('topLinks_custom') ?>
+                </div>
+            </div>
         </div>
 
         <?php echo $this->getChildHtml('topContainer'); ?>
 
     </div>
 </header>
+
+<div><b>
+    EXAMPLE
+</b></div>
+
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<?php echo $this->getUrl(); ?>"><?php echo $this->__("Home"); ?></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <?php echo $this->getChildHtml('topSearch') ?>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
 
 <nav class="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <div class="navbar-inner">
@@ -64,11 +120,9 @@
 
             <a class="brand" href="<?php echo $this->getUrl(); ?>" itemprop="description"><span class="icon-home"></span> <?php echo $this->__("Home"); ?></a>
 
-            <div class="nav-collapse collapse navbar-responsive-collapse">
-
+            <div class="_nav-collapse _collapse _navbar-responsive-collapse">
                 <?php echo $this->getChildHtml('topMenu') ?>
                 <div class="hidden-phone"><?php echo $this->getChildHtml('topSearch') ?></div>
-
             </div>
 
         </div>

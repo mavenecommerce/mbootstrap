@@ -1,30 +1,21 @@
 //
 // Layout
 // --------------------------------------------------
-.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    //width: @gridRowWidth + @gridGutterWidth * 2;
-
-    .case {
-        //padding: @gridGutterWidth / 2;
-
-        //background: @white;
-        border-style: solid;
-        //border-width: @gridGutterWidth / 2;
-        //#translucent > .border(@black, 0.075);
-
-        //.border-radius(@border-radius-small - 1);
-    }
-}
+.wrapper {}
 
 
 // Header Container
 // -------------------------
 .header-container {
+
+    padding: (@padding-large-vertical * 2) 0;
+
+    border-bottom: 2px solid @gray-lighter;
+    
     .header-panel {}
     
     .header {
+
         .i-logo {
             text-align: center;
 
@@ -38,28 +29,42 @@
                     overflow: hidden;
 
                     text-indent: -999%;
+                }
 
-                    img {
-                        display: block;
-                        margin: 0 auto;
-                    }
+                img {
+                    display: block;
+                    margin: 0 auto;
                 }
             }
+
             :link.logo {}
+            
             h1.logo {}
         }
     }
 
     .quick-access {
+        text-align: center;
+
+        .i-top-bar {
+            display: inline-block;
+
+            .top-bar {
+                .clearfix();
+            }
+        }
+
         .welcome-msg {
-            margin: 0 0 @line-height-base / 2;
+            float: left;
+            
+            padding: (@padding-base-vertical + 1) 0 @padding-base-vertical;
 
             text-align: right;
         }
 
         .form-language {
             float: right;
-            margin: 0 0 @line-height-base / 2;
+            margin: 0 0 @padding-large-vertical;
 
             > label {
                 margin: auto;

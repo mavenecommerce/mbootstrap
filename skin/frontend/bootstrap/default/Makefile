@@ -23,9 +23,11 @@
 #
 # Defaults
 # --------------------------------------------------
-THEME_LESS 		= ./less/mbootstrap.less
-THEME_CSS		= css/styles.css
-THEME_LESS_DIR	= less
+THEME_LESS 			= ./less/mbootstrap.less
+THEME_CSS			= css/mbootstrap.css
+THEME_LESS_DIR		= less
+RESPONSIVE_LESS 	= ./less/responsive/mbootstrap.responsive.less
+RESPONSIVE_CSS		= css/mbootstrap.responsive.css
 
 DATE 			= $(shell date +%H:%M:%S)
 CHECK 			= \033[32m✔\033[39m
@@ -44,6 +46,7 @@ theme-css:
 	@printf "Compile theme less files..."
 	@mkdir -p css
 	@../default/bootstrap/node_modules/.bin/recess --compile --compress ${THEME_LESS} > ${THEME_CSS}
+	@../default/bootstrap/node_modules/.bin/recess --compile --compress ${RESPONSIVE_LESS} > ${RESPONSIVE_CSS}
 	@printf "\rCompile theme less files...             ${CHECK} Done | ${DATE}\n"
 	
 #

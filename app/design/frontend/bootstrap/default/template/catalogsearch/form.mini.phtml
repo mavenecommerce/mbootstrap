@@ -27,13 +27,12 @@
 /* @var $catalogSearchHelper Mage_Catalogsearch_Helper_Data */
 $catalogSearchHelper =  $this->helper('catalogsearch');
 ?>
-<form id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get" class="navbar-search">
+<form class="navbar-form navbar-left" role="search" id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
 
-    <div class="input-append input-prepend">
-        <span class="add-on hidden-phone"><i class="icon-search"></i></span>
-        <input id="search" type="search" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text span2" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" placeholder="<?php echo $this->__('Search entire store here...') ?>" />
-        <button type="submit" title="<?php echo $this->__('Search') ?>" class="btn"><?php echo $this->__('Search') ?></button>
+    <div class="form-group">
+        <input class="form-control" id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" placeholder="<?php echo $this->__('Search entire store here...') ?>" />
     </div>
+    <button type="submit" title="<?php echo $this->__('Search') ?>" class="btn btn-default"><?php echo $this->__('Search') ?></button>
 
     <div id="search_autocomplete" class="search-autocomplete hidden-phone" style="display: none;"></div>
     <script type="text/javascript">

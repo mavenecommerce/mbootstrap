@@ -27,28 +27,36 @@
 -->
 <layoutUpdate version="0.1.0">
 
-    <!--
-    Default layout, loads most of the pages
-    -->
+    <!-- Default layout, loads most of the pages -->
     <default translate="label">
+
+        <!-- Remove Magento blocks -->
+        <remove name="left.permanent.callout" /> <!--the dog-->
+        <remove name="right.permanent.callout" /> <!--back to school-->
+        <remove name="top.links"/>
+
         <reference name="root">
 
-            <!-- Add project CSS file -->
             <reference name="head">
-                <!-- Remove default files -->
-                <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+
+                <!-- Clean Up -->
                 <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
                 <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
                 <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+                <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name><params/></action>
+                <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name><params/></action>
 
 
                 <!-- Bootstrap framework styles -->
-                <action method="addItem"><type>skin_css</type><name>bootstrap/bootstrap/css/bootstrap.min.css</name><params>media="screen"</params></action>
-                <action method="addItem"><type>skin_css</type><name>bootstrap/bootstrap/css/bootstrap-responsive.min.css</name><params>media="screen"</params></action>
+                <action method="addItem"><type>skin_css</type><name>bootstrap/dist/css/bootstrap.min.css</name><params/></action>
+                <!--<action method="addItem"><type>skin_css</type><name>bootstrap/bootstrap/css/bootstrap-responsive.min.css</name><params>media="screen"</params></action>-->
 
 
                 <!-- General styles -->
-                <action method="addItem"><type>skin_css</type><name>css/styles.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.responsive.css</name><params/></action>
+
                 <!--<action method="addItem"><type>skin_css</type><name>css/forms.css</name><params/></action>
                 <action method="addItem"><type>skin_css</type><name>css/blocks.css</name><params/></action>
                 <action method="addItem"><type>skin_css</type><name>css/my-account.css</name><params/></action>-->
@@ -61,33 +69,28 @@
 
 
                 <!-- IE styles -->
-                <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lte IE 8</if></action>
-                <action method="addItem"><type>skin_css</type><name>css/styles-ie9.css</name><params/><if>IE 9</if></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.css</name><params/><if>lt IE 9</if></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.css</name><params/><if>IE 9</if></action>
+
+
+                <!-- jQuery & UI -->
+                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery.min.js</script></action>
+
+
+                <!-- Bootstrap framework scripts -->
+                <action method="addItem"><type>skin_js</type><script>bootstrap/dist/js/bootstrap.js</script></action>
 
 
                 <!-- Add fontsquirrel fonts -->
                 <!--<action method="addItem"><type>skin_css</type><name>css/fonts/stylesheet.css</name><params/></action>-->
 
 
-                <!-- Add Cufon fonts generator script -->
-                <!--<action method="addItem">
-                    <type>skin_js</type>
-                    <jsfile>js/cufon-yui.js</jsfile>
-                </action>
-                <action method="addItem">
-                    <type>skin_js</type>
-                    <jsfile>js/HelveticaNeue_Thin_100.font.js</jsfile>
-                </action>-->
-
+                <!-- Google Web Fonts -->
                 <block type="core/text" name="google.webfonts">
                     <action method="setText"><text><![CDATA[<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>]]></text></action>
                 </block>
-            </reference>
 
-            <!-- Default Magento blocks -->
-            <remove name="left.permanent.callout" /> <!--the dog-->
-            <remove name="right.permanent.callout" /> <!--back to school-->
-            <remove name="top.links"/>
+            </reference>
 
             <reference name="header">
 
@@ -95,22 +98,22 @@
                     <action method="addLink" translate="label title" module="customer">
                         <label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title>
                         <prepare/><urlParams/><position>100</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="icon-user"></i>]]></beforeText>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-user"></i>]]></beforeText>
                     </action>
                     <action method="addLink" translate="label title" module="wishlist">
                         <label>My Wishlist</label><url helper="wishlist/getListUrl"/><title>My Wishlist</title>
                         <prepare/><urlParams/><position>200</position><liParams>hidden-phone</liParams>
-                        <aParams/><beforeText><![CDATA[<i class="icon-star"></i>]]></beforeText>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-bookmark"></i>]]></beforeText>
                     </action>
                     <action method="addLink" translate="label title" module="wishlist">
                         <label>My Cart</label><url helper="checkout/url/getCartUrl"/><title>My Cart</title>
                         <prepare/><urlParams/><position>300</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="icon-shopping-cart"></i>]]></beforeText>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-shopping-cart"></i>]]></beforeText>
                     </action>
                     <action method="addLink" translate="label title" module="wishlist">
                         <label>Checkout</label><url helper="checkout/url/getCheckoutUrl"/><title>Checkout</title>
                         <prepare/><urlParams/><position>400</position><liParams>hidden-phone</liParams>
-                        <aParams/><beforeText><![CDATA[<i class="icon-ok"></i>]]></beforeText>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-usd"></i>]]></beforeText>
                     </action>
                 </block>
 
@@ -124,21 +127,25 @@
                 <block type="core/template" name="page.company.organization" as="organization" template="page/html/footer/organization.phtml"/>
             </reference>
 
-            <block type="page/html_head" name="before_body_end" as="before_body_end">
-                <!-- jQuery framework -->
-                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery-1.9.1.min.js</script></action>
-
-                <!-- Bootstrap framework scripts -->
-                <action method="addItem"><type>skin_js</type><script>bootstrap/bootstrap/js/bootstrap.min.js</script></action>
-            </block>
-
         </reference>
     </default>
 
-    <!--
-    Load this update on every page when customer is logged in
-    -->
 
+    <!-- Print page -->
+    <print translate="label" module="page">
+        <reference name="root">
+            <reference name="head">
+
+                <!-- Clean Up -->
+                <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+
+            </reference>
+        </reference>
+    </print>
+
+
+    <!-- Load this update on every page when customer is logged in -->
     <customer_logged_in translate="label">
         <reference name="root">
 
@@ -148,7 +155,7 @@
                     <action method="addLink" translate="label title" module="customer">
                         <label>Log Out</label><url helper="customer/getLogoutUrl"/><title>Log Out</title>
                         <prepare/><urlParams/><position>1000</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="icon-off"></i>]]></beforeText>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-out"></i>]]></beforeText>
                     </action>
 
                 </reference>
@@ -157,10 +164,8 @@
         </reference>
     </customer_logged_in>
 
-    <!--
-    Load this update on every page when customer is logged out
-    -->
 
+    <!-- Load this update on every page when customer is logged out -->
     <customer_logged_out translate="label">
         <reference name="root">
 
@@ -170,7 +175,7 @@
                     <action method="addLink" translate="label title" module="customer">
                         <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
                         <prepare/><urlParams/><position>1000</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="icon-lock"></i>]]></beforeText>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-in"></i>]]></beforeText>
                     </action>
 
                 </reference>
@@ -179,16 +184,8 @@
         </reference>
     </customer_logged_out>
 
-    <!--
-    Home page
-    -->
 
-    <cms_index_index translate="label"></cms_index_index>
-
-    <!--
-    Category default layout
-    -->
-
+    <!-- Category default layout -->
     <catalog_category_default translate="label">
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
@@ -200,10 +197,7 @@
         </reference>
     </catalog_category_default>
 
-    <!--
-    Category layered navigation layout
-    -->
-
+    <!-- Category layered navigation layout -->
     <catalog_category_layered translate="label">
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
@@ -215,10 +209,7 @@
         </reference>
     </catalog_category_layered>
 
-    <!--
-    Search result page
-    -->
-
+    <!-- Search result page-->
     <catalogsearch_result_index translate="label">
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
@@ -230,10 +221,8 @@
         </reference>
     </catalogsearch_result_index>
 
-    <!--
-    Product view
-    -->
 
+    <!-- Product view -->
     <catalog_product_view translate="label">
         <reference name="root">
             <remove name="left"/>
@@ -242,10 +231,8 @@
         </reference>
     </catalog_product_view>
 
-    <!--
-    Cart page
-    -->
 
+    <!-- Cart page -->
     <checkout_cart_index translate="label">
         <reference name="root">
             <remove name="left"/>
@@ -254,41 +241,39 @@
         </reference>
     </checkout_cart_index>
 
-    <!--
-    One page checkout main layout
-    -->
 
+    <!-- One page checkout main layout-->
     <checkout_onepage_index translate="label">
         <reference name="head">
+
             <!-- Checkout styles -->
             <action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>
+
         </reference>
     </checkout_onepage_index>
 
-    <!--
-    One page checkout progress block
-    -->
-
+    <!-- One page checkout success page -->
     <checkout_onepage_success translate="label">
-        <!-- Add project JS/CSS file -->
         <reference name="head">
+
             <!-- Checkout styles -->
             <action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>
+
         </reference>
     </checkout_onepage_success>
 
+    <!-- One page checkout failure page -->
     <checkout_onepage_failure translate="label">
-        <!-- Add project JS/CSS file -->
         <reference name="head">
+
             <!-- Checkout styles -->
             <action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>
+
         </reference>
     </checkout_onepage_failure>
 
-    <!--
-    Customer account pages, rendered for all tabs in dashboard
-    -->
 
+    <!-- Customer account pages, rendered for all tabs in dashboard-->
     <customer_account translate="label">
         <reference name="root">
 
@@ -336,16 +321,10 @@
         </reference>
     </customer_account>
 
-    <!--
-    Customer account home dashboard layout
-    -->
-
+    <!-- Customer account home dashboard layout-->
     <customer_account_index translate="label"></customer_account_index>
 
-    <!--
-    Layout for customer login page
-    -->
-
+    <!-- Customer login page -->
     <customer_account_login translate="label">
         <reference name="root">
 
@@ -366,22 +345,14 @@
         </reference>
     </customer_account_login>
 
-    <!--
-    New customer registration
-    -->
-
+    <!-- New customer registration page -->
     <customer_account_create translate="label"></customer_account_create>
 
-    <!--
-    CMS Page
-    -->
 
+    <!-- CMS Page -->
     <cms_page translate="label"></cms_page>
 
-    <!--
-    One page checkout main layout
-    -->
-
-    <checkout_onepage_index translate="label"></checkout_onepage_index>
+    <!-- Home page -->
+    <cms_index_index translate="label"></cms_index_index>
 
 </layoutUpdate>

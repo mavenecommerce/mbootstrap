@@ -32,14 +32,16 @@
  */
 ?>
 <?php if(count($this->getStores())>1): ?>
-<div class="clearfix"></div>
-<div class="form-language form-inline">
-    <label for="select-language" class="control-label"><?php echo $this->__('Your Language:') ?></label>
-    <select class="span3" id="select-language" title="<?php echo $this->__('Your Language') ?>" onchange="window.location.href=this.value">
+<div class="form-language btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <?php echo $this->__('Your Language') ?> <span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu" role="menu">
         <?php foreach ($this->getStores() as $_lang): ?>
-        <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? ' selected="selected"' : '' ?>
-        <option value="<?php echo $_lang->getCurrentUrl() ?>"<?php echo $_selected ?>><?php echo $this->htmlEscape($_lang->getName()) ?></option>
+        <?php $_disabled = ($_lang->getId() == $this->getCurrentStoreId()) ? 'class="disabled"' : '' ?>
+        <li <?php echo $_disabled; ?>><a href="<?php echo $_lang->getCurrentUrl() ?>"><?php echo $this->htmlEscape($_lang->getName()) ?></a></li>
         <?php endforeach; ?>
-    </select>
+    </ul>
 </div>
 <?php endif; ?>
