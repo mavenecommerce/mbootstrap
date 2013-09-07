@@ -23,8 +23,10 @@ Current version: Alpha
     * open **Design** tab on left sidebar
     * open **Package** section
     * write "bootstrap" in *Current Package Name* field
+    * write "default" in "Default" field ([example](http://screencast.com/t/ACJTP2CxHi))
     * press "Save Config" button
-3. Refresh front-end page and enjoy
+3. You must enable "[Allow Symlinks](https://github.com/colinmollenhour/modman#requirements)" in Admin Panel
+4. Refresh front-end page and enjoy
 
 ## How to use
 
