@@ -1,8 +1,13 @@
-app/code/local/EcomDev/Cms								    app/code/local/EcomDev/Cms
-app/code/local/EcomDev/Bootstrap							app/code/local/EcomDev/Bootstrap
-app/etc/modules/EcomDev_Cms.xml								app/etc/modules/EcomDev_Cms.xml
-app/etc/modules/EcomDev_Bootstrap.xml						app/etc/modules/EcomDev_Bootstrap.xml
+#Modules
+app/code/local/EcomDev/Cms				app/code/local/EcomDev/Cms
+app/code/local/EcomDev/Bootstrap			app/code/local/EcomDev/Bootstrap
 
+#Config
+app/etc/modules/EcomDev_Cms.xml				app/etc/modules/EcomDev_Cms.xml
+app/etc/modules/EcomDev_Bootstrap.xml			app/etc/modules/EcomDev_Bootstrap.xml
 
-app/design/frontend/bootstrap/default						app/design/frontend/bootstrap/default
-skin/frontend/bootstrap/default								skin/frontend/bootstrap/default
+#Theme
+app/design/frontend/bootstrap/default			app/design/frontend/bootstrap/default
+
+#Skin
+skin/frontend/bootstrap/default				skin/frontend/bootstrap/default
