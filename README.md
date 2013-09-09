@@ -22,9 +22,10 @@ Current version: Alpha
     * go to **System -> Configuration**
     * open **Design** tab on left sidebar
     * open **Package** section
-    * write "bootstrap" in *Current Package Name* field
+    * write "bootstrap" in *Current Package Name* field ([example](http://screencast.com/t/wr5GNCt2xUV))
     * press "Save Config" button
-3. Refresh front-end page and enjoy
+3. You must enable "[Allow Symlinks](https://github.com/colinmollenhour/modman/blob/master/README.md#requirements)"
+4. Refresh front-end page and enjoy
 
 ## How to use
 
