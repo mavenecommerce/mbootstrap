@@ -2,21 +2,19 @@
 // Block
 // --------------------------------------------------
 .block {
-    margin: 0 0 @line-height-base;
+    margin: 0 0 @line-height-computed;
     
     //padding: @gridGutterWidth / 4;
-
-    background: url(../images/blocks/block/background.png);
 
     .border-radius(@border-radius-small - 1);
 
     > .block-title {
+        padding: @padding-base-vertical @padding-base-horizontal;
         
-        //padding: @gridGutterWidth / 2;
-
         line-height: @line-height-base;
 
-        //#translucent > .background(@black, 0.1);
+        background: @gray;
+        border-bottom: 2px solid #fff;
 
         > a {}
 
@@ -24,14 +22,13 @@
             font-size: @font-size-large;
             
             color: #fff;
-            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.50);
 
             > span {}
         }
     }
 
     .block-content {
-        padding: @line-height-base / 2;
+        padding: (@line-height-computed / 2);
 
         //background: @white;
 
@@ -46,7 +43,7 @@
         }
 
         > .actions {
-            margin-top: @line-height-base;
+            margin-top: @line-height-computed;
         }
     }
 
@@ -69,7 +66,7 @@
 
     > .block-content {
         > .currently {
-            margin: 0 0 @line-height-base;
+            margin: 0 0 @line-height-computed;
 
             > .nav-list {
                 padding: 0;

@@ -27,7 +27,7 @@
 /* @var $catalogSearchHelper Mage_Catalogsearch_Helper_Data */
 $catalogSearchHelper =  $this->helper('catalogsearch');
 ?>
-<form class="navbar-form navbar-left" role="search" id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
+<form class="navbar-form navbar-left hidden-sm" role="search" id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
 
     <div class="form-group">
         <input class="form-control" id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" placeholder="<?php echo $this->__('Search entire store here...') ?>" />

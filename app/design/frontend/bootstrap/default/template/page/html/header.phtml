@@ -57,9 +57,6 @@
     </div>
 </header>
 
-<div><b>
-    EXAMPLE
-</b></div>
 
 <nav class="navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -75,7 +72,10 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
+
+        <?php echo $this->getChildHtml('topMenu') ?>
+
+        <!--<ul class="nav navbar-nav">
             <li class="active"><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
@@ -88,7 +88,7 @@
                     <li><a href="#">One more separated link</a></li>
                 </ul>
             </li>
-        </ul>
+        </ul>-->
 
         <?php echo $this->getChildHtml('topSearch') ?>
 
@@ -105,26 +105,4 @@
             </li>
         </ul>
     </div><!-- /.navbar-collapse -->
-</nav>
-
-
-<nav class="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <div class="navbar-inner">
-        <div class="container">
-
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-
-            <a class="brand" href="<?php echo $this->getUrl(); ?>" itemprop="description"><span class="icon-home"></span> <?php echo $this->__("Home"); ?></a>
-
-            <div class="_nav-collapse _collapse _navbar-responsive-collapse">
-                <?php echo $this->getChildHtml('topMenu') ?>
-                <div class="hidden-phone"><?php echo $this->getChildHtml('topSearch') ?></div>
-            </div>
-
-        </div>
-    </div>
 </nav>
