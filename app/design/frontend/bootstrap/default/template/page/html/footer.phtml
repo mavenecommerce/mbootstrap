@@ -27,20 +27,18 @@
 <footer class="footer-container case" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer container">
 
-        <section class="row">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <?php echo $this->getChildHtml('cms_footer_links') ?>
-            </div>
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                <?php echo $this->getChildHtml('footer_links') ?>
-            </div>
+        <section class="footer__links">
+            <div class="links-left"><?php echo $this->getChildHtml('cms_footer_links') ?></div>
+
+            <div class="links-right"><?php echo $this->getChildHtml('footer_links') ?></div>
         </section>
 
-        <?php echo $this->getChildHtml('organization') ?>
+        <div class="footer__organization"><?php echo $this->getChildHtml('organization') ?></div>
 
-        <section class="row">
-            <div class="copyright col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php echo $this->getCopyright() ?></div>
+        <section class="footer__copy">
+            <div class="copyright"><?php echo $this->getCopyright() ?></div>
         </section>
+
 
     </div>
 </footer>

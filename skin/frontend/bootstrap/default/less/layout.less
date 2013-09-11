@@ -165,16 +165,74 @@
 // Footer Container
 // -------------------------
 .footer-container {
-    margin: @line-height-computed 0 0;
+    margin: @line-height-computed 0;
+    padding: @line-height-computed 0 0;
 
-    .footer {
-        color: @gray;
+    border-top: 2px solid @gray-lighter;
+    color: @gray;
+
+    .footer {}
         
-        .organization {
-            margin-top: @line-height-computed;
-            margin-bottom: @line-height-computed;
+        .footer__links,
+        .footer__organization > .organization {
+            .make-row();
         }
 
-        .copyright {}
-    }
+        .footer__links {
+            > .links-left {
+                .make-xs-column(4);
+                .make-sm-column(4);
+                .make-md-column(4);
+                .make-lg-column(4);
+            }
+
+            > .links-right {
+                .make-xs-column(8);
+                .make-sm-column(8);
+                .make-md-column(8);
+                .make-lg-column(8);
+            }
+        }
+
+        .footer__organization {
+            .organization {
+                margin-top: @line-height-computed;
+                margin-bottom: @line-height-computed;
+
+                > .image {
+                    .make-xs-column(6);
+                    .make-sm-column(3);
+                    .make-md-column(3);
+                    .make-lg-column(3);
+                }
+                
+                > .name {
+                    .make-xs-column(6);
+                    .make-sm-column(3);
+                    .make-md-column(2);
+                    .make-lg-column(2);
+
+                    .make-md-column-offset(1);
+                    .make-lg-column-offset(1);
+                }
+
+                > .address {
+                    .make-xs-column(6);
+                    .make-sm-column(3);
+                    .make-md-column(2);
+                    .make-lg-column(2);
+                }
+                
+                > .contacts {
+                    .make-xs-column(6);
+                    .make-sm-column(3);
+                    .make-md-column(2);
+                    .make-lg-column(2);
+                }
+            }
+        }
+
+        .footer__copy {
+            > .copyright {}
+        }
 }
