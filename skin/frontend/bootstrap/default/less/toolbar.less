@@ -2,23 +2,60 @@
 // Toolbar
 // --------------------------------------------------
 .toolbar { 
-    margin-bottom: @line-height-base;
+    margin-bottom: @line-height-computed;
     
     > .pager-wrapper {
+        .make-row();
+
         > .amount {
-            line-height: @line-height-base + 10;
+            //line-height: @line-height-base + 10;
+
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
         }
         
-        .limiter {}
+        .limiter {
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
+        }
         
         .sort-by {
             white-space: nowrap;
+
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
         }
     }
-    > .sorter {
-        margin-top: @line-height-base / 2;
 
-        .view-mode {}
+    > .sorter {
+        margin-top: (@line-height-computed / 2);
+
+        .make-row();
+
+        .view-mode {
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
+        }
+
+        .pager-list {
+            .make-xs-column(8);
+            .make-sm-column(8);
+            .make-md-column(8);
+            .make-lg-column(8);
+
+            .pagination {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
