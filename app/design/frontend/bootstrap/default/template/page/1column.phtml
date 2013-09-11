@@ -44,19 +44,17 @@
 
         <?php echo $this->getChildHtml('header') ?>
 
-        <div class="main-container" role="main">
-            <div class="container">
-                <div class="main row">
+        <div class="main-container col1-layout" role="main">
+            <div class="main container">
 
-                    <?php echo $this->getChildHtml('breadcrumbs') ?>
-                    <?php echo $this->getChildHtml('before_main_start') ?>
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <?php echo $this->getChildHtml('before_main_start') ?>
 
-                    <article class="col-main col-xs-12 col-sm-12 col-md-12 col-lg-12" role="main">
-                        <?php echo $this->getChildHtml('global_messages') ?>
-                        <?php echo $this->getChildHtml('content') ?>
-                    </article>
+                <article class="col-main col-xs-12 col-sm-12 col-md-12 col-lg-12" role="main">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </article>
 
-                </div>
             </div>
         </div>
 

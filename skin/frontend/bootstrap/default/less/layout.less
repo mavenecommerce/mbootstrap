@@ -109,64 +109,71 @@
 .main-container {
     .main {
         .make-row();
+    }
 
-        .col-main {}
-        .col-left {}
-        .col-right {}
+    .col-main {
+        .make-xs-column(12);
+        .make-sm-column(12);
+        .make-md-column(12);
+        .make-lg-column(12);
+    }
 
-        &.main_2col-left {
-            .col-left {
-                .make-xs-column(5);
-                .make-sm-column(4);
-                .make-md-column(3);
-                .make-lg-column(3);
-            }
+    .col-left {}
+    .col-right {}
 
-            .col-main {
-                .make-xs-column(7);
-                .make-sm-column(8);
-                .make-md-column(9);
-                .make-lg-column(9);
-            }
+
+    &.col2-left-layout {
+        .col-left {
+            .make-xs-column(5);
+            .make-sm-column(4);
+            .make-md-column(3);
+            .make-lg-column(3);
         }
 
-        &.main_2col-right {
-            .col-right {
-                .make-xs-column(5);
-                .make-sm-column(4);
-                .make-md-column(3);
-                .make-lg-column(3);
-            }
-
-            .col-main {
-                .make-xs-column(7);
-                .make-sm-column(8);
-                .make-md-column(9);
-                .make-lg-column(9);
-            }
+        .col-main {
+            .make-xs-column(7);
+            .make-sm-column(8);
+            .make-md-column(9);
+            .make-lg-column(9);
+        }
+    }
+    
+    &.col2-right-layout {
+        .col-right {
+            .make-xs-column(5);
+            .make-sm-column(4);
+            .make-md-column(3);
+            .make-lg-column(3);
         }
 
-        &.main_3col-right {
-            .col-left {
-                .make-xs-column(3);
-                .make-sm-column(3);
-                .make-md-column(3);
-                .make-lg-column(3);
-            }
+        .col-main {
+            .make-xs-column(7);
+            .make-sm-column(8);
+            .make-md-column(9);
+            .make-lg-column(9);
+        }
+    }
 
-            .col-right {
-                .make-xs-column(3);
-                .make-sm-column(3);
-                .make-md-column(3);
-                .make-lg-column(3);
-            }
+    &.col3-layout {
+        .col-left {
+            .make-xs-column(3);
+            .make-sm-column(3);
+            .make-md-column(3);
+            .make-lg-column(3);
+        }
 
-            .col-main {
-                .make-xs-column(6);
-                .make-sm-column(6);
-                .make-md-column(6);
-                .make-lg-column(6);
-            }
+        .col-right {
+            .make-xs-column(3);
+            .make-sm-column(3);
+            .make-md-column(3);
+            .make-lg-column(3);
+        }
+
+        .col-main {
+            .make-xs-column(6);
+            .make-sm-column(6);
+            .make-md-column(6);
+            .make-lg-column(6);
         }
     }
 }
