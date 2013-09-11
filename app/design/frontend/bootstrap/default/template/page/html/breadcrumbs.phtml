@@ -25,20 +25,20 @@
  */
 ?>
 <?php if($crumbs && is_array($crumbs)): ?>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="i-breadcrumb">
     <ol class="breadcrumb" itemprop="breadcrumb">
 
-        <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
-            <li class="<?php echo $_crumbName ?>" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <?php if($_crumbInfo['link']): ?>
-                <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>" itemprop="url"><span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span></a>
-            <?php elseif($_crumbInfo['last']): ?>
-                <span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span>
-            <?php else: ?>
-                <span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span>
-            <?php endif; ?>
-            </li>
-        <?php endforeach; ?>
+    <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+        <li class="<?php echo $_crumbName ?>" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <?php if($_crumbInfo['link']): ?>
+            <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>" itemprop="url"><span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span></a>
+        <?php elseif($_crumbInfo['last']): ?>
+            <span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span>
+        <?php else: ?>
+            <span itemprop="title"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span>
+        <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
 
     </ol>
 </div>
