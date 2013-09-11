@@ -12,39 +12,49 @@
 
     border-bottom: 2px solid @gray-lighter;
     
-    .header-panel {}
-    
     .header {
+        > .header__i {
+            .make-row();
+        }
+    }
 
-        .i-logo {
-            text-align: center;
+    .i-logo {
+        text-align: center;
 
-            .logo {
+        .make-xs-column(12);
+        .make-sm-column(3);
+        .make-md-column(4);
+        .make-lg-column(4);
+
+        .logo {
+            display: block;
+            
+            line-height: 0;
+
+            strong {
                 display: block;
-                
-                line-height: 0;
+                overflow: hidden;
 
-                strong {
-                    display: block;
-                    overflow: hidden;
-
-                    text-indent: -999%;
-                }
-
-                img {
-                    display: block;
-                    margin: 0 auto;
-                }
+                text-indent: -999%;
             }
 
-            :link.logo {}
-            
-            h1.logo {}
+            img {
+                display: block;
+                margin: 0 auto;
+            }
         }
+
+        :link.logo {}
+        h1.logo {}
     }
 
     .quick-access {
         text-align: center;
+
+        .make-xs-column(12);
+        .make-sm-column(9);
+        .make-md-column(8);
+        .make-lg-column(8);
 
         .i-top-bar {
             display: inline-block;

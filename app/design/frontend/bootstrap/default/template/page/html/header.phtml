@@ -29,9 +29,9 @@
 ?>
 <header class="header-container" itemscope itemtype="http://schema.org/WPHeader">
     <div class="header container">
+        <div class="header__i">
 
-        <div class="row">
-            <div class="i-logo col-xs-12 col-sm-3 col-md-4 col-lg-4">
+            <div class="i-logo">
                 <?php if ($this->getIsHomePage()):?>
                     <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a></h1>
                 <?php else:?>
@@ -39,7 +39,7 @@
                 <?php endif?>
             </div>
 
-            <div class="quick-access col-sx-12 col-sm-9 col-md-8 col-lg-8">
+            <div class="quick-access">
                 <div class="i-top-bar">
                     <div class="top-bar">
                         <div class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></div>
