@@ -88,12 +88,66 @@
 // -------------------------
 .main-container {
     .main {
-        //padding-bottom: 30px; rem because of Login page
-        
+        .make-row();
+
         .col-main {}
         .col-left {}
         .col-right {}
-        .sidebar {}
+
+        &.main_2col-left {
+            .col-left {
+                .make-xs-column(5);
+                .make-sm-column(4);
+                .make-md-column(3);
+                .make-lg-column(3);
+            }
+
+            .col-main {
+                .make-xs-column(7);
+                .make-sm-column(8);
+                .make-md-column(9);
+                .make-lg-column(9);
+            }
+        }
+
+        &.main_2col-right {
+            .col-right {
+                .make-xs-column(5);
+                .make-sm-column(4);
+                .make-md-column(3);
+                .make-lg-column(3);
+            }
+
+            .col-main {
+                .make-xs-column(7);
+                .make-sm-column(8);
+                .make-md-column(9);
+                .make-lg-column(9);
+            }
+        }
+
+        &.main_3col-right {
+            .col-left {
+                .make-xs-column(3);
+                .make-sm-column(3);
+                .make-md-column(3);
+                .make-lg-column(3);
+            }
+
+            .col-right {
+                .make-xs-column(3);
+                .make-sm-column(3);
+                .make-md-column(3);
+                .make-lg-column(3);
+            }
+
+            .col-main {
+                .make-xs-column(6);
+                .make-sm-column(6);
+                .make-md-column(6);
+                .make-lg-column(6);
+            }
+        }
     }
 }
 
@@ -101,13 +155,14 @@
 // Footer Container
 // -------------------------
 .footer-container {
-    margin: @line-height-base 0 0;
+    margin: @line-height-computed 0 0;
 
     .footer {
         color: @gray;
         
         .organization {
-            margin-bottom: @line-height-base;
+            margin-top: @line-height-computed;
+            margin-bottom: @line-height-computed;
         }
 
         .copyright {}

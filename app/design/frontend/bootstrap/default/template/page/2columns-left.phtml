@@ -44,20 +44,18 @@
 
         <?php echo $this->getChildHtml('header') ?>
 
-        <div class="main-container">
-            <div class="container">
-                <div class="main row">
+        <div class="main-container container">
+            <div class="main main_2col-left">
 
-                    <?php echo $this->getChildHtml('breadcrumbs') ?>
-                    <?php echo $this->getChildHtml('before_main_start') ?>
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <?php echo $this->getChildHtml('before_main_start') ?>
 
-                    <aside class="col-left sidebar col-xs-5 col-sm-4 col-md-3 col-lg-3" itemscope itemtype="http://schema.org/WPSideBar"><?php echo $this->getChildHtml('left') ?></aside>
-                    <article class="col-main col-xs-7 col-sm-8 col-md-9 col-lg-9" role="main">
-                        <?php echo $this->getChildHtml('global_messages') ?>
-                        <?php echo $this->getChildHtml('content') ?>
-                    </article>
+                <aside class="col-left" itemscope itemtype="http://schema.org/WPSideBar"><?php echo $this->getChildHtml('left') ?></aside>
+                <article class="col-main" role="main">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </article>
 
-                </div>
             </div>
         </div>
 
