@@ -29,33 +29,20 @@
 
     <?php echo $this->getChildHtml('list_before')?>
 
-    <div class="row">
-        <div class="span8">
-            <?php if( $this->getCount() ): ?>
-            <h3><?php echo $this->__('Other people marked this product with these tags:') ?></h3>
-
-            <ul id="<?php echo $this->getUniqueHtmlId('product-tags_'); ?>" class="product-tags">
-                <?php echo $this->renderTags('<li><a href="%1$s">%2$s</a> (%3$s)</li>') ?>
-            </ul>
-            <script type="text/javascript">
-                decorateGeneric($("<?php echo $this->getUniqueHtmlId('product-tags_'); ?>").select('li'), ['first', 'last']);
-            </script>
-            <?php endif; ?>
-        </div>
-
-        <div class="span4">
+    <div class="box-tags-layout">
+        <div class="add-tag">
             <form id="addTagForm" action="<?php echo $this->getFormAction(); ?>" method="get">
-                <div class="form-add form-inline">
-                    <label for="productTagName"><?php echo $this->__('Add Your Tags:') ?></label>
-                    <input type="text" class="input-text required-entry span2" name="productTagName" id="productTagName" />
-                    <button type="button" title="<?php echo $this->__('Add Tags') ?>" class="btn" onclick="submitTagForm()">
-                <span>
-                    <span><?php echo $this->__('Add Tags') ?></span>
-                </span>
-                    </button>
+                <div class="form-add input-group">
+                    <label class="input-group-addon" for="productTagName"><?php echo $this->__('Add Your Tags:') ?></label>
+                    <input type="text" class="input-text required-entry form-control" name="productTagName" id="productTagName" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" title="<?php echo $this->__('Add Tags') ?>" onclick="submitTagForm()"><?php echo $this->__('Add Tags') ?></button>
+                    </span>
                 </div>
             </form>
+
             <p class="note"><?php echo $this->__("Use spaces to separate tags. Use single quotes (') for phrases.") ?></p>
+
             <script type="text/javascript">
                 //<![CDATA[
                 var addTagFormJs = new VarienForm('addTagForm');
@@ -66,6 +53,19 @@
                 }
                 //]]>
             </script>
+        </div>
+
+        <div class="present-tags">
+            <?php if( $this->getCount() ): ?>
+            <h3><?php echo $this->__('Other people marked this product with these tags:') ?></h3>
+
+            <ul id="<?php echo $this->getUniqueHtmlId('product-tags_'); ?>" class="product-tags">
+                <?php echo $this->renderTags('<li><a href="%1$s">%2$s</a> (%3$s)</li>') ?>
+            </ul>
+            <script type="text/javascript">
+                decorateGeneric($("<?php echo $this->getUniqueHtmlId('product-tags_'); ?>").select('li'), ['first', 'last']);
+            </script>
+            <?php endif; ?>
         </div>
     </div>
 

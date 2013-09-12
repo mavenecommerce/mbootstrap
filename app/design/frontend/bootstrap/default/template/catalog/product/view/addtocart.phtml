@@ -27,14 +27,17 @@
 <?php $_product = $this->getProduct(); ?>
 <?php $buttonTitle = $this->__('Add to Cart'); ?>
 <?php if($_product->isSaleable()): ?>
-    <div class="add-to-cart form-inline">
+    <div class="add-to-cart input-group">
 
         <?php if(!$_product->isGrouped()): ?>
-            <label for="qty"><?php echo $this->__('Qty:') ?></label>
-            <input type="number" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty span1" />
+            <label class="input-group-addon" for="qty"><?php echo $this->__('Qty:') ?></label>
+            <input class="input-text qty form-control" type="number" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" />
         <?php endif; ?>
 
-        <button type="button" title="<?php echo $buttonTitle ?>" class="btn btn-success btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        <div class="input-group-btn">
+            <button class="btn btn-success btn-cart" type="button" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        </div>
+
         <?php echo $this->getChildHtml('', true, true) ?>
 
     </div>

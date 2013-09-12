@@ -48,72 +48,68 @@
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
             </div>
 
-            <div class="row">
+            <div class="product-img-box">
+                <?php echo $this->getChildHtml('media') ?>
+            </div>
 
-                <div class="product-img-box span6">
-                    <?php echo $this->getChildHtml('media') ?>
+            <div class="product-shop">
+                <div class="page-title product-name">
+                    <h1 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
                 </div>
 
-                <div class="product-shop span6">
-                    <div class="page-title product-name">
-                        <h1 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                <div class="product-toolbar product-2col-layout">
+                    <div class="side-left">
+
+                        <?php if ($this->canEmailToFriend()): ?>
+                            <p class="email-friend"><i class="icon-envelope"></i> <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+                        <?php endif; ?>
+
                     </div>
-
-                    <div class="row">
-                        <div class="span3">
-
-                            <?php if ($this->canEmailToFriend()): ?>
-                                <p class="email-friend"><i class="icon-envelope"></i> <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-                            <?php endif; ?>
-
-                        </div>
-                        <div class="span3">
-                            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-                        </div>
+                    <div class="side-right">
+                        <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
                     </div>
-
-                    <?php echo $this->getChildHtml('alert_urls') ?>
-
-                    <?php echo $this->getChildHtml('product_type_data') ?>
-                    <?php echo $this->getTierPriceHtml() ?>
-
-                    <?php echo $this->getChildHtml('extrahint') ?>
-
-                    <?php if ($_product->getShortDescription()):?>
-                    <div class="short-description hidden-phone">
-                        <h2><?php echo $this->__('Quick Overview') ?></h2>
-                        <div class="std" itemprop="description"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                    </div>
-                    <?php endif;?>
-
-
-                    <?php if (!$this->hasOptions()):?>
-                        <div class="add-to-box row">
-                            <div class="span3">
-                            <?php if($_product->isSaleable()): ?>
-                                <?php echo $this->getChildHtml('addtocart') ?>
-                            <?php endif; ?>
-                            </div>
-
-                            <div class="span3"><?php echo $this->getChildHtml('addto') ?></div>
-                        </div>
-
-                        <?php echo $this->getChildHtml('extra_buttons') ?>
-
-                    <?php elseif (!$_product->isSaleable()): ?>
-                        <div class="add-to-box">
-                            <?php echo $this->getChildHtml('addto') ?>
-                        </div>
-                    <?php endif; ?>
-
-
-                    <?php echo $this->getChildHtml('other');?>
-
-                    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                        <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-                    <?php endif;?>
-
                 </div>
+
+                <?php echo $this->getChildHtml('alert_urls') ?>
+
+                <?php echo $this->getChildHtml('product_type_data') ?>
+                <?php echo $this->getTierPriceHtml() ?>
+
+                <?php echo $this->getChildHtml('extrahint') ?>
+
+                <?php if ($_product->getShortDescription()):?>
+                <div class="short-description hidden-phone">
+                    <h2><?php echo $this->__('Quick Overview') ?></h2>
+                    <div class="std" itemprop="description"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                </div>
+                <?php endif;?>
+
+
+                <?php if (!$this->hasOptions()):?>
+                    <div class="add-to-box product-2col-layout">
+                        <div class="side-left">
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                        <?php endif; ?>
+                        </div>
+
+                        <div class="side-right"><?php echo $this->getChildHtml('addto') ?></div>
+                    </div>
+
+                    <?php echo $this->getChildHtml('extra_buttons') ?>
+
+                <?php elseif (!$_product->isSaleable()): ?>
+                    <div class="add-to-box">
+                        <?php echo $this->getChildHtml('addto') ?>
+                    </div>
+                <?php endif; ?>
+
+
+                <?php echo $this->getChildHtml('other');?>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
 
             </div>
 

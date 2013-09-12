@@ -7,16 +7,39 @@
 // -------------------------
 .box-tags {
     h3 {
-        font-size: 14px;
-
         margin-top: 0;
     }
-    .product-tags {
-        .reset-list;
-        > li {
-            display: inline;
-            > a {}
+
+    .box-tags-layout {
+        .make-row();
+
+        > .present-tags {
+            .make-xs-column(6);
+            .make-sm-column(6);
+            .make-md-column(6);
+            .make-lg-column(6);
+        }
+        > .add-tag {
+            .make-xs-column(6);
+            .make-sm-column(6);
+            .make-md-column(6);
+            .make-lg-column(6);
         }
     }
+
+    .product-tags {
+        padding: 0;
+
+        list-style: none;
+
+        > li {
+            display: inline;
+        }
+    }
+
     .form-add {}
+
+    .note {
+        margin: (@line-height-computed / 2) 0 0;
+    }
 }

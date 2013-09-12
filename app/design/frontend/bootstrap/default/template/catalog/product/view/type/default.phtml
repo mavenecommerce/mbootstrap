@@ -27,8 +27,8 @@
 <?php /* @var $this Mage_Catalog_Block_Product_View_Abstract */?>
 <?php $_product = $this->getProduct() ?>
 
-<div class="row" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    <div class="span3">
+<div class="product-type product-2col-layout" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <div class="side-left">
 
         <?php if ($_product->isAvailable()): ?>
             <p class="availability in-stock"><?php echo $this->__('Availability:') ?>
@@ -43,7 +43,8 @@
         <?php endif; ?>
 
     </div>
-    <div class="span3">
+
+    <div class="side-right">
 
         <?php echo $this->getPriceHtml($_product) ?>
         <?php echo $this->getChildHtml('product_type_data_extra') ?>
