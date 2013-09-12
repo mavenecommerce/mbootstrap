@@ -240,42 +240,57 @@
 // Block - Cart sidebar
 // -------------------------
 .block-cart {
-    .block-title {}
     .block-content {
 
-        .summary {
-            padding: @line-height-base/2;
+        .summary {}
 
-            //background-color: @grayLighter;
-
-            .border-radius(2px);
-        }
         .action {
-            margin: @line-height-base/2 0 @line-height-base;
+            padding-bottom: (@line-height-computed / 2);
+            margin: (@line-height-computed / 2) 0;
 
             text-align: right;
+
+            border-bottom: 1px solid #fff;
         }
 
         .block-subtitle {}
 
-        .thumbnails {
+        .cart-list {
+            padding: 0;
+
+            list-style: none;
+
             > .item {
-                float: none;
+                margin-bottom: (@line-height-computed / 2);
+
                 overflow: hidden;
 
                 > .thumbnail {
-                    float: left;
-                    //margin-right: @gridGutterWidth / 2;
+                    > .thumbnail__i {
+                        .make-row();
+                    }
                 }
 
-                > .caption {
+                .product-image {
+                    .make-xs-column(12);
+                    .make-sm-column(4);
+                    .make-md-column(4);
+                    .make-lg-column(4);
+                }
+
+                .caption {
                     overflow: hidden;
+
+                    .make-xs-column(12);
+                    .make-sm-column(8);
+                    .make-md-column(8);
+                    .make-lg-column(8);
 
                     > .actions {
                         float: right;
                         margin-top: 2px;
 
-                        .opacity(10);
+                        .opacity(0.1);
                         .transition(opacity 0.25s ease-in-out;)
                     }
 
@@ -285,9 +300,9 @@
                 }
 
                 &:hover {
-                    > .caption {
+                    .caption {
                         .actions {
-                            .opacity(100);
+                            .opacity(1);
                         }
                     }
                 }

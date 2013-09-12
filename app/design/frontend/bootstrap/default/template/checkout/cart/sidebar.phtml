@@ -67,7 +67,7 @@
     <?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
     <div class="action">
         <?php echo $this->getChildHtml('extra_actions') ?>
-        <button type="button" title="<?php echo $this->__('Checkout') ?>" class="btn" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')"><?php echo $this->__('Checkout') ?></button>
+        <button type="button" title="<?php echo $this->__('Checkout') ?>" class="btn btn-primary" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')"><?php echo $this->__('Checkout') ?></button>
     </div>
     <?php endif ?>
 
@@ -75,7 +75,7 @@
     <?php if(count($_items)): ?>
         <p class="block-subtitle"><?php echo $this->__('Recently added item(s)') ?></p>
 
-        <ol id="cart-sidebar" class="thumbnails">
+        <ol id="cart-sidebar" class="cart-list">
         <?php foreach($_items as $_item): ?>
             <?php echo $this->getItemHtml($_item) ?>
         <?php endforeach; ?>
