@@ -88,18 +88,26 @@
 
         > .block-subtitle {}
 
-        > .nav-list {
+        .layered-list {
             padding: 0;
 
-            .amount {
-                font-weight: normal;
-            }
-            
-            .price {
-                font-size: @font-size-base;
+            list-style: none;
+
+            > .layered-list-item {
+                > .layered-list-header {
+                    padding: @padding-base-vertical 0;
+                }
             }
         }
-        > .actions {}
+
+                .list-group {            
+                    .price {
+                        font-size: @font-size-base;
+                        font-weight: normal;
+                    }
+                }
+
+                > .actions {}
     }
 }
 

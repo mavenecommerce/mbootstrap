@@ -36,20 +36,22 @@
     <div class="block-title">
         <strong><span><?php echo $this->__('Shop By') ?></span></strong>
     </div>
+
     <div class="block-content">
         <?php echo $this->getStateHtml() ?>
         <?php if ($this->getLayer()->getState()->getFilters()): ?>
             <div class="actions clearfix"><a class="btn pull-right" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
         <?php endif; ?>
+
         <?php if($this->canShowOptions()): ?>
             <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
 
-            <ul id="narrow-by-list" class="nav nav-list">
+            <ul id="narrow-by-list" class="layered-list">
                 <?php $_filters = $this->getFilters() ?>
                 <?php foreach ($_filters as $_filter): ?>
                 <?php if($_filter->getItemsCount()): ?>
-                    <li class="nav-header">
-                        <?php echo $this->__($_filter->getName()) ?>
+                    <li class="layered-list-item">
+                        <div class="layered-list-header"><?php echo $this->__($_filter->getName()) ?></div>
                         <?php echo $_filter->getHtml() ?>
                     </li>
                 <?php endif; ?>

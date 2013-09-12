@@ -194,6 +194,14 @@
                 <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
             </reference>
 
+            <reference name="content">
+                <reference name="category.products">
+                    <reference name="product_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
         </reference>
     </catalog_category_default>
 
@@ -204,6 +212,14 @@
 
             <reference name="left">
                 <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
+            </reference>
+
+            <reference name="content">
+                <reference name="category.products">
+                    <reference name="product_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
             </reference>
 
         </reference>

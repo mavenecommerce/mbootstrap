@@ -32,17 +32,17 @@
  */
 ?>
 
-<ul class="nav nav-list">
+<ul class="list-group">
 <?php foreach ($this->getItems() as $_item): ?>
-    <li>
+    <li class="list-group-item">
+
+        <?php if ($this->shouldDisplayProductCount()): ?>
+            <span class="badge"><?php echo $_item->getCount() ?></span>
+        <?php endif; ?>
 
         <?php if ($_item->getCount() > 0): ?>
             <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>">
                 <?php echo $_item->getLabel() ?>
-
-                <?php if ($this->shouldDisplayProductCount()): ?>
-                    <span class="amount">(<?php echo $_item->getCount() ?>)</span>
-                <?php endif; ?>
             </a>
         <?php else: echo $_item->getLabel() ?>
         <?php endif; ?>
