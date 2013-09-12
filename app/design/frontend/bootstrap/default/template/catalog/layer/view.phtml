@@ -40,7 +40,7 @@
     <div class="block-content">
         <?php echo $this->getStateHtml() ?>
         <?php if ($this->getLayer()->getState()->getFilters()): ?>
-            <div class="actions clearfix"><a class="btn pull-right" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
+            <div class="actions currently-actions clearfix"><a class="btn btn-default btn-sm pull-right" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
         <?php endif; ?>
 
         <?php if($this->canShowOptions()): ?>

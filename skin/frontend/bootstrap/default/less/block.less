@@ -65,28 +65,44 @@
     }
 
     > .block-content {
-        > .currently {
-            margin: 0 0 @line-height-computed;
-
-            > .nav-list {
+        
+        .currently {}
+            .currently-list {
                 padding: 0;
 
-                .currently__list {
-                    > li {
-                        > span {
-                            //color: @textColor;
+                list-style: none;
+            }
+                .currently-list-item {}
+                    .currently-list-header {
+                        font-weight: bold;
+                    }
 
-                            &.title {}
-                            &.value {
-                                text-transform: none;
+                    .currently-sublist {
+                        padding: 0;
+
+                        list-style: none;
+
+                        > li {
+                            margin-bottom: (@line-height-computed / 4);
+
+                            .clearfix();
+
+                            > .title {}
+                            > .value {}
+
+                            .btn {
+                                float: right;
+                                margin-left: (@line-height-computed / 4);
                             }
                         }
                     }
-                }
-            }
-        }
+        
+        .currently-actions {
+            padding-bottom: (@line-height-computed / 2);
+            margin-bottom: (@line-height-computed / 2);
 
-        > .block-subtitle {}
+            border-bottom: 1px solid #fff;
+        }
 
         .layered-list {
             padding: 0;
@@ -97,10 +113,14 @@
                 > .layered-list-header {
                     padding: @padding-base-vertical 0;
                 }
+
+                > .list-group:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
 
-                .list-group {            
+                .list-group {
                     .price {
                         font-size: @font-size-base;
                         font-weight: normal;
@@ -112,19 +132,29 @@
 }
 
 
-
-// Block - Subscribe
+// Block - Tags
 // -------------------------
-.block-subscribe {
-    .block-title {}
-    .block-content {
-        .form-subscribe-header {}
-        .actions {}
+.block-tags {
+    .tags-list {
+        padding: 0;
+
+        list-style: none;
+        
+        > li {
+            display: inline-block;
+        }
     }
 }
 
 
-
+// Block - Tags
+// -------------------------
+.block-subscribe {
+    .block-title {}
+    .block-content {
+        
+    }
+}
 
 
 // Block - Poll

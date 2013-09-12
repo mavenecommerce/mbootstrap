@@ -34,27 +34,32 @@
 <?php $_filters = $this->getActiveFilters() ?>
 <?php if(!empty($_filters)): ?>
 <div class="currently">
-    <ul class="nav nav-list">
+    <ul class="currently-list">
 
-        <li class="nav-header"><?php echo $this->__('Currently Shopping by:') ?>
-            <ul class="nav nav-list currently__list">
+        <li class="currently-list-item">
+            <div class="currently-list-header"><?php echo $this->__('Currently Shopping by:') ?></div>
+
+            <ul class="currently-sublist">
                 <?php foreach ($_filters as $_filter): ?>
                     <li>
-                        <span class="title"><?php echo $this->__($_filter->getName()) ?>:</span> <span class="value"><?php echo $this->stripTags($_filter->getLabel()) ?></span>
+
                         <?php
-                            $clearLinkUrl = $_filter->getClearLinkUrl();
-                            if ($clearLinkUrl):
-                        ?>
-                            <a  class="btn btn-previous" href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Previous') ?>"><?php echo $this->__('Previous') ?></a>
-                            <a  class="btn btn-remove" title="<?php echo $this->escapeHtml($_filter->getFilter()->getClearLinkText()) ?>" href="<?php echo $clearLinkUrl ?>"><?php echo $this->escapeHtml($_filter->getFilter()->getClearLinkText()) ?></a>
+                        $clearLinkUrl = $_filter->getClearLinkUrl();
+                        if ($clearLinkUrl):
+                            ?>
+                            <a  class="btn btn-default btn-previous" href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Previous') ?>"><?php echo $this->__('Previous') ?></a>
+                            <a  class="btn btn-default btn-remove btn-xs" title="<?php echo $this->escapeHtml($_filter->getFilter()->getClearLinkText()) ?>" href="<?php echo $clearLinkUrl ?>"><?php echo $this->escapeHtml($_filter->getFilter()->getClearLinkText()) ?></a>
                         <?php else: ?>
-                            <button class="btn btn-link btn-mini btn-remove" onclick='window.location="<?php echo $_filter->getRemoveUrl() ?>"'><i class="icon-remove"></i></button>
+                            <button class="btn btn-default btn-remove btn-xs" onclick='window.location="<?php echo $_filter->getRemoveUrl() ?>"'><i class="icon-remove"></i></button>
                         <?php endif; ?>
+
+                        <span class="title"><?php echo $this->__($_filter->getName()) ?>:</span>
+                        <span class="value"><?php echo $this->stripTags($_filter->getLabel()) ?></span>
+
                     </li>
                 <?php endforeach; ?>
             </ul>
         </li>
-        <li class="divider"></li>
 
     </ul>
 </div>
