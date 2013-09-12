@@ -34,35 +34,39 @@
 <?php if($this->getItemCount()): ?>
 <section class="crosssell">
     <h2><?php echo $this->__('Based on your selection, you may be interested in the following items:') ?></h2>
-    <ul id="crosssell-products-list" class="thumbnails">
+    <ul id="crosssell-products-list" class="products-grid">
     <?php foreach ($this->getItems() as $_item): ?>
-        <li class="item span2">
+        <li class="item">
 
-            <a class="product-image thumbnail" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(260); ?>" width="260" height="260" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
+            <div class="thumbnail">
+                <a class="product-image" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>">
+                    <img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(260); ?>" width="260" height="260" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
+                </a>
 
-            <div class="caption">
+                <div class="caption">
 
-                <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
-                <?php echo $this->getPriceHtml($_item, true) ?>
+                    <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
+                    <?php echo $this->getPriceHtml($_item, true) ?>
 
-                <?php if ( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->getAddToCompareUrl($_item) ): ?>
-                    <div class="btn-group">
+                    <?php if ( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->getAddToCompareUrl($_item) ): ?>
+                        <div class="btn-group">
 
-                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><?php echo $this->__('Add to Cart') ?></button>
-                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><?php echo $this->__('Add to Cart') ?></button>
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 
-                        <ul class="dropdown-menu">
-                            <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                                <li><a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
-                            <?php endif; ?>
-                            <?php if($_compareUrl=$this->getAddToCompareUrl($_item)): ?>
-                                <li><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
-                            <?php endif; ?>
-                        </ul>
-                    </div>
-                <?php else: ?>
-                    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><?php echo $this->__('Add to Cart') ?> <span class="caret"></span></button>
-                <?php endif; ?>
+                            <ul class="dropdown-menu">
+                                <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                                    <li><a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                                <?php endif; ?>
+                                <?php if($_compareUrl=$this->getAddToCompareUrl($_item)): ?>
+                                    <li><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                    <?php else: ?>
+                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><?php echo $this->__('Add to Cart') ?> <span class="caret"></span></button>
+                    <?php endif; ?>
+                </div>
             </div>
         </li>
     <?php endforeach; ?>

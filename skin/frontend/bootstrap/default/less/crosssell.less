@@ -2,32 +2,19 @@
 // Crosssel
 // --------------------------------------------------
 .crosssell {
-    margin: @line-height-base 0;
+    margin: @line-height-computed 0;
     
     > h2 {
         font-size: @font-size-base;
         
-        //border-bottom: 2px solid @black;
     }
-    > ul {
-        > .item {
-            .product-image {
-                > img {
-                    min-width: 100%;
-                }
-            }
-            .caption {
-                > .product-name {
-                    min-height: @line-height-base * 2;
-                    
-                    line-height: @line-height-base;
-                }
 
-                .price-box {
-                    min-height: @line-height-base * 2;
-                    margin-bottom: @line-height-base / 2;
-                }
-            }
+    .products-grid {
+        > .item {
+            .make-xs-column(12);
+            .make-sm-column(4);
+            .make-md-column(3);
+            .make-lg-column(2);
         }
     }
 }

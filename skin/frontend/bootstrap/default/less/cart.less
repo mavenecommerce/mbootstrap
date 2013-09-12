@@ -1,10 +1,4 @@
 //
-// Bootstrap Core variables and mixins
-// --------------------------------------------------
-@import "../bootstrap/less/variables.less";
-@import "../bootstrap/less/mixins.less";
-
-
 // Cart
 // --------------------------------------------------
 .cart {
@@ -13,7 +7,7 @@
             .reset-list;
             position: absolute;
             top: 0;
-            //right: @gridGutterWidth;
+            right: 0;
         }
     }
 
@@ -36,24 +30,27 @@
         thead {
             th {}
         }
+
         tfoot {
-            td {}
+            td {
+                vertical-align: bottom;
+            }
         }
         tbody {
             tr {
                 td {
                     .product-name {
-                        line-height: @line-height-base;
+                        line-height: @line-height-computed;
                     }
 
 
                     .qty {
                         margin: 0;
-                        //min-width: @gridGutterWidth * 2.25;
+                        width: 50px;
                     }
 
                     .btn {
-                        .opacity(10);
+                        .opacity(0.1);
                         .transition(opacity 0.25s ease-in-out;)
                     }
 
@@ -68,27 +65,48 @@
 
                 &:hover {
                     .btn {
-                    .opacity(100);
+                        .opacity(1);
                     }
                 }
             }
         }
     }
 
-    .totals { 
-        text-align: right;
+    .cart-table-totals {
+        tfoot {
+            td {
+                vertical-align: baseline;
+            }
+        }
     }
 
     .cart-collaterals {
+        .cart-collaterals-layout {
+            .make-row();
+
+            > .left,
+            > .center,
+            > .right {
+                .make-xs-column(12);
+                .make-sm-column(4);
+                .make-md-column(4);
+                .make-lg-column(4);
+
+                margin-bottom: @line-height-computed;
+            }
+        }
+
         h2 {
             font-size: @font-size-large;
             font-weight: normal;
 
-            //border-bottom: 2px solid @grayLighter;
+            margin-top: 0;
         }
 
         .shipping {
-            .shipping-form {}
+            .shipping-form {
+                .form-list {}
+            }
             .sp-methods {
                 ul {
                     .reset-list;
@@ -97,6 +115,12 @@
                         font-size: @font-size-base;
                     }
                 }
+            }
+        }
+
+        .discount {
+            .buttons-set {
+                margin-top: (@line-height-computed / 2);
             }
         }
 

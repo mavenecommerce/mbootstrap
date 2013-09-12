@@ -30,7 +30,7 @@ $isVisibleProduct = $_item->getProduct()->isVisibleInSiteVisibility();
 $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage_Catalog_Model_Product_Attribute_Source_Msrp_Type::TYPE_BEFORE_ORDER_CONFIRM);
 ?>
 <tr>
-    <td class="cell_image"><?php if ($this->hasProductUrl()):?><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><?php endif;?><img src="<?php echo $this->getProductThumbnail()->resize(100); ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /><?php if ($this->hasProductUrl()):?></a><?php endif;?></td>
+    <td class="cell_image"><?php if ($this->hasProductUrl()):?><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><?php endif;?><img class="img-responsive" src="<?php echo $this->getProductThumbnail()->resize(100); ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /><?php if ($this->hasProductUrl()):?></a><?php endif;?></td>
     <td>
         <h2 class="product-name">
         <?php if ($this->hasProductUrl()):?>
@@ -71,8 +71,8 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <td class="a-center">
         <?php if ($isVisibleProduct): ?>
         <div class="iblock">
-            <a class="btn hidden-phone" href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo $this->__('Edit item parameters') ?>"><i class="icon-edit"></i></a>
-            <a class="btn btn-mini visible-phone" href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo $this->__('Edit item parameters') ?>"><i class="icon-edit"></i></a>
+            <a class="btn hidden-xs" href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo $this->__('Edit item parameters') ?>"><i class="icon-edit"></i></a>
+            <a class="btn btn-mini visible-xs" href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo $this->__('Edit item parameters') ?>"><i class="icon-edit"></i></a>
         </div>
         <?php endif ?>
     </td>
@@ -81,8 +81,8 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <td class="a-center">
         <?php if ($isVisibleProduct): ?>
         <div class="iblock">
-            <a href="<?php echo $this->helper('wishlist')->getMoveFromCartUrl($_item->getId()); ?>" class="btn link-wishlist use-ajax hidden-phone"><i class="icon-bookmark"></i></a>
-            <a href="<?php echo $this->helper('wishlist')->getMoveFromCartUrl($_item->getId()); ?>" class="btn link-wishlist use-ajax btn-mini visible-phone"><i class="icon-bookmark"></i></a>
+            <a href="<?php echo $this->helper('wishlist')->getMoveFromCartUrl($_item->getId()); ?>" class="btn link-wishlist use-ajax hidden-xs"><i class="icon-bookmark"></i></a>
+            <a href="<?php echo $this->helper('wishlist')->getMoveFromCartUrl($_item->getId()); ?>" class="btn link-wishlist use-ajax btn-mini visible-xs"><i class="icon-bookmark"></i></a>
         </div>
         <?php endif ?>
     </td>
@@ -189,7 +189,7 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <?php endif; ?>
 
     <td class="a-center">
-        <input type="number" name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="4" title="<?php echo $this->__('Qty') ?>" class="input-text qty span1" maxlength="12" />
+        <input class="input-text qty form-control"type="number" name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="4" title="<?php echo $this->__('Qty') ?>" maxlength="12" />
     </td>
 
     <?php if (($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()) && !$_item->getNoSubtotal()): ?>
@@ -289,8 +289,8 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
 
     <td class="a-center">
         <div class="iblock">
-            <a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn btn-remove hidden-phone"><i class="icon-remove"></i></a>
-            <a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn btn-remove btn-mini visible-phone"><i class="icon-remove"></i></a>
+            <a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn btn-remove hidden-xs"><i class="icon-remove"></i></a>
+            <a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn btn-remove btn-mini visible-xs"><i class="icon-remove"></i></a>
         </div>
     </td>
 </tr>

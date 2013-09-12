@@ -13,8 +13,10 @@
 	> select,
 	> textarea {
 		margin-bottom: 0;
+	}
 
-		//.input-block-level();
+	select {
+		width: 100%;
 	}
 }
 
@@ -66,14 +68,12 @@ label.required {
 // Forms-list
 // -------------------------
 .form-list {
+	padding: 0;
+
 	list-style: none;
 
-	&.reset {
-		.reset-list;
-	}
-
 	li {
-		margin-bottom: @line-height-base / 2;
+		margin-bottom: (@line-height-computed / 2);
 
 		label {
 			&.required {
@@ -98,13 +98,13 @@ label.required {
 			margin-bottom: 0;
 
 			.field {
-				margin-bottom: @line-height-base / 2;
+				margin-bottom: (@line-height-computed / 2);
 			}
 
 			&.address {
 				.field {
 					+ .field {
-						margin-top: @line-height-base * 1.25; // label height + label margin-bottom
+						margin-top: (@line-height-computed * 1.25); // label height + label margin-bottom
 
 						+ .field {
 							margin-top: 0;
@@ -119,9 +119,9 @@ label.required {
 	}
 	
 	ul {
-		&.reset {
-			.reset-list;
-		}
+		padding: 0;
+
+		list-style: none;
 	}
 }
 		
@@ -196,81 +196,7 @@ label.required {
 
 
 
-/* PROJECT_NAME project elements styles */
 
-/* @group Checkbox */
-/*
-	input[type="checkbox"] { 
-		display: block;
-		position: absolute;
-		visibility: hidden;
-		width: 0;
-		height: 0;
-		
-		overflow: hidden;
-		}
-
-	input[type="checkbox"] + label { }
-	
-	input[type="checkbox"] + label:before { 
-		display: inline-block;
-		width: 12px;
-		height: 12px;
-		margin-right: 3px;
-		
-		content: '';
-		vertical-align: text-bottom;
-		
-		background: url(../images/elements/forms/checkbox.png);
-		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAAcklEQVQ4jWM4d+50BBD/JxJHMIAYr1+/JgpfvHj+/6iGIayB5KQxjQQN0waBp+/cufO/paWFOA0gxTo6OmAMYqNoSE9P/79//36cijFsiIiI+M/Pzw/WhE0xVifBNGFTjNMPIE3YFOP1NDbFFMUDSUkDAE2Z8cOx5CO+AAAAAElFTkSuQmCC") no-repeat;
-		}
-
-	input[type="checkbox"]:checked { }
-	input[type="checkbox"]:checked + label { }
-	input[type="checkbox"]:checked + label:before { 
-		background-position: 0 -12px;
-		}
-*/
-/* @end */
-
-
-
-/* @group Radio button */
-/*
-	input[type="radio"] { 
-		display: block;
-		position: absolute;
-		visibility: hidden;
-		width: 0;
-		height: 0;
-		
-		overflow: hidden;
-		}
-
-	input[type="radio"] + label { 
-		vertical-align: bottom;
-		}
-	
-	input[type="radio"] + label:before { 
-		display: inline-block;
-		width: 17px;
-		height: 17px;
-		margin-right: 3px;
-		
-		content: '';
-		vertical-align: middle;
-		
-		background: url(../images/elements/forms/radiobutton.png) no-repeat;
-		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAiCAYAAAC5gzL5AAABRUlEQVR42rWUQc6CMBCFjYeDM+hSLyIcyY0nICxMNHFhDKzEH4NwAlfjfIlNtAZLLf/iZdLOvMcwbd+k67o37HbbqWKuWCuuiruifq5n5F/rRWRiCywVcjodparO0jSNtG0rRNbsk6fOFjECq8NhL3Vdi657QZ466o2IEViQ4IsUukAd9fAQMTPQL/xRMBjUw4OPyJx/JeELePAR2Vwu1U8i8OAjcjWz8MXt1iDSIXLnGNn8BcxlrE7CZzLa6YTfk/AbG/523K+Y6UMkul/xp5/Mnv7RQiJ+8xNIFtympIAMPkS8TKlHxH+wlsg/mlJRFJJlGdHflGg5TVOJ41iiKCKyZn+4KSVJAtkGQsNMqSxL04EN9sk7TYkZQOgDeYcpBXRiz4R/95pJ6Om4TYnW8zwnOu5J4I0d/e0AL1P6ZgWDTMn2kwfOeXAQF8GPLAAAAABJRU5ErkJggg==") no-repeat;
-		}
-	
-	input[type="radio"]:checked { }
-	input[type="radio"]:checked + label { }
-	input[type="radio"]:checked + label:before { 
-		background-position: 0 -17px;
-		}
-*/
-/* @end */
 
 /* @group Select box */
 	
