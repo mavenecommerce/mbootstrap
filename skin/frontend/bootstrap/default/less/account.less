@@ -21,6 +21,12 @@
         .make-md-column(8);
         .make-lg-column(8);
     }
+
+    .content {
+        h2 + p {
+            min-height: (@line-height-computed * 3);
+        }
+    }
 }
 
 
