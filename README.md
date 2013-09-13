@@ -10,8 +10,8 @@ Current version: Alpha
 
 ## Assets
 
-* Bootstrap v2.3.1
-* Font Awesome v3.0.2
+* Bootstrap v3.0.0
+* Font Awesome v3.0.2 (will be removed)
 * HTML5 support
 * Microdata support (schema.org)
 
