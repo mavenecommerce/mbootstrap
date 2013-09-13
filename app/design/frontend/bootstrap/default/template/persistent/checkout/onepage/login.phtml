@@ -50,14 +50,14 @@
                 <p><?php echo $this->__('Please log in below:') ?></p>
                 <ul class="form-list">
 
-                    <li class="control-group">
+                    <li>
                         <label for="login-email" class="required control-label"><em>*</em><?php echo $this->__('Email Address') ?></label>
                         <div class="input-box controls">
                             <input type="text" class="input-text required-entry validate-email" id="login-email" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" />
                         </div>
                     </li>
 
-                    <li class="control-group">
+                    <li>
                         <label for="login-password" class="required control-label"><em>*</em><?php echo $this->__('Password') ?></label>
                         <div class="input-box controls">
                             <input type="password" class="input-text required-entry" id="login-password" name="login[password]" />
