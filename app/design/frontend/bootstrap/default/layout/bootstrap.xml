@@ -127,6 +127,10 @@
                 <block type="core/template" name="page.company.organization" as="organization" template="page/html/footer/organization.phtml"/>
             </reference>
 
+            <block type="core/text_list" name="before_document_end" as="before_document_end" translate="label">
+                <label>Before Document End</label>
+            </block>
+
         </reference>
     </default>
 
@@ -174,11 +178,15 @@
 
                     <action method="addLink" translate="label title" module="customer">
                         <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
-                        <prepare/><urlParams/><position>1000</position><liParams/>
+                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in</liParams>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-in"></i>]]></beforeText>
                     </action>
 
                 </reference>
+            </reference>
+
+            <reference name="before_document_end">
+                <block type="customer/form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
             </reference>
 
         </reference>
