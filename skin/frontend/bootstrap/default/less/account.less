@@ -38,12 +38,21 @@
 // Block - Account navigation
 // -------------------------
 .block-account {
-    .block-title {}
-    .block-content { 
-        > ul {
-            > li {
-                > a {}
-                &.current {}
+    .block-content {
+        padding: @padding-small-horizontal 0;
+    }
+    
+    .nav {
+        > li {
+            > a,
+            > strong {
+                display: block;
+                padding: @padding-small-vertical @padding-small-horizontal;
+            }
+
+            &.active {
+                border-right: 1px solid #563d7c;
+                color: #563d7c;
             }
         }
     }
