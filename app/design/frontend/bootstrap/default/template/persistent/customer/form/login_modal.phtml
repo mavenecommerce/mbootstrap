@@ -33,18 +33,6 @@
 /** @var $this Mage_Customer_Block_Form_Login */
 ?>
 
-<script type="text/javascript">
-    /*<![CDATA[*/
-    jQuery(document).ready(function ($) {
-        $(".quick-access .btn-log-in").on("click", function(event){
-            event.preventDefault();
-
-            $("#customer-form-login-modal").modal("show");
-        });
-    });
-    /*]]>*/
-</script>
-
 <div class="modal modal-form-login fade" id="customer-form-login-modal" tabindex="-1" role="dialog" aria-labelledby="<?php echo $this->__("Log In"); ?>" aria-hidden="true">
     <div class="modal-dialog">
 
@@ -113,3 +101,16 @@
 
     </div>
 </div>
+
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    jQuery(document).ready(function ($) {
+        $(".quick-access .btn-log-in").on("click", function(event){
+            event.preventDefault();
+
+            $("#customer-form-login-modal").modal("show");
+        });
+    });
+    /*]]>*/
+</script>
