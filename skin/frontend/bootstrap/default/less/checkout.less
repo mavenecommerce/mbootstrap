@@ -2,14 +2,16 @@
 // One Page Checkout
 // --------------------------------------------------
 .opc {
-	.reset-list;
+	padding: 0;
+
+	list-style: none;
 
 	> li {
 		> .step-title {
-			margin: 0 0 @line-height-base;
+			margin: 0 0 @line-height-computed;
 		    position: relative;
 		    
-			//border-bottom: 2px solid @grayLighter;
+			border-bottom: 2px solid @gray-lighter;
 
 	        .clearfix();
 
@@ -18,12 +20,13 @@
 		        font-weight: normal;
 
 				float: left;
-		        margin: 0 0 0 @line-height-base * 1.5 + 10;
+		        margin: 0 0 0 ((@line-height-computed * 1.5) + 10);
 		        
-		        line-height: @line-height-base * 1.5;
+		        line-height: normal;
 
-		        //color: @grayLight;
+		        color: @gray-light;
 			}
+
 			> a {
 				float: right;
 				display: none;
@@ -31,6 +34,7 @@
 				.opacity(10);
                 .transition(opacity 0.25s ease-in-out;)
 			}
+
 			> .number {
 				font-size: @font-size-large * 1.25;
 		        font-weight: bold;
@@ -38,15 +42,14 @@
 				position: absolute;
 				left: 0;
 				bottom: 0;
-				width: @line-height-base * 1.5;
-				height: @line-height-base * 1.5;
+				width: (@line-height-computed * 1.5);
+				height: (@line-height-computed * 1.5);
 
-		        line-height: @line-height-base * 1.5;
+		        line-height: (@line-height-computed * 1.5);
 		        text-align: center;
-		        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
 
-		        //background: @grayLighter;
-		        //color: @white;
+		        background: @gray-lighter;
+		        color: @gray-light;
 
 		        .border-radius(2px 2px 0 0);
 			}
@@ -59,7 +62,7 @@
 		}
 		
 		> .step {
-			margin: @line-height-base 0;
+			margin: @line-height-computed 0;
 			
 			.form-list {}
 
@@ -74,13 +77,14 @@
 
 					line-height: inherit;
 				}
+
 				> .btn,
 				> .btn-group {
 					float: right;
 				}
+
 				> .please-wait {
 					float: right;
-					//margin-right: @gridGutterWidth;
 				}
 			}
 
@@ -93,7 +97,7 @@
 						list-style: none;
 						
 						> li {
-							margin-bottom: @line-height-base/2;
+							margin-bottom: (@line-height-computed / 2);
 
 							> label {
 								margin-bottom: 0;
@@ -113,14 +117,16 @@
 		&.allow {
 			> .step-title {
 				> h2 {
-					//color: @textColor;
+					color: @text-color;
 					cursor: pointer;
 				}
+
 				> .number {
 					text-shadow: none;
 
-					//color: @green;
+					color: @green;
 				}
+
 				> a {
 					display: inline;
 				}
@@ -132,7 +138,7 @@
 				> .number {
 					text-shadow: none;
 
-					//color: @black;
+					color: @black;
 				}
 				> h2 {
 					cursor: default;
@@ -166,11 +172,10 @@
 
 				.registered-users {
 					.buttons-set {
-						line-height: @line-height-base * 2 + 4;
+						line-height: (@line-height-computed * 2);
 
 						.btn {
 							float: none;
-							//margin-right: @gridGutterWidth / 2;
 						}
 					}
 				}
@@ -241,7 +246,7 @@
 
 			#checkout-review-submit {
 				.buttons-set {
-					line-height: @line-height-base * 2 + 4;
+					line-height: (@line-height-computed * 2);
 				}
 			}
 		}
@@ -265,9 +270,9 @@
 			> dt {
 				font-weight: normal;
 
-				margin-bottom: @line-height-base/2;
+				margin-bottom: (@line-height-computed / 2);
 
-				//color: @grayLight;
+				color: @gray-light;
 				
 				.clearfix();
 
@@ -275,7 +280,6 @@
 					font-weight: normal;
 
 					float: right;
-					//margin-left: @gridGutterWidth/4;
 				}
 
 				> .separator {
@@ -287,9 +291,9 @@
 
 					padding: 3px 10px;
 
-					//background: @grayLighter;
+					background: @gray-lighter;
 
-					//color: @textColor;
+					color: @text-color;
 
 					.border-radius(@border-radius-small);
 				}
