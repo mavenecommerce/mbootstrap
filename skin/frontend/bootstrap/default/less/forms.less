@@ -16,7 +16,7 @@ form {
 	.legend {
 		font-family: inherit;
 		font-weight: normal;
-		
+
 		margin: @line-height-computed 0 (@line-height-computed / 2);
 		padding-top: (@line-height-computed / 2);
 
@@ -90,15 +90,21 @@ label.required {
 // Forms-list
 // -------------------------
 .form-list {
+	@field-margion-bottom: (@line-height-computed * 0.75);	// default bootstrap is 15px
+
 	padding: 0;
 
 	list-style: none;
 
 	li {
-		margin-bottom: (@line-height-computed / 2);
+		margin-bottom: @field-margion-bottom;
 
 		label {
 			cursor: pointer;
+		}
+
+		.form-group {
+			margin-bottom: 0;
 		}
 
 		.input-box {
@@ -111,7 +117,7 @@ label.required {
 			.make-row();
 
 			.field {
-				margin-bottom: (@line-height-computed / 2);
+				margin-bottom: @field-margion-bottom;
 
 				.make-xs-column(12);
 	            .make-sm-column(12);
@@ -122,7 +128,7 @@ label.required {
 			&.address {
 				.field {
 					+ .field {
-						margin-top: (@line-height-computed * 1.25); // label height + label margin-bottom
+						//margin-top: (@line-height-computed * 1.25); // label height + label margin-bottom
 
 						+ .field {
 							margin-top: 0;
