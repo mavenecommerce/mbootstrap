@@ -37,8 +37,8 @@
 
         <h2 class="legend"><?php echo $this->__('Account Information') ?></h2>
 
-        <ul class="form-list reset">
-            <li class="fields row">
+        <ul class="form-list">
+            <li class="fields">
                 <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getCustomer())->toHtml() ?>
             </li>
             <li class="control-group">
@@ -81,7 +81,7 @@
 
         <h2 class="legend"><?php echo $this->__('Change Password') ?></h2>
 
-        <ul class="form-list reset">
+        <ul class="form-list">
 
             <li class="control-group">
                 <label for="current_password" class="required control-label"><em>*</em><?php echo $this->__('Current Password') ?></label>

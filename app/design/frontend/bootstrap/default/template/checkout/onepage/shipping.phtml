@@ -42,7 +42,7 @@
                 <input type="hidden" name="shipping[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="shipping:address_id" />
 
                 <ul class="reset">
-                    <li class="fields row"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress())->setFieldIdFormat('shipping:%s')->setFieldNameFormat('shipping[%s]')->setFieldParams('onchange="shipping.setSameAsBilling(false)"')->toHtml() ?></li>
+                    <li class="fields"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress())->setFieldIdFormat('shipping:%s')->setFieldNameFormat('shipping[%s]')->setFieldParams('onchange="shipping.setSameAsBilling(false)"')->toHtml() ?></li>
 
                     <li class="row">
                         <div class="field span4 control-group">
@@ -81,7 +81,7 @@
                     </li>
                     <?php endif; ?>
 
-                    <li class="fields row">
+                    <li class="fields">
                         <div class="field span4 control-group">
                             <label for="shipping:city" class="required control-label"><em>*</em><?php echo $this->__('City') ?></label>
                             <div class="input-box controls">
@@ -104,7 +104,7 @@
                         </div>
                     </li>
 
-                    <li class="fields row">
+                    <li class="fields">
                         <div class="field span4 control-group">
                             <label for="shipping:postcode" class="required control-label"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
                             <div class="input-box controls">
@@ -119,7 +119,7 @@
                         </div>
                     </li>
 
-                    <li class="fields row">
+                    <li class="fields">
                         <div class="field span4 control-group">
                             <label for="shipping:telephone" class="required control-label"><em>*</em><?php echo $this->__('Telephone') ?></label>
                             <div class="input-box controls">

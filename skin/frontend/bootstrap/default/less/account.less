@@ -6,66 +6,22 @@
 // Login form
 // -------------------------
 .account-login {
-    .page-title {}
+    .registered-users {
+        margin-bottom: (@line-height-computed * 2);
+        
+        .make-xs-column(12);
+        .make-sm-column(4);
+        .make-md-column(4);
+        .make-lg-column(4);
+    }
 
     .new-users {
-        .buttons-set {
-            line-height: @line-height-base * 2 + 4;
-
-            .clearfix();
-
-            .required {
-                float: left;
-                margin: auto;
-
-                line-height: inherit;
-            }
-            .btn {
-                float: right;
-            }
-        }
-    }
-    .registered-users {
-        .content {
-            //padding: 0 @gridGutterWidth @gridGutterWidth;
-            
-            background: url(../images/blocks/block/background.png);
-
-            .border-radius(2px);
-
-            .form-list {}
-            
-            .buttons-set {
-                line-height: @line-height-base * 2 + 4;
-
-                .link-forgot {
-                    white-space: nowrap;
-                }
-            }
-        }
-            
-    }
-    form {
-        margin-bottom: 0;
-    }
-
-    h2 {
-        font-size: @font-size-large;
-        font-weight: normal;
-
-        margin: 0;
+        .make-xs-column(12);
+        .make-sm-column(8);
+        .make-md-column(8);
+        .make-lg-column(8);
     }
 }
-
-    .account__or {
-        font-size: @font-size-large * 3;
-
-        line-height: 260px;
-        text-align: center;
-        text-transform: uppercase;
-
-        //color: @grayLight;
-    }
 
 
 // Register form

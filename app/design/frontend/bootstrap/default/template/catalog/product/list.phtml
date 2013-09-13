@@ -83,7 +83,7 @@
 
                                 <div class="btn-group">
                                     <?php if($_product->isSaleable()): ?>
-                                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__('Add to Cart') ?></button>
 
                                         <?php if ( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->getAddToCompareUrl($_product) ) : ?>
                                             <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>

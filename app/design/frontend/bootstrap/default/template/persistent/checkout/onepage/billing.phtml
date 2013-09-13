@@ -44,9 +44,9 @@
             <input type="hidden" name="billing[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="billing:address_id" />
 
             <ul class="reset">
-                <li class="fields row"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></li>
+                <li class="fields"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></li>
 
-                <li class="fields row">
+                <li class="fields">
                     <div class="field span4 control-group">
                         <label for="billing:company" class="control-label"><?php echo $this->__('Company') ?></label>
                         <div class="input-box controls">
@@ -91,7 +91,7 @@
                 </li>
                 <?php endif; ?>
 
-                <li class="fields row">
+                <li class="fields">
                     <div class="field span4 control-group">
                         <label for="billing:city" class="required control-label"><em>*</em><?php echo $this->__('City') ?></label>
                         <div class="input-box controls">
@@ -114,7 +114,7 @@
                     </div>
                 </li>
 
-                <li class="fields row">
+                <li class="fields">
                     <div class="field span4 control-group">
                         <label for="billing:postcode" class="required control-label"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
                         <div class="input-box controls">
@@ -129,7 +129,7 @@
                     </div>
                 </li>
 
-                <li class="fields row">
+                <li class="fields">
                     <div class="field span4 control-group">
                         <label for="billing:telephone" class="required control-label"><em>*</em><?php echo $this->__('Telephone') ?></label>
                         <div class="input-box controls">
@@ -149,7 +149,7 @@
         <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
         <?php $_gender = $this->getLayout()->createBlock('customer/widget_gender') ?>
             <?php if ($_dob->isEnabled() || $_gender->isEnabled()): ?>
-                <li class="fields row">
+                <li class="fields">
                 <?php if ($_dob->isEnabled()): ?>
                     <div class="field span4">
                         <?php echo $_dob->setDate($this->getQuote()->getCustomerDob())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?>
@@ -167,7 +167,7 @@
                 <li class="span9"><?php echo $this->getTaxvatHtml() ?></li>
             <?php endif; ?>
 
-                <li class="fields row" id="register-customer-password">
+                <li class="fields" id="register-customer-password">
                     <div class="field span4 control-group">
                         <label for="billing:customer_password" class="required control-label"><em>*</em><?php echo $this->__('Password') ?></label>
                         <div class="input-box controls">

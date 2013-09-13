@@ -50,9 +50,9 @@
 
         <h2 class="legend"><?php echo $this->__('Contact Information') ?></h2>
 
-        <ul class="form-list reset">
+        <ul class="form-list">
 
-            <li class="fields row">
+            <li class="fields">
                 <?php echo $this->getNameBlockHtml() ?>
             </li>
 
@@ -109,7 +109,7 @@
 
         <h2 class="legend"><?php echo $this->__('Address') ?></h2>
 
-        <ul class="form-list reset">
+        <ul class="form-list">
 
             <?php $_streetValidationClass = $this->helper('customer/address')->getAttributeValidationClass('street'); ?>
             <li class="fields address">
