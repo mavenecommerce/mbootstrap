@@ -271,7 +271,7 @@
         <reference name="head">
 
             <!-- Checkout styles -->
-            <action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>
+            <!--<action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>-->
 
         </reference>
     </checkout_onepage_index>
@@ -281,7 +281,7 @@
         <reference name="head">
 
             <!-- Checkout styles -->
-            <action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>
+            <!--<action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>-->
 
         </reference>
     </checkout_onepage_success>
@@ -291,7 +291,7 @@
         <reference name="head">
 
             <!-- Checkout styles -->
-            <action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>
+            <!--<action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>-->
 
         </reference>
     </checkout_onepage_failure>

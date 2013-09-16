@@ -47,8 +47,8 @@
     <p class="required"><?php echo $this->__('* Required Fields') ?></p>
 
     <div class="btn-group">
-        <a class="btn" href="#" onclick="checkout.back(); return false;"><i class="glyphicon glyphicon-chevron-left"></i> <?php echo $this->__('Back') ?></a>
-        <button type="button" class="btn" onclick="payment.save()"><?php echo $this->__('Continue') ?> <i class="icon-chevron-right"></i></button>
+        <a class="btn btn-default" href="#" onclick="checkout.back(); return false;"><i class="glyphicon glyphicon-chevron-left"></i> <?php echo $this->__('Back') ?></a>
+        <button type="button" class="btn btn-primary" onclick="payment.save()"><?php echo $this->__('Continue') ?> <i class="icon-chevron-right"></i></button>
     </div>
     <span class="please-wait" id="payment-please-wait" style="display:none;">
         <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Loading next step...') ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>

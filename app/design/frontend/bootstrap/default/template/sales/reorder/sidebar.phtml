@@ -49,15 +49,19 @@
             <?php foreach ($_items as $_item): ?>
                 <li class="item">
                     <?php if ($this->isItemAvailableForReorder($_item)): ?>
+                        <div class="checkbox">
                         <?php $_showAddButtonFlag = true ?>
-                        <input type="checkbox" name="order_items[]" id="reorder-item-<?php echo $_item->getId() ?>" value="<?php echo $_item->getId() ?>" title="<?php echo $this->__('Add to Cart') ?>" class="validate-one-required-by-name" />
-                        <script type="text/javascript">
-                        //<![CDATA[
-                            $('reorder-item-<?php echo $_item->getId() ?>').advaiceContainer = 'cart-sidebar-reorder-advice-container';
-                        //]]>
-                        </script>
+                            <input type="checkbox" name="order_items[]" id="reorder-item-<?php echo $_item->getId() ?>" value="<?php echo $_item->getId() ?>" title="<?php echo $this->__('Add to Cart') ?>" class="validate-one-required-by-name" />
+                            <script type="text/javascript">
+                            //<![CDATA[
+                                $('reorder-item-<?php echo $_item->getId() ?>').advaiceContainer = 'cart-sidebar-reorder-advice-container';
+                            //]]>
+                            </script>
+                            <a class="product-name" href="<?php echo $_item->getProduct()->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
+                        </div>
+                    <?php else: ?>
+                        <a class="product-name" href="<?php echo $_item->getProduct()->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
                     <?php endif; ?>
-                    <a class="product-name" href="<?php echo $_item->getProduct()->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
                 </li>
             <?php endforeach; ?>
             </ol>
@@ -67,10 +71,10 @@
             <div id="cart-sidebar-reorder-advice-container"></div>
 
             <div class="actions btn-group">
+                <a class="btn btn-default" href="<?php echo $this->getUrl('customer/account') ?>"><?php echo $this->__('View All'); ?></a>
                 <?php if ($_showAddButtonFlag): ?>
-                    <button type="submit" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-primary btn-cart"><i class="icon-shopping-cart"></i> <?php echo $this->__('Add to Cart') ?></button>
+                    <button type="submit" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-primary btn-cart"><i class="glyphicon glyphicon-shopping-cart"></i> <?php echo $this->__('Add to Cart') ?></button>
                 <?php endif; ?>
-                <a class="btn" href="<?php echo $this->getUrl('customer/account') ?>"><?php echo $this->__('View All'); ?></a>
             </div>
 
         </div>
