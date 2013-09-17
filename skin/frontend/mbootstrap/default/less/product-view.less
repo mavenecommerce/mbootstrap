@@ -158,10 +158,37 @@
             &:first-child {
                 margin-top: 0;
             }
+
             &.box-description {}
             &.box-additional {}
             &.box-up-sell {}
             &.box-tags {}
+            
+            &.box-reviews {
+                .media-list {
+                    .media-heading {
+                        .clearfix();
+
+                        .subj {}
+                        
+                        .author {
+                            font-weight: normal;
+
+                            color: @gray-light;
+                        }
+
+                        .date {
+                            float: right;
+                        }
+                    }
+
+                    .media-body {
+                        .ratings-table {
+                            float: right;
+                        }
+                    }
+                }
+            }
         }
     }
 }
