@@ -61,10 +61,11 @@
                     <td><em><?php echo $_order->getStatusLabel() ?></em></td>
                     <td class="a-center">
 
-                        <div class="btn-group">
-                            <a class="btn" href="<?php echo $this->getViewUrl($_order) ?>" title="<?php echo $this->__('View Order') ?>"><i class="icon-folder-open"></i></a>
+                        <div class="actions">
+                            <a class="btn" href="<?php echo $this->getViewUrl($_order) ?>" title="<?php echo $this->__('View Order') ?>"><i class="glyphicon glyphicon-folder-open"></i></a>
+
                             <?php if ($this->helper('sales/reorder')->canReorder($_order)) : ?>
-                                <a href="<?php echo $this->getReorderUrl($_order) ?>" class="btn link-reorder" title="<?php echo $this->__('Reorder') ?>"><i class="icon-shopping-cart"></i></a>
+                                <a href="<?php echo $this->getReorderUrl($_order) ?>" class="btn link-reorder" title="<?php echo $this->__('Reorder') ?>"><i class="glyphicon glyphicon-shopping-cart"></i></a>
                             <?php endif ?>
                         </div>
 

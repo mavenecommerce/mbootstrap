@@ -94,7 +94,7 @@
 
     > a {
         float: right;
-        margin-top: @line-height-base;
+        margin-top: (@line-height-computed + 14);
     }
 }
 
@@ -105,15 +105,12 @@
         .clearfix();
 
         > h3 {
-            //font-size: @font-size-large;
             font-weight: normal;
         }
 
         > a {
             float: right;
-            margin-top: (@line-height-computed / 2);
-            
-            line-height: (@line-height-base * 2);
+            margin-top: (@line-height-computed + 7);
         }
     }
     
@@ -167,9 +164,11 @@
         td {
             vertical-align: middle;
         }
-    }
 
-    .price {}
+        .actions {
+            white-space: nowrap;
+        }
+    }
 }
 
 
