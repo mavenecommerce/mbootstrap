@@ -22,7 +22,7 @@ Current version: Alpha
     * go to **System -> Configuration**
     * open **Design** tab on left sidebar
     * open **Package** section
-    * write "bootstrap" in *Current Package Name* field ([example](http://screencast.com/t/wr5GNCt2xUV))
+    * write "mbootstrap" in *Current Package Name* field and "default" in "Default" field ([example](http://screencast.com/t/ahgxx10Ud))
     * press "Save Config" button
 3. You must enable "[Allow Symlinks](https://github.com/colinmollenhour/modman/blob/master/README.md#requirements)"
 4. Refresh front-end page and enjoy
@@ -43,11 +43,11 @@ After `git clone` command you will have next folder hierarchy:
 ├── app
 │   └── design
 │       └── frontend
-│           └── bootstrap
+│           └── mbootstrap
 │               └── default
 ├── skin
 │   └── frontend
-│       └── bootstrap
+│       └── mbootstrap
 │           └── default
 ```
 
@@ -59,12 +59,12 @@ So you need create new theme in **bootstrap** package
 ├── app
 │   └── design
 │       └── frontend
-│           └── bootstrap
+│           └── mbootstrap
 │               ├── default
 │               └── custom-theme
 ├── skin
 │   └── frontend
-│       └── bootstrap
+│       └── mbootstrap
 │           ├── default
 │           └── custom-theme
 ```
@@ -77,7 +77,7 @@ at Admin Panel (System -> Configuration -> General -> Design tab -> Themes secti
 
 ## Skin folder structure description
 
-Open *magento/skin/frontend/bootstrap/default* path
+Open *magento/skin/frontend/mbootstrap/default* path
 
 ```
 .
@@ -99,7 +99,7 @@ Magento-Bootstrap theme contains also developers tools:
 * run *less to css* compile
 * run file system watching program and compile *less to css* automatically
 
-For more information go *magento/skin/frontend/bootstrap/default/* folder and read *Makefile* file
+For more information go *magento/skin/frontend/mbootstrap/default/* folder and read *Makefile* file
 
 ### Requirements
 
