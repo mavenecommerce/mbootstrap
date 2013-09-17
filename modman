@@ -1,13 +1,13 @@
 #Modules
-app/code/local/EcomDev/Cms				app/code/local/EcomDev/Cms
+app/code/local/EcomDev/Cms					app/code/local/EcomDev/Cms
 app/code/local/EcomDev/Bootstrap			app/code/local/EcomDev/Bootstrap
 
 #Config
-app/etc/modules/EcomDev_Cms.xml				app/etc/modules/EcomDev_Cms.xml
+app/etc/modules/EcomDev_Cms.xml					app/etc/modules/EcomDev_Cms.xml
 app/etc/modules/EcomDev_Bootstrap.xml			app/etc/modules/EcomDev_Bootstrap.xml
 
 #Theme
-app/design/frontend/bootstrap/default			app/design/frontend/bootstrap/default
+app/design/frontend/mbootstrap/default			app/design/frontend/mbootstrap/default
 
 #Skin
-skin/frontend/bootstrap/default				skin/frontend/bootstrap/default
+skin/frontend/mbootstrap/default					skin/frontend/mbootstrap/default
