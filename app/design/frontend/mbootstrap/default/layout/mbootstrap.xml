@@ -54,13 +54,8 @@
 
 
                 <!-- General styles -->
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.css</name><params/></action>
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.responsive.css</name><params/></action>
-
-                <!--<action method="addItem"><type>skin_css</type><name>css/forms.css</name><params/></action>
-                <action method="addItem"><type>skin_css</type><name>css/blocks.css</name><params/></action>
-                <action method="addItem"><type>skin_css</type><name>css/my-account.css</name><params/></action>-->
-                <!--<action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>-->
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.min.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.responsive.min.css</name><params/></action>
 
 
                 <!-- @MediaQueries styles -->

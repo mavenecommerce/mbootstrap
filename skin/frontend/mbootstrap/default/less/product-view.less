@@ -73,6 +73,23 @@
             .make-sm-column(4);
             .make-md-column(4);
             .make-lg-column(4);
+
+            .more-views {
+                > h2 {
+                    font-size: @font-size-small;
+                    font-weight: normal;
+                }
+
+                > ul {
+                    padding: 0;
+
+                    list-style: none;
+
+                    > li {
+                        display: inline-block;
+                    }
+                }
+            }
         }
 
         .product-options {
@@ -146,5 +163,31 @@
             &.box-up-sell {}
             &.box-tags {}
         }
+    }
+}
+
+
+// Product Image Popup
+// -------------------------
+.product-image-popup {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .buttons-set {
+        margin: @line-height-computed 0;
+        position: relative;
+
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .image {}
+
+    .nav {
+        text-align: center;
     }
 }
