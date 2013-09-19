@@ -1835,6 +1835,19 @@ body {
   margin-top: 0;
   line-height: 20px;
 }
+.product-view .product-essential .product-shop .product-options {
+  max-width: 50%;
+}
+.product-view .product-essential .product-shop .grouped-items-table td {
+  vertical-align: middle;
+}
+.product-view .product-essential .product-shop .grouped-items-table .price-box,
+.product-view .product-essential .product-shop .grouped-items-table .form-group {
+  margin: 0;
+}
+.product-view .product-essential .product-shop .grouped-items-table .qty {
+  min-width: 100px;
+}
 .product-view .product-essential .product-img-box {
   float: left;
   width: 100%;
@@ -1873,6 +1886,7 @@ body {
   display: inline-block;
 }
 .product-view .product-essential .product-options {
+  clear: left;
   position: relative;
 }
 .product-view .product-essential .product-options dl > dt > label {
@@ -1884,12 +1898,11 @@ body {
 }
 .product-view .product-essential .product-options dl > dd .options-list {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 .product-view .product-essential .product-options dl > dd .qty-holder {
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 0;
+  width: 200px;
 }
 .product-view .product-essential .product-options dl > dd .input-box .options-list {
   margin: 0;
@@ -1900,12 +1913,79 @@ body {
   top: 0;
   right: 0;
 }
+.product-view .product-essential .product-options-bottom {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.product-view .product-essential .product-options-bottom:before,
+.product-view .product-essential .product-options-bottom:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.product-view .product-essential .product-options-bottom:after {
+  clear: both;
+}
 .product-view .product-essential .product-options-bottom .price-box {
   margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .product-view .product-essential .product-options-bottom .price-box {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .product-view .product-essential .product-options-bottom .price-box {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .product-view .product-essential .product-options-bottom .price-box {
+    float: left;
+    width: 100%;
+  }
 }
 .product-view .product-essential .product-options-bottom .add-to-cart,
 .product-view .product-essential .product-options-bottom .add-to-links {
-  display: inline-block;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .product-view .product-essential .product-options-bottom .add-to-cart,
+  .product-view .product-essential .product-options-bottom .add-to-links {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .product-view .product-essential .product-options-bottom .add-to-cart,
+  .product-view .product-essential .product-options-bottom .add-to-links {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .product-view .product-essential .product-options-bottom .add-to-cart,
+  .product-view .product-essential .product-options-bottom .add-to-links {
+    float: left;
+    width: 50%;
+  }
 }
 .product-view .product-collateral .box-collateral {
   margin-bottom: 20px;
@@ -1917,6 +1997,9 @@ body {
 }
 .product-view .product-collateral .box-collateral:first-child {
   margin-top: 0;
+}
+.product-view .product-collateral .box-collateral.box-additional ul {
+  padding-left: 0;
 }
 .product-view .product-collateral .box-collateral.box-reviews .media-list .media-heading:before,
 .product-view .product-collateral .box-collateral.box-reviews .media-list .media-heading:after {
@@ -1939,6 +2022,10 @@ body {
 }
 .product-view .product-collateral .box-collateral.box-reviews .media-list .media-body .ratings-table {
   float: right;
+  margin-left: 10px;
+}
+.product-view .product-collateral .box-collateral.box-reviews .form-add .ratings-table td.value {
+  text-align: center;
 }
 .product-image-popup {
   margin-left: auto;
@@ -2883,6 +2970,13 @@ label.required > em {
 /* need add as container */
 .modal-form-login > .modal-dialog {
   width: 550px;
+}
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
+  left: 100%;
+  top: 0;
+  margin-left: -1px;
+  margin-top: -2px;
 }
 /*!
  *  Font Awesome 3.0.2

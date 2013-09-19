@@ -25,17 +25,7 @@
  */
 ?>
 
-<?php $_product = $this->getProduct(); ?>
-<?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
-
-<div class="add-to-links btn-group">
-<?php if ($this->helper('wishlist')->isAllow()) : ?>
-    <a href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="btn btn-default btn-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
-<?php endif; ?>
-<?php
-    $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product);
-?>
-<?php if($_compareUrl) : ?>
-    <a href="<?php echo $_compareUrl ?>" class="btn btn-default btn-compare"><?php echo $this->__('Add to Compare') ?></a>
-<?php endif; ?>
+<?php $_product = Mage::registry('product'); ?>
+<div class="buttons-set">
+    <a class="btn btn-default btn-back" href="<?php echo $_product->getProductUrl() ?>"><i class="glyphicon glyphicon-chevron-left"></i> <?php echo $this->__('Back to Main Product Info') ?></a>
 </div>

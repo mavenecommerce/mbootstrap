@@ -27,36 +27,32 @@
 ?>
 <?php $_product = $this->getProduct() ?>
 
-<div class="row">
-    <div class="span3">
+<div class="bundle-info">
 
-        <?php if($_product->isSaleable()): ?>
-        <script type="text/javascript">
-        //<![CDATA[
-            var bundle = new Product.Bundle(<?php echo $this->getJsonConfig() ?>);
-        //]]>
-        </script>
-        <?php endif; ?>
+    <?php if($_product->isSaleable()): ?>
+    <script type="text/javascript">
+    //<![CDATA[
+        var bundle = new Product.Bundle(<?php echo $this->getJsonConfig() ?>);
+    //]]>
+    </script>
+    <?php endif; ?>
 
-        <?php if ($_product->isAvailable()): ?>
-            <p class="availability in-stock"><?php echo $this->helper('catalog')->__('Availability:') ?>
-                <link itemprop="availability" href="http://schema.org/InStock" />
-                <span><?php echo $this->helper('catalog')->__('In stock') ?></span>
-            </p>
-        <?php else: ?>
-            <p class="availability out-of-stock"><?php echo $this->helper('catalog')->__('Availability:') ?>
-                <link itemprop="availability" href="http://schema.org/OutOfStock" />
-                <span><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
-            </p>
-        <?php endif; ?>
+    <?php if ($_product->isAvailable()): ?>
+        <p class="availability in-stock"><?php echo $this->helper('catalog')->__('Availability:') ?>
+            <link itemprop="availability" href="http://schema.org/InStock" />
+            <span><?php echo $this->helper('catalog')->__('In stock') ?></span>
+        </p>
+    <?php else: ?>
+        <p class="availability out-of-stock"><?php echo $this->helper('catalog')->__('Availability:') ?>
+            <link itemprop="availability" href="http://schema.org/OutOfStock" />
+            <span><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
+        </p>
+    <?php endif; ?>
 
+
+    <div class="price-box-bundle">
+        <?php echo $this->getPriceHtml($_product) ?>
     </div>
-    <div class="span3">
+    <?php echo $this->getChildHtml('bundle_prices') ?>
 
-        <div class="price-box-bundle">
-            <?php echo $this->getPriceHtml($_product) ?>
-        </div>
-        <?php echo $this->getChildHtml('bundle_prices') ?>
-
-    </div>
 </div>

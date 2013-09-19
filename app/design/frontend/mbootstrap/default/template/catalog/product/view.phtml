@@ -59,14 +59,12 @@
 
                 <div class="product-toolbar product-2col-layout">
                     <div class="side-left">
-
+                        <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+                    </div>
+                    <div class="side-right">
                         <?php if ($this->canEmailToFriend()): ?>
                             <p class="email-friend"><i class="icon-envelope"></i> <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
                         <?php endif; ?>
-
-                    </div>
-                    <div class="side-right">
-                        <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
                     </div>
                 </div>
 
