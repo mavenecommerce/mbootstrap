@@ -50,7 +50,7 @@
 
                 <!-- Bootstrap framework styles -->
                 <action method="addItem"><type>skin_css</type><name>bootstrap/dist/css/bootstrap.min.css</name><params/></action>
-                <!--<action method="addItem"><type>skin_css</type><name>bootstrap/bootstrap/css/bootstrap-responsive.min.css</name><params>media="screen"</params></action>-->
+                <action method="addItem"><type>skin_css</type><name>bootstrap/dist/css/bootstrap-theme.min.css</name><params/></action>
 
 
                 <!-- General styles -->
