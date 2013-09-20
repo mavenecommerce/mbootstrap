@@ -965,10 +965,6 @@ body {
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-.search-autocomplete > ul {
-  margin: 0;
-  list-style: none;
-}
 .search-autocomplete > ul > li {
   padding: 5px 10px;
   color: #333333;
@@ -1906,6 +1902,7 @@ body {
 }
 .product-view .product-essential .product-options dl > dd .input-box .options-list {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 .product-view .product-essential .product-options p.required {
@@ -2148,10 +2145,11 @@ body {
 }
 .cart .page-title .checkout-types {
   margin: 0;
-  list-style: none;
+  padding: 0;
   position: absolute;
   top: 0;
   right: 0;
+  list-style: none;
 }
 .cart .cart-table tr td {
   vertical-align: middle;
@@ -2244,9 +2242,10 @@ body {
   margin-top: 10px;
 }
 .cart .cart-collaterals .checkout-types {
-  text-align: right;
   margin: 0;
+  padding: 0;
   list-style: none;
+  text-align: right;
 }
 form .legend {
   font-family: inherit;
@@ -2592,6 +2591,7 @@ label.required > em {
 }
 .addresses-list ol {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 .addresses-list ol h3 {
@@ -2975,7 +2975,6 @@ label.required > em {
   display: block;
   left: 100%;
   top: 0;
-  margin-left: -1px;
   margin-top: -2px;
 }
 /*!
