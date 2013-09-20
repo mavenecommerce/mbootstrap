@@ -105,12 +105,12 @@
                         <prepare/><urlParams/><position>200</position><liParams>hidden-phone</liParams>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-bookmark"></i>]]></beforeText>
                     </action>
-                    <action method="addLink" translate="label title" module="wishlist">
+                    <action method="addLink" translate="label title" module="checkout">
                         <label>My Cart</label><url helper="checkout/url/getCartUrl"/><title>My Cart</title>
                         <prepare/><urlParams/><position>300</position><liParams/>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-shopping-cart"></i>]]></beforeText>
                     </action>
-                    <action method="addLink" translate="label title" module="wishlist">
+                    <action method="addLink" translate="label title" module="checkout">
                         <label>Checkout</label><url helper="checkout/url/getCheckoutUrl"/><title>Checkout</title>
                         <prepare/><urlParams/><position>400</position><liParams>hidden-phone</liParams>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-usd"></i>]]></beforeText>
