@@ -36,12 +36,12 @@
     <ul id="nav" class="nav navbar-nav">
         <?php echo $_menu ?>
     </ul>
+    
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        jQuery(document).ready(function ($) {
+            $("#nav").magentoBootstrapNavigation();
+        });
+        /*]]>*/
+    </script>
 <?php endif ?>
-
-<script type="text/javascript">
-    /*<![CDATA[*/
-    jQuery(document).ready(function ($) {
-        $("#nav").magentoBootstrapNavigation();
-    });
-    /*]]>*/
-</script>
