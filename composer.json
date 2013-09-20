@@ -1,0 +1,23 @@
+{
+    "name": "ecomdev/mbootstrap",
+    "type": "magento-module",
+    "homepage": "https://github.com/EcomDev/mbootstrap",
+    "description": "Magento theme fully based on the Twitter Bootstrap framework.",
+    "authors":[
+        {
+            "name": "Andrey",
+            "email": "akorolyov@ecomdev.org"
+        },
+        {
+            "name": "Aleksej Filippovich",
+            "email": "a.filippovich@ecomdev.org"
+        },
+        {
+            "name": "Chris Jones",
+            "email": "chris@studiobanks.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
