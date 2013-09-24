@@ -2140,6 +2140,18 @@ body {
 .box-tags .note {
   margin: 10px 0 0;
 }
+.box-tags .recent-tags {
+  margin: 0;
+}
+.tags ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tags ul > li {
+  display: inline-block;
+}
 .ratings > .amount {
   display: inline-block;
 }
