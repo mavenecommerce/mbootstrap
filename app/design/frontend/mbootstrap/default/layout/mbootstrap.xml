@@ -200,6 +200,7 @@
 
             <reference name="left">
                 <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
+                <action method="insert"><name>catalog.compare.sidebar</name></action>
             </reference>
 
             <reference name="content">
@@ -220,6 +221,7 @@
 
             <reference name="left">
                 <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
+                <action method="insert"><name>catalog.compare.sidebar</name><siblineName>cart_sidebar</siblineName><after>1</after></action>
             </reference>
 
             <reference name="content">
