@@ -6,8 +6,7 @@
 #
 # Requirements
 # --------------------------------------------------
-# You need open Bootstrap framework folder (magento/skin/frontend/bootstrap/default/bootstrap/) and install modules (run "$ npm install" command in terminal)
-# For more info how do that read "Compiling CSS and JavaScript" on https://github.com/twitter/bootstrap page please
+# You need install Recess (read more at https://github.com/twitter/recess)
 
 #
 # How to use
@@ -24,10 +23,12 @@
 # Defaults
 # --------------------------------------------------
 THEME_LESS 			= ./less/mbootstrap.less
-THEME_CSS			= css/mbootstrap.css
-THEME_LESS_DIR		= less
+THEME_CSS			= ./css/mbootstrap.css
+THEME_CSS_MIN		= ./css/mbootstrap.min.css
+
 RESPONSIVE_LESS 	= ./less/responsive/mbootstrap.responsive.less
-RESPONSIVE_CSS		= css/mbootstrap.responsive.css
+RESPONSIVE_CSS		= ./css/mbootstrap.responsive.css
+RESPONSIVE_CSS_MIN	= ./css/mbootstrap.responsive.min.css
 
 DATE 			= $(shell date +%H:%M:%S)
 CHECK 			= \033[32m✔\033[39m
@@ -45,8 +46,10 @@ build: theme-css
 theme-css:
 	@printf "Compile theme less files..."
 	@mkdir -p css
-	@../default/bootstrap/node_modules/.bin/recess --compile --compress ${THEME_LESS} > ${THEME_CSS}
-	@../default/bootstrap/node_modules/.bin/recess --compile --compress ${RESPONSIVE_LESS} > ${RESPONSIVE_CSS}
+	@recess ${THEME_LESS} --compile > ${THEME_CSS}
+	@recess ${THEME_LESS} --compile --compress > ${THEME_CSS_MIN}
+	@recess ${RESPONSIVE_LESS} --compile > ${RESPONSIVE_CSS}
+	@recess ${RESPONSIVE_LESS} --compile --compress > ${RESPONSIVE_CSS_MIN}
 	@printf "\rCompile theme less files...             ${CHECK} Done | ${DATE}\n"
 	
 #
@@ -56,7 +59,7 @@ theme-css:
 watch:
 	clear;
 	@echo "Watching theme less files..."
-	@../default/bootstrap/node_modules/.bin/recess --compile --compress ${THEME_LESS}:${THEME_CSS} --watch THEME_LESS_DIR
+	@recess --compile --compress ${THEME_LESS}:${THEME_CSS} --watch THEME_LESS_DIR
 
 
 #
