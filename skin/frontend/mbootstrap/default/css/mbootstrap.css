@@ -2992,6 +2992,17 @@ label.required > em {
   top: 0;
   margin-top: -2px;
 }
+.compare-window .buttons-set {
+  margin: 20px 2%;
+  text-align: right;
+}
+.compare-table ul {
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+.compare-table .price-box {
+  margin: 10px 0;
+}
 /*!
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
