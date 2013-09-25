@@ -186,7 +186,7 @@
             </reference>
 
             <reference name="before_document_end">
-                <block type="customer/form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
+                <block type="ecomdev_bootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
             </reference>
 
         </reference>
