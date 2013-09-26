@@ -3,7 +3,7 @@
  */
 (function ( $ ) {
 
-    $.fn.magentoBootstrapNavigation = function() {
+        $.fn.magentoBootstrapNavigation = function() {
 
         var menu = function(){
             var nav = $(this);
