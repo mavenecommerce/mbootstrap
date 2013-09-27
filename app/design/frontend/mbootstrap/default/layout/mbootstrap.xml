@@ -244,8 +244,31 @@
                 <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
             </reference>
 
+            <reference name="content">
+                <reference name="search.result">
+                    <reference name="search_result_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
         </reference>
     </catalogsearch_result_index>
+
+    <!-- Advanced search results -->
+    <catalogsearch_advanced_result translate="label">
+        <reference name="root">
+
+            <reference name="content">
+                <reference name="catalogsearch_advanced_result">
+                    <reference name="search_result_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
+        </reference>
+    </catalogsearch_advanced_result>
 
 
     <!-- Product view -->

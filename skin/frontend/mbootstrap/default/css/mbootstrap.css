@@ -1049,6 +1049,48 @@ body {
   background-color: #ffffff;
   color: #428bca;
 }
+.advanced-search .form-list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.advanced-search .form-list:before,
+.advanced-search .form-list:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.advanced-search .form-list:after {
+  clear: both;
+}
+.advanced-search .form-list li {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .advanced-search .form-list li {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .advanced-search .form-list li {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .advanced-search .form-list li {
+    float: left;
+    width: 50%;
+  }
+}
 .navbar-container .i-navbar {
   margin-top: 20px;
   margin-bottom: 20px;
