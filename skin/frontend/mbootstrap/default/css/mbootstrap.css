@@ -3114,6 +3114,48 @@ label.required > em {
   right: 0;
   top: 0;
 }
+.returns-form {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.returns-form:before,
+.returns-form:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.returns-form:after {
+  clear: both;
+}
+.returns-form form {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .returns-form form {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .returns-form form {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .returns-form form {
+    float: left;
+    width: 50%;
+  }
+}
 /*!
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
