@@ -3067,6 +3067,11 @@ label.required > em {
 .compare-table .price-box {
   margin: 10px 0;
 }
+.page-sitemap .page-title .links {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 /*!
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
