@@ -1,16 +1,18 @@
+<?php
 
+    $name       = Mage::getStoreConfig('general/store_information/name');
+    $phone      = Mage::getStoreConfig('general/store_information/phone');
+    $url        = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+    $storeUrl   = parse_url($url);
+    $email      = Mage::getStoreConfig('trans_email/ident_general/email');
+
+?>
 <section class="organization" itemscope itemtype="http://schema.org/Organization">
 
-    <div class="image">
-        <img class="img-responsive" itemprop="image" src="http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png" alt="logo of EcomDev" />
-    </div>
-
     <div class="name">
-        <div itemprop="name">EcomDev</div>
-        <div itemprop="url"><a href="http://www.ecomdev.org">www.ecomdev.org</a></div>
+        <div itemprop="name"><?php echo $name ?></div>
+        <div itemprop="url"><a href="<?php echo $url; ?>"><?php echo $storeUrl["host"]; ?></a></div>
     </div>
-
-    <div class="visible-xs"><i class="clearfix"></i></div>
 
     <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <div><span itemprop="streetAddress">Duivenkamp 645</span>,</div>
@@ -19,9 +21,8 @@
     </div>
 
     <div class="contacts">
-        <div itemprop="telephone">+380 67 323 9033</div>
-        <div itemprop="telephone">+380 63 787 1538</div>
-        <a href="mailto:info@ecomdev.org" itemprop="email">info@ecomdev.org</a>
+        <div itemprop="telephone"><?php echo $phone ?></div>
+        <a href="mailto:<?php echo $email ?>" itemprop="email"><?php echo $email ?></a>
     </div>
 
 </section>

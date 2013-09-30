@@ -839,35 +839,9 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.footer-container .footer__organization .organization > .image {
-  float: left;
-  width: 50%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .footer-container .footer__organization .organization > .image {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 992px) {
-  .footer-container .footer__organization .organization > .image {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .footer-container .footer__organization .organization > .image {
-    float: left;
-    width: 25%;
-  }
-}
 .footer-container .footer__organization .organization > .name {
   float: left;
-  width: 50%;
+  width: 100%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -889,21 +863,11 @@ body {
   .footer-container .footer__organization .organization > .name {
     float: left;
     width: 16.666666666666664%;
-  }
-}
-@media (min-width: 992px) {
-  .footer-container .footer__organization .organization > .name {
-    margin-left: 8.333333333333332%;
-  }
-}
-@media (min-width: 1200px) {
-  .footer-container .footer__organization .organization > .name {
-    margin-left: 8.333333333333332%;
   }
 }
 .footer-container .footer__organization .organization > .address {
   float: left;
-  width: 50%;
+  width: 100%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -929,7 +893,7 @@ body {
 }
 .footer-container .footer__organization .organization > .contacts {
   float: left;
-  width: 50%;
+  width: 100%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
