@@ -41,6 +41,11 @@
         </layout>
     </frontend>
     <global>
+        <blocks>
+            <ecomdev_bootstrap>
+                <class>EcomDev_Bootstrap_Block</class>
+            </ecomdev_bootstrap>
+        </blocks>
         <models>
             <ecomdev_bootstrap>
                 <class>EcomDev_Bootstrap_Model</class>
