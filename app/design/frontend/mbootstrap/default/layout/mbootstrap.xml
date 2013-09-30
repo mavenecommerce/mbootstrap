@@ -70,7 +70,6 @@
 
                 <!-- jQuery & UI -->
                 <action method="addItem"><type>skin_js</type><script>js/jquery/jquery.min.js</script></action>
-                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery.min.js</script></action>
 
 
                 <!-- jQuery scripts -->
