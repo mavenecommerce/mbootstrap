@@ -4,6 +4,9 @@
         <EcomDev_Cms>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Mage_Cms />
+            </depends>
         </EcomDev_Cms>
     </modules>
 </config>

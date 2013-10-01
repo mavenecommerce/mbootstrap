@@ -22,37 +22,15 @@
  * @package     EcomDev_Cms
  * @copyright   Copyright (c) 2013 EcomDev (http://www.ecomdev.org)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Chris Jones <leeked@gmail.com>
  */
 
-/**
- * CMS block block
- *
- * @category   EcomDev
- * @package    EcomDev_Cms
- */
-class EcomDev_Cms_Block_Block extends Mage_Core_Block_Abstract
-{
-    /**
-     * Prepare Content HTML
-     *
-     * @return string
-     */
-    protected function _toHtml()
-    {
-        $blockId = $this->getBlockId();
-        $html = '';
-        if ($blockId) {
-            $block = Mage::getModel('cms/block')
-                    ->setStoreId(Mage::app()->getStore()->getId())
-                    ->load($blockId);
-            if ($block->getIsActive()) {
-                $this->setBlockInstance($block);
-                /* @var $helper Mage_Cms_Helper_Data */
-                $helper = Mage::helper('cms');
-                $processor = $helper->getBlockTemplateProcessor();
-                $html = $processor->filter($block->getContent());
-            }
-        }
-        return $html;
+$footerLinksBlock = Mage::getModel('cms/block')->load('footer_links', 'identifier');
+
+if ($footerLinksBlock->getId()) {
+    $content = $footerLinksBlock->getContent();
+    if (preg_match('/<ul>(.*?)<\\/ul>/ims', $content, $matches)) {
+        $content = preg_replace('/<ul>/ims', '<ul class="nav nav-pills">', $content);
+        $footerLinksBlock->setContent($content)->save();
     }
 }
