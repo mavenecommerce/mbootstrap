@@ -126,6 +126,13 @@
 
             <reference name="footer">
                 <block type="core/template" name="page.company.organization" as="organization" template="page/html/footer/organization.phtml"/>
+
+                <block type="core/text_list" name="page.footer.links_left.wrapper" as="links-left-wrapper">
+                    <action method="insert"><name>cms_footer_links</name></action>
+                </block>
+                <block type="core/text_list" name="page.footer.links_right.wrapper" as="links-right-wrapper">
+                    <action method="insert"><name>footer_links</name></action>
+                </block>
             </reference>
 
             <block type="core/text_list" name="before_document_end" as="before_document_end" translate="label">
