@@ -93,27 +93,29 @@
 
             <reference name="header">
 
-                <block type="page/template_links" name="top.links_custom" as="topLinks_custom" template="page/html/top.links.phtml">
-                    <action method="addLink" translate="label title" module="customer">
-                        <label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title>
-                        <prepare/><urlParams/><position>100</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-user"></i>]]></beforeText>
-                    </action>
-                    <action method="addLink" translate="label title" module="wishlist">
-                        <label>My Wishlist</label><url helper="wishlist/getListUrl"/><title>My Wishlist</title>
-                        <prepare/><urlParams/><position>200</position><liParams>hidden-phone</liParams>
-                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-bookmark"></i>]]></beforeText>
-                    </action>
-                    <action method="addLink" translate="label title" module="checkout">
-                        <label>My Cart</label><url helper="checkout/url/getCartUrl"/><title>My Cart</title>
-                        <prepare/><urlParams/><position>300</position><liParams/>
-                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-shopping-cart"></i>]]></beforeText>
-                    </action>
-                    <action method="addLink" translate="label title" module="checkout">
-                        <label>Checkout</label><url helper="checkout/url/getCheckoutUrl"/><title>Checkout</title>
-                        <prepare/><urlParams/><position>400</position><liParams>hidden-phone</liParams>
-                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-usd"></i>]]></beforeText>
-                    </action>
+                <block type="page/html_wrapper" name="top.links-wrapper" as="top-links-wrapper">
+                    <block type="page/template_links" name="top.links_custom" as="topLinks_custom" template="page/html/top.links.phtml">
+                        <action method="addLink" translate="label title" module="customer">
+                            <label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title>
+                            <prepare/><urlParams/><position>100</position><liParams/>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-user"></i>]]></beforeText>
+                        </action>
+                        <action method="addLink" translate="label title" module="wishlist">
+                            <label>My Wishlist</label><url helper="wishlist/getListUrl"/><title>My Wishlist</title>
+                            <prepare/><urlParams/><position>200</position><liParams>hidden-phone</liParams>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-bookmark"></i>]]></beforeText>
+                        </action>
+                        <action method="addLink" translate="label title" module="checkout">
+                            <label>My Cart</label><url helper="checkout/url/getCartUrl"/><title>My Cart</title>
+                            <prepare/><urlParams/><position>300</position><liParams/>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-shopping-cart"></i>]]></beforeText>
+                        </action>
+                        <action method="addLink" translate="label title" module="checkout">
+                            <label>Checkout</label><url helper="checkout/url/getCheckoutUrl"/><title>Checkout</title>
+                            <prepare/><urlParams/><position>400</position><liParams>hidden-phone</liParams>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-usd"></i>]]></beforeText>
+                        </action>
+                    </block>
                 </block>
 
             </reference>
