@@ -93,7 +93,7 @@
 
             <reference name="header">
 
-                <block type="page/html_wrapper" name="top.links-wrapper" as="top-links-wrapper">
+                <block type="core/text_list" name="top.links-wrapper" as="top-links-wrapper">
                     <block type="page/template_links" name="top.links_custom" as="topLinks_custom" template="page/html/top.links.phtml">
                         <action method="addLink" translate="label title" module="customer">
                             <label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title>
