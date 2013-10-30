@@ -285,6 +285,21 @@
             <remove name="left"/>
             <remove name="right"/>
             <action method="setTemplate"><template>page/1column.phtml</template></action>
+
+            <reference name="content">
+                <reference name="product.info">
+
+                    <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
+                        <action method="addTab" translate="title" module="catalog"><alias>description</alias><title>Product Description</title><block>catalog/product_view_description</block><template>catalog/product/view/description.phtml</template></action>
+                        <action method="addTab" translate="title" module="catalog"><alias>upsell_products</alias><title>We Also Recommend</title><block>catalog/product_list_upsell</block><template>catalog/product/list/upsell.phtml</template></action>
+                        <action method="addTab" translate="title" module="catalog"><alias>additional</alias><title>Additional Information</title><block>catalog/product_view_attributes</block><template>catalog/product/view/attributes.phtml</template></action>
+
+                        <block type="review/form" name="product.review.form" as="review_form"/>
+                        <action method="addTab" translate="title" module="review"><alias>product_additional_data</alias><title>Reviews</title><block>review/product_view_list</block><template>review/product/view/list_tab.phtml</template></action>
+                    </block>
+
+                </reference>
+            </reference>
         </reference>
     </catalog_product_view>
 
