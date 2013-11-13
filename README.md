@@ -2,30 +2,21 @@
 
 # Magento-Bootstrap theme
 
-Magento-Bootstrap theme it is package fully based on Twitter Bootstrap framework.
+Magento-Bootstrap theme it is package fully based on Twitter Bootstrap 3 framework.
 
 ## Status:
 
-Current version: Alpha
+Current version: Beta
 
 ## Assets
 
 * Bootstrap v3.0.0
-* Font Awesome v3.0.2 (will be removed)
 * HTML5 support
 * Microdata support (schema.org)
 
 ## How to install
 
-1. `modman clone git@github.com:EcomDev/mbootstrap.git mboostrap`
-2. Open Admin Panel
-    * go to **System -> Configuration**
-    * open **Design** tab on left sidebar
-    * open **Package** section
-    * write "mbootstrap" in *Current Package Name* field and "default" in "Default" field ([example](http://screencast.com/t/ahgxx10Ud))
-    * press "Save Config" button
-3. You must enable "[Allow Symlinks](https://github.com/colinmollenhour/modman/blob/master/README.md#requirements)"
-4. Refresh front-end page and enjoy
+Open our [wiki](https://github.com/EcomDev/mbootstrap/wiki) and read [How to install theme via modman?](https://github.com/EcomDev/mbootstrap/wiki/How-to-install-theme-via-modman%3F) please.
 
 ## How to use
 
@@ -35,7 +26,7 @@ Develop process as usual for Magento theme (more about front-end develope for Ma
 
 ### Create your theme based on Magento-Bootstrap theme
 
-You need create custom theme based on Magento-Bootstrap theme. 
+You need create custom theme based on Magento-Bootstrap theme.
 After `git clone` command you will have next folder hierarchy:
 
 ```
@@ -72,7 +63,7 @@ So you need create new theme in **bootstrap** package
 That's it!
 Now you can develope your custom theme based on Magento-Bootstrap theme
 
-(i) don`t forget enter your just created theme name (in example it is *custom-theme*) 
+(i) don`t forget enter your just created theme name (in example it is *custom-theme*)
 at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
 
 ## Skin folder structure description
