@@ -1,13 +1,30 @@
 # Modules
+#
 app/code/local/EcomDev/Cms                  app/code/local/EcomDev/Cms
 app/code/local/EcomDev/Bootstrap            app/code/local/EcomDev/Bootstrap
 
 # Config
+#
 app/etc/modules/EcomDev_Cms.xml             app/etc/modules/EcomDev_Cms.xml
 app/etc/modules/EcomDev_Bootstrap.xml       app/etc/modules/EcomDev_Bootstrap.xml
 
 # Theme
+#
 app/design/frontend/mbootstrap/default      app/design/frontend/mbootstrap/default
 
 # Skin
+#
 skin/frontend/mbootstrap/default            skin/frontend/mbootstrap/default
+
+
+# Themes examples
+#
+# Advanced theme with LESS compile required
+#
+app/design/frontend/mbootstrap/advanced     app/design/frontend/mbootstrap/advanced
+skin/frontend/mbootstrap/advanced           skin/frontend/mbootstrap/advanced
+
+# Simple theme with
+#
+app/design/frontend/mbootstrap/simple       app/design/frontend/mbootstrap/simple
+skin/frontend/mbootstrap/simple             skin/frontend/mbootstrap/simple

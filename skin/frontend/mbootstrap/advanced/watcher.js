@@ -1,8 +1,8 @@
 //
-// 
+//
 // --------------------------------------------------
 
-// 
+//
 // Requirements
 // --------------------------------------------------
 // * Require Watchr        https://github.com/bevry/watchr         -- Need Watchr — better file system watching for Node.js
@@ -20,11 +20,11 @@ var watchr  = require('/usr/local/lib/node_modules/watchr');
 var exec    = require('child_process').exec;
 
 function execCallback (error, stdout, stderr) {
-    
+
     // this javascript replaces all 3 types of line breaks with a space
     var stdout = stdout;
     stdout = stdout.replace(/(\r\n|\n|\r)/gm," ");
-    
+
     //
     // print result to command line
     console.log(stdout);
@@ -55,8 +55,7 @@ watchr.watch({
             console.log('an error occured:', err);
         },
         change: function(changeType,filePath,fileCurrentStat,filePreviousStat){
-            exec('lessc less/mbootstrap.less css/mbootstrap.css && lessc -x --yui-compress less/mbootstrap.less css/mbootstrap.min.css && growlnotify -m "Build complete." && printf "[' + changeType + ']\t\t"&& date "+\033[32m✔\033[39m Build complete | %H:%M:%S." ', execCallback);
-            exec('lessc less/responsive/mbootstrap.responsive.less css/mbootstrap.responsive.css && lessc -x --yui-compress less/responsive/mbootstrap.responsive.less css/mbootstrap.responsive.min.css && growlnotify -m "Responsive build complete." && printf "[' + changeType + ']\t\t"&& date "+\033[32m✔\033[39m Build complete | %H:%M:%S." ', execCallback);
+            exec('lessc less/theme.less css/theme.css && lessc -x --yui-compress less/theme.less css/theme.min.css && growlnotify -m "Build complete." && printf "[' + changeType + ']\t\t"&& date "+\033[32m✔\033[39m Build complete | %H:%M:%S." ', execCallback);
         }
     },
     next: function(err,watchers){

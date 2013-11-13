@@ -22,26 +22,22 @@
 #
 # Defaults
 # --------------------------------------------------
-THEME_LESS 			= ./less/mbootstrap.less
-THEME_CSS			= ./css/mbootstrap.css
-THEME_CSS_MIN		= ./css/mbootstrap.min.css
-
-RESPONSIVE_LESS 	= ./less/responsive/mbootstrap.responsive.less
-RESPONSIVE_CSS		= ./css/mbootstrap.responsive.css
-RESPONSIVE_CSS_MIN	= ./css/mbootstrap.responsive.min.css
+THEME_LESS 			= ./less/theme.less
+THEME_CSS			= ./css/theme.css
+THEME_CSS_MIN		= ./css/theme.min.css
 
 DATE 			= $(shell date +%H:%M:%S)
 CHECK 			= \033[32m✔\033[39m
 
 #
 # Build CSS
-# ------------------------- 
+# -------------------------
 
 build: theme-css
 
 #
 # CSS COMPILE
-# ------------------------- 
+# -------------------------
 
 theme-css:
 	@printf "Compile theme less files..."
@@ -51,10 +47,10 @@ theme-css:
 	@recess ${RESPONSIVE_LESS} --compile > ${RESPONSIVE_CSS}
 	@recess ${RESPONSIVE_LESS} --compile --compress > ${RESPONSIVE_CSS_MIN}
 	@printf "\rCompile theme less files...             ${CHECK} Done | ${DATE}\n"
-	
+
 #
 # WATCH LESS FILES
-# ------------------------- 
+# -------------------------
 
 watch:
 	clear;
@@ -65,7 +61,7 @@ watch:
 #
 # WATCH LESS FILES (For OSX)
 # See watch.conf for more infomation
-# ------------------------- 
+# -------------------------
 
 watch-osx:
 	clear;
@@ -75,7 +71,7 @@ watch-osx:
 
 #
 # CSS COMPILE AND WATCH LESS FILES
-# ------------------------- 
+# -------------------------
 
 all: theme-css watch
 
