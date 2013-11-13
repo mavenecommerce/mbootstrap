@@ -56,12 +56,12 @@ So you need create new theme in **bootstrap** package
 │       └── frontend
 │           └── mbootstrap
 │               ├── default
-│               └── custom-theme
+│               └── custom-theme    -- your Custom theme templates files folder
 ├── skin
 │   └── frontend
 │       └── mbootstrap
 │           ├── default
-│           └── custom-theme
+│           └── custom-theme        -- your Custom theme css/images files
 ```
 
 That's it!
