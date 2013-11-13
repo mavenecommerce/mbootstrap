@@ -35,11 +35,15 @@ After `git clone` command you will have next folder hierarchy:
 │   └── design
 │       └── frontend
 │           └── mbootstrap
-│               └── default
+│               ├── default
+│               ├── advanced    -- example theme with LESS compile
+│               └── simple      -- example theme with http://getbootstrap.com/customize css file
 ├── skin
 │   └── frontend
 │       └── mbootstrap
-│           └── default
+│           ├── default
+│           ├── advanced
+│           └── simple
 ```
 
 So you need create new theme in **bootstrap** package
