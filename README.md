@@ -75,8 +75,6 @@ Open *magento/skin/frontend/mbootstrap/default* path
 ├── Makefile              -- Script file with *compile* less to css and *watch* file system changes commands. Open it and read *How to use*
 ├── bootstrap             -- Bootstrap framework source files
 ├── css                   -- Theme css files compile there
-├── fonts
-│   └── Font-Awesome      -- The iconic font designed for use with Twitter Bootstrap
 ├── images
 ├── js
 ├── less                  -- Theme less files
@@ -90,11 +88,11 @@ Magento-Bootstrap theme contains also developers tools:
 * run *less to css* compile
 * run file system watching program and compile *less to css* automatically
 
-For more information go *magento/skin/frontend/mbootstrap/default/* folder and read *Makefile* file
+For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *Makefile* file (or watcher.js file for Mac OS X users)
 
 ### Requirements
 
 1. Node.js                              -- Open http://nodejs.org and install latest Node.js version
 2. Bootstrap framework install          -- Open *magento/skin/frontend/default/bootstrap* and run `$ npm install` command in terminal
-
+3. modman (Module Manager)              -- Open https://github.com/colinmollenhour/modman and install it
 
