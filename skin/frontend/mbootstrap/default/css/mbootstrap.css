@@ -2491,6 +2491,22 @@ label.required > em {
     width: 16.666666666666664%;
   }
 }
+.account-login {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.account-login:before,
+.account-login:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.account-login:after {
+  clear: both;
+}
 .account-login .registered-users {
   margin-bottom: 40px;
   float: left;
