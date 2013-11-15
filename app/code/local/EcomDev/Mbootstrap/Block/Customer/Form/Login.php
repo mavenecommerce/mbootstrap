@@ -7,7 +7,7 @@
  * @package    EcomDev_Bootstrap
  * @author     Chris Jones <leeked@gmail.com>
  */
-class EcomDev_Bootstrap_Block_Customer_Form_Login extends Mage_Customer_Block_Form_Login
+class EcomDev_Mbootstrap_Block_Customer_Form_Login extends Mage_Customer_Block_Form_Login
 {
     /**
      * Override parent functionality so Form_Login block can be used
