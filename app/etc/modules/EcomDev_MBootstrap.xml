@@ -11,7 +11,7 @@
  * that is bundled with this package in the file LICENSE.txt.
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/osl-3.0.php
- *
+ * 
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade
@@ -27,30 +27,12 @@
 -->
 <config>
     <modules>
-        <EcomDev_Bootstrap>
-            <version>0.0.1</version>
-        </EcomDev_Bootstrap>
+        <EcomDev_Mbootstrap>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Core/>
+            </depends>
+        </EcomDev_Mbootstrap>
     </modules>
-    <frontend>
-        <layout>
-            <updates>
-                <ecomdev_bootstrap>
-                    <file>mbootstrap.xml</file>
-                </ecomdev_bootstrap>
-            </updates>
-        </layout>
-    </frontend>
-    <global>
-        <blocks>
-            <ecomdev_bootstrap>
-                <class>EcomDev_Bootstrap_Block</class>
-            </ecomdev_bootstrap>
-        </blocks>
-        <models>
-            <ecomdev_bootstrap>
-                <class>EcomDev_Bootstrap_Model</class>
-            </ecomdev_bootstrap>
-        </models>
-    </global>
 </config>
-

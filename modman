@@ -1,12 +1,12 @@
 # Modules
 #
 app/code/local/EcomDev/Cms                  app/code/local/EcomDev/Cms
-app/code/local/EcomDev/Bootstrap            app/code/local/EcomDev/Bootstrap
+app/code/local/EcomDev/Mbootstrap            app/code/local/EcomDev/Mbootstrap
 
 # Config
 #
 app/etc/modules/EcomDev_Cms.xml             app/etc/modules/EcomDev_Cms.xml
-app/etc/modules/EcomDev_Bootstrap.xml       app/etc/modules/EcomDev_Bootstrap.xml
+app/etc/modules/EcomDev_MBootstrap.xml       app/etc/modules/EcomDev_MBootstrap.xml
 
 # Theme
 #
