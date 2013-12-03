@@ -30,10 +30,10 @@ class EcomDev_Mbootstrap_Block_Core_Messages
     public function getGroupedHtml()
     {
         $types = array(
-            Mage_Core_Model_Message::ERROR,
-            Mage_Core_Model_Message::WARNING,
-            Mage_Core_Model_Message::NOTICE,
-            Mage_Core_Model_Message::SUCCESS
+            Mage_Core_Model_Message::ERROR      => "danger",
+            Mage_Core_Model_Message::WARNING    => Mage_Core_Model_Message::WARNING,
+            Mage_Core_Model_Message::NOTICE     => "info",
+            Mage_Core_Model_Message::SUCCESS    => Mage_Core_Model_Message::SUCCESS
         );
         $html = '';
         foreach ($types as $type) {
