@@ -56,7 +56,7 @@
                 <?php foreach( $poll_answers as $answer ): ?>
                 <li class="item">
                     <label class="radio" for="vote_<?php echo $answer->getId() ?>">
-                        <input type="radio" name="vote" class="radio poll_vote" id="vote_<?php echo $answer->getId() ?>" value="<?php echo $answer->getAnswerId() ?>" />
+                        <input type="radio" name="vote" class="poll_vote" id="vote_<?php echo $answer->getId() ?>" value="<?php echo $answer->getAnswerId() ?>" />
                         <?php echo $this->htmlEscape($answer->getAnswerTitle()) ?>
                     </label>
                 </li>
@@ -68,7 +68,7 @@
             <?php endif; ?>
 
             <div class="actions">
-                <button type="submit" title="<?php echo $this->__('Vote') ?>" class="btn btn-default"><i class="glyphicon glyphicon-thumbs-up"></i> <?php echo $this->__('Vote') ?></button>
+                <button type="submit" title="<?php echo $this->__('Vote') ?>" class="btn btn-primary"><i class="glyphicon glyphicon-thumbs-up"></i> <?php echo $this->__('Vote') ?></button>
             </div>
 
         </div>

@@ -52,13 +52,13 @@
                         <li>
                             <label for="email" class="required control-label"><em>*</em><?php echo $this->__('Email Address') ?></label>
                             <div class="input-box controls">
-                                <input type="email" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo $this->__('Email Address') ?>" />
+                                <input type="email" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email form-control" title="<?php echo $this->__('Email Address') ?>" />
                             </div>
                         </li>
                         <li>
                             <label for="pass" class="required control-label"><em>*</em><?php echo $this->__('Password') ?></label>
                             <div class="input-box controls">
-                                <input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>" />
+                                <input type="password" name="login[password]" class="input-text required-entry validate-password form-control" id="pass" title="<?php echo $this->__('Password') ?>" />
                             </div>
                         </li>
 
@@ -70,7 +70,7 @@
 
                     <div class="buttons-set">
                         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-                        <button type="submit" class="btn btn-large btn-success" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+                        <button type="submit" class="btn btn-lg btn-success" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
                         <a class="link-forgot" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
                     </div>
 
