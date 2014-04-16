@@ -76,21 +76,20 @@ Open *magento/skin/frontend/mbootstrap/default* path
 
 ```
 .
-├── Makefile              -- Script file with *compile* less to css and *watch* file system changes commands. Open it and read *How to use*
+
 ├── bootstrap             -- Bootstrap framework source files
 ├── css                   -- Theme css files compile there
 ├── images
 ├── js
+├── Gruntfile.js          -- Script file with *compile* less to css, minify css files and uglify js files, *watch* file system changes commands. Use `$ grunt` to compile or `$ grunt watch` to watch files for changes
 ├── less                  -- Theme less files
-└── watcher.js            -- More powerful watch program for OSX (with lessc, watchr, growl). Open it and read *Requirements* for use
+└── package.json
 
 ```
 
 ## Developer tools
 
-Magento-Bootstrap theme contains also developers tools:
-* run *less to css* compile
-* run file system watching program and compile *less to css* automatically
+Magento-Bootstrap theme contains also developers tools. You can use Grunt to compile files.
 
 For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *Gruntfile.js* file
 
