@@ -1,4 +1,4 @@
-<a href="http://mavenecommerce.com/services/">![mavenecommerce](http://mavenecommerce.com/wp-content/uploads/2014/03/logo@2x.gif)</a>
+<a href="http://mavenecommerce.com/services/">![mavenecommerce](http://mavenecommerce.com/wp-content/uploads/2014/03/logo@.gif)</a>
 
 # Magento-Bootstrap responsive theme
 
