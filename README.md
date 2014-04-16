@@ -1,4 +1,4 @@
-<a href="http://www.ecomdev.org/services/magento-development?utm_source=github&utm_medium=logo&utm_campaign=github">![EcomDev](http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png)</a>
+<a href="http://www.mavenecommerce.org/services/magento-development?utm_source=github&utm_medium=logo&utm_campaign=github">![mavenecommerce](http://www.mavenecommerce.org/wp-content/themes/mavenecommerce/images/logo.png)</a>
 
 # Magento-Bootstrap theme
 
@@ -16,7 +16,7 @@ Current version: Beta
 
 ## How to install
 
-Open our [wiki](https://github.com/EcomDev/mbootstrap/wiki) and read [How to install theme via modman?](https://github.com/EcomDev/mbootstrap/wiki/How-to-install-theme-via-modman%3F) please.
+Open our [wiki](https://github.com/mavenecommerce/mbootstrap/wiki) and read [How to install theme via modman?](https://github.com/mavenecommerce/mbootstrap/wiki/How-to-install-theme-via-modman%3F) please.
 
 ## How to use
 
