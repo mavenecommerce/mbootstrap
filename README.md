@@ -92,7 +92,7 @@ Magento-Bootstrap theme contains also developers tools:
 * run *less to css* compile
 * run file system watching program and compile *less to css* automatically
 
-For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *Makefile* file (or watcher.js file for Mac OS X users)
+For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *Gruntfile.js* file
 
 ### Requirements
 
