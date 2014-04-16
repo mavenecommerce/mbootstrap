@@ -56,21 +56,17 @@
                 <li>
                     <div class="form-group">
                         <label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
-                        <input type="text" name="email" id="email_address" value="<?php echo $this->escapeHtml($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry form-control form-control" />
+                        <input type="text" name="email" id="email_address" value="<?php echo $this->escapeHtml($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry form-control" />
                     </div>
                 </li>
 
                 <?php if ($this->isNewsletterEnabled()): ?>
                     <li class="control">
                         <div class="form-group">
-
-                            <div class="checkbox">
-                                <label for="is_subscribed">
-                                    <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
-                                    <?php echo $this->__('Sign Up for Newsletter') ?>
-                                </label>
-                            </div>
-
+                            <label for="is_subscribed" class="checkbox">
+                                <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> />
+                                <?php echo $this->__('Sign Up for Newsletter') ?>
+                            </label>
                         </div>
                     </li>
                 <?php endif ?>
@@ -209,7 +205,7 @@
 
         <div class="buttons-set">
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-            <button type="submit" title="<?php echo $this->__('Submit') ?>" class="btn btn-default"><?php echo $this->__('Submit') ?></button>
+            <button type="submit" title="<?php echo $this->__('Submit') ?>" class="btn btn-primary"><?php echo $this->__('Submit') ?></button>
         </div>
 
         <?php if (Mage::helper('checkout')->isContextCheckout()): ?>

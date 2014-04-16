@@ -35,7 +35,7 @@ $product = $item->getProduct();
 
     <div class="add-to-cart-alt input-append">
         <?php if ($item->canHaveQty() && $item->getProduct()->isVisibleInSiteVisibility()): ?>
-            <input type="number" class="input-text qty validate-not-negative-number span1" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" />
+            <input type="number" class="input-text qty validate-not-negative-number form-control col-md-12" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" />
         <?php endif; ?>
 
         <?php if ($product->isSaleable()): ?>

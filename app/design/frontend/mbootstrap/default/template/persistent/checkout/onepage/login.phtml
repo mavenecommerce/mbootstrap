@@ -75,7 +75,7 @@
 
         <div class="buttons-set">
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-            <button type="submit" class="btn btn-default btn-large" onclick="onepageLogin(this)"><?php echo $this->__('Login') ?></button>
+            <button type="submit" class="btn btn-primary btn-lg" onclick="onepageLogin(this)"><?php echo $this->__('Login') ?></button>
             <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="nobr"><?php echo $this->__('Forgot your password?') ?></a>
         </div>
 
@@ -103,18 +103,15 @@
             <ul class="form-list">
                 <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
                 <li class="control">
-                    <div class="radio">
-                        <label for="login:guest">
-                            <input type="radio" name="checkout_method" id="login:guest" value="guest"<?php if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_GUEST): ?> checked="checked"<?php endif; ?> />
-                            <?php echo $this->__('Checkout as Guest') ?>
-                        </label>
-                    </div>
+                    <label for="login:guest" class="radio">
+                        <input type="radio" name="checkout_method" id="login:guest" value="guest"<?php if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_GUEST): ?> checked="checked"<?php endif; ?> />
+                        <?php echo $this->__('Checkout as Guest') ?>
+                    </label>
                 </li>
                 <?php endif; ?>
 
                 <li class="control">
-                    <div class="radio">
-                        <label for="login:register">
+                    <label for="login:register" class="radio">
                         <input type="radio" name="checkout_method" id="login:register" value="register"<?php if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER || !$this->getQuote()->isAllowedGuestCheckout()): ?> checked="checked"<?php endif ?> />
                         <?php echo $this->__('Register') ?>
                     </label>
@@ -141,7 +138,7 @@
                 <button id="onepage-guest-register-button" type="button" class="btn btn-default" onclick="window.location='<?php echo $this->helper('checkout/url')->getRegistrationUrl();?>'"><?php echo $this->__('Register') ?></button>
             <?php else: ?>
                 <form action="<?php echo $this->getUrl('persistent/index/saveMethod'); ?>">
-                    <button id="onepage-guest-register-button" type="submit" class="btn btn-default"><?php echo $this->__('Register') ?></button>
+                    <button id="onepage-guest-register-button" type="submit" class="btn btn-primary"><?php echo $this->__('Register') ?></button>
                 </form>
             <?php endif; ?>
         </div>
