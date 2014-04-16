@@ -3,6 +3,35 @@
 // --------------------------------------------------
 
 
+// Index page
+// -------------------------
+.cms-index-index {
+	.col-main {
+		.std {
+			.make-row();	// default magento sample Index page layout fix
+		}
+	}
+
+	.col-left {
+        .make-xs-column(12);
+        .make-sm-column(12);
+        .make-md-column(4);
+        .make-lg-column(4);
+    }
+
+    .home-spot {
+        .make-xs-column(12);
+        .make-sm-column(12);
+        .make-md-column(8);
+        .make-lg-column(8);
+
+        img {
+        	.img-responsive();
+        }
+    }
+	
+}
+
 // Page Sitemap
 // -------------------------
 .page-sitemap {

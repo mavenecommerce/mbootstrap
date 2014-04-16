@@ -28,17 +28,12 @@
 
                 <!-- General styles -->
                 <action method="addItem"><type>skin_css</type><name>css/mbootstrap.min.css</name><params/></action>
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.responsive.min.css</name><params/></action>
-
-
-                <!-- @MediaQueries styles -->
-                <!--<action method="addItem"><type>skin_css</type><name>css/mediaQueries.css</name><params/></action>-->
-                <!--<action method="addItem"><type>skin_js</type><script>js/dev_mediaQueries.js</script></action>-->
+                <!--<action method="addItem"><type>skin_css</type><name>css/mbootstrap.responsive.min.css</name><params/></action>-->
 
 
                 <!-- IE styles -->
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.css</name><params/><if>lt IE 9</if></action>
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.css</name><params/><if>IE 9</if></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.min.css</name><params/><if>lt IE 9</if></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.min.css</name><params/><if>IE 9</if></action>
 
 
                 <!-- jQuery & UI -->
@@ -48,16 +43,12 @@
                 </block>
 
 
-                <!-- jQuery scripts -->
-                <action method="addItem"><type>skin_js</type><script>js/jquery/scripts/magento-to-bootstrap-navigation.js</script></action>
-
-
                 <!-- Bootstrap framework scripts -->
-                <action method="addItem"><type>skin_js</type><script>bootstrap/dist/js/bootstrap.js</script></action>
+                <action method="addItem"><type>skin_js</type><script>bootstrap/dist/js/bootstrap.min.js</script></action>
 
 
-                <!-- Add fontsquirrel fonts -->
-                <!--<action method="addItem"><type>skin_css</type><name>css/fonts/stylesheet.css</name><params/></action>-->
+                <!-- jQuery scripts -->
+                <action method="addItem"><type>skin_js</type><script>js/dist/scripts.js</script></action>
 
 
                 <!-- Google Web Fonts -->

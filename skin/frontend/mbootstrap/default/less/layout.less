@@ -41,6 +41,10 @@
             img {
                 display: block;
                 margin: 0 auto;
+
+                @media (min-width: @screen-sm){
+                    margin: 0;
+                }
             }
         }
 
@@ -50,6 +54,10 @@
 
     .quick-access {
         text-align: center;
+
+        @media (min-width: @screen-sm){
+            text-align: right;
+        }
 
         .make-xs-column(12);
         .make-sm-column(9);
@@ -151,22 +159,6 @@
             .make-sm-column(8);
             .make-md-column(9);
             .make-lg-column(9);
-        }
-
-
-        // Home Page default layout
-        .col-left {
-            .make-xs-column(12);
-            .make-sm-column(12);
-            .make-md-column(4);
-            .make-lg-column(4);
-        }
-
-        .home-spot {
-            .make-xs-column(12);
-            .make-sm-column(12);
-            .make-md-column(8);
-            .make-lg-column(8);
         }
     }
 

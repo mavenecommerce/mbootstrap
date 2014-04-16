@@ -8,6 +8,13 @@
 // Mixins
 // --------------------------------------------------
 
+// Grid System
+// -----------
+
+// Creates a wrapper for a series of columns
+.make-row(@gutter: @grid-gutter-width) {
+	.clearfix();	// fix need because .clearfix() not work when mixin.less imported
+}
 
 // Project mixins
 // --------------------------------------------------
