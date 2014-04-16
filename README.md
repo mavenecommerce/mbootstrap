@@ -22,7 +22,7 @@ Open our [wiki](https://github.com/mavenecommerce/mbootstrap/wiki) and read [How
 
 Really it is very-very easy to use :)
 
-Develop process as usual for Magento theme (more about front-end develope for Magento you can see on [Designer's Guide To Magento](http://www.magentocommerce.com/design_guide/articles/working-with-magento-themes))
+Develop process as usual for Magento theme (more about front-end develop for Magento you can see on [Designer's Guide To Magento](http://www.magentocommerce.com/design_guide/articles/working-with-magento-themes))
 
 ### Create your theme based on Magento-Bootstrap theme
 
@@ -46,7 +46,7 @@ After `git clone` command you will have next folder hierarchy:
 │           └── simple
 ```
 
-So you need create new theme in **bootstrap** package
+So you need create new theme in **mbootstrap** package
 
 **Example**
 ```
@@ -65,7 +65,7 @@ So you need create new theme in **bootstrap** package
 ```
 
 That's it!
-Now you can develope your custom theme based on Magento-Bootstrap theme
+Now you can develop your custom theme based on Magento-Bootstrap theme
 
 (i) don`t forget enter your just created theme name (in example it is *custom-theme*)
 at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
