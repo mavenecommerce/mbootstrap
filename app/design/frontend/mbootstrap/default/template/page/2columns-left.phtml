@@ -50,11 +50,11 @@
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
                 <?php echo $this->getChildHtml('before_main_start') ?>
 
-                <aside class="col-left" itemscope itemtype="http://schema.org/WPSideBar"><?php echo $this->getChildHtml('left') ?></aside>
                 <article class="col-main" role="main">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
                 </article>
+                <aside class="col-left" itemscope itemtype="http://schema.org/WPSideBar"><?php echo $this->getChildHtml('left') ?></aside>
 
             </div>
         </div>

@@ -510,6 +510,7 @@ body {
 .main-container.col2-left-layout .col-left {
   position: relative;
   float: left;
+  float: left !important;
   width: 100%;
   min-height: 1px;
   padding-right: 15px;
@@ -530,6 +531,7 @@ body {
 .main-container.col2-left-layout .col-main {
   position: relative;
   float: left;
+  float: right !important;
   width: 100%;
   min-height: 1px;
   padding-right: 15px;
@@ -901,6 +903,11 @@ body {
   list-style: none;
   border: 1px solid red;
   border-radius: 3px;
+}
+.messages ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 .btn-remove {
   color: #f00;
