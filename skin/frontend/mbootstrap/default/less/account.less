@@ -13,15 +13,11 @@
 
         .make-xs-column(12);
         .make-sm-column(4);
-        .make-md-column(4);
-        .make-lg-column(4);
     }
 
     .new-users {
         .make-xs-column(12);
         .make-sm-column(8);
-        .make-md-column(8);
-        .make-lg-column(8);
     }
 
     .content {
@@ -43,7 +39,7 @@
     .block-content {
         padding: @padding-small-horizontal 0;
     }
-    
+
     .nav {
         > li {
             > a,
@@ -85,10 +81,10 @@
 // Box
 // -------------------------
 .box-head {
-    
+
     .clearfix();
 
-    > h2 { 
+    > h2 {
         font-weight: normal;
 
         float: left;
@@ -115,7 +111,7 @@
             margin-top: (@line-height-computed + 7);
         }
     }
-    
+
     .box-content {
         margin-top: @line-height-computed;
 
@@ -131,9 +127,6 @@
 .edit-account-info {
     .buttons-set {
         .make-xs-column(12);
-        .make-sm-column(12);
-        .make-md-column(12);
-        .make-lg-column(12);
     }
 }
 
@@ -143,9 +136,6 @@
 .edit-address-info {
     .buttons-set {
         .make-xs-column(12);
-        .make-sm-column(12);
-        .make-md-column(12);
-        .make-lg-column(12);
     }
 }
 
@@ -179,7 +169,7 @@
 .addresses-list {
     .addresses-primary {}
     .addresses-additional {}
-    
+
     h2 {
         //border-bottom: 2px solid @gray-lighter;
     }
@@ -189,7 +179,7 @@
         padding: 0;
 
         list-style: none;
-        
+
         h3 {
             font-weight: normal;
             font-size: @font-size-large;
@@ -203,7 +193,7 @@
 // Orders history
 // -------------------------
 .orders-history {
-    
+
     .table {
         margin: @line-height-base 0;
 
@@ -235,7 +225,7 @@
         tfoot {
             tr {
                 font-weight: bold;
-                
+
                 &.last {
                     font-size: @font-size-large;
                     font-weight: bold;
@@ -254,12 +244,12 @@
 // Wishlist
 // -------------------------
 .my-wishlist {
-    
+
     .table {
         tr {
             .btn-remove {
                 .opacity(10);
-                .transition(opacity 0.25s ease-in-out;)
+                .transition(opacity 0.25s ease-in-out);
             }
 
             &:hover {
@@ -274,7 +264,7 @@
         display: block;
         width: 100px;
     }
-    
+
     .product-name {}
     .description {}
 
