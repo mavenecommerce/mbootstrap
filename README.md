@@ -1,6 +1,6 @@
 <a href="http://www.mavenecommerce.org/services/magento-development?utm_source=github&utm_medium=logo&utm_campaign=github">![mavenecommerce](http://www.mavenecommerce.org/wp-content/themes/mavenecommerce/images/logo.png)</a>
 
-# Magento-Bootstrap theme
+# Magento-Bootstrap responsive theme
 
 Magento-Bootstrap theme it is package fully based on Twitter Bootstrap 3 framework.
 
