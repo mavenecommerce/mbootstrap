@@ -76,7 +76,6 @@ Open *magento/skin/frontend/mbootstrap/default* path
 
 ```
 .
-
 ├── bootstrap             -- Bootstrap framework source files
 ├── css                   -- Theme css files compile there
 ├── images
