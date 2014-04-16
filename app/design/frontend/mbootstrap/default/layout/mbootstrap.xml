@@ -48,7 +48,7 @@
 
 
                 <!-- jQuery scripts -->
-                <action method="addItem"><type>skin_js</type><script>js/dist/scripts.js</script></action>
+                <action method="addItem"><type>skin_js</type><script>js/dist/scripts.min.js</script></action>
 
 
                 <!-- Google Web Fonts -->
