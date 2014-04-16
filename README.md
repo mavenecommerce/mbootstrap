@@ -97,6 +97,6 @@ For more information go to *magento/skin/frontend/mbootstrap/default/* folder an
 ### Requirements
 
 1. Node.js                              -- Open http://nodejs.org and install latest Node.js version
-2. Bootstrap framework install          -- Open *magento/skin/frontend/default/bootstrap* and run `$ npm install` command in terminal
+2. Bootstrap framework install          -- Open *magento/skin/frontend/default/mbootstrap* and run `$ npm install` command in terminal
 3. modman (Module Manager)              -- Open https://github.com/colinmollenhour/modman and install it
 
