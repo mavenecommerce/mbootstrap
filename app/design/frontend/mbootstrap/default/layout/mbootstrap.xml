@@ -28,7 +28,6 @@
 
                 <!-- General styles -->
                 <action method="addItem"><type>skin_css</type><name>css/mbootstrap.min.css</name><params/></action>
-                <!--<action method="addItem"><type>skin_css</type><name>css/mbootstrap.responsive.min.css</name><params/></action>-->
 
 
                 <!-- IE styles -->
