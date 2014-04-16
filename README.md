@@ -1,4 +1,4 @@
-<a href="http://www.mavenecommerce.org/services/magento-development?utm_source=github&utm_medium=logo&utm_campaign=github">![mavenecommerce](http://www.mavenecommerce.org/wp-content/themes/mavenecommerce/images/logo.png)</a>
+<a href="http://mavenecommerce.com/services/">![mavenecommerce](http://mavenecommerce.com/wp-content/uploads/2014/03/logo@2x.gif)</a>
 
 # Magento-Bootstrap responsive theme
 
