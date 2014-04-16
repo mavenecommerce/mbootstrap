@@ -40,7 +40,7 @@
             <div class="buttons-set btn-group">
                 <button type="button" title="<?php echo $this->__('Apply Coupon') ?>" class="btn btn-default" onclick="discountForm.submit(false)" value="<?php echo $this->__('Apply Coupon') ?>"> <i class="glyphicon glyphicon-certificate"></i> <?php echo $this->__('Apply Coupon') ?></button>
                 <?php if(strlen($this->getCouponCode())): ?>
-                    &nbsp; <button type="button" title="<?php echo $this->__('Cancel Coupon') ?>" class="btn" onclick="discountForm.submit(true)" value="<?php echo $this->__('Cancel Coupon') ?>"><i class="glyphicon glyphicon-remove"></i> <?php echo $this->__('Cancel Coupon') ?></button>
+                    &nbsp; <button type="button" title="<?php echo $this->__('Cancel Coupon') ?>" class="btn btn-default" onclick="discountForm.submit(true)" value="<?php echo $this->__('Cancel Coupon') ?>"><i class="glyphicon glyphicon-remove"></i> <?php echo $this->__('Cancel Coupon') ?></button>
                 <?php endif;?>
             </div>
         </div>

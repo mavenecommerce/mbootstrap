@@ -44,9 +44,7 @@
         </div>
 
         <div class="limiter">
-            <label><?php echo $this->__('Show') ?></label>
-            <span><?php echo $this->__('per page') ?></span>
-            <select onchange="setLocation(this.value)" class="span1">
+            <select onchange="setLocation(this.value)">
             <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
                 <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
                     <?php echo $_limit ?>
@@ -67,7 +65,7 @@
                 <?php endif; ?>
             </span>-->
 
-            <select onchange="setLocation(this.value)" class="span2">
+            <select onchange="setLocation(this.value)">
                 <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
                 <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
                     <?php echo $this->__($_order) ?>
@@ -76,9 +74,9 @@
             </select>
 
             <?php if($this->getCurrentDirection() == 'desc'): ?>
-                <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>"><i class="glyphicon glyphicon-sort-by-alphabet"></i></a>
+                <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>"><i class="glyphicon glyphicon-sort asc"></i></a>
             <?php else: ?>
-                <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><i class="glyphicon glyphicon-sort-by-alphabet-alt"></i></a>
+                <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><i class="glyphicon glyphicon-sort dsc"></i></a>
             <?php endif; ?>
         </div>
 

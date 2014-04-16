@@ -88,12 +88,10 @@
                         <span class="help-block"><?php echo $this->__('Default Billing Address') ?></span>
                     <?php elseif($this->canSetAsDefaultBilling()): ?>
                         <div class="form-group">
-                            <div class="checkbox">
-                                <label for="primary_billing">
-                                    <input type="checkbox" id="primary_billing" name="default_billing" value="1" title="<?php echo $this->__('Use as My Default Billing Address') ?>" />
-                                    <?php echo $this->__('Use as my default billing address') ?>
-                                </label>
-                            </div>
+                            <label for="primary_billing" class="checkbox">
+                                <input type="checkbox" id="primary_billing" name="default_billing" value="1" title="<?php echo $this->__('Use as My Default Billing Address') ?>" />
+                                <?php echo $this->__('Use as my default billing address') ?>
+                            </label>
                         </div>
                     <?php else: ?>
                         <input type="hidden" name="default_billing" value="1" />
@@ -105,12 +103,10 @@
                         <span class="help-block"><?php echo $this->__('Default Shipping Address') ?></span>
                     <?php elseif($this->canSetAsDefaultShipping()): ?>
                         <div class="form-group">
-                            <div class="checkbox">
-                                <label for="primary_shipping">
-                                    <input type="checkbox" id="primary_shipping" name="default_shipping" value="1" title="<?php echo $this->__('Use as My Default Shipping Address') ?>" />
-                                    <?php echo $this->__('Use as my default shipping address') ?>
-                                </label>
-                            </div>
+                            <label for="primary_shipping" class="checkbox">
+                                <input type="checkbox" id="primary_shipping" name="default_shipping" value="1" title="<?php echo $this->__('Use as My Default Shipping Address') ?>" />
+                                <?php echo $this->__('Use as my default shipping address') ?>
+                            </label>
                         </div>
                     <?php else: ?>
                         <input type="hidden" name="default_shipping" value="1" />

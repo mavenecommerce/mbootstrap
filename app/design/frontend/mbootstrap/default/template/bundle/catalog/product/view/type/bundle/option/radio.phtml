@@ -47,12 +47,10 @@
         <?php if (!$_option->getRequired()): ?>
             <li>
                 <div class="form-group">
-                    <div class="radio">
-                        <label for="bundle-option-<?php echo $_option->getId() ?>">
-                            <input type="radio" onclick="bundle.changeSelection(this)" id="bundle-option-<?php echo $_option->getId() ?>" name="bundle_option[<?php echo $_option->getId() ?>]"<?php echo ($_default && $_default->isSalable())?'':' checked="checked" ' ?> value=""/>
-                            <?php echo $this->__('None') ?>
-                        </label>
-                    </div>
+                    <label for="bundle-option-<?php echo $_option->getId() ?>" class="radio">
+                        <input type="radio" onclick="bundle.changeSelection(this)" id="bundle-option-<?php echo $_option->getId() ?>" name="bundle_option[<?php echo $_option->getId() ?>]"<?php echo ($_default && $_default->isSalable())?'':' checked="checked" ' ?> value=""/>
+                        <?php echo $this->__('None') ?>
+                    </label>
                 </div>
             </li>
         <?php endif; ?>
@@ -60,12 +58,10 @@
         <?php foreach ($_selections as $_selection): ?>
             <li>
                 <div class="form-group">
-                    <div class="radio">
-                        <label for="bundle-option-<?php echo $_option->getId() ?>-<?php echo $_selection->getSelectionId() ?>">
-                            <input type="radio" onclick="bundle.changeSelection(this)" class="<?php echo $_option->getRequired()?' validate-one-required-by-name':'' ?> change-container-classname" id="bundle-option-<?php echo $_option->getId() ?>-<?php echo $_selection->getSelectionId() ?>" name="bundle_option[<?php echo $_option->getId() ?>]"<?php if ($this->_isSelected($_selection)) echo ' checked="checked"' ?><?php if (!$_selection->isSaleable()) echo ' disabled="disabled"' ?>value="<?php echo $_selection->getSelectionId() ?>"/>
-                            <?php echo $this->getSelectionTitlePrice($_selection) ?>
-                        </label>
-                    </div>
+                    <label for="bundle-option-<?php echo $_option->getId() ?>-<?php echo $_selection->getSelectionId() ?>" class="radio">
+                        <input type="radio" onclick="bundle.changeSelection(this)" class="<?php echo $_option->getRequired()?' validate-one-required-by-name':'' ?> change-container-classname" id="bundle-option-<?php echo $_option->getId() ?>-<?php echo $_selection->getSelectionId() ?>" name="bundle_option[<?php echo $_option->getId() ?>]"<?php if ($this->_isSelected($_selection)) echo ' checked="checked"' ?><?php if (!$_selection->isSaleable()) echo ' disabled="disabled"' ?>value="<?php echo $_selection->getSelectionId() ?>"/>
+                        <?php echo $this->getSelectionTitlePrice($_selection) ?>
+                    </label>
                 </div>
 
                 <?php if ($_option->getRequired()): ?>

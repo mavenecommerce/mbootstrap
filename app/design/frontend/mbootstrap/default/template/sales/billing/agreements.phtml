@@ -79,7 +79,7 @@
                     <p><?php echo $this->__('You will be redirected to the payment system website.') ?></p>
                     <ul class="form-list">
                         <li>
-                            <select id="payment_method" name="payment_method">
+                            <select id="payment_method" name="payment_method" class="form-control">
                                 <option value=""><?php echo $this->__('-- Please Select --') ?></option>
                                 <?php foreach ($paymentMethods as $code => $title): ?>
                                     <option value="<?php echo $code ?>"><?php echo $title ?></option>
