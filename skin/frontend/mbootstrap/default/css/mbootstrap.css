@@ -1753,6 +1753,11 @@ body {
 .product-view .box-collateral.box-additional ul {
   padding-left: 0;
 }
+.product-view .box-collateral.box-up-sell img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .product-view .box-collateral.box-reviews .media-list .media-heading:before,
 .product-view .box-collateral.box-reviews .media-list .media-heading:after {
   /* 1 */
