@@ -57,14 +57,6 @@
         <div class="sort-by">
             <label><?php echo $this->__('Sort By') ?></label>
 
-            <!--<span class="visible-xs">
-                <?php if($this->getCurrentDirection() == 'desc'): ?>
-                    <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>"><i class="glyphicon glyphicon-sort-by-alphabet"></i></a>
-                <?php else: ?>
-                    <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>">i.<span class="glyphicon glyphicon-sort-by-alphabet-alt"></span></a>
-                <?php endif; ?>
-            </span>-->
-
             <select onchange="setLocation(this.value)">
                 <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
                 <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>

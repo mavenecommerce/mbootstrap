@@ -185,8 +185,8 @@
     var opConfig = new Product.Options(<?php echo $this->getJsonConfig() ?>);
     //]]>
     </script>
-    <div class="row">
-        <dl class="col-md-4">
+    <div class="product-options-list-wrapper">
+        <dl class="product-options-list">
         <?php foreach($_options as $_option): ?>
             <?php echo $this->getOptionHtml($_option) ?>
         <?php endforeach; ?>

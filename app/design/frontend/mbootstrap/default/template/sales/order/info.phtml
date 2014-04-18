@@ -58,62 +58,54 @@
     <p class="order-date"><?php echo $this->__('Order Date: %s', $this->formatDate($_order->getCreatedAtStoreDate(), 'long')) ?></p>
 
     <?php if (!$_order->getIsVirtual()): ?>
-    <div class="row order-info-box">
-        <div class="col-md-4">
-            <div class="box">
+    <div class="order-info-box">
+        <div class="box">
 
-                <div class="box-title">
-                    <h2><?php echo $this->__('Shipping Address') ?></h2>
-                </div>
-                <div class="box-content">
-                    <address><?php echo $_order->getShippingAddress()->format('html') ?></address>
-                </div>
-
+            <div class="box-title">
+                <h2><?php echo $this->__('Shipping Address') ?></h2>
             </div>
+            <div class="box-content">
+                <address><?php echo $_order->getShippingAddress()->format('html') ?></address>
+            </div>
+
         </div>
-        <div class="col-md-4">
-            <div class="box">
+        <div class="box">
 
-                <div class="box-title">
-                    <h2><?php echo $this->__('Shipping Method') ?></h2>
-                </div>
-                <div class="box-content">
-                    <?php if ($_order->getShippingDescription()): ?>
-                        <?php echo $this->escapeHtml($_order->getShippingDescription()) ?>
-                    <?php else: ?>
-                        <p><?php echo $this->helper('sales')->__('No shipping information available'); ?></p>
-                    <?php endif; ?>
-                </div>
-
+            <div class="box-title">
+                <h2><?php echo $this->__('Shipping Method') ?></h2>
             </div>
+            <div class="box-content">
+                <?php if ($_order->getShippingDescription()): ?>
+                    <?php echo $this->escapeHtml($_order->getShippingDescription()) ?>
+                <?php else: ?>
+                    <p><?php echo $this->helper('sales')->__('No shipping information available'); ?></p>
+                <?php endif; ?>
+            </div>
+
         </div>
     </div>
     <?php endif; ?>
 
-    <div class="row order-info-box">
-        <div class="col-md-4">
-            <div class="box">
+    <div class="order-info-box">
+        <div class="box">
 
-                <div class="box-title">
-                    <h2><?php echo $this->__('Billing Address') ?></h2>
-                </div>
-                <div class="box-content">
-                    <address><?php echo $_order->getBillingAddress()->format('html') ?></address>
-                </div>
-
+            <div class="box-title">
+                <h2><?php echo $this->__('Billing Address') ?></h2>
             </div>
+            <div class="box-content">
+                <address><?php echo $_order->getBillingAddress()->format('html') ?></address>
+            </div>
+
         </div>
-        <div class="col-md-4">
-            <div class="box box-payment">
+        <div class="box box-payment">
 
-                <div class="box-title">
-                    <h2><?php echo $this->__('Payment Method') ?></h2>
-                </div>
-                <div class="box-content">
-                    <?php echo $this->getPaymentInfoHtml() ?>
-                </div>
-
+            <div class="box-title">
+                <h2><?php echo $this->__('Payment Method') ?></h2>
             </div>
+            <div class="box-content">
+                <?php echo $this->getPaymentInfoHtml() ?>
+            </div>
+
         </div>
     </div>
 

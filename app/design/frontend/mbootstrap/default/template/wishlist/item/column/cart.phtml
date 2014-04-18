@@ -35,11 +35,11 @@ $product = $item->getProduct();
 
     <div class="add-to-cart-alt input-append">
         <?php if ($item->canHaveQty() && $item->getProduct()->isVisibleInSiteVisibility()): ?>
-            <input type="number" class="input-text qty validate-not-negative-number form-control col-md-12" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" />
+            <input type="number" class="input-text qty validate-not-negative-number form-control" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" />
         <?php endif; ?>
 
         <?php if ($product->isSaleable()): ?>
-            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId()?>);" class="btn btn-cart"><?php echo $this->__('Add to Cart') ?></button>
+            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId()?>);" class="btn btn-primary btn-cart"><?php echo $this->__('Add to Cart') ?></button>
         <?php else: ?>
             <?php if ($product->getIsSalable()): ?>
                 <span class="availability in-stock add-on"><?php echo $this->__('In stock') ?></span>
@@ -54,7 +54,7 @@ $product = $item->getProduct();
     <?php endforeach;?>
 
     <?php if ($product->isVisibleInSiteVisibility()): ?>
-        <a class="btn link-edit" href="<?php echo $this->getItemConfigureUrl($item) ?>"><?php echo $this->__('Edit') ?></a>
+        <a class="btn btn-default btn-block link-edit" href="<?php echo $this->getItemConfigureUrl($item) ?>"><?php echo $this->__('Edit') ?></a>
     <?php endif ?>
 
 </div>

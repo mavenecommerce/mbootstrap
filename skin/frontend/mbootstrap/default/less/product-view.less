@@ -68,8 +68,15 @@
             }
 
             .product-options {
-                max-width: 50%;
+                //max-width: 50%;
             }
+                .product-options-list-wrapper {
+                    .make-row();
+                }
+                    .product-options-list {
+                        .make-xs-column(12);
+                        .make-sm-column(8);
+                    }
 
             .grouped-items-table {
                 
@@ -157,19 +164,20 @@
         }
 
         .product-options-bottom {
-            .make-row();
-
             .price-box {
                 margin-bottom: @line-height-computed;
-
-                .make-xs-column(12);
             }
+            .add-to-cart {
+                .make-row();
+
+                .form-group {
+                    .make-xs-column(8);
+                }
+            }
+
             .add-to-cart,
             .add-to-links {
                 margin-bottom: @line-height-computed;
-
-                .make-xs-column(12);
-                .make-sm-column(6);
             }
         }
 

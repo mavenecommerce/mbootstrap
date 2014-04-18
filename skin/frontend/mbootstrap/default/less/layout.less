@@ -121,6 +121,14 @@
     .col-left {}
     .col-right {}
 
+    @media (max-width: @screen-xs-max) {
+        .col-main,
+        .col-left,
+        .col-right {
+            margin: @line-height-computed 0;
+        }
+    }
+
 
     &.col2-left-layout {
         .col-left {

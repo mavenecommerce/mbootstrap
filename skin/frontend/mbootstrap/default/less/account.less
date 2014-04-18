@@ -33,6 +33,19 @@
 .account-create {}
 
 
+// Forgot password form
+// -------------------------
+.forgot-password {
+    .form-list {
+        .make-row();
+    }
+        .control-group {
+            .make-xs-column(12);
+            .make-sm-column(6);
+        }
+}
+
+
 // Block - Account navigation
 // -------------------------
 .block-account {
@@ -214,10 +227,17 @@
 
 // View order details
 // -------------------------
-.order-view {
+.view-order {
     .order-info {}
     .order-date {}
-    .order-info-box {}
+    .order-info-box {
+        .make-row();
+
+        .box {
+            .make-xs-column(12);
+            .make-sm-column(4);
+        }
+    }
 }
 
 .order-items {
@@ -244,22 +264,6 @@
 // Wishlist
 // -------------------------
 .my-wishlist {
-
-    .table {
-        tr {
-            .btn-remove {
-                .opacity(10);
-                .transition(opacity 0.25s ease-in-out);
-            }
-
-            &:hover {
-                .btn-remove {
-                    .opacity(100);
-                }
-            }
-        }
-    }
-
     .product-image {
         display: block;
         width: 100px;
@@ -269,11 +273,16 @@
     .description {}
 
     .cell_cart {
-        > .price-box {
-            margin-bottom: @line-height-base;
+    }
+        .price-box {
+            margin-bottom: 5px;
 
             white-space: nowrap;
         }
-        > .add-to-cart-alt {}
-    }
+
+        .add-to-cart-alt {
+            .btn {
+                margin: (@line-height-computed / 2) 0;
+            }
+        }
 }
