@@ -1,0 +1,20 @@
+//
+// Crosssel
+// --------------------------------------------------
+.crosssell {
+    margin: @line-height-computed 0;
+    
+    > h2 {
+        font-size: @font-size-base;
+        
+    }
+
+    .products-grid {
+        > .item {
+            .make-xs-column(12);
+            .make-sm-column(4);
+            .make-md-column(3);
+            .make-lg-column(2);
+        }
+    }
+}

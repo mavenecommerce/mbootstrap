@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layoutUpdate version="0.1.0">
+
+    <!-- Default layout, loads most of the pages -->
+    <default translate="label">
+        <reference name="root">
+
+            <reference name="head">
+
+                <!-- Clean Up -->
+                <remove name="google.webfonts"/>
+
+                <!-- General styles -->
+                <!--<action method="addItem"><type>skin_css</type><name>css/bootstrap/css/bootstrap.min.css</name><params/></action>-->
+                <action method="addItem"><type>skin_css</type><name>css/theme.min.css</name><params/></action>
+
+            </reference>
+
+        </reference>
+    </default>
+
+</layoutUpdate>

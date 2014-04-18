@@ -2,31 +2,23 @@
 
 # Magento-Bootstrap theme
 
-Magento-Bootstrap theme it is package fully based on Twitter Bootstrap framework.
+Magento-Bootstrap theme it is package fully based on Twitter Bootstrap 3 framework.
 
 **Attention:** Current version with Bootstrap v.2 is deprecated. We recommend to use [bootstrap_3.0.0](https://github.com/mavenecommerce/mbootstrap/tree/bootstrap_3.0.0) branch instead
 
 ## Status:
 
-Current version: Alpha
+Current version: Beta
 
 ## Assets
 
-* Bootstrap v2.3.1
-* Font Awesome v3.0.2
+* Bootstrap v3.0.0
 * HTML5 support
 * Microdata support (schema.org)
 
 ## How to install
 
-1. `modman clone git@github.com:EcomDev/mbootstrap.git mboostrap`
-2. Open Admin Panel
-    * go to **System -> Configuration**
-    * open **Design** tab on left sidebar
-    * open **Package** section
-    * write "bootstrap" in *Current Package Name* field
-    * press "Save Config" button
-3. Refresh front-end page and enjoy
+Open our [wiki](https://github.com/EcomDev/mbootstrap/wiki) and read [How to install theme via modman?](https://github.com/EcomDev/mbootstrap/wiki/How-to-install-theme-via-modman%3F) please.
 
 ## How to use
 
@@ -36,7 +28,7 @@ Develop process as usual for Magento theme (more about front-end develope for Ma
 
 ### Create your theme based on Magento-Bootstrap theme
 
-You need create custom theme based on Magento-Bootstrap theme. 
+You need create custom theme based on Magento-Bootstrap theme.
 After `git clone` command you will have next folder hierarchy:
 
 ```
@@ -44,12 +36,16 @@ After `git clone` command you will have next folder hierarchy:
 ├── app
 │   └── design
 │       └── frontend
-│           └── bootstrap
-│               └── default
+│           └── mbootstrap
+│               ├── default
+│               ├── advanced    -- example theme with LESS compile
+│               └── simple      -- example theme with http://getbootstrap.com/customize css file
 ├── skin
 │   └── frontend
-│       └── bootstrap
-│           └── default
+│       └── mbootstrap
+│           ├── default
+│           ├── advanced
+│           └── simple
 ```
 
 So you need create new theme in **bootstrap** package
@@ -60,33 +56,31 @@ So you need create new theme in **bootstrap** package
 ├── app
 │   └── design
 │       └── frontend
-│           └── bootstrap
+│           └── mbootstrap
 │               ├── default
-│               └── custom-theme
+│               └── custom-theme    -- your Custom theme templates files folder
 ├── skin
 │   └── frontend
-│       └── bootstrap
+│       └── mbootstrap
 │           ├── default
-│           └── custom-theme
+│           └── custom-theme        -- your Custom theme css/images files
 ```
 
 That's it!
 Now you can develope your custom theme based on Magento-Bootstrap theme
 
-(i) don`t forget enter your just created theme name (in example it is *custom-theme*) 
+(i) don`t forget enter your just created theme name (in example it is *custom-theme*)
 at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
 
 ## Skin folder structure description
 
-Open *magento/skin/frontend/bootstrap/default* path
+Open *magento/skin/frontend/mbootstrap/default* path
 
 ```
 .
 ├── Makefile              -- Script file with *compile* less to css and *watch* file system changes commands. Open it and read *How to use*
 ├── bootstrap             -- Bootstrap framework source files
 ├── css                   -- Theme css files compile there
-├── fonts
-│   └── Font-Awesome      -- The iconic font designed for use with Twitter Bootstrap
 ├── images
 ├── js
 ├── less                  -- Theme less files
@@ -100,11 +94,11 @@ Magento-Bootstrap theme contains also developers tools:
 * run *less to css* compile
 * run file system watching program and compile *less to css* automatically
 
-For more information go *magento/skin/frontend/bootstrap/default/* folder and read *Makefile* file
+For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *Makefile* file (or watcher.js file for Mac OS X users)
 
 ### Requirements
 
 1. Node.js                              -- Open http://nodejs.org and install latest Node.js version
 2. Bootstrap framework install          -- Open *magento/skin/frontend/default/bootstrap* and run `$ npm install` command in terminal
-
+3. modman (Module Manager)              -- Open https://github.com/colinmollenhour/modman and install it
 

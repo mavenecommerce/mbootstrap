@@ -1,0 +1,70 @@
+//
+// Toolbar
+// --------------------------------------------------
+.toolbar { 
+    margin-bottom: @line-height-computed;
+    
+    > .pager-wrapper {
+        .make-row();
+
+        > .amount {
+            //line-height: @line-height-base + 10;
+
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
+        }
+        
+        .limiter {
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
+        }
+        
+        .sort-by {
+            white-space: nowrap;
+
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
+        }
+    }
+
+    > .sorter {
+        margin-top: (@line-height-computed / 2);
+
+        .make-row();
+
+        .view-mode {
+            .make-xs-column(4);
+            .make-sm-column(4);
+            .make-md-column(4);
+            .make-lg-column(4);
+        }
+
+        .pager-list {
+            .make-xs-column(8);
+            .make-sm-column(8);
+            .make-md-column(8);
+            .make-lg-column(8);
+
+            .pagination {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+// Tolbar at bottom
+// -------------------------
+.toolbar-bottom {
+    .pager-wrapper,
+    .view-mode .btn {
+        display: none;
+    }
+}

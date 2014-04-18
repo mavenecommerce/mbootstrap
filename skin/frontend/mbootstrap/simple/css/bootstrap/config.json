@@ -1,0 +1,21 @@
+{
+  "vars": {
+    "@brand-primary": "#91afca",
+    "@brand-success": "#458845",
+    "@brand-warning": "#c37c17",
+    "@brand-danger": "#a2231f",
+    "@brand-info": "#66a1b3",
+    "@body-bg": "#fff",
+    "@font-size-base": "13px",
+    "@btn-default-bg": "#eeeefe"
+  },
+  "css": [
+    "print.less",
+    "type.less",
+    "code.less",
+    "tables.less",
+    "forms.less",
+    "buttons.less"
+  ],
+  "js": []
+}
