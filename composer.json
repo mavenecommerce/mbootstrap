@@ -1,7 +1,7 @@
 {
-    "name": "ecomdev/mbootstrap",
+    "name": "mavenecommerce/mbootstrap",
     "type": "magento-module",
-    "homepage": "https://github.com/EcomDev/mbootstrap",
+    "homepage": "https://github.com/mavenecommerce/mbootstrap",
     "description": "Magento theme fully based on the Twitter Bootstrap framework.",
     "authors":[
         {
