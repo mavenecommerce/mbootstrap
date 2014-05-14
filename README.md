@@ -1,5 +1,3 @@
-<a href="http://www.ecomdev.org/services/magento-development?utm_source=github&utm_medium=logo&utm_campaign=github">![EcomDev](http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png)</a>
-
 # Magento-Bootstrap theme
 
 Magento-Bootstrap theme it is package fully based on Twitter Bootstrap framework.
