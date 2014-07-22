@@ -2,7 +2,7 @@
 
 Magento-Bootstrap theme it is package fully based on Twitter Bootstrap framework.
 
-**Attention:** Current version with Bootstrap v.2 is deprecated. We recommend to use [bootstrap_3.0.0](https://github.com/mavenecommerce/mbootstrap/tree/bootstrap_3.0.0) branch instead
+**Attention:** Current version with Bootstrap v.2 is deprecated. We recommend to use [bootstrap_3.2.0](https://github.com/mavenecommerce/mbootstrap/tree/bootstrap_3.2.0) branch instead
 
 ## Status:
 
