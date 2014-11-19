@@ -10,7 +10,7 @@ Current version: Beta
 
 ## Assets
 
-* Bootstrap v3.0.0
+* Bootstrap v3.2.0
 * HTML5 support
 * Microdata support (schema.org)
 
