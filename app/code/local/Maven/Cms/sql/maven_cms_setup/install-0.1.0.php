@@ -1,25 +1,14 @@
 <?php
 
 /**
+ * Maven extension for Magento
  *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
- *
- * @category   EcomDev
- * @package
- * @copyright  Copyright (c) 2012 EcomDev (http://www.ecomdev.org)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Sergey Gozhedrianov <s.gozhedrianov@ecomdev.org>
+ * @category   Maven
+ * @package    Maven_Bootstrap
+ * @copyright  Copyright (C) 2013 MavenEcommerce Inc. (http://www.mavenecommerce.com/)
  */
-/**
- * Created by EcomDev.
- * @author Sergey Gozhedrianov
- */
-/* @var $this Montelle_Cms_Model_Resource_Setup */
+
+/** @var $this Montelle_Cms_Model_Resource_Setup */
 $this->startSetup();
 /** @var $connection Varien_Db_Adapter_Pdo_Mysql */
 $connection = $this->getConnection();

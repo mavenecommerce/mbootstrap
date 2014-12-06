@@ -160,7 +160,7 @@
             </reference>
 
             <reference name="before_document_end">
-                <block type="ecomdev_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
+                <block type="maven_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
             </reference>
 
         </reference>

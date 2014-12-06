@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Maven_Cms>
+            <version>0.1.0</version>
+        </Maven_Cms>
+    </modules>
+    <global>
+        <blocks>
+            <maven_cms>
+                <class>Maven_Cms_Block</class>
+            </maven_cms>
+        </blocks>
+        <models>
+            <maven_cms>
+                <class>Maven_Cms_Model</class>
+            </maven_cms>
+        </models>
+        <helpers>
+            <maven_cms>
+                <class>Maven_Cms_Helper</class>
+            </maven_cms>
+        </helpers>
+        <resources>
+            <maven_cms_setup>
+                <setup>
+                    <module>Maven_Cms</module>
+                    <class>Maven_Cms_Model_Resource_Setup</class>
+                </setup>
+                <setup>
+                </setup>
+            </maven_cms_setup>
+        </resources>
+    </global>
+</config>

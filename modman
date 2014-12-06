@@ -1,12 +1,12 @@
 # Modules
 #
-app/code/local/EcomDev/Cms                  app/code/local/EcomDev/Cms
-app/code/local/EcomDev/Mbootstrap            app/code/local/EcomDev/Mbootstrap
+app/code/local/Maven/Cms                  app/code/local/Maven/Cms
+app/code/local/Maven/Mbootstrap            app/code/local/Maven/Mbootstrap
 
 # Config
 #
-app/etc/modules/EcomDev_Cms.xml             app/etc/modules/EcomDev_Cms.xml
-app/etc/modules/EcomDev_MBootstrap.xml       app/etc/modules/EcomDev_MBootstrap.xml
+app/etc/modules/Maven_Cms.xml             app/etc/modules/Maven_Cms.xml
+app/etc/modules/Maven_MBootstrap.xml       app/etc/modules/Maven_MBootstrap.xml
 
 # Theme
 #

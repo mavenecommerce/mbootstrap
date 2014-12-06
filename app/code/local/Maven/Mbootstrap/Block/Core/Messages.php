@@ -1,6 +1,12 @@
 <?php
-
-class EcomDev_Mbootstrap_Block_Core_Messages
+/**
+ * Maven extension for Magento
+ *
+ * @category   Maven
+ * @package    Maven_Bootstrap
+ * @copyright  Copyright (C) 2013 MavenEcommerce Inc. (http://www.mavenecommerce.com/)
+ */
+class Maven_Mbootstrap_Block_Core_Messages
     extends Mage_Core_Block_Messages {
 
     /**

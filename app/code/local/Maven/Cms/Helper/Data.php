@@ -1,10 +1,13 @@
 <?php
-
 /**
- * Created by EcomDev.
- * @author Sergey Gozhedrianov
+ * Maven extension for Magento
+ *
+ * @category   Maven
+ * @package    Maven_Bootstrap
+ * @copyright  Copyright (C) 2013 MavenEcommerce Inc. (http://www.mavenecommerce.com/)
  */
-class EcomDev_Cms_Helper_Data extends Mage_Core_Helper_Abstract
+
+class Maven_Cms_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
     public function isAdmin()

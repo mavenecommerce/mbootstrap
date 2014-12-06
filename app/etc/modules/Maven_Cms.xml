@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Maven extension for Magento
+ *
+ * @category   Maven
+ * @package    Maven_Bootstrap
+ * @copyright  Copyright (C) 2013 MavenEcommerce Inc. (http://www.mavenecommerce.com/)
+ */
+-->
+<config>
+    <modules>
+        <Maven_Cms>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Maven_Cms>
+    </modules>
+</config>

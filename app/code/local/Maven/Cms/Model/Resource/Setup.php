@@ -1,6 +1,13 @@
 <?php
+/**
+ * Maven extension for Magento
+ *
+ * @category   Maven
+ * @package    Maven_Bootstrap
+ * @copyright  Copyright (C) 2013 MavenEcommerce Inc. (http://www.mavenecommerce.com/)
+ */
 
-class EcomDev_Cms_Model_Resource_Setup extends Mage_Core_Model_Resource_Setup
+class Maven_Cms_Model_Resource_Setup extends Mage_Core_Model_Resource_Setup
 {
 
     /**

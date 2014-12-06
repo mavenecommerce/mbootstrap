@@ -1,6 +1,12 @@
 <?php
-
-class EcomDev_Cms_Block_Block extends Mage_Core_Block_Abstract
+/**
+ * Maven extension for Magento
+ *
+ * @category   Maven
+ * @package    Maven_Bootstrap
+ * @copyright  Copyright (C) 2013 MavenEcommerce Inc. (http://www.mavenecommerce.com/)
+ */
+class Maven_Cms_Block_Block extends Mage_Core_Block_Abstract
 {
 
     /**
