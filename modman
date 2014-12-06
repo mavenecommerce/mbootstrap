@@ -1,7 +1,7 @@
 # Modules
 #
-app/code/local/Maven/Cms                  app/code/local/Maven/Cms
-app/code/local/Maven/Mbootstrap            app/code/local/Maven/Mbootstrap
+app/code/community/Maven/Cms                  app/code/community/Maven/Cms
+app/code/community/Maven/Mbootstrap            app/code/community/Maven/Mbootstrap
 
 # Config
 #
