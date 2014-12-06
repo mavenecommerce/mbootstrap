@@ -1,0 +1,72 @@
+//
+// Tags
+// --------------------------------------------------
+
+
+// Product view - Tags
+// -------------------------
+.box-tags {
+    h3 {
+        font-size: @font-size-large;
+        font-weight: normal;
+
+        margin: 0;
+
+        line-height: @line-height-base;
+    }
+
+    .box-tags-layout {
+        .make-row();
+
+        > .present-tags {
+            .make-xs-column(12);
+            .make-sm-column(6);
+        }
+        
+        > .add-tag {
+            margin-bottom: @line-height-computed;
+
+            .make-xs-column(12);
+            .make-sm-column(6);
+        }
+    }
+
+    .product-tags {
+        padding: 0;
+
+        list-style: none;
+
+        > li {
+            display: inline;
+        }
+    }
+
+    .form-add {}
+
+    .note {
+        margin: (@line-height-computed / 2) 0 0;
+    }
+
+    .recent-tags {
+        margin: 0;
+    }
+}
+
+.tags {
+    ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        > li {
+            display: inline-block;
+        }
+    }
+}
+
+
+// Tags List. Also used for Popular Search Terms
+// -------------------------
+.tags-list {}

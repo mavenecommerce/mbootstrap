@@ -1,0 +1,128 @@
+//
+// Category products
+// --------------------------------------------------
+.category-products {}
+
+
+// Products grid
+// -------------------------
+.products-grid {
+    font-size: 0;
+    padding: 0;
+
+    list-style: none;
+
+    .make-row();
+
+    > .item {
+        font-size: @font-size-base;
+
+        display: inline-block;
+        float: none !important;
+        margin-bottom: @line-height-computed;
+
+        vertical-align: top;
+
+        .make-xs-column(12);
+        .make-sm-column(6);
+        .make-md-column(4);
+
+        > .thumbnail {}
+
+            .product-name,
+            .ratings,
+            .price-box,
+            .availability {
+                margin-bottom: (@line-height-computed / 2);
+            }
+
+            .product-image {
+                display: block;
+            }
+
+            .product-name {
+                font-size: @font-size-base;
+
+                min-height: (@line-height-computed * 2);
+            }
+            .ratings {}
+            .price-box {
+                min-height: (@line-height-computed * 2);
+            }
+            .availability {}
+            .actions {}
+    }
+}
+
+
+// Products list
+// -------------------------
+.products-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    > .item {
+        padding: 0;
+        margin: 0 0 @line-height-computed;
+
+        > .thumbnail {
+            > .thumbnail__i {
+                .make-row();
+            }
+        }
+
+            .product-name,
+            .ratings,
+            .price-box,
+            .availability,
+            .desc {
+                margin-bottom: (@line-height-computed / 2);
+            }
+
+            .product-image {
+                text-align: center;
+
+                .make-xs-column(12);
+                .make-sm-column(6);
+                .make-md-column(4);
+            }
+            
+            .caption {
+                .make-xs-column(12);
+                .make-sm-column(6);
+                .make-md-column(8);
+            }
+
+            .product-name {
+                font-size: @font-size-base;
+
+                line-height: @line-height-base;
+            }
+
+            .ratings {}
+            .price-box {}
+            .desc {}
+            .availability {}
+            .actions {}
+    }
+}
+
+
+// Product elements
+// -------------------------
+.product-name {
+    font-size: @font-size-base;
+
+    margin-top: 0;
+
+    line-height: @line-height-base;
+}
+
+.product-image {
+    > img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

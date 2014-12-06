@@ -1,0 +1,28 @@
+<?php
+
+    $name       = Mage::getStoreConfig('general/store_information/name');
+    $phone      = Mage::getStoreConfig('general/store_information/phone');
+    $url        = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+    $storeUrl   = parse_url($url);
+    $email      = Mage::getStoreConfig('trans_email/ident_general/email');
+
+?>
+<section class="organization" itemscope itemtype="http://schema.org/Organization">
+
+    <div class="name">
+        <div itemprop="name"><?php echo $name ?></div>
+        <div itemprop="url"><a href="<?php echo $url; ?>"><?php echo $storeUrl["host"]; ?></a></div>
+    </div>
+
+    <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div><span itemprop="streetAddress">Duivenkamp 645</span>,</div>
+        <div><span itemprop="addressLocality">Maarssen, Netherlands</span></div>
+        <span itemprop="postalCode">3607 BR</span>
+    </div>
+
+    <div class="contacts">
+        <div itemprop="telephone"><?php echo $phone ?></div>
+        <a href="mailto:<?php echo $email ?>" itemprop="email"><?php echo $email ?></a>
+    </div>
+
+</section>

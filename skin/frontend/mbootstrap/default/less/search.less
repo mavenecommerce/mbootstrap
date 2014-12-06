@@ -1,0 +1,98 @@
+//
+// Search
+// --------------------------------------------------
+
+
+// Search mini
+// -------------------------
+.search-mini {
+    position: relative;
+}
+
+    .search-autocomplete {
+        padding: 5px 0;
+
+        background: @dropdown-bg;
+        border: 1px solid @dropdown-border;
+
+        border-radius: 0 0 @border-radius-base @border-radius-base;
+
+        > ul {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+
+            > li {
+                padding: 3px 20px;
+                overflow: hidden;
+                
+                line-height: @line-height-base;
+                
+                color: @dropdown-link-color;
+                cursor: pointer;
+
+                > .amount {
+                    
+                    // Clone of Bootstrap badget element
+                    // In future this element can be modify into .badget
+                    //
+                    font-size: @font-size-small;
+                    font-weight: @badge-font-weight;
+
+                    float: right;
+                    min-width: 10px;
+                    padding: 3px 7px;
+                    
+                    line-height: @badge-line-height;
+                    vertical-align: baseline;
+                    white-space: nowrap;
+                    text-align: center;
+                    
+                    background-color: @badge-bg;
+                    border-radius: @badge-border-radius;
+                    color: @badge-color;
+
+                    // Empty badges collapse automatically (not available in IE8)
+                    &:empty {
+                        display: none;
+                    }
+                }
+
+                &:hover,
+                &.selected {
+                    background-color: @dropdown-link-active-bg;
+                    color: @dropdown-link-active-color;
+
+                    > .amount {
+                        background-color: @dropdown-link-active-color;
+                        color: @dropdown-link-active-bg;
+                    }
+                }
+
+                &.odd {}
+                &.even {}
+                &.first {}
+                &.last {}
+            }
+        }
+    }
+
+
+// Search result
+// -------------------------
+.search-result {}
+
+
+// Advanced search
+// -------------------------
+.advanced-search {
+    .form-list {
+        .make-row();
+        
+        li {
+            .make-xs-column(12);
+            .make-md-column(6);
+        }
+    }
+}

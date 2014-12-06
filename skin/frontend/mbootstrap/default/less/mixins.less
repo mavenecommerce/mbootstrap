@@ -1,0 +1,20 @@
+//
+// Bootstrap core variables and mixins
+// --------------------------------------------------
+@import "../default/bootstrap/less/mixins.less";
+@import "../default/bootstrap/less/forms.less";
+
+//
+// Mixins
+// --------------------------------------------------
+
+// Grid System
+// -----------
+
+// Creates a wrapper for a series of columns
+.make-row(@gutter: @grid-gutter-width) {
+	.clearfix();	// fix need because .clearfix() not work when mixin.less imported
+}
+
+// Project mixins
+// --------------------------------------------------

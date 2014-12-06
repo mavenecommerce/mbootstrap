@@ -1,0 +1,45 @@
+//
+// Notices
+// --------------------------------------------------
+
+
+// Global Notice (based on Alert bootstrap component)
+// -------------------------
+.global-site-notice {
+    padding: @alert-padding;
+    margin-bottom: @line-height-computed;
+
+    text-align: center;
+    
+    border: 1px solid transparent;
+
+    .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+
+    p {
+        margin: 0;
+    }
+
+    .notice-inner {}
+    .actions {
+        margin-top: (@line-height-computed / 2);
+    }
+}
+
+
+// Demo
+// -------------------------
+.demo-notice {}
+
+
+// Cookie
+// -------------------------
+.notice-cookie {
+    .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
+}
+
+
+// Noscript
+// -------------------------
+.noscript {
+    .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}

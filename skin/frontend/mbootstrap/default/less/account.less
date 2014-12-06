@@ -1,0 +1,288 @@
+//
+// Account register/login area
+// --------------------------------------------------
+
+
+// Login form
+// -------------------------
+.account-login {
+    .make-row();
+
+    .registered-users {
+        margin-bottom: (@line-height-computed * 2);
+
+        .make-xs-column(12);
+        .make-sm-column(4);
+    }
+
+    .new-users {
+        .make-xs-column(12);
+        .make-sm-column(8);
+    }
+
+    .content {
+        h2 + p {
+            min-height: (@line-height-computed * 3);
+        }
+    }
+}
+
+
+// Register form
+// -------------------------
+.account-create {}
+
+
+// Forgot password form
+// -------------------------
+.forgot-password {
+    .form-list {
+        .make-row();
+    }
+        .control-group {
+            .make-xs-column(12);
+            .make-sm-column(6);
+        }
+}
+
+
+// Block - Account navigation
+// -------------------------
+.block-account {
+    .block-content {
+        padding: @padding-small-horizontal 0;
+    }
+
+    .nav {
+        > li {
+            > a,
+            > strong {
+                display: block;
+                padding: @padding-small-vertical @padding-small-horizontal;
+            }
+
+            &.active {
+                border-right: 1px solid #563d7c;
+                color: #563d7c;
+            }
+        }
+    }
+}
+
+
+// Account Dashboard area
+// --------------------------------------------------
+
+
+// Dashboard
+// -------------------------
+.dashboard {
+    .dashboard-info {}
+    .dashboard-address {}
+}
+
+
+// My account
+// -------------------------
+.my-account {
+    h2 {
+        //font-weight: normal;
+    }
+}
+
+
+// Box
+// -------------------------
+.box-head {
+
+    .clearfix();
+
+    > h2 {
+        font-weight: normal;
+
+        float: left;
+    }
+
+    > a {
+        float: right;
+        margin-top: (@line-height-computed + 14);
+    }
+}
+
+.box {
+    .box-title {
+        border-bottom: 2px solid @gray-lighter;
+
+        .clearfix();
+
+        > h3 {
+            font-weight: normal;
+        }
+
+        > a {
+            float: right;
+            margin-top: (@line-height-computed + 7);
+        }
+    }
+
+    .box-content {
+        margin-top: @line-height-computed;
+
+        h4 {
+            font-weight: normal;
+        }
+    }
+}
+
+
+// Edit account info
+// -------------------------
+.edit-account-info {
+    .buttons-set {
+        .make-xs-column(12);
+    }
+}
+
+
+// Edit account info
+// -------------------------
+.edit-address-info {
+    .buttons-set {
+        .make-xs-column(12);
+    }
+}
+
+
+// Address list
+// -------------------------
+.addresses-list {
+    ol {
+        padding-left: 0;
+    }
+}
+
+
+// Box - Recent orders
+// -------------------------
+.box-recent {
+    .table {
+        td {
+            vertical-align: middle;
+        }
+
+        .actions {
+            white-space: nowrap;
+        }
+    }
+}
+
+
+// Addresses list
+// -------------------------
+.addresses-list {
+    .addresses-primary {}
+    .addresses-additional {}
+
+    h2 {
+        //border-bottom: 2px solid @gray-lighter;
+    }
+
+    ol {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        h3 {
+            font-weight: normal;
+            font-size: @font-size-large;
+
+            //border-bottom: 1px solid @gray-lighter;
+        }
+    }
+}
+
+
+// Orders history
+// -------------------------
+.orders-history {
+
+    .table {
+        margin: @line-height-base 0;
+
+        td {
+            vertical-align: middle;
+        }
+
+        .actions {
+            white-space: nowrap;
+        }
+    }
+
+    .pager-wrapper {
+        margin-bottom: @line-height-computed;
+    }
+}
+
+
+// View order details
+// -------------------------
+.view-order {
+    .order-info {}
+    .order-date {}
+    .order-info-box {
+        .make-row();
+
+        .box {
+            .make-xs-column(12);
+            .make-sm-column(4);
+        }
+    }
+}
+
+.order-items {
+    .table {
+        tfoot {
+            tr {
+                font-weight: bold;
+
+                &.last {
+                    font-size: @font-size-large;
+                    font-weight: bold;
+
+                    .price {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Wishlist
+// -------------------------
+.my-wishlist {
+    .product-image {
+        display: block;
+        width: 100px;
+    }
+
+    .product-name {}
+    .description {}
+
+    .cell_cart {
+    }
+        .price-box {
+            margin-bottom: 5px;
+
+            white-space: nowrap;
+        }
+
+        .add-to-cart-alt {
+            .btn {
+                margin: (@line-height-computed / 2) 0;
+            }
+        }
+}

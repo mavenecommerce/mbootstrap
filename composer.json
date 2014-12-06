@@ -1,0 +1,23 @@
+{
+    "name": "mavenecommerce/mbootstrap",
+    "type": "magento-module",
+    "homepage": "https://github.com/mavenecommerce/mbootstrap",
+    "description": "Magento theme fully based on the Twitter Bootstrap framework.",
+    "authors":[
+        {
+            "name": "Andrey",
+            "email": "akorolyov@mavenecommerce.сcom"
+        },
+        {
+            "name": "Aleksej Filippovich",
+            "email": "a.filippovich@mavenecommerce.com"
+        },
+        {
+            "name": "Chris Jones",
+            "email": "chris@studiobanks.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

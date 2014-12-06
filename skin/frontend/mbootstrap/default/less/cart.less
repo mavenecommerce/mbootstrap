@@ -1,0 +1,128 @@
+//
+// Cart
+// --------------------------------------------------
+.cart {
+    .page-title {
+        .checkout-types {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            list-style: none;
+        }
+    }
+
+    .cart-table {
+        tr {
+            th {}
+            td {
+                vertical-align: middle;
+
+                &.last {}
+            }
+
+            &.first {}
+            &.last {}
+
+            &.odd {}
+            &.even {}
+        }
+
+        thead {
+            th {}
+        }
+
+        tfoot {
+            td {
+                vertical-align: bottom;
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    .product-name {
+                        line-height: @line-height-computed;
+                    }
+
+
+                    .qty {
+                        margin: 0;
+                        width: 50px;
+                    }
+
+                    .btn {
+                        .opacity(0.1);
+                        .transition(opacity 0.25s ease-in-out);
+
+                        &.visible-xs {
+                            .opacity(1);
+                        }
+                    }
+
+                    .price {}
+
+                    &.cell_image {
+                        min-width: 100px;
+                    }
+                }
+
+                &:hover {
+                    .btn {
+                        .opacity(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-table-totals {
+        tfoot {
+            td {
+                vertical-align: baseline;
+            }
+        }
+    }
+
+    .cart-collaterals {
+        .cart-collaterals-layout {
+            .make-row();
+
+            > .left,
+            > .center,
+            > .right {
+                .make-xs-column(12);
+                .make-sm-column(4);
+
+                margin-bottom: @line-height-computed;
+            }
+        }
+
+        h2 {
+            font-size: @font-size-large;
+            font-weight: normal;
+
+            margin-top: 0;
+        }
+
+        .shipping {
+            .shipping-form {}
+            .sp-methods {}
+        }
+
+        .discount {
+            .buttons-set {
+                margin-top: (@line-height-computed / 2);
+            }
+        }
+
+        .checkout-types {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+            text-align: right;
+        }
+    }
+}

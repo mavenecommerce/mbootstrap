@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<layoutUpdate version="0.1.0">
+
+    <!-- Default layout, loads most of the pages -->
+    <default translate="label">
+
+        <!-- Remove Magento blocks -->
+        <remove name="left.permanent.callout" /> <!--the dog-->
+        <remove name="right.permanent.callout" /> <!--back to school-->
+        <remove name="top.links"/>
+
+        <reference name="root">
+
+            <reference name="head">
+
+                <!-- Clean Up -->
+                <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+                <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name><params/></action>
+                <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name><params/></action>
+
+
+                <!-- Bootstrap framework styles -->
+                <action method="addItem"><type>skin_css</type><name>bootstrap/dist/css/bootstrap.min.css</name><params/></action>
+
+
+                <!-- General styles -->
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.min.css</name><params/></action>
+
+
+                <!-- IE styles -->
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.min.css</name><params/><if>lt IE 9</if></action>
+                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.min.css</name><params/><if>IE 9</if></action>
+
+
+                <!-- jQuery & UI -->
+                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery.min.js</script></action>
+                <block type="core/text" name="jQuery.noConflict">
+                    <action method="setText"><text><![CDATA[<script type="text/javascript">jQuery.noConflict();</script>]]></text></action>
+                </block>
+
+
+                <!-- Bootstrap framework scripts -->
+                <action method="addItem"><type>skin_js</type><script>bootstrap/dist/js/bootstrap.min.js</script></action>
+
+
+                <!-- jQuery scripts -->
+                <action method="addItem"><type>skin_js</type><script>js/dist/scripts.min.js</script></action>
+
+
+                <!-- Google Web Fonts -->
+                <block type="core/text" name="google.webfonts">
+                    <action method="setText"><text><![CDATA[<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>]]></text></action>
+                </block>
+
+            </reference>
+
+            <reference name="header">
+
+                <block type="core/text_list" name="top.links-wrapper" as="top-links-wrapper">
+                    <block type="page/template_links" name="top.links_custom" as="topLinks_custom" template="page/html/top.links.phtml">
+                        <action method="addLink" translate="label title" module="customer">
+                            <label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title>
+                            <prepare/><urlParams/><position>100</position><liParams/>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-user"></i>]]></beforeText>
+                        </action>
+                        <action method="addLink" translate="label title" module="wishlist" ifconfig="wishlist/general/active">
+                            <label>My Wishlist</label><url helper="wishlist/getListUrl"/><title>My Wishlist</title>
+                            <prepare/><urlParams/><position>200</position><liParams>hidden-phone</liParams>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-bookmark"></i>]]></beforeText>
+                        </action>
+                        <action method="addLink" translate="label title" module="checkout">
+                            <label>My Cart</label><url helper="checkout/url/getCartUrl"/><title>My Cart</title>
+                            <prepare/><urlParams/><position>300</position><liParams/>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-shopping-cart"></i>]]></beforeText>
+                        </action>
+                        <action method="addLink" translate="label title" module="checkout">
+                            <label>Checkout</label><url helper="checkout/url/getCheckoutUrl"/><title>Checkout</title>
+                            <prepare/><urlParams/><position>400</position><liParams>hidden-phone</liParams>
+                            <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-usd"></i>]]></beforeText>
+                        </action>
+                    </block>
+                </block>
+
+            </reference>
+
+            <block type="core/text_list" name="before_main_start" as="before_main_start" translate="label">
+                <label>Before Main Start</label>
+            </block>
+
+            <reference name="footer">
+                <block type="core/template" name="page.company.organization" as="organization" template="page/html/footer/organization.phtml"/>
+
+                <block type="core/text_list" name="page.footer.links_left.wrapper" as="links-left-wrapper">
+                    <action method="insert"><name>cms_footer_links</name></action>
+                </block>
+                <block type="core/text_list" name="page.footer.links_right.wrapper" as="links-right-wrapper">
+                    <action method="insert"><name>footer_links</name></action>
+                </block>
+            </reference>
+
+            <block type="core/text_list" name="before_document_end" as="before_document_end" translate="label">
+                <label>Before Document End</label>
+            </block>
+
+        </reference>
+    </default>
+
+
+    <!-- Print page -->
+    <print translate="label" module="page">
+        <reference name="root">
+            <reference name="head">
+
+                <!-- Clean Up -->
+                <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+
+            </reference>
+        </reference>
+    </print>
+
+
+    <!-- Load this update on every page when customer is logged in -->
+    <customer_logged_in translate="label">
+        <reference name="root">
+
+            <reference name="header">
+                <reference name="top.links_custom">
+
+                    <action method="addLink" translate="label title" module="customer">
+                        <label>Log Out</label><url helper="customer/getLogoutUrl"/><title>Log Out</title>
+                        <prepare/><urlParams/><position>1000</position><liParams/>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-out"></i>]]></beforeText>
+                    </action>
+
+                </reference>
+            </reference>
+
+        </reference>
+    </customer_logged_in>
+
+
+    <!-- Load this update on every page when customer is logged out -->
+    <customer_logged_out translate="label">
+        <reference name="root">
+
+            <reference name="header">
+                <reference name="top.links_custom">
+
+                    <action method="addLink" translate="label title" module="customer">
+                        <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
+                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in</liParams>
+                        <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-in"></i>]]></beforeText>
+                    </action>
+
+                </reference>
+            </reference>
+
+            <reference name="before_document_end">
+                <block type="ecomdev_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
+            </reference>
+
+        </reference>
+    </customer_logged_out>
+
+
+    <!-- Category default layout -->
+    <catalog_category_default translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+
+            <reference name="left">
+                <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
+                <action method="insert"><name>catalog.compare.sidebar</name></action>
+            </reference>
+
+            <reference name="content">
+                <reference name="category.products">
+                    <reference name="product_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
+        </reference>
+    </catalog_category_default>
+
+    <!-- Category layered navigation layout -->
+    <catalog_category_layered translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+
+            <reference name="left">
+                <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
+                <action method="insert"><name>catalog.compare.sidebar</name><siblineName>cart_sidebar</siblineName><after>1</after></action>
+            </reference>
+
+            <reference name="content">
+                <reference name="category.products">
+                    <reference name="product_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
+        </reference>
+    </catalog_category_layered>
+
+    <!-- Search result page-->
+    <catalogsearch_result_index translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+
+            <reference name="left">
+                <action method="insert"><name>cart_sidebar</name><siblingName>catalog.leftnav</siblingName><after>1</after></action>
+            </reference>
+
+            <reference name="content">
+                <reference name="search.result">
+                    <reference name="search_result_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
+        </reference>
+    </catalogsearch_result_index>
+
+    <!-- Advanced search results -->
+    <catalogsearch_advanced_result translate="label">
+        <reference name="root">
+
+            <reference name="content">
+                <reference name="catalogsearch_advanced_result">
+                    <reference name="search_result_list">
+                        <action method="setColumnCount"><columns>9</columns></action>
+                    </reference>
+                </reference>
+            </reference>
+
+        </reference>
+    </catalogsearch_advanced_result>
+
+
+    <!-- Product view -->
+    <catalog_product_view translate="label">
+        <reference name="root">
+            <remove name="left"/>
+            <remove name="right"/>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+
+            <reference name="content">
+                <reference name="product.info">
+
+                    <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
+                        <action method="addTab" translate="title" module="catalog"><alias>description</alias><title>Product Description</title><block>catalog/product_view_description</block><template>catalog/product/view/description.phtml</template></action>
+                        <action method="addTab" translate="title" module="catalog"><alias>upsell_products</alias><title>We Also Recommend</title><block>catalog/product_list_upsell</block><template>catalog/product/list/upsell.phtml</template></action>
+                        <action method="addTab" translate="title" module="catalog"><alias>additional</alias><title>Additional Information</title><block>catalog/product_view_attributes</block><template>catalog/product/view/attributes.phtml</template></action>
+
+                        <block type="review/form" name="product.review.form" as="review_form"/>
+                        <action method="addTab" translate="title" module="review"><alias>product_additional_data</alias><title>Reviews</title><block>review/product_view_list</block><template>review/product/view/list_tab.phtml</template></action>
+                    </block>
+
+                </reference>
+            </reference>
+        </reference>
+    </catalog_product_view>
+
+
+    <!-- Cart page -->
+    <checkout_cart_index translate="label">
+        <reference name="root">
+            <remove name="left"/>
+            <remove name="right"/>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    </checkout_cart_index>
+
+
+    <!-- One page checkout main layout-->
+    <checkout_onepage_index translate="label">
+        <reference name="head">
+
+            <!-- Checkout styles -->
+            <!--<action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>-->
+
+        </reference>
+    </checkout_onepage_index>
+
+    <!-- One page checkout success page -->
+    <checkout_onepage_success translate="label">
+        <reference name="head">
+
+            <!-- Checkout styles -->
+            <!--<action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>-->
+
+        </reference>
+    </checkout_onepage_success>
+
+    <!-- One page checkout failure page -->
+    <checkout_onepage_failure translate="label">
+        <reference name="head">
+
+            <!-- Checkout styles -->
+            <!--<action method="addItem"><type>skin_css</type><name>css/checkout.css</name><params/></action>-->
+
+        </reference>
+    </checkout_onepage_failure>
+
+
+    <!-- Customer account pages, rendered for all tabs in dashboard-->
+    <customer_account translate="label">
+        <reference name="root">
+
+            <!--<reference name="left">
+                <remove name="customer_account_navigation"/>
+
+                <block type="customer/account_navigation" name="customer_account_navigation_custom" before="-" template="customer/account/navigation.phtml">
+                    <action method="addLink" translate="label" module="customer">
+                        <name>account</name><path>customer/account/</path><label>Account Dashboard</label>
+                    </action>
+                    <action method="addLink" translate="label" module="customer">
+                        <name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label>
+                    </action>
+
+                    <action method="addLink" translate="label" module="customer">
+                        <name>address_book</name><path>customer/address/</path><label>Address Book</label>
+                    </action>
+                    <action method="addLink" translate="label" module="sales">
+                        <name>orders</name><path>sales/order/history/</path><label>My Orders</label>
+                    </action>
+
+                    <action method="addLink" translate="label" module="review">
+                        <name>reviews</name><path>review/customer</path><label>My Product Reviews</label>
+                    </action>
+                    <action method="addLink" translate="label" module="tag">
+                        <name>tags</name><path>tag/customer/</path><label>My Tags</label>
+                    </action>
+
+                    <action method="addLink" translate="label" module="wishlist" ifconfig="wishlist/general/active">
+                        <name>wishlist</name><path>wishlist/</path><label>Favorites</label>
+                    </action>
+                    <action method="addLink" translate="label" module="oauth">
+                        <name>OAuth Customer Tokens</name><path>oauth/customer_token</path><label>My Applications</label>
+                    </action>
+
+                    <action method="addLink" translate="label" module="newsletter">
+                        <name>newsletter</name><path>newsletter/manage/</path><label>Newsletter Subscriptions</label>
+                    </action>
+                    <action method="addLink" translate="label" module="downloadable">
+                        <name>downloadable_products</name><path>downloadable/customer/products</path><label>My Downloadable Products</label>
+                    </action>
+                </block>
+            </reference>-->
+
+        </reference>
+    </customer_account>
+
+    <!-- Customer account home dashboard layout-->
+    <customer_account_index translate="label"></customer_account_index>
+
+    <!-- Customer login page -->
+    <customer_account_login translate="label">
+        <reference name="root">
+
+            <reference name="content">
+                <reference name="customer_form_login">
+
+                    <block type="customer/form_register" name="customer_form_register" template="persistent/customer/form/register_with-login.phtml">
+                        <block type="page/html_wrapper" name="customer.form.register.fields.before" as="form_fields_before" translate="label">
+                            <label>Form Fields Before</label>
+                        </block>
+                        <block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
+                        <block type="core/template" name="persistent.remember.me.tooltip" template="persistent/remember_me_tooltip.phtml" />
+                    </block>
+
+                </reference>
+            </reference>
+
+        </reference>
+    </customer_account_login>
+
+    <!-- New customer registration page -->
+    <customer_account_create translate="label"></customer_account_create>
+
+
+    <!-- CMS Page -->
+    <cms_page translate="label"></cms_page>
+
+    <!-- Home page -->
+    <cms_index_index translate="label"></cms_index_index>
+
+</layoutUpdate>
