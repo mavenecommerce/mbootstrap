@@ -12,7 +12,7 @@
     <modules>
         <Maven_Cms>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Maven_Cms>
     </modules>
 </config>
