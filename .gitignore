@@ -3,9 +3,16 @@
 .DS_Store
 .DS_Store?
 ._*
-.idea
 .Spotlight-V100
 .Trashes
 !Icon
 ehthumbs.db
 Thumbs.db
+
+# node.js and modules #
+######################
+node_modules/
+
+# building sources #
+######################
+build/

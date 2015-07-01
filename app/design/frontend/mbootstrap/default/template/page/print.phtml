@@ -51,11 +51,11 @@
             <button type="button" title="<?php echo $this->__('Close Window') ?>" class="button" onclick="window.close();"><span><span><?php echo $this->__('Close Window') ?></span></span></button>
         </div>
 
-        <?php echo $this->getAbsoluteFooter() ?>
-
     </div>
 
     <?php echo $this->getChildHtml('before_document_end') ?>
+    <?php echo $this->getChildHtml('enhancement') ?>
+    <?php echo $this->getAbsoluteFooter() ?>
 
 </body>
 </html>

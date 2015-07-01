@@ -1,0 +1,338 @@
+//
+// Product
+// --------------------------------------------------
+
+// Product elements
+// -------------------------
+.product-name {
+    font-size: $font-size-base;
+
+    margin-top: 0;
+
+    line-height: $line-height-base;
+
+    .products-list,
+    .products-grid {
+        min-height: ($line-height-computed * $product-name-rows);
+    }
+}
+
+.product-image {
+    > img {
+        margin-left: auto;
+        margin-right: auto;
+
+        &:not(.img-responsive){
+            @include img-responsive;
+        }
+    }
+}
+
+.input-text.qty {
+    @media (min-width: $screen-sm-min) {
+        display: inline-block;
+        width: 80px;
+    }
+}
+
+
+//
+// Product view
+// --------------------------------------------------
+.product-view {
+    &.simple {}
+    &.configurable {}
+    &.bundle {}
+    &.grouped {}
+    &.virtual {}
+}
+
+    //
+    // Essential
+    .product-essential {
+        form {
+            @media (min-width: $screen-sm-min) {
+                @include make-row();
+            }
+        }
+    }
+        .product-shop {
+            @media (min-width: $screen-sm-min) {
+                @include make-sm-column(6);
+
+                float: right !important;
+            }
+        }
+
+            //
+            // Grouped items table
+            .grouped-items-table {
+                > tbody > tr > td {
+                    vertical-align: middle;
+                }
+                    .input-text {
+                        min-width: 40px;
+                    }
+            }
+
+            //
+            // Add to box
+            .add-to-box {
+                margin-top: $line-height-computed;
+
+                .or {
+                    display: none;
+                }
+
+                // Tablet view - landscape
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                    .add-to-cart {
+                        margin-bottom: ($line-height-computed / 2);
+                    }
+                }
+            }
+
+                .add-to-cart,
+                .add-to-links {
+                    @media (min-width: $screen-sm-min) {
+                        display: inline-block;
+                    }
+                }
+                .add-to-cart {
+                    label {}
+                    .input-text {
+                        vertical-align: middle;
+                    }
+
+                    .btn-cart {
+                        @media (max-width: $screen-xs-max) {
+                            margin: ($line-height-computed / 2) 0;
+                        }
+                    }
+                }
+
+                .add-to-links {
+                    @extend .list-unstyled;
+
+                    margin: 0;
+
+                    .separator {
+                        display: none;
+                    }
+
+                    li {
+                        display: inline-block;
+
+                        vertical-align: middle;
+                    }
+                }
+
+            //
+            // Short description
+            .short-description {
+                margin: $line-height-computed 0;
+
+                border-top: 1px solid $gray-lighter;
+            }
+
+            //
+            // Product options
+            .product-options {
+                margin: $line-height-computed 0 0;
+                padding: ($line-height-computed / 2) ($grid-gutter-width / 2) 0;
+
+                border: 1px solid $gray-lighter;
+
+                dl {
+                    &.last {
+                        margin-bottom: 0;
+                    }
+                }
+                    dt {
+                        &:not(:first-child) {
+                            margin-top: $line-height-computed;
+                            padding-top: $line-height-computed;
+
+                            border-top: 1px solid $gray-lighter;
+                        }
+                    }
+                    dd {}
+
+                        // bundle product options
+                        .qty-holder {}
+
+                        // options list
+                        .options-list {
+                            @include list-unstyled;
+
+                            > li {
+                                @include checkbox-wrapper;
+                            }
+                        }
+                            .label {
+                                font-size: $font-size-base;
+                                font-weight: normal;
+
+                                padding: 0;
+
+                                color: $text-color;
+                            }
+            }
+
+            //
+            // Product options bottom
+            .product-options-bottom {
+                padding: ($line-height-computed / 2) 0;
+
+                background: $gray-lighter;
+
+                @media (min-width: $screen-lg-min) {
+                    display: table;
+                    min-width: 100%;
+                }
+
+                .price-box,
+                .add-to-cart,
+                .add-to-links {
+                    @media (min-width: $screen-lg-min) {
+                        display: table-cell;
+
+                        vertical-align: middle;
+                    }
+                }
+
+                .price-box {
+                    display: none;
+                }
+
+                .add-to-cart {
+                    margin-right: 5px;
+                    padding-left: ($grid-gutter-width / 2);
+                    padding-right: ($grid-gutter-width / 2);
+
+                    text-align: left;
+                }
+
+                .add-to-links {
+                    padding-left: ($grid-gutter-width / 2);
+                    padding-right: ($grid-gutter-width / 2);
+
+                    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+                        padding-top: ($line-height-computed / 2);
+                    }
+                }
+            }
+
+
+        //
+        // Product image box
+        .product-img-box {
+            @include make-sm-column(6);
+        }
+            .more-views {
+                ul {
+                    @extend .list-unstyled;
+                }
+                    li {
+                        display: inline-block;
+                    }
+            }
+
+
+// Collateral box
+// -------------------------
+.product-collateral {}
+    .box-collateral {
+        h2 {
+            @extend .page-header;
+
+            margin-bottom: 0;
+
+            border-bottom: none;
+        }
+    }
+    .box-collateral + .box-collateral {
+        margin-top: $line-height-computed;
+
+        border-top: 1px solid $gray-light;
+    }
+
+    // Additional
+    .box-additional {
+        .data-table {}
+            .data {
+                > ul {
+                    @extend .list-unstyled;
+
+                    > ul {
+                        padding-left: 0;
+                    }
+                }
+            }
+    }
+
+    // Up Sell
+    .box-up-sell {
+        .product-image {
+            @extend .thumbnail;
+        }
+    }
+
+    // Review
+    .box-reviews {
+        dl {}
+            dt,
+            dd {
+                padding: $padding-small-vertical $padding-small-horizontal;
+
+                border: $box-reviews-border;
+            }
+            dt {
+                background: $box-reviews-title-bg;
+                border-width: 1px 1px 0;
+
+                &:not(:first-child) {
+                    margin-top: ($line-height-computed / 2);
+                }
+            }
+            dd {
+                border-width: 0 1px 1px;
+
+                @include clearfix;
+            }
+
+                .ratings-table {
+                    float: left;
+                    margin-right: ($line-height-computed / 2);
+                }
+
+        #product-review-table {
+            width: auto;
+            @extend .table-condensed;
+        }
+
+        .form-list {
+            @media (min-width: $screen-sm-min) {
+                max-width: 50%;
+            }
+        }
+    }
+
+
+// Product Image Popup
+// -------------------------
+.product-image-popup {
+    margin-left: auto;
+    margin-right: auto;
+
+    .buttons-set {
+        margin: $line-height-computed 0;
+        position: relative;
+    }
+
+    .image {}
+
+    .nav {
+        text-align: center;
+    }
+}

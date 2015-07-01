@@ -1,0 +1,18 @@
+//
+// Messages/Notifications
+// --------------------------------------------------
+.messages {
+    margin: 0 0 $line-height-base;
+
+    border-radius: $border-radius-base;
+
+    &,
+    ul {
+        @extend .list-unstyled;
+    }
+
+    .error-msg {}
+    .success-msg {}
+    .note-msg {}
+    .notice-msg {}
+}

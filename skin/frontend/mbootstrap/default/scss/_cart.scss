@@ -1,0 +1,270 @@
+//
+// Cart
+// --------------------------------------------------
+.cart {
+    .page-title {
+        .checkout-types {
+            @media (min-width: $screen-sm-min) {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+    .cart-table {
+        tr {
+            &.first {}
+            &.last {}
+
+            &.odd {}
+            &.even {}
+        }
+            th {
+                @media (max-width: $screen-xs-max) {
+                    display: none;
+                }
+            }
+            td {
+                vertical-align: middle;
+
+                &.last {}
+            }
+
+        thead {
+            th {}
+        }
+
+        tfoot {
+            td {
+                vertical-align: bottom;
+            }
+
+                @media (min-width: $screen-sm-min) {
+                    .btn-continue {
+                        float: left;
+                    }
+                }
+        }
+
+        tbody {
+            tr {}
+            tr:hover {
+                .btn {
+                    @include opacity(1);
+                }
+            }
+
+                    .btn {
+                        opacity: 0.1;
+                        transition: opacity 0.25s ease-in-out;
+
+                        @media (max-width: $screen-sm-max) {
+                            opacity: 1;
+                        }
+                    }
+        }
+                td {}
+                    .product-image {
+                        display: block;
+                        min-width: $cart-image-width; // chrome bug td collapse fix
+                    }
+
+                    .product-name {
+                        line-height: $line-height-computed;
+                    }
+
+                    .qty {
+                        margin: 0;
+                        width: 50px;
+                    }
+
+                    .price {}
+
+                    .btn-remove {
+                        @media (min-width: $screen-sm-min) {
+                            margin-bottom: ($line-height-computed / 2);
+                        }
+                    }
+
+                .cell_image {}
+                .cell_desc {}
+                .cell_wishlist {}
+                .cell_price {}
+                .cell_qty {}
+                .cell_subtotal {}
+                .cell_actions {}
+
+        // Mobile view
+        @media (max-width: $screen-xs-max) {
+            tbody tr {
+                display: block;
+                @include clearfix;
+
+                + tr {
+                    border-top: 1px solid $table-border-color;
+                }
+            }
+
+                tbody td {
+                    display: inline-block;
+
+                    border: none !important;
+                }
+
+                .clearfix {
+                    display: block !important;
+                    padding: 0 !important;
+                }
+
+                .cell_image {
+                    display: block;
+                    float: left;
+                }
+                .cell_desc {
+                    display: block;
+                    margin-left: ($cart-image-width + ($table-cell-padding * 2));
+                }
+                .cell_wishlist {
+                    display: none;
+                }
+                .cell_price,
+                .cell_subtotal {
+                    line-height: $input-height-base;
+                }
+                .cell_qty {
+                    position: relative;
+                    z-index: 1;
+
+                    .cross {
+                        position: absolute;
+                        z-index: 1;
+                        top: $table-cell-padding;
+                        left: -$table-cell-padding;
+
+                        line-height: $input-height-base;
+                    }
+                }
+
+                .cell_actions {}
+
+            tfoot td {
+                text-align: center !important;
+
+                .button + .button {
+                    margin-top: ($line-height-computed / 2);
+                }
+            }
+        }
+    }
+
+    .cart-table-totals {}
+
+    .cart-collaterals {
+        @include make-row();
+
+        .col2-set {
+            @include make-xs-column(12);
+            @include make-sm-column(7);
+
+            margin: 0;
+            padding: 0;
+        }
+
+            h2 {
+                font-size: $font-size-large;
+
+                margin: 0;
+                padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
+
+                background: $gray-lighter;
+            }
+
+            .shipping {
+                margin-top: $line-height-computed;
+            }
+                .shipping-form {
+                    padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
+
+                    border: 1px solid $gray-lighter;
+
+                    .sp-methods {
+                        margin-top: $line-height-computed;
+                    }
+                }
+
+            .discount {}
+            .discount-form {
+                padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
+
+                border: 1px solid $gray-lighter;
+            }
+
+        .totals {
+            @include make-xs-column(12);
+            @include make-sm-column(5);
+            float: right !important;
+
+            table {
+                @extend .table;
+
+                border: 1px solid $gray-lighter;
+
+                > tbody > tr > td {
+                    border-top: none;
+                }
+            }
+        }
+
+        // Tablet portair view
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+            .totals,
+            .col2-set {
+                @include make-sm-column(12);
+            }
+        }
+    }
+
+        .checkout-types {
+            @extend .list-unstyled;
+            padding-right: 0;
+
+            text-align: center;
+
+            @media (min-width: $screen-sm-min) {
+                text-align: right;
+                direction: rtl;
+            }
+
+            li {
+                display: inline-block;
+            }
+                a {
+                    // @extend .btn;
+                    // @extend .btn-link;
+                }
+
+                .button {
+                    @extend .btn-lg;
+                }
+        }
+
+
+// Item Options
+// -------------------------
+.item-options {
+    margin: 0;
+
+    dt {
+        float: left;
+
+        &:after {
+            margin-right: 0.25em;
+            content: ":"
+        }
+    }
+    dd {
+        float: none;
+    }
+}

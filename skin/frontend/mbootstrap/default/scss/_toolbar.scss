@@ -1,0 +1,63 @@
+//
+// Toolbar
+// --------------------------------------------------
+.toolbar {
+    margin-bottom: $line-height-computed;
+    padding: 0 $padding-base-horizontal ($line-height-computed / 2);
+    background: $toolbar-bg;
+    border: $toolbar-border;
+    border-width: 1px 0;
+
+    .paging {}
+        .amount {
+            display: none;
+        }
+        .limiter,
+        .pages {
+            margin-top: ($line-height-computed / 2);
+        }
+
+    .sorter {}
+        .view-mode {
+            margin-bottom: 0;
+
+            @media (max-width: $screen-xs-max) {
+                margin-right: ($grid-gutter-width / 2);
+            }
+
+            label {
+                display: none;
+            }
+        }
+        .view-mode,
+        .sort-by {
+            margin-top: ($line-height-computed / 2);
+            display: inline-block;
+        }
+        .sort-by {
+            label {
+                margin: 0;
+            }
+
+            .input-text {
+                display: inline-block;
+                width: 100px;
+            }
+        }
+
+    @media (min-width: $screen-sm-min) {
+        .paging,
+        .sorter {
+            @include clearfix;
+        }
+            .pages,
+            .sort-by {
+                float: right;
+            }
+    }
+}
+
+
+// Tolbar at bottom
+// -------------------------
+.toolbar-bottom {}

@@ -1,0 +1,498 @@
+//
+// Account register/login area
+// --------------------------------------------------
+
+
+// Login form
+// -------------------------
+.account-login {
+    .registered-users {}
+
+    .new-users {}
+
+    .content {
+        h2 + p {
+            min-height: ($line-height-computed * 3);
+        }
+    }
+
+    .buttons-set {
+        .f-left {
+            // don`t used yeat maybe?!
+            // @extend .btn;
+            // @extend .btn-link;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: ($line-height-computed / 2);
+        }
+    }
+}
+
+
+// Register form
+// -------------------------
+.account-create {
+    @media (min-width: $screen-sm-min) {
+        form {
+            max-width: 50%;
+            margin: auto;
+        }
+    }
+}
+
+
+// Forgot password form
+// -------------------------
+.forgot-password {
+    .form-list {
+        @include make-row();
+    }
+        .control-group {
+            // @include make-xs-column(12);
+            @include make-sm-column(6);
+        }
+}
+
+
+// Block - Account navigation
+// -------------------------
+.block-account {
+    .block-content {
+        padding: $padding-small-horizontal 0;
+    }
+
+        .nav {}
+            li {
+                strong {
+                    display: block;
+                    padding: $nav-link-padding
+                }
+
+                &.active {
+                    border-right: 2px solid $brand-primary;
+                    color: $brand-primary;
+                }
+            }
+}
+
+
+// Account Dashboard area
+// --------------------------------------------------
+
+
+// Dashboard
+// -------------------------
+.dashboard {
+    .dashboard-info {}
+    .dashboard-address {}
+}
+
+// My account
+// -------------------------
+.my-account {
+    h2 {
+        //font-weight: normal;
+    }
+}
+
+
+// Box
+// -------------------------
+.box-account {}
+.box-recent {}
+.box-info {}
+    .box-head {
+        @media (min-width: $screen-sm-min) {
+            @include clearfix;
+
+            > h2 {
+                font-weight: normal;
+
+                float: left;
+            }
+
+            > a {
+                float: right;
+                margin-top: ($line-height-computed + 14);
+            }
+        }
+    }
+
+    .box {
+        .box-title {
+            border-bottom: 2px solid $gray-lighter;
+
+            @include clearfix;
+
+            > h3 {
+                font-weight: normal;
+
+                float: left;
+            }
+
+            > a {
+                float: right;
+                margin-top: ($line-height-computed + 7);
+            }
+        }
+
+        .box-content {
+            margin-top: $line-height-computed;
+
+            h4 {
+                font-weight: normal;
+            }
+        }
+    }
+
+
+// Edit account info
+// -------------------------
+.edit-account-info {
+    .buttons-set {
+        // @include make-xs-column(12);
+    }
+}
+
+
+// Edit account info
+// -------------------------
+.edit-address-info {
+    .buttons-set {
+        // @include make-xs-column(12);
+    }
+}
+
+
+// Address list
+// -------------------------
+.addresses-list {
+    ol {
+        padding-left: 0;
+    }
+}
+
+
+// Box - Recent orders
+// -------------------------
+.box-recent {
+    .table {
+        td {
+            vertical-align: middle;
+        }
+
+        .actions {
+            white-space: nowrap;
+        }
+    }
+}
+
+
+// Box - Reviews
+// -------------------------
+.box-reviews {
+    ul {}
+        .item {
+            padding-top: ($line-height-computed / 2);
+            position: relative;
+            z-index: 1;
+
+            border-top: $block-content-border;
+        }
+        .item + .item {
+            margin-top: ($line-height-computed / 2);
+        }
+            .number {
+                font-weight: bold;
+
+                min-width: $line-height-computed;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: ($line-height-computed / 2);
+
+                text-align: center;
+
+                background: $block-title-bg;
+                color: #fff;
+            }
+            .details {
+                padding-left: ($line-height-computed * 1.5);
+            }
+                .product-name,
+                .ratings {
+                    display: inline-block;
+                    margin: 0;
+                }
+                .ratings {
+                    @media (min-width: $screen-sm-min) {
+                        margin-left: ($line-height-computed / 2);
+                    }
+                }
+}
+    #my_recent_reviews {
+        @extend .list-unstyled;
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: ($line-height-computed / 2);
+        }
+    }
+
+
+// Addresses list
+// -------------------------
+.addresses-list {
+    .addresses-primary {}
+    .addresses-additional {}
+
+    h2 {}
+
+    ol {
+        @extend .list-unstyled;
+    }
+        h3 {
+            font-weight: normal;
+            font-size: $font-size-large;
+        }
+}
+
+
+// Orders history
+// -------------------------
+.orders-history {
+
+    .table {
+        margin: $line-height-base 0;
+
+        td {
+            vertical-align: middle;
+        }
+    }
+            .actions {
+                white-space: nowrap;
+            }
+
+    .pager-wrapper {
+        margin-bottom: $line-height-computed;
+    }
+}
+
+
+// View order details
+// -------------------------
+.view-order {
+    .order-info {}
+    .order-date {}
+    .order-info-box {
+        @include make-row();
+
+        .box {
+            // @include make-xs-column(12);
+            @include make-sm-column(4);
+        }
+    }
+}
+
+.order-items {
+    .table {}
+        tfoot {}
+            tr {
+                font-weight: bold;
+
+                &.last {
+                    font-size: $font-size-large;
+                    font-weight: bold;
+
+                    .price {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+            }
+}
+
+
+// Wishlist
+// -------------------------
+.my-wishlist {
+    .product-image {
+        display: block;
+        width: 100px;
+    }
+
+    .product-name {}
+    .description {}
+        .inner {
+            @extend p;
+        }
+
+    textarea {
+        @include form-control;
+        @extend textarea.form-control;
+    }
+
+    .cell_cart {}
+        .price-box {
+            margin-bottom: 5px;
+
+            &:not(.map-info) {
+                white-space: nowrap;
+            }
+        }
+        .map-info {
+            .msrp-price-hide-message,
+            a {
+                font-size: $font-size-base;
+
+                display: block;
+            }
+        }
+
+        .add-to-cart-alt {
+            .btn + .btn {
+                margin-top: ($line-height-computed / 2);
+            }
+        }
+
+
+    .buttons-set {
+        @media (max-width: $screen-xs-max) {
+            .btn {
+                margin-bottom: ($line-height-computed / 2);
+            }
+        }
+    }
+}
+
+    #wishlist-table {
+        thead {
+            .cell_image {
+                width: 1px;
+            }
+            .cell_desc {}
+
+            .cell_cart {
+                width: 25%;
+            }
+            .cell_remove {
+                width: 1px;
+            }
+        }
+
+        tbody {}
+            textarea {
+                height: auto !important;
+            }
+
+        @media (max-width: $screen-xs-max) {
+            thead {
+                display: none;
+            }
+
+            tr {
+                display: block;
+                padding: ($line-height-computed / 2) 0;
+
+                border: $block-content-border;
+
+                @include clearfix;
+            }
+
+            tr + tr {
+                border-top-width: 0;
+            }
+                td {
+                    display: block;
+
+                    border: none !important;
+                }
+
+                .cell_image {}
+                    .product-image {
+                        margin: auto;
+                    }
+        }
+    }
+
+// Map Popup
+// -------------------------
+.map-popup {
+    background: #fff;
+    border: 1px solid #aaa;
+    margin: 12px 0 0;
+    position: absolute;
+    -moz-box-shadow: 0 0 6px #ccc;
+    -webkit-box-shadow: 0 0 6px #ccc;
+    box-shadow: 0 0 6px #ccc;
+    text-align: left;
+    width: 300px;
+    z-index: 100;
+
+    @media (max-width: $screen-xs-max) {
+        left: 9px !important;
+    }
+}
+
+    .map-popup-heading { background:#d9e5ee; border-bottom:1px solid #ccc; padding:5px 30px 5px 10px; width:260px; }
+        .map-popup-heading h2 { font-size:16px; margin:0; text-shadow:0 1px 0 #f6f6f6; overflow:hidden; white-space:nowrap; word-wrap:break-word; text-align:left; text-overflow:ellipsis; }
+
+    .map-popup-arrow { background:url(../../images/map_popup_arrow.gif) no-repeat; position:absolute; left:50%; top:-10px; height:10px; width:19px; }
+    .map-popup-close { background:url(../../images/btn_window_close.gif) no-repeat; display:block; position:absolute; top:8px; right:10px; height:15px; width:15px; text-indent:-9999em; -moz-box-shadow:0 0 3px #999; -webkit-box-shadow:0 0 3px #999; box-shadow:0 0 3px #999; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; }
+    .map-popup-content { border-top:1px solid #eee; padding:10px; overflow:hidden; text-align:left; width:280px; }
+    .map-popup-checkout { display:inline; float:right; text-align:right; }
+
+        .map-popup-checkout span { display:block; }
+        .map-popup-checkout .paypal-or { clear:both; display:block; }
+        .map-popup-checkout .paypal-logo { margin:0 0 5px; }
+        .map-popup-checkout li { list-style: none; }
+        .map-popup-checkout { text-align: center; }
+
+    .map-popup-price .price-box,
+    .map-popup-price .price-box .special-price { margin:0; padding:0; }
+    .map-popup-price { margin:5px 0 0; }
+    .map-popup-text { clear:right; margin:0 10px; padding:10px 0; text-align:left; word-wrap:break-word; }
+    .map-popup-only-text { border-top:1px solid #ddd; }
+
+
+// Truncated
+// -------------------------
+.truncated {
+    margin: ($line-height-computed / 2) 0;
+
+    cursor: help;
+
+        .dots,
+        .details { cursor: help }
+}
+    .truncated_full_value {
+        position: relative;
+        z-index: 999;
+
+        .item-options {
+            position: absolute;
+            top: -99999em;
+            left: -99999em;
+            z-index: 999;
+            width: 250px;
+            padding: 8px;
+
+            border: 1px solid #ddd;
+            background-color: #f6f6f6;
+        }
+
+        .item-options > p {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    .truncated .show .item-options {
+        left: 0;
+        top: ($line-height-computed * 1.5);
+
+        @media (min-width: $screen-sm-min) {
+            top: -20px;
+            left: 50%;
+        }
+    }

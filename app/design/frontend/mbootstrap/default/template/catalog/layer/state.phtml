@@ -44,9 +44,9 @@
                     <li>
 
                         <?php
-                        $clearLinkUrl = $_filter->getClearLinkUrl();
-                        if ($clearLinkUrl):
-                            ?>
+                            $clearLinkUrl = $_filter->getClearLinkUrl();
+                            if ($clearLinkUrl):
+                        ?>
                             <a  class="btn btn-default btn-previous" href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Previous') ?>"><?php echo $this->__('Previous') ?></a>
                             <a  class="btn btn-default btn-remove btn-xs" title="<?php echo $this->escapeHtml($_filter->getFilter()->getClearLinkText()) ?>" href="<?php echo $clearLinkUrl ?>"><?php echo $this->escapeHtml($_filter->getFilter()->getClearLinkText()) ?></a>
                         <?php else: ?>

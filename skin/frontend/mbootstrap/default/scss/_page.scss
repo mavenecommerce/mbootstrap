@@ -1,0 +1,121 @@
+//
+// Pages
+// --------------------------------------------------
+
+
+// Index/Home page
+// -------------------------
+.cms-index-index {
+	.col-main {
+		.std {
+			// @include make-row();	// default magento sample Index page layout fix
+		}
+	}
+
+	.col-left {
+        // @include make-xs-column(12);
+        @include make-md-column(4);
+    }
+
+    .home-spot {
+        // @include make-xs-column(12);
+        @include make-md-column(8);
+    }
+
+    .home-callout {
+        margin-bottom: $line-height-computed;
+
+        > a {
+            display: block;
+        }
+    }
+
+    .home-callout,
+    .home-spot {
+        img {
+            @include img-responsive;
+        }
+    }
+
+    .promos {
+        @extend .list-unstyled;
+        @include make-row();
+
+        margin-top: $line-height-computed;
+
+        > li {
+            @include make-sm-column(4);
+
+            @media (max-width: $screen-xs-max) {
+                + li {
+                    margin-top: ($line-height-computed / 2);
+                }
+            }
+        }
+
+            img {
+                @include img-responsive;
+            }
+    }
+}
+
+    // Best selling
+    .box.best-selling {
+        > h3 {
+            @extend .block-title;
+
+            font-size: $font-size-large;
+            font-weight: normal;
+
+            color: $block-title-color;
+        }
+
+        > table {
+            @extend .table;
+
+            border: $block-content-border;
+        }
+    }
+
+// Page Sitemap
+// -------------------------
+.page-sitemap {
+    .page-title {
+        .links {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .links {
+        margin: ($line-height-computed / 2) 0;
+    }
+
+    .pager-wrapper {}
+}
+
+    #sitemap_top_links {}
+    .sitemap {
+        @extend .list-unstyled;
+
+        // margin: ($line-height-computed / 2) 0;
+
+        @extend .panel;
+        @extend .panel-default;
+
+        .level-0 {
+            @extend .panel-heading;
+        }
+        .level-1 {
+            @extend .panel-body;
+        }
+    }
+
+
+// Send Friend
+// -------------------------
+.send-friend {}
+    #add_recipient_button {
+        display: inline-block;
+    }

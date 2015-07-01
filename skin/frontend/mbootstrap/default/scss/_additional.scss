@@ -1,0 +1,81 @@
+//
+// Additional classes
+// --------------------------------------------------
+
+
+
+// Alignment
+// -------------------------
+.a-left     { text-align: left !important; }
+.a-right    { text-align: right !important; }
+.a-center   { text-align: center !important; }
+.v-middle   { vertical-align: middle !important; }
+
+
+// Visibility
+// -------------------------
+.no-display { display: none; }
+
+
+// Typography
+// -------------------------
+.nobr       { white-space: nowrap; }
+
+
+// Extended
+// -------------------------
+.no-display { display: none; }
+
+
+// Development
+// -------------------------
+.g-static-todo  { background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKElEQVQ4jWP4//9/AxhbMPwnh81AiWaIARRoBrEZRr0w6oVRL1DHCwAj0BCbelWSywAAAABJRU5ErkJggg==") 0 0 repeat !important; }
+
+// Table
+// -------------------------
+.data-table {
+	@extend .table;
+}
+
+// Clear Fix
+// -------------------------
+.clearer {
+	@include clearfix;
+}
+
+// Links
+// -------------------------
+.links {
+	margin-bottom: 0;
+	@extend .list-unstyled;
+
+	> li {
+		display: inline-block;
+		margin-right: $padding-small-vertical;
+		padding-right: $padding-small-vertical;
+
+		border-right: 1px solid #aaa;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+
+// Loader
+// -------------------------
+.please-wait {
+	white-space: nowrap;
+}
+
+
+// Map link
+// -------------------------
+.map-link {
+	font-size: $font-size-base;
+}

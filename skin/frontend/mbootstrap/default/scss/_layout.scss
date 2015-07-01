@@ -1,0 +1,273 @@
+//
+// Layout
+// --------------------------------------------------
+.wrapper {}
+
+
+// Header Container
+// -------------------------
+.header-container {
+
+    padding: ($line-height-computed / 2) 0;
+
+    .header {}
+        .header__i {
+            @include make-row();
+        }
+
+    .i-logo {
+        text-align: center;
+
+        // @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(4);
+
+        .logo {
+            display: block;
+            margin: 0;
+
+            line-height: 0;
+
+            strong {
+                display: block;
+                overflow: hidden;
+
+                text-indent: -999%;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+
+                @media (min-width: $screen-sm){
+                    margin: 0;
+                }
+            }
+        }
+
+        :link.logo {}
+        h1.logo {}
+    }
+}
+
+    //
+    // quick access
+    .quick-access {
+        text-align: center;
+
+        @media (min-width: $screen-sm){
+            text-align: right;
+        }
+
+        // @include make-xs-column(12);
+        @include make-sm-column(9);
+        @include make-md-column(8);
+
+            .form-language {
+                text-align: left;
+
+                @media (min-width: $screen-sm){
+                    float: right;
+                }
+            }
+
+            .links {
+                .btn {
+                    @media (max-width: $screen-xs-max) {
+                        margin-top: ($line-height-computed / 2);
+                    }
+                }
+            }
+    }
+
+        .quick-access__i {
+            display: inline-block;
+        }
+
+            .welcome-bar {
+                @media (min-width: $screen-sm){
+                    margin-top: ($line-height-computed / 2);
+                    padding: 0 $padding-small-horizontal;
+
+                    @include clearfix;
+                }
+            }
+
+                .welcome-msg {
+                    font-size: $font-size-small;
+
+                    padding: ($padding-small-vertical + 1) 0 $padding-small-vertical;
+
+                    @media (min-width: $screen-sm){
+                        float: left;
+
+                        text-align: right;
+                    }
+                }
+
+
+// Breadcrumbs
+// -------------------------
+.i-breadcrumb {
+    @include make-sm-column(12);
+}
+
+
+// Main Container
+// -------------------------
+.main-container {
+    position: relative;
+    z-index: 1;
+
+    .main {
+        @include make-row();
+    }
+
+    .col-main {
+        padding: 0 ($grid-gutter-width / 2);
+        // @include make-xs-column(12); // because of bug (float) on catalog
+    }
+
+    .col-left {}
+    .col-right {}
+
+    @media (max-width: $screen-xs-max) {
+        .col-main,
+        .col-left,
+        .col-right {
+            margin-top: ($line-height-computed / 2);
+        }
+    }
+
+    &.col1-layout {
+        .col-main {
+            clear: both;
+        }
+    }
+
+
+    &.col2-left-layout {
+        .col-left {
+            // @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(3);
+
+            @media (min-width: $screen-sm-min) {
+                float: left !important;
+            }
+        }
+
+        .col-main {
+            // @include make-xs-column(12);
+            @include make-sm-column(8);
+            @include make-md-column(9);
+
+            @media (min-width: $screen-sm-min) {
+                float: right !important;
+            }
+        }
+    }
+
+    &.col2-right-layout {
+        .col-right {
+            // @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(3);
+        }
+
+        .col-main {
+            // @include make-xs-column(12);
+            @include make-sm-column(8);
+            @include make-md-column(9);
+        }
+    }
+
+    &.col3-layout {
+        .col-left {
+            // @include make-xs-column(12);
+            @include make-sm-column(3);
+        }
+
+        .col-right {
+            // @include make-xs-column(12);
+            @include make-sm-column(3);
+        }
+
+        .col-main {
+            // @include make-xs-column(12);
+            @include make-sm-column(6);
+        }
+    }
+}
+
+
+// Footer Container
+// -------------------------
+.footer-container {
+    margin: $line-height-computed 0 0;
+    padding: ($line-height-computed / 2) 0;
+
+    border-top: 2px solid $gray-lighter;
+}
+    .footer {
+        font-size: $font-size-small;
+
+        color: $footer-text-color;
+
+        a {
+            color: $footer-link-color;
+        }
+    }
+
+        .footer-links {
+            .links-left {}
+            .links-right {}
+                .links {
+                    li {
+                        @media (max-width: $screen-xs-max) {
+                            margin-bottom: ($line-height-computed / 2);
+                        }
+                    }
+                }
+
+            @media (min-width: $screen-md-min) {
+                @include clearfix;
+
+                .links-left {
+                    float: left;
+                    margin: 0;
+                }
+                .links-right {
+                    float: right;
+                }
+            }
+        }
+
+        .organization {
+            margin: ($line-height-computed / 2) 0;
+
+            .name,
+            .address,
+            .contacts {
+                display: inline-block;
+            }
+        }
+
+        .copyright {}
+
+
+//
+// Inner page layout set`s
+// --------------------------------------------------
+
+// 2 columns layout
+// -------------------------
+.col2-set {
+    @include make-row();
+
+    .col-1,
+    .col-2 {
+        // @include make-xs-column(12);
+        @include make-sm-column(6);
+    }
+}

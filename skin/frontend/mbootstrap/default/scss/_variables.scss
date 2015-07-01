@@ -1,0 +1,45 @@
+//
+// Variables
+// --------------------------------------------------
+
+// -------------------------
+$green:     #0f0 !default;
+$black:     #000 !default;
+
+// Block
+$block-radius-base: 					$border-radius-base !default;
+$block-title-bg:						$gray-light !default;
+$block-title-color:						#fff !default;
+$block-content-border:					1px solid $gray-lighter !default;
+
+// Search
+$search-mini-input-color:				#fff !default;
+$search-mini-input-bg:					transparent !default;
+$search-mini-input-border-color:		$gray !default;
+$search-mini-input-box-shadow:			inset 1px 1px 2px 0 rgba(0,0,0,0.25) !default;
+$search-mini-input-min-width:			200px !default;
+$search-mini-btn-color:					#fff !default;
+
+// Product
+$product-name-rows:						2 !default;
+
+// Toolbar
+$toolbar-border:						$block-content-border !default;
+$toolbar-border-radius:					$border-radius-base !default;
+$toolbar-padidng:						$padding-small-vertical $padding-small-horizontal !default;
+$toolbar-bg:							$gray-lighter !default;
+$toolbar-border:						1px solid darken($gray-lighter, 10%);
+
+// Cart
+$cart-image-width:						75px !default;
+
+// Form
+$form-required-color: 					$brand-danger !default;
+
+// Box
+$box-reviews-border:					$block-content-border !default;
+$box-reviews-title-bg:					lighten($gray-lighter, 2%) !default;
+
+// Footer
+$footer-text-color:						lighten($gray-light, 20%) !default;
+$footer-link-color:						$gray-light !default;

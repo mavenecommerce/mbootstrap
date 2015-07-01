@@ -1,20 +1,15 @@
-<a href="http://mavenecommerce.com/services/">![mavenecommerce](http://mavenecommerce.com/wp-content/uploads/2014/03/logo.gif)</a>
+<a href="http://mavenecommerce.com/">![mavenecommerce](http://www.mavenecommerce.com/wp-content/themes/maven/images/logo.png)</a>
 
 # Magento-Bootstrap responsive theme
 
 Magento-Bootstrap theme it is package fully based on Twitter Bootstrap 3 framework.
 
-**Attention:** Current version with Bootstrap v.2 is deprecated. We recommend to use [bootstrap_3.2.0](https://github.com/mavenecommerce/mbootstrap/tree/bootstrap_3.2.0) branch instead
-
-## Status:
-
-Current version: Beta
-
 ## Assets
 
-* Bootstrap v3.2.0
+* Bootstrap SASS v3.3.4
 * HTML5 support
 * Microdata support (schema.org)
+* Gulp js/css builder
 
 ## How to install
 
@@ -22,14 +17,11 @@ Open our [wiki](https://github.com/mavenecommerce/mbootstrap/wiki) and read [How
 
 ## How to use
 
-Really it is very-very easy to use :)
-
-Develop process as usual for Magento theme (more about front-end develop for Magento you can see on [Designer's Guide To Magento](http://www.magentocommerce.com/design_guide/articles/working-with-magento-themes))
+Develop process as usual for Magento theme (more about front-end develop for Magento you can see on [Designer's Guide To Magento](http://info2.magento.com/rs/magentoenterprise/images/MagentoDesignGuide.pdf))
 
 ### Create your theme based on Magento-Bootstrap theme
 
-You need create custom theme based on Magento-Bootstrap theme.
-After `git clone` command you will have next folder hierarchy:
+You need create custom theme based on Magento-Bootstrap theme. After `git clone` command you will have next folder hierarchy:
 
 ```
 .
@@ -37,9 +29,9 @@ After `git clone` command you will have next folder hierarchy:
 │   └── design
 │       └── frontend
 │           └── mbootstrap
-│               ├── default
-│               ├── advanced    -- example theme with LESS compile
-│               └── simple      -- example theme with http://getbootstrap.com/customize css file
+│               ├── default     — regular example with CSS/JS builder
+│               ├── advanced    — example theme with SASS builder compile
+│               └── simple      — example theme with http://getbootstrap.com/customize css file
 ├── skin
 │   └── frontend
 │       └── mbootstrap
@@ -58,19 +50,17 @@ So you need create new theme in **mbootstrap** package
 │       └── frontend
 │           └── mbootstrap
 │               ├── default
-│               └── custom-theme    -- your Custom theme templates files folder
+│               └── custom-theme    — your Custom theme templates files folder
 ├── skin
 │   └── frontend
 │       └── mbootstrap
 │           ├── default
-│           └── custom-theme        -- your Custom theme css/images files
+│           └── custom-theme        — your Custom theme css/images files
 ```
 
-That's it!
-Now you can develop your custom theme based on Magento-Bootstrap theme
+That's it! Now you can develop your custom theme based on Magento-Bootstrap theme
 
-(i) don`t forget enter your just created theme name (in example it is *custom-theme*)
-at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
+(i) don`t forget enter your just created theme name (in example it is *custom-theme*) at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
 
 ## Skin folder structure description
 
@@ -78,25 +68,26 @@ Open *magento/skin/frontend/mbootstrap/default* path
 
 ```
 .
-├── bootstrap             -- Bootstrap framework source files
-├── css                   -- Theme css files compile there
+├── bootstrap             — Bootstrap framework source files
+├── build/css             — Theme css files compile there
 ├── images
 ├── js
-├── Gruntfile.js          -- Script file with *compile* less to css, minify css files and uglify js files, *watch* file system changes commands. Use `$ grunt` to compile or `$ grunt watch` to watch files for changes
-├── less                  -- Theme less files
+├── gulpfile.js           — Script file with *compile* less to css, minify css files and uglify js files, *watch* file system changes commands. Use `$ grunt` to compile or `$ grunt watch` to watch files for changes
+├── scss                  — Theme SASS files
 └── package.json
 
 ```
 
 ## Developer tools
 
-Magento-Bootstrap theme contains also developers tools. You can use Grunt to compile files.
+Magento-Bootstrap theme contains also developers tools. You can use Gulp to compile files.
 
-For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *Gruntfile.js* file
+For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *gulpfile.js* file
 
 ### Requirements
 
-1. Node.js                              -- Open http://nodejs.org and install latest Node.js version
-2. Bootstrap framework install          -- Open *magento/skin/frontend/default/mbootstrap* and run `$ npm install` command in terminal
-3. modman (Module Manager)              -- Open https://github.com/colinmollenhour/modman and install it
+1. Modman (Module Manager)              — Open https://github.com/colinmollenhour/modman and install it
+2. Node.js                              — Open http://nodejs.org and install latest Node.js version
+3. Gulp                                 — Open http://gulpjs.com/ and install latest Gulp version
+4. Magento-Bootstrap theme builder      — Open *magento/skin/frontend/default/mbootstrap* and run `$ npm install` command in terminal
 

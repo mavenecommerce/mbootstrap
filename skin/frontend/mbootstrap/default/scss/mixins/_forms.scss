@@ -1,0 +1,25 @@
+//
+// Form mixins
+// --------------------------------------------------
+
+@mixin checkbox-wrapper(){
+	position: relative;
+	padding-left: 20px;
+
+	.checkbox {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+@mixin radio-wrapper(){
+	position: relative;
+	padding-left: 20px;
+
+	.checkbox {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}

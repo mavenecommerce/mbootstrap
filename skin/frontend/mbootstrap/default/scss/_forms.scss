@@ -1,0 +1,388 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Form
+// -------------------------
+form {
+	.fieldset {}
+	.fieldset + .fieldset {
+		margin-top: $line-height-computed;
+
+		border-top: 1px solid $gray-lighter;
+	}
+
+	.legend {
+		font-size: $font-size-large;
+
+		margin: $line-height-computed 0 ($line-height-computed / 2);
+	}
+
+	// Bootstrap core class names
+	&.form-inline {}
+	&.form-horizontal {}
+}
+
+
+// Input box
+// -------------------------
+.input-box {
+
+	// set bootstrap .form-group(-control) styles for Magento form elements
+	@extend .form-group;
+
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	select,
+	textarea {
+		&:not(.input-text){
+			@include form-control;
+			@extend textarea.form-control;
+		}
+	}
+
+	textarea {
+		height: auto !important;
+	}
+
+	// fix when input.radio(.checkbox)
+	input.radio,
+	input.checkbox {
+		display: inline-block;
+	}
+
+	input + input {
+		margin-top: $line-height-computed; // for multiple input (example: change password)
+	}
+}
+
+.input-text {
+	@include form-control;
+	@extend textarea.form-control;
+}
+
+
+// Checkbox and Radio
+// -------------------------
+
+
+// Required info
+// -------------------------
+p.required {
+	color: $form-required-color;
+
+	> em {
+		font-style: normal;
+	}
+}
+
+label.required {
+	> em {
+		font-style: normal;
+
+		color: $form-required-color;
+
+		&:after {
+			content: ' ';
+		}
+	}
+}
+
+
+// Validation notification
+// -------------------------
+.validation-advice {
+	color: $form-required-color;
+}
+
+
+// Forms-list
+// -------------------------
+.form-list {
+	margin-bottom: ($line-height-computed * 0.75);	// default bootstrap is 15px
+
+	@extend .list-unstyled;
+
+	li {
+		margin-bottom: $line-height-computed;
+	}
+
+		label {
+			cursor: pointer;
+		}
+
+		.form-group,
+		.input-box {
+			margin-bottom: 0;
+		}
+
+		.fields {
+			margin-bottom: 0;
+
+			@include make-row();
+
+			.field {
+				margin-bottom: $line-height-computed;
+
+				// @include make-xs-column(12);
+	            @include make-sm-column(6);
+			}
+
+			&.address {
+				.field + .field + .field {
+					margin-top: 0;
+				}
+			}
+		}
+
+		// radio, checkbox styles
+		.control {
+			position: relative;
+			margin-bottom: 0;	// rule based on OPC
+
+			input.checkbox,
+			.input-box {
+				position: absolute;
+				margin-top: 4px \9;
+			}
+
+			label {
+				padding-left: 20px;
+			}
+
+			.radio,
+			.checkbox {
+				position: absolute;
+			}
+		}
+		.controls {
+			label.checkbox,
+			label.radio {
+				padding-left: 20px;
+			}
+		}
+
+		.wide {}
+
+		.additional-row {}
+
+	li.last,
+	> li:last-child {
+		margin-bottom: 0;
+	}
+
+		ul {
+			@extend .list-unstyled;
+		}
+}
+
+// Customer - Date of Birth
+// -------------------------
+.customer-dob {
+	@include make-row();
+
+	label {
+		font-weight: normal;
+
+		position: absolute;
+		right: ($grid-gutter-width / 2) + 5px;
+		top: 7px;
+
+		color: $gray-light;
+	}
+}
+	.dob-month,
+	.dob-day,
+	.dob-year {
+		position: relative;
+
+		@include make-sm-column(4);
+	}
+	.dob-full {}
+
+		/* additional row */
+		.form-list li.additional-row { }
+		.form-list li.additional-row .btn-remove { }
+
+		.form-list .input-range input.input-text { }
+
+		/* Customer */
+		.form-list .customer-name-prefix .input-box,
+		.form-list .customer-name-suffix .input-box,
+		.form-list .customer-name-prefix-suffix .input-box,
+		.form-list .customer-name-prefix-middlename .input-box,
+		.form-list .customer-name-middlename-suffix .input-box,
+		.form-list .customer-name-prefix-middlename-suffix .input-box {  }
+
+		.form-list .name-prefix { }
+			.form-list .name-prefix select { }
+			.form-list .name-prefix input.input-text { }
+
+		.form-list .name-suffix { }
+			.form-list .name-suffix select { }
+			.form-list .name-suffix input.input-text { }
+
+		.form-list .name-middlename { }
+			.form-list .name-middlename input.input-text { }
+
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname,
+		.form-list .customer-name-prefix-middlename .name-firstname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-prefix-middlename .name-firstname input.input-text { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-name-prefix .name-firstname,
+		.form-list .customer-name-middlename .name-firstname { }
+
+		.form-list .customer-name-suffix .name-lastname,
+		.form-list .customer-name-middlename .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-lastname { }
+
+		.form-list .customer-name-prefix .name-firstname input.input-text,
+		.form-list .customer-name-suffix .name-lastname input.input-text,
+		.form-list .customer-name-middlename .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-dob .dob-month,
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob input.input-text { }
+		.form-list .customer-dob label { }
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-month { }
+		.form-list .customer-dob .dob-day input.input-text,
+		.form-list .customer-dob .dob-month input.input-text { }
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob .dob-year input.input-text { }
+
+
+/* @group Form list */
+
+	.form-list { }
+
+		.form-list li { }
+
+			/* label */
+			.form-list label { }
+			.form-list label.required {}
+			.form-list label.required em { }
+
+			/* input */
+			.form-list .input-box { }
+				.form-list input.input-text { }
+				.form-list textarea { }
+				.form-list select { }
+
+			/* controls */
+			.form-list li.control { }
+				.form-list li.control label { }
+				.form-list li.control input.radio,
+				.form-list li.control input.checkbox { }
+				.form-list li.control .input-box { }
+
+		/* fields */
+		.form-list .fields { }
+			.form-list .fields .field { }
+			.form-list .fields .field:first-child { }
+
+		/* wide */
+		.form-list li.wide { }
+			.form-list li.wide .input-box { }
+			.form-list li.wide input.input-text { }
+			.form-list li.wide textarea { }
+			.form-list li.wide select { }
+
+		/* additional row */
+		.form-list li.additional-row { }
+		.form-list li.additional-row .btn-remove { }
+
+		.form-list .input-range input.input-text { }
+
+		/* Customer */
+		.form-list .customer-name-prefix .input-box,
+		.form-list .customer-name-suffix .input-box,
+		.form-list .customer-name-prefix-suffix .input-box,
+		.form-list .customer-name-prefix-middlename .input-box,
+		.form-list .customer-name-middlename-suffix .input-box,
+		.form-list .customer-name-prefix-middlename-suffix .input-box {  }
+
+		.form-list .name-prefix { }
+			.form-list .name-prefix select { }
+			.form-list .name-prefix input.input-text { }
+
+		.form-list .name-suffix { }
+			.form-list .name-suffix select { }
+			.form-list .name-suffix input.input-text { }
+
+		.form-list .name-middlename { }
+			.form-list .name-middlename input.input-text { }
+
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname,
+		.form-list .customer-name-prefix-middlename .name-firstname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-prefix-middlename .name-firstname input.input-text { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname { }
+		.form-list .customer-name-prefix-middlename-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-name-prefix-suffix .name-firstname { }
+		.form-list .customer-name-prefix-suffix .name-lastname { }
+			.form-list .customer-name-prefix-suffix .name-firstname input.input-text,
+			.form-list .customer-name-prefix-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-name-prefix .name-firstname,
+		.form-list .customer-name-middlename .name-firstname { }
+
+		.form-list .customer-name-suffix .name-lastname,
+		.form-list .customer-name-middlename .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-firstname,
+		.form-list .customer-name-middlename-suffix .name-lastname { }
+
+		.form-list .customer-name-prefix .name-firstname input.input-text,
+		.form-list .customer-name-suffix .name-lastname input.input-text,
+		.form-list .customer-name-middlename .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-firstname input.input-text,
+		.form-list .customer-name-middlename-suffix .name-lastname input.input-text { }
+
+		.form-list .customer-dob .dob-month,
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob input.input-text { }
+		.form-list .customer-dob label { }
+		.form-list .customer-dob .dob-day,
+		.form-list .customer-dob .dob-month { }
+		.form-list .customer-dob .dob-day input.input-text,
+		.form-list .customer-dob .dob-month input.input-text { }
+		.form-list .customer-dob .dob-year { }
+		.form-list .customer-dob .dob-year input.input-text { }
+/* @end */

@@ -1,30 +1,18 @@
 # Modules
 #
-app/code/community/Maven/Cms                  app/code/community/Maven/Cms
-app/code/community/Maven/Mbootstrap            app/code/community/Maven/Mbootstrap
+app/code/local/EcomDev/Cms                  app/code/local/EcomDev/Cms
+app/etc/modules/EcomDev_Cms.xml             app/etc/modules/EcomDev_Cms.xml
+app/code/local/EcomDev/Mbootstrap           app/code/local/EcomDev/Mbootstrap
+app/etc/modules/EcomDev_MBootstrap.xml      app/etc/modules/EcomDev_MBootstrap.xml
 
-# Config
+# Gulp
 #
-app/etc/modules/Maven_Cms.xml             app/etc/modules/Maven_Cms.xml
-app/etc/modules/Maven_MBootstrap.xml       app/etc/modules/Maven_MBootstrap.xml
+gulpfile.js                                 gulpfile.js
+gulpconfig.js                               gulpconfig.js
+package.json                                package.json
+skin/frontend/base/default/gulp             skin/frontend/base/default/gulp
 
-# Theme
+# Mbootstrap Theme
 #
-app/design/frontend/mbootstrap/default      app/design/frontend/mbootstrap/default
-
-# Skin
-#
-skin/frontend/mbootstrap/default            skin/frontend/mbootstrap/default
-
-
-# Themes examples
-#
-# Advanced theme with LESS compile required
-#
-app/design/frontend/mbootstrap/advanced     app/design/frontend/mbootstrap/advanced
-skin/frontend/mbootstrap/advanced           skin/frontend/mbootstrap/advanced
-
-# Simple theme with
-#
-app/design/frontend/mbootstrap/simple       app/design/frontend/mbootstrap/simple
-skin/frontend/mbootstrap/simple             skin/frontend/mbootstrap/simple
+app/design/frontend/mbootstrap              app/design/frontend/mbootstrap
+skin/frontend/mbootstrap                    skin/frontend/mbootstrap

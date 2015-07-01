@@ -1,36 +1,38 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "3.2.0",
-  "keywords": [
-    "css",
-    "js",
-    "less",
-    "mobile-first",
-    "responsive",
-    "front-end",
-    "framework",
-    "web"
+  "name": "bootstrap-sass",
+  "version": "3.3.4",
+  "homepage": "https://github.com/twbs/bootstrap-sass",
+  "authors": [
+    "Thomas McDonald",
+    "Tristan Harward",
+    "Peter Gumeson",
+    "Gleb Mazovetskiy"
   ],
-  "homepage": "http://getbootstrap.com",
+  "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.",
   "main": [
-    "less/bootstrap.less",
-    "dist/css/bootstrap.css",
-    "dist/js/bootstrap.js",
-    "dist/fonts/glyphicons-halflings-regular.eot",
-    "dist/fonts/glyphicons-halflings-regular.svg",
-    "dist/fonts/glyphicons-halflings-regular.ttf",
-    "dist/fonts/glyphicons-halflings-regular.woff"
+    "assets/stylesheets/_bootstrap.scss",
+    "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+    "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+    "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+    "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+    "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+    "assets/javascripts/bootstrap.js"
   ],
+  "keywords": [
+    "twbs",
+    "bootstrap",
+    "sass"
+  ],
+  "license": "MIT",
   "ignore": [
-    "/.*",
-    "_config.yml",
-    "CNAME",
-    "composer.json",
-    "CONTRIBUTING.md",
-    "docs",
-    "js/tests",
-    "test-infra"
+    "**/.*",
+    "lib",
+    "tasks",
+    "templates",
+    "test",
+    "*.gemspec",
+    "Rakefile",
+    "Gemfile"
   ],
   "dependencies": {
     "jquery": ">= 1.9.0"

@@ -1,0 +1,192 @@
+//
+// Category products
+// --------------------------------------------------
+.category-products {}
+    .category-image {
+        margin-bottom: $line-height-computed;
+
+        img {
+            @include img-responsive;
+        }
+    }
+
+
+// Category bloks
+// -------------------------
+.catblocks {
+    @extend .list-unstyled;
+    @include make-row();
+
+    margin-bottom: $line-height-computed;
+
+    > li {
+        @include make-sm-column(3);
+    }
+        a {
+            @extend .thumbnail;
+            margin: 0;
+
+            color: $block-title-color;
+        }
+            span {
+                display: block;
+                padding: $thumbnail-caption-padding;
+
+                background: $block-title-bg;
+            }
+}
+
+
+// Products grid
+// -------------------------
+.products-grid {
+    font-size: 0;
+
+    @extend .list-unstyled;
+
+    &:not(table) {
+        @media (min-width: $screen-sm-min) {
+            @include make-row();
+        }
+    }
+
+    .item {
+        font-size: $font-size-base;
+
+        margin-bottom: $line-height-computed;
+
+        @media (min-width: $screen-sm-min) {
+            display: inline-block;
+            float: none !important;
+
+            vertical-align: top;
+
+            // @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(4);
+        }
+
+        .col3-layout & {
+            @media (min-width: $screen-sm-min) {
+                @include make-md-column(6);
+            }
+        }
+    }
+
+        .thumbnail {
+            margin-bottom: 0;
+        }
+
+            .product-name,
+            .ratings,
+            .price-box,
+            .availability {
+                margin-bottom: ($line-height-computed / 2);
+            }
+
+            .product-image {}
+            .product-name {}
+            .ratings {}
+            .price-box {}
+            .availability {}
+
+            .actions {
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    .btn {
+                        margin-bottom: ($line-height-computed / 2);
+                    }
+                }
+            }
+                .buttons-set {
+                    .btn {
+                        // margin-right: 10px;
+                    }
+                }
+}
+
+
+// Products list
+// -------------------------
+.products-list {
+    @extend .list-unstyled;
+
+    .item {
+        padding: 0;
+        margin: 0 0 $line-height-computed;
+    }
+        .thumbnail {
+            margin-bottom: 0;
+        }
+            .thumbnail__i {
+                @include make-row();
+            }
+
+            .product-name,
+            .ratings,
+            .price-box,
+            .availability,
+            .desc {
+                margin-bottom: ($line-height-computed / 2);
+            }
+
+            .product-image {
+                text-align: center;
+
+                // @include make-xs-column(12);
+                @include make-sm-column(6);
+                @include make-md-column(4);
+            }
+
+            .caption {
+                // @include make-xs-column(12);
+                @include make-sm-column(6);
+                @include make-md-column(8);
+            }
+
+            .product-name {
+                font-size: $font-size-base;
+
+                line-height: $line-height-base;
+            }
+
+            .ratings {}
+            .price-box {}
+            .desc {}
+            .availability {}
+            .actions {
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    .btn {
+                        margin-bottom: ($line-height-computed / 2);
+                    }
+                }
+            }
+}
+
+
+// Mini products list
+// -------------------------
+.mini-products-list {
+    @extend .list-unstyled;
+
+    .item {
+        @include clearfix;
+    }
+    .item + .item {
+        margin-top: ($line-height-computed / 2);
+        padding-top: ($line-height-computed / 2);
+
+        border-top: 1px solid $gray-lighter;
+    }
+
+        .product-details {
+            @include clearfix;
+
+            .btn-remove,
+            .link-cart {
+                float: right;
+            }
+            .price-box {
+                margin-bottom: ($line-height-computed / 2);
+            }
+        }
+}

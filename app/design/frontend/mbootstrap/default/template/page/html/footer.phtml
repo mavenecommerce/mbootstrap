@@ -24,21 +24,18 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<footer class="footer-container case" itemscope itemtype="http://schema.org/WPFooter">
+<footer class="footer-container" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer container">
 
         <?php if( $this->getChildHtml('cms_footer_links') || $this->getChildHtml('cms_footer_links') ): ?>
-        <section class="footer__links">
-            <div class="links-left"><?php echo $this->getChildHtml("links-left-wrapper"); ?></div>
-
-            <div class="links-right"><?php echo $this->getChildHtml("links-right-wrapper"); ?></div>
-        </section>
+            <div class="footer-links clearfix">
+                <div class="links-left"><?php echo $this->getChildHtml("links-left-wrapper"); ?></div>
+                <div class="links-right"><?php echo $this->getChildHtml("links-right-wrapper"); ?></div>
+            </div>
         <?php endif; ?>
 
-        <div class="footer__organization"><?php echo $this->getChildHtml('organization') ?></div>
+        <?php echo $this->getChildHtml('organization') ?>
 
-        <section class="footer__copy">
-            <div class="copyright"><?php echo $this->getCopyright() ?></div>
-        </section>
+        <div class="copyright"><?php echo $this->getCopyright() ?></div>
     </div>
 </footer>

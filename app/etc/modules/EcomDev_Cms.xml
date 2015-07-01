@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <EcomDev_Cms>
+            <active>true</active>
+            <codePool>local</codePool>
+        </EcomDev_Cms>
+    </modules>
+</config>

@@ -5,8 +5,6 @@
     <default translate="label">
 
         <!-- Remove Magento blocks -->
-        <remove name="left.permanent.callout" /> <!--the dog-->
-        <remove name="right.permanent.callout" /> <!--back to school-->
         <remove name="top.links"/>
 
         <reference name="root">
@@ -21,40 +19,37 @@
                 <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name><params/></action>
                 <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name><params/></action>
 
-
-                <!-- Bootstrap framework styles -->
-                <action method="addItem"><type>skin_css</type><name>bootstrap/dist/css/bootstrap.min.css</name><params/></action>
+                <action method="removeItem"><type>js</type><script>prototype/prototype.js</script></action>
+                <action method="removeItem"><type>js</type><script>lib/ccard.js</script></action>
+                <action method="removeItem"><type>js</type><script>prototype/validation.js</script></action>
+                <action method="removeItem"><type>js</type><script>scriptaculous/builder.js</script></action>
+                <action method="removeItem"><type>js</type><script>scriptaculous/effects.js</script></action>
+                <action method="removeItem"><type>js</type><script>scriptaculous/dragdrop.js</script></action>
+                <action method="removeItem"><type>js</type><script>scriptaculous/controls.js</script></action>
+                <action method="removeItem"><type>js</type><script>scriptaculous/slider.js</script></action>
+                <action method="removeItem"><type>js</type><script>varien/js.js</script></action>
+                <action method="removeItem"><type>js</type><script>varien/form.js</script></action>
+                <action method="removeItem"><type>js</type><script>varien/menu.js</script></action>
+                <action method="removeItem"><type>js</type><script>mage/translate.js</script></action>
+                <action method="removeItem"><type>js</type><script>mage/cookies.js</script></action>
 
 
                 <!-- General styles -->
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.min.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>build/css/mbootstrap.min.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>build/css/mbootstrap.ie9.css</name><params/><if>lte IE 9</if></action>
 
-
-                <!-- IE styles -->
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.min.css</name><params/><if>lt IE 9</if></action>
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.min.css</name><params/><if>IE 9</if></action>
-
-
-                <!-- jQuery & UI -->
-                <action method="addItem"><type>skin_js</type><script>js/jquery/jquery.min.js</script></action>
-                <block type="core/text" name="jQuery.noConflict">
-                    <action method="setText"><text><![CDATA[<script type="text/javascript">jQuery.noConflict();</script>]]></text></action>
-                </block>
-
-
-                <!-- Bootstrap framework scripts -->
-                <action method="addItem"><type>skin_js</type><script>bootstrap/dist/js/bootstrap.min.js</script></action>
-
-
-                <!-- jQuery scripts -->
-                <action method="addItem"><type>skin_js</type><script>js/dist/scripts.min.js</script></action>
+                <!-- jQuery, frameworks and scripts -->
+                <action method="addJs"><script>build/mbootstrap/default/jquery.min.js</script></action>
+                <action method="addJs"><script>build/base/default/magento.min.js</script></action>
+                <action method="addJs"><script>build/mbootstrap/default/bootstrap.min.js</script></action>
+                <action method="addJs"><script>build/mbootstrap/default/jquery.plugins.min.js</script></action>
+                <action method="addJs"><script>build/mbootstrap/default/jquery.scripts.min.js</script></action>
 
 
                 <!-- Google Web Fonts -->
-                <block type="core/text" name="google.webfonts">
-                    <action method="setText"><text><![CDATA[<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>]]></text></action>
-                </block>
-
+                <!--<block type="core/text" name="google.webfonts">-->
+                    <!--<action method="setText"><text><![CDATA[<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>]]></text></action>-->
+                <!--</block>-->
             </reference>
 
             <reference name="header">
@@ -152,7 +147,7 @@
 
                     <action method="addLink" translate="label title" module="customer">
                         <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
-                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in</liParams>
+                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in js-btn-log-in</liParams>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-in"></i>]]></beforeText>
                     </action>
 
@@ -160,7 +155,7 @@
             </reference>
 
             <reference name="before_document_end">
-                <block type="maven_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
+                <block type="ecomdev_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
             </reference>
 
         </reference>
@@ -264,10 +259,46 @@
                         <action method="addTab" translate="title" module="review"><alias>product_additional_data</alias><title>Reviews</title><block>review/product_view_list</block><template>review/product/view/list_tab.phtml</template></action>
                     </block>
 
+                    <block type="core/text_list" name="after_media_end" as="after_media_end" translate="label">
+                        <label>After Product Media End</label>
+                    </block>
+
                 </reference>
             </reference>
         </reference>
     </catalog_product_view>
+
+    <PRODUCT_TYPE_simple>
+        <reference name="head">
+            <action method="addJs"><script>build/base/default/product_simple.min.js</script></action>
+        </reference>
+    </PRODUCT_TYPE_simple>
+    <PRODUCT_TYPE_configurable>
+        <reference name="head">
+            <action method="addJs"><script>build/base/default/product_configurable.min.js</script></action>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+    <PRODUCT_TYPE_grouped></PRODUCT_TYPE_grouped>
+    <PRODUCT_TYPE_virtual></PRODUCT_TYPE_virtual>
+    <PRODUCT_TYPE_bundle>
+        <reference name="head">
+            <action method="removeItem"><type>skin_js</type><name>js/bundle.js</name><params/></action>
+            <action method="addJs"><script>build/base/default/product_bundle.min.js</script></action>
+        </reference>
+    </PRODUCT_TYPE_bundle>
+
+    <!-- Product reviews page -->
+    <review_product_list>
+        <reference name="product.info">
+            <remove name="product.info.other"/>
+
+            <block type="core/text_list" name="after_media_end" as="after_media_end" translate="label">
+                <label>After Product Media End</label>
+
+                <block type="core/template" name="product.info.other_custom" as="other_copy" template="review/product/view/other.phtml"/>
+            </block>
+        </reference>
+    </review_product_list>
 
 
     <!-- Cart page -->

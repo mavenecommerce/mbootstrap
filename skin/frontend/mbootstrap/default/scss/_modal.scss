@@ -1,0 +1,15 @@
+//
+// Modal
+// --------------------------------------------------
+
+// Customer login modal
+// -------------------------
+.modal-form-login {
+    .modal-footer {
+        .btn + .btn {
+        	@media (max-width: $screen-xs-max) {
+        		margin-top: ($line-height-computed / 2);
+        	}
+        }
+    }
+}

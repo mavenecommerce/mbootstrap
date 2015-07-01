@@ -1,0 +1,41 @@
+//
+// Page title
+// --------------------------------------------------
+.page-title {
+    @extend .page-header;
+
+    &,
+    > h1 {
+        margin-top: 0;
+    }
+
+    &.title-buttons {
+        position: relative;
+
+        @media (min-width: $screen-sm-min) {
+            > .btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            > .btn-group {
+                position: absolute;
+                top: $line-height-computed / 2;
+            }
+        }
+    }
+
+    &.category-title {}
+}
+
+
+// Sub title
+// -------------------------
+.sub-title {
+    font-size: $font-size-large;
+    font-weight: normal;
+}
+.subtitle {
+    @extend .page-header;
+}

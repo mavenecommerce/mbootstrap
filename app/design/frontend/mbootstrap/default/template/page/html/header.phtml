@@ -29,25 +29,25 @@
 ?>
 <header class="header-container" itemscope itemtype="http://schema.org/WPHeader">
     <div class="header container">
-        <div class="header__i">
 
+        <div class="header__i">
             <div class="i-logo">
                 <?php if ($this->getIsHomePage()):?>
-                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a></h1>
+                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" width="81" height="70" itemprop="image" /></a></h1>
                 <?php else:?>
-                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" width="81" height="70" itemprop="image" /></a>
                 <?php endif?>
             </div>
 
             <div class="quick-access">
-                <div class="i-top-bar">
-                    <div class="top-bar">
+                <div class="quick-access__i">
+                    <?php echo $this->getChildHtml("top-links-wrapper"); ?>
+
+                    <div class="welcome-bar">
                         <div class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></div>
 
                         <?php echo $this->getChildHtml('store_language') ?>
                     </div>
-
-                    <?php echo $this->getChildHtml("top-links-wrapper"); ?>
                 </div>
             </div>
         </div>
@@ -59,29 +59,25 @@
 
 
 <div class="navbar-container container">
-    <div class="i-navbar">
-
-        <nav class="navbar navbar-default" role="navigation">
+    <div class="i-navbar" id="i-navbar">
+        <nav class="navbar navbar-default navbar-main" role="navigation">
 
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-main-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo $this->getUrl(); ?>"><?php echo $this->__("Home"); ?></a>
+                <a class="navbar-brand glyphicon glyphicon-home" href="<?php echo $this->getUrl(); ?>" title="<?php echo $this->__("Home"); ?>"></a>
             </div>
 
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-
+            <div class="collapse navbar-collapse js-navbar-main-collapse">
                 <?php echo $this->getChildHtml('topMenu') ?>
-
                 <?php echo $this->getChildHtml('topSearch') ?>
-
             </div>
-        </nav>
 
+        </nav>
     </div>
 </div>
 

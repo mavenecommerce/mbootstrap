@@ -10,17 +10,17 @@
  * http://opensource.org/licenses/afl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
+ * to license@magento.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade Magento to newer
  * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
+ * needs please refer to http://www.magento.com for more information.
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
@@ -28,33 +28,28 @@
 /* @var Mage_Wishlist_Model_Item $item */
 $item = $this->getItem();
 $product = $item->getProduct();
+$options = $this->getChild('customer.wishlist.item.options')
+    ->setItem($item)
+    ->getConfiguredOptions();
 ?>
-<div class="cell_cart">
+<div class="cart-cell">
 
-    <?php echo $this->getPriceHtml($product);?>
+    <?php echo $this->getPriceHtml($product, empty($options)); ?>
 
-    <div class="add-to-cart-alt input-append">
+    <div class="add-to-cart-alt">
         <?php if ($item->canHaveQty() && $item->getProduct()->isVisibleInSiteVisibility()): ?>
-            <input type="number" class="input-text qty validate-not-negative-number form-control" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" />
+            <input type="text" class="input-text qty validate-not-negative-number" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>"/>
         <?php endif; ?>
-
-        <?php if ($product->isSaleable()): ?>
-            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId()?>);" class="btn btn-primary btn-cart"><?php echo $this->__('Add to Cart') ?></button>
-        <?php else: ?>
+        <?php if (!$product->isSaleable()): ?>
             <?php if ($product->getIsSalable()): ?>
-                <span class="availability in-stock add-on"><?php echo $this->__('In stock') ?></span>
+                <p class="availability in-stock"><span><?php echo $this->__('In stock') ?></span></p>
             <?php else: ?>
-                <span class="availability out-of-stock add-on"><?php echo $this->__('Out of stock') ?></span>
+                <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
             <?php endif; ?>
         <?php endif; ?>
     </div>
 
-    <?php foreach($this->getSortedChildren() as $childName):?>
-        <?php echo $this->getChildHtml($childName, false);?>
-    <?php endforeach;?>
-
-    <?php if ($product->isVisibleInSiteVisibility()): ?>
-        <a class="btn btn-default btn-block link-edit" href="<?php echo $this->getItemConfigureUrl($item) ?>"><?php echo $this->__('Edit') ?></a>
-    <?php endif ?>
-
+    <?php foreach ($this->getSortedChildren() as $childName): ?>
+        <?php echo $this->getChildHtml($childName, false); ?>
+    <?php endforeach; ?>
 </div>

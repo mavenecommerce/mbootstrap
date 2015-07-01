@@ -1,0 +1,67 @@
+//
+// Paging
+// --------------------------------------------------
+.paging {}
+	.amount,
+	.limiter,
+	.pagination,
+	.pages {
+		display: inline-block;
+		margin: 0;
+
+		vertical-align: middle;
+	}
+
+	.limiter {
+		white-space: nowrap;
+
+		@media (max-width: $screen-xs-max) {
+			margin-right: ($grid-gutter-width / 2);
+		}
+
+		.input-text {
+			display: inline-block;
+			width: 75px;
+		}
+	}
+
+
+// Pager on Review page
+// -------------------------
+.pager-wrapper {
+	margin-bottom: $line-height-computed;
+    padding: $padding-base-vertical $padding-base-horizontal;
+
+    background: $toolbar-bg;
+    border: $toolbar-border;
+    border-width: 1px 0;
+
+    .amount {
+    	margin-right: ($grid-gutter-width / 2);
+    }
+}
+
+// Pages/Pagination
+// -------------------------
+.pages {
+	.pagination {
+		@media (max-width: $screen-xs-max) {
+			display: none;
+		}
+	}
+}
+	.pages-list {
+		@extend .list-unstyled;
+		margin-bottom: 0;
+
+		> li {
+			@media (min-width: $screen-sm-min) {
+				@extend .btn;
+				@extend .btn-default;
+			}
+		}
+
+		@media (min-width: $screen-sm-min) {
+			display: none;
+		}
+	}
