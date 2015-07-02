@@ -37,11 +37,15 @@
         .sort-by {
             label {
                 margin: 0;
+
+                vertical-align: middle;
             }
 
             .input-text {
                 display: inline-block;
                 width: 100px;
+
+                vertical-align: middle;
             }
         }
 
