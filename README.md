@@ -26,18 +26,18 @@ You need create custom theme based on Magento-Bootstrap theme. After `git clone`
 ```
 .
 ├── app
-│   └── design
-│       └── frontend
-│           └── mbootstrap
-│               ├── default     — regular example with CSS/JS builder
-│               ├── advanced    — example theme with SASS builder compile
-│               └── simple      — example theme with http://getbootstrap.com/customize css file
+│   └── design
+│       └── frontend
+│           └── mbootstrap
+│               ├── default     — regular example with CSS/JS builder
+│               ├── advanced    — example theme with SASS builder compile
+│               └── simple      — example theme with http://getbootstrap.com/customize css file
 ├── skin
-│   └── frontend
-│       └── mbootstrap
-│           ├── default
-│           ├── advanced
-│           └── simple
+│   └── frontend
+│       └── mbootstrap
+│           ├── default
+│           ├── advanced
+│           └── simple
 ```
 
 So you need create new theme in **mbootstrap** package
@@ -46,25 +46,25 @@ So you need create new theme in **mbootstrap** package
 ```
 .
 ├── app
-│   └── design
-│       └── frontend
-│           └── mbootstrap
-│               ├── default
-│               └── custom-theme    — your Custom theme templates files folder
+│   └── design
+│       └── frontend
+│           └── mbootstrap
+│               ├── default
+│               └── custom-theme    — your Custom theme templates files folder
 ├── skin
-│   └── frontend
-│       └── mbootstrap
-│           ├── default
-│           └── custom-theme        — your Custom theme css/images files
+│   └── frontend
+│       └── mbootstrap
+│           ├── default
+│           └── custom-theme        — your Custom theme css/images files
 ```
 
 That's it! Now you can develop your custom theme based on Magento-Bootstrap theme
 
-(i) don`t forget enter your just created theme name (in example it is *custom-theme*) at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
+(i) don't forget enter your just created theme name (in example it is *custom-theme*) at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
 
 ## Skin folder structure description
 
-Open *magento/skin/frontend/mbootstrap/default* path
+Open `magento/skin/frontend/mbootstrap/default` path
 
 ```
 .
@@ -82,7 +82,7 @@ Open *magento/skin/frontend/mbootstrap/default* path
 
 Magento-Bootstrap theme contains also developers tools. You can use Gulp to compile files.
 
-For more information go to *magento/skin/frontend/mbootstrap/default/* folder and read *gulpfile.js* file
+For more information go to `magento/skin/frontend/mbootstrap/default/` folder and read *gulpfile.js* file
 
 ### Requirements
 
@@ -90,4 +90,3 @@ For more information go to *magento/skin/frontend/mbootstrap/default/* folder an
 2. Node.js                              — Open http://nodejs.org and install latest Node.js version
 3. Gulp                                 — Open http://gulpjs.com/ and install latest Gulp version
 4. Magento-Bootstrap theme builder      — Open *magento/skin/frontend/default/mbootstrap* and run `$ npm install` command in terminal
-
