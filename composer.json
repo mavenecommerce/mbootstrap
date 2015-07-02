@@ -3,6 +3,7 @@
     "type": "magento-module",
     "homepage": "https://github.com/mavenecommerce/mbootstrap",
     "description": "Magento theme fully based on the Twitter Bootstrap framework.",
+    "version": "1.0.0",
     "authors":[
         {
             "name": "Andrey",
