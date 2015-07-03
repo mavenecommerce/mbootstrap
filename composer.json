@@ -39,9 +39,9 @@
         "magento-force": true
     },
     "post-install-cmd": [
-        "npm -v"
+        "npm install"
     ],
     "post-update-cmd": [
-        "npm -v"
+        "npm install"
     ]
 }
