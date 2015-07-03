@@ -31,7 +31,7 @@
         }
     },
     "require": {
-        "Cotya/magento-composer-installer": "*",
+        "magento-hackathon/magento-composer-installer": "*",
         "twbs/bootstrap-sass": "*"
     },
     "extra":{
