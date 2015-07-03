@@ -34,11 +34,12 @@
         "magento-hackathon/magento-composer-installer": "*",
         "twbs/bootstrap-sass": "*"
     },
-    "extra":{
-        "magento-root-dir": "magento/"
+    "extra": {
+        "magento-root-dir": "magento/",
+        "magento-force": true
     },
-    "post-install-cmd":[
+    "post-install-cmd": [
         "npm -v"
     ],
-    "post-update-cmd":[]
+    "post-update-cmd": []
 }
