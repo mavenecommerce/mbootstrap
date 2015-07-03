@@ -38,10 +38,12 @@
         "magento-root-dir": "magento/",
         "magento-force": true
     },
-    "post-install-cmd": [
-        "npm install"
-    ],
-    "post-update-cmd": [
-        "npm install"
-    ]
+    "scripts": {
+        "post-install-cmd": [
+            "npm install"
+        ],
+        "post-update-cmd": [
+            "npm install"
+        ]
+    }
 }
