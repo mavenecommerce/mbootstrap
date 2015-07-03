@@ -31,7 +31,6 @@
         }
     },
     "require": {
-        "magento-hackathon/magento-composer-installer": "*",
         "twbs/bootstrap-sass": "*"
     },
     "extra": {
