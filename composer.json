@@ -3,21 +3,38 @@
     "type": "magento-module",
     "homepage": "https://github.com/mavenecommerce/mbootstrap",
     "description": "Magento theme fully based on the Twitter Bootstrap framework.",
-    "authors":[
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
         {
             "name": "Andrey",
-            "email": "akorolyov@mavenecommerce.сcom"
+            "email": "akorolyov@mavenecommerce.com"
         },
         {
             "name": "Aleksej Filippovich",
-            "email": "a.filippovich@mavenecommerce.com"
+            "email": "a.filippovich@mavenecommerce.com",
+            "role": "Developer"
         },
         {
             "name": "Chris Jones",
             "email": "chris@studiobanks.com"
         }
     ],
+    "repositories": {
+        "firegento": {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        },
+        "magento": {
+            "type": "composer",
+            "url": "https?://packages.magento.com"
+        }
+    },
     "require": {
-        "magento-hackathon/magento-composer-installer": "*"
+        "Cotya/magento-composer-installer": "*",
+        "twbs/bootstrap-sass": "*"
+    },
+    "extra":{
+        "magento-root-dir": "magento/"
     }
 }
