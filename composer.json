@@ -11,7 +11,7 @@
             "email": "akorolyov@mavenecommerce.com"
         },
         {
-            "name": "Aleksej Filippovich",
+            "name": "Oleksii Filippovych",
             "email": "a.filippovich@mavenecommerce.com",
             "role": "Developer"
         },
@@ -36,5 +36,9 @@
     },
     "extra":{
         "magento-root-dir": "magento/"
-    }
+    },
+    "post-install-cmd":[
+        "npm -v"
+    ],
+    "post-update-cmd":[]
 }
