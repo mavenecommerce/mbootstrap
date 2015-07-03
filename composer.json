@@ -41,5 +41,7 @@
     "post-install-cmd": [
         "npm -v"
     ],
-    "post-update-cmd": []
+    "post-update-cmd": [
+        "npm -v"
+    ]
 }
