@@ -10,7 +10,7 @@
 
 // Include gulp and plugins
 // --------------------------------------------------
-var gulp = require('gulp');
+var gulp    = require('gulp');
 var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
