@@ -30,7 +30,7 @@ v0.12.3
 ## How to install
 ### Step 1. Install theme as Composer module
 
-Create (or edit) `composer.json` file in your project folder, near `magento/` folder. You nedd add next lines to your composer.json:
+Create (or edit) `composer.json` file in your project folder, near `magento/` folder. You need add next lines to your composer.json:
 ```
     "repositories": [
         {
