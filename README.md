@@ -156,4 +156,5 @@ $ gulp
 ### Step 4. Update Magento configuration
 
 Go to `Admin Panel -> System -> Configuration -> Developer` and open `Template Settings` Tab. Set `Allow Symlinks` to `Yes` and Save.
+
 Go to `Admin Panel -> System -> Configuration -> Design` and open `Package` Tab. Set `Current Package Name` with `mbootstrap` value and Save. Open `Theme` Tab and check `Default` option value — it should be empty or 'default' value and Save.
