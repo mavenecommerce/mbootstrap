@@ -85,7 +85,7 @@ So you will get something like that:
 
 If you don't use command line and just edit `composer.json` than run `$ composer install` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
 
-### Step 2. Create Gulp build environment
+### Step 2.1 Prepare Gulp build environment
 
 Go to your project root folder and create `node_modules/` folder. You get:
 ```
@@ -131,7 +131,7 @@ After that just run `$ npm install` in your `magento/` folder to install Gulp de
 
 note: *if you know how to make it easier share with us please :)*
 
-### Step 3. Build MBootstrap theme resources (JS/CSS)
+### Step 2.2 Build MBootstrap theme resources (JS/CSS)
 
 Go to `project_folder/magento/` and run `$ gulp`:
 ```
@@ -161,7 +161,7 @@ $ gulp
 
 It will create
 
-### Step 4. Update Magento configuration
+### Step 3. Update Magento configuration
 
 Go to `Admin Panel -> System -> Configuration -> Developer` and open **Template Settings** Tab.
 
