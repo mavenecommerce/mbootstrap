@@ -83,7 +83,7 @@ So you will get something like that:
 }
 ```
 
-If you don`t use command line and just edit `composer.jdon` than run `$ composer istall` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
+If you don't use command line and just edit `composer.json` than run `$ composer install` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
 
 ### Step 2. Create Gulp build environment
 
