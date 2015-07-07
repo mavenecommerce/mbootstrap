@@ -174,3 +174,5 @@ Set **Allow Symlinks** to **Yes** and Save.
 Go to `Admin Panel -> System -> Configuration -> Design` and open **Package** Tab.
 
 Set **Current Package Name** with **mbootstrap** value and Save. Open **Theme** Tab and check **Default** option value — it should be empty or **default** value and Save.
+
+PS: rebuild cache if enable via `Admin Panel -> System -> Cache Management`. **Select All** and run **Refresh** action.
