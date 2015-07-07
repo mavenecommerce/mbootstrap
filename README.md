@@ -48,6 +48,12 @@ Create (or edit) `composer.json` file in your project folder, near `magento/` fo
 
 You need add `repository`, `require` and path to your magento folder `extra.magento-root-dir`.
 
+Or do it via commad line interface:
+```
+$ composer config repositories.mbootstrap vcs git@github.com:mavenecommerce/mbootstrap.git
+$ composer require mavenecommerce/mbootstrap:dev-mbootstrap_sass_composer
+```
+
 So you will get something like that:
 ```
 {
@@ -62,22 +68,22 @@ So you will get something like that:
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "mbootstrap": {
             "type": "vcs",
             "url": "git@github.com:mavenecommerce/mbootstrap.git"
         }
-    ],
+    },
     "require": {
         "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
     },
     "extra": {
-        "magento-root-dir": "magento/"
+        "magento-root-dir": "magento"
     }
 }
 ```
 
-After that run `$ composer istall` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
+If you don`t use command line and just edit `composer.jdon` than run `$ composer istall` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
 
 ### Step 2. Create Gulp build environment
 
