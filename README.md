@@ -28,7 +28,7 @@ v0.12.3
 ```
 
 ## How to install
-### Step 1. Install Composer module
+### Step 1. Install theme as Composer module
 
 Create (or edit) `composer.json` file in your project folder, near `magento/` folder. You nedd add next lines to your composer.json:
 ```
@@ -152,6 +152,8 @@ $ gulp
 [15:28:47] Starting 'default'...
 [15:28:47] Finished 'default' after 2.59 μs
 ```
+
+It will create
 
 ### Step 4. Update Magento configuration
 
