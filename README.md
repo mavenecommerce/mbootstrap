@@ -98,6 +98,7 @@ Go to your project folder and create `project_folder/node_modules/` folder. You 
 ```
 
 The open `magento/` folder and create symlink by command
+
 ```$ ln -s ../node_modules node_modules```
 
 It is need for Gulp builder.
