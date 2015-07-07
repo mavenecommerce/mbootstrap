@@ -9,84 +9,151 @@ Magento-Bootstrap theme it is package fully based on Twitter Bootstrap 3 framewo
 * Bootstrap SASS v3.3.4
 * HTML5 support
 * Microdata support (schema.org)
+* Composer installer
 * Gulp js/css builder
-
-## How to install
-
-Open our [wiki](https://github.com/mavenecommerce/mbootstrap/wiki) and read [How to install theme via modman?](https://github.com/mavenecommerce/mbootstrap/wiki/How-to-install-theme-via-modman%3F) please.
-
-## How to use
-
-Develop process as usual for Magento theme (more about front-end develop for Magento you can see on [Designer's Guide To Magento](http://info2.magento.com/rs/magentoenterprise/images/MagentoDesignGuide.pdf))
-
-### Create your theme based on Magento-Bootstrap theme
-
-You need create custom theme based on Magento-Bootstrap theme. After `git clone` command you will have next folder hierarchy:
-
-```
-.
-├── app
-│   └── design
-│       └── frontend
-│           └── mbootstrap
-│               ├── default     — regular example with CSS/JS builder
-│               ├── advanced    — example theme with SASS builder compile
-│               └── simple      — example theme with http://getbootstrap.com/customize css file
-├── skin
-│   └── frontend
-│       └── mbootstrap
-│           ├── default
-│           ├── advanced
-│           └── simple
-```
-
-So you need create new theme in **mbootstrap** package
-
-**Example**
-```
-.
-├── app
-│   └── design
-│       └── frontend
-│           └── mbootstrap
-│               ├── default
-│               └── custom-theme    — your Custom theme templates files folder
-├── skin
-│   └── frontend
-│       └── mbootstrap
-│           ├── default
-│           └── custom-theme        — your Custom theme css/images files
-```
-
-That's it! Now you can develop your custom theme based on Magento-Bootstrap theme
-
-(i) don't forget enter your just created theme name (in example it is *custom-theme*) at Admin Panel (System -> Configuration -> General -> Design tab -> Themes section -> Default field)
-
-## Skin folder structure description
-
-Open `magento/skin/frontend/mbootstrap/default` path
-
-```
-.
-├── bootstrap             — Bootstrap framework source files
-├── build/css             — Theme css files compile there
-├── images
-├── js
-├── gulpfile.js           — Script file with *compile* less to css, minify css files and uglify js files, *watch* file system changes commands. Use `$ grunt` to compile or `$ grunt watch` to watch files for changes
-├── scss                  — Theme SASS files
-└── package.json
-
-```
-
-## Developer tools
-
-Magento-Bootstrap theme contains also developers tools. You can use Gulp to compile files.
-
-For more information go to `magento/skin/frontend/mbootstrap/default/` folder and read *gulpfile.js* file
 
 ### Requirements
 
-1. Modman (Module Manager)              — Open https://github.com/colinmollenhour/modman and install it
-2. Node.js                              — Open http://nodejs.org and install latest Node.js version
-3. Gulp                                 — Open http://gulpjs.com/ and install latest Gulp version
-4. Magento-Bootstrap theme builder      — Open *magento/skin/frontend/default/mbootstrap* and run `$ npm install` command in terminal
+1. Composer  — Open https://getcomposer.org/doc/00-intro.md and install Composer to your system
+2. Node.js   — Open http://nodejs.org and install latest Node.js version
+3. Gulp      — Open http://gulpjs.com/ and install latest Gulp version
+
+You can check if all of this installed by commands:
+```
+$ composer -V && node -v && gulp -v
+Composer version 1.0-dev (d1a9cfbd634d3b9e3350a77189de9c6b20737111) 2015-07-02 09:36:31
+v0.12.3
+[16:35:34] CLI version 3.9.0
+[16:35:34] Local version 3.9.0
+```
+
+## How to install
+### Step 1. Install Composer module
+
+Create (or edit) `composer.json` file in your project folder, near `magento/` folder. You nedd add next lines to your composer.json:
+```
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:mavenecommerce/mbootstrap.git"
+        }
+    ],
+    "require": {
+        "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
+    },
+    "extra": {
+        "magento-root-dir": "magento/"
+    }
+```
+
+You need add `repository`, `require` and path to your magento folder `extra.magento-root-dir`.
+
+So you will get something like that:
+```
+{
+    "name": "mavenecommerce/mbootstrap-example",
+    "description": "Mavenecommerce MBootstrap Theme Example",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Oleksii Filippovych",
+            "email": "a.filippovich@mavenecommerce.com",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:mavenecommerce/mbootstrap.git"
+        }
+    ],
+    "require": {
+        "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
+    },
+    "extra": {
+        "magento-root-dir": "magento/"
+    }
+}
+```
+
+After that run `$ composer istall` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
+
+### Step 2. Create Gulp build environment
+
+Go to your project root folder and create `node_modules/` folder. You get:
+```
+.
+├── composer.json
+├── composer.lock
+├── magento         — Magento folder
+├── node_modules    - npm node_modules/ folder
+└── vendor          - Composer modules
+```
+
+The open `magento/` folder and create symlink by command `$ ln -s ../node_modules node_modules`. It is need for Gulp builder.
+After that just run `$ npm install` in your `magento/` folder to install Gulp dependies. All Gulp dependies should be instaled to `project_folder/node_modules/` folder, example:
+```
+.
+├── composer.json
+├── composer.lock
+├── magento
+│   ├── ...
+│   ├── gulpconfig.js -> ../vendor/mavenecommerce/mbootstrap/gulpconfig.js
+│   ├── gulpfile.js -> ../vendor/mavenecommerce/mbootstrap/gulpfile.js
+│   ├── ...
+│   ├── node_modules -> ../node_modules
+│   ├── package.json -> ../vendor/mavenecommerce/mbootstrap/package.json
+│   └── ...
+├── node_modules
+│   ├── del
+│   ├── gulp
+│   ├── gulp-autoprefixer
+│   ├── gulp-bless
+│   ├── gulp-cache
+│   ├── gulp-concat
+│   ├── gulp-imagemin
+│   ├── gulp-load-plugins
+│   ├── gulp-minify-css
+│   ├── gulp-rename
+│   ├── gulp-sass
+│   ├── gulp-sourcemaps
+│   ├── gulp-uglify
+│   └── vinyl-paths
+└── vendor
+```
+
+note: *if you know how to make it easier share with us please :)*
+
+### Step 3. Build MBootstrap theme resources (JS/CSS)
+
+Go to `project_folder/magento/` and run `$ gulp`:
+```
+$ gulp
+[15:28:37] Using gulpfile /path_to_project_folder/vendor/mavenecommerce/mbootstrap/gulpfile.js
+[15:28:37] Starting 'build-base-scripts'...
+[15:28:38] Finished 'build-base-scripts' after 348 ms
+[15:28:38] Starting 'build-base'...
+[15:28:38] Finished 'build-base' after 17 μs
+[15:28:38] Starting 'build-mbootstrap-scripts'...
+[15:28:38] Finished 'build-mbootstrap-scripts' after 13 ms
+[15:28:38] Starting 'build-mbootstrap-styles-clean'...
+[15:28:38] Finished 'build-mbootstrap-styles-clean' after 1.36 ms
+[15:28:38] Starting 'build-mbootstrap-styles'...
+[15:28:39] Starting 'build-mbootstrap-images'...
+[15:28:39] Finished 'build-mbootstrap-images' after 759 ms
+[15:28:47] Finished 'build-mbootstrap-styles' after 9.31 s
+[15:28:47] Starting 'build-mbootstrap-styles-ie9'...
+[15:28:47] Finished 'build-mbootstrap-styles-ie9' after 129 ms
+[15:28:47] Starting 'build-mbootstrap'...
+[15:28:47] Finished 'build-mbootstrap' after 4.4 μs
+[15:28:47] Starting 'build'...
+[15:28:47] Finished 'build' after 2.82 μs
+[15:28:47] Starting 'default'...
+[15:28:47] Finished 'default' after 2.59 μs
+```
+
+### Step 4. Update Magento configuration
+
+Go to `Admin Panel -> System -> Configuration -> Developer` and open `Template Settings` Tab. Set `Allow Symlinks` to `Yes` and Save.
+Go to `Admin Panel -> System -> Configuration -> Design` and open `Package` Tab. Set `Current Package Name` with `mbootstrap` value and Save. Open `Theme` Tab and check `Default` option value — it should be empty or 'default' value and Save.
