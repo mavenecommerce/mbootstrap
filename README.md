@@ -87,7 +87,7 @@ If you don't use command line and just edit `composer.json` than run `$ composer
 
 ### Step 2.1 Prepare Gulp build environment
 
-Go to your project root folder and create `node_modules/` folder. You get:
+Go to your project folder and create `project_folder/node_modules/` folder. You get:
 ```
 .
 ├── composer.json
