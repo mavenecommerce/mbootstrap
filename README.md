@@ -43,7 +43,7 @@ Create (or edit) `composer.json` file in your project folder, near `magento/` fo
 },
 "extra": {
     "magento-root-dir": "magento/"
-    }
+}
 ```
 
 You need add `repository`, `require` and path to your magento folder `extra.magento-root-dir`.
