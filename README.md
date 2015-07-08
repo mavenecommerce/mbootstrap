@@ -32,17 +32,17 @@ v0.12.3
 
 Create (or edit) `composer.json` file in your project folder, near `magento/` folder. You need add next lines to your composer.json:
 ```
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:mavenecommerce/mbootstrap.git"
-        }
-    ],
-    "require": {
-        "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
-    },
-    "extra": {
-        "magento-root-dir": "magento/"
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:mavenecommerce/mbootstrap.git"
+    }
+],
+"require": {
+    "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
+},
+"extra": {
+    "magento-root-dir": "magento/"
     }
 ```
 
