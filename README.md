@@ -51,7 +51,7 @@ You need add `repository`, `require` and path to your magento folder `extra.mage
 Or do it via commad line interface:
 ```
 $ composer config repositories.mbootstrap vcs git@github.com:mavenecommerce/mbootstrap.git
-$ composer require mavenecommerce/mbootstrap:dev-mbootstrap_sass_composer
+$ composer require mavenecommerce/mbootstrap:dev-master
 ```
 
 So you will get something like that:
@@ -75,7 +75,7 @@ So you will get something like that:
         }
     },
     "require": {
-        "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
+        "mavenecommerce/mbootstrap": "dev-master"
     },
     "extra": {
         "magento-root-dir": "magento"
