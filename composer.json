@@ -31,6 +31,11 @@
         }
     ],
     "require": {
+        "magento-hackathon/magento-composer-installer": "3.0.2",
         "twbs/bootstrap-sass": "*"
+    },
+    "extra": {
+        "magento-root-dir": "magento/",
+        "magento-force": true
     }
 }
