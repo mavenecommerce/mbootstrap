@@ -163,8 +163,6 @@ $ gulp
 [15:28:47] Finished 'default' after 2.59 μs
 ```
 
-It will create
-
 ### Step 3. Update Magento configuration
 
 Go to `Admin Panel -> System -> Configuration -> Developer` and open **Template Settings** Tab.
