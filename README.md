@@ -163,6 +163,10 @@ $ gulp
 [15:28:47] Finished 'default' after 2.59 μs
 ```
 
+This bulder will create JS/CSS theme files:
+* JS: builder will generate scripts into `magento/js/build/` folder
+* CSS: builder will generate css-files into `magento/skin/frontend/mbootstrap/default/build/css/` folder
+
 ### Step 3. Update Magento configuration
 
 Go to `Admin Panel -> System -> Configuration -> Developer` and open **Template Settings** Tab.
