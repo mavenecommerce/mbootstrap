@@ -20,18 +20,7 @@
             "email": "chris@studiobanks.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://packages.firegento.com"
-        },
-        {
-            "type": "composer",
-            "url": "https?://packages.magento.com"
-        }
-    ],
     "require": {
-        "magento-hackathon/magento-composer-installer":"*",
         "twbs/bootstrap-sass": "*"
     }
 }
