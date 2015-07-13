@@ -6,7 +6,7 @@ Magento-Bootstrap theme it is package fully based on Twitter Bootstrap 3 framewo
 
 ## Assets
 
-* Bootstrap SASS v3.3.4
+* Bootstrap (SASS latest official version)
 * HTML5 support
 * Microdata support (schema.org)
 * Composer installer
