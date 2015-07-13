@@ -32,17 +32,22 @@ v0.12.3
 
 Create (or edit) `composer.json` file in your project folder, near `magento/` folder. You need add next lines to your composer.json:
 ```
-"repositories": [
-    {
+"repositories": {
+    "firegento": {
+        "type": "composer",
+        "url": "http://packages.firegento.com"
+    },
+    "mbootstrap": {
         "type": "vcs",
         "url": "git@github.com:mavenecommerce/mbootstrap.git"
     }
-],
+},
 "require": {
-    "mavenecommerce/mbootstrap": "dev-mbootstrap_sass_composer"
+    "magento-hackathon/magento-composer-installer": "*",
+    "mavenecommerce/mbootstrap": "dev-master"
 },
 "extra": {
-    "magento-root-dir": "magento/"
+    "magento-root-dir": "magento"
 }
 ```
 
@@ -50,7 +55,9 @@ You need add `repository`, `require` and path to your magento folder `extra.mage
 
 Or do it via commad line interface:
 ```
+$ composer config repositories.firegento composer http://packages.firegento.com
 $ composer config repositories.mbootstrap vcs git@github.com:mavenecommerce/mbootstrap.git
+$ composer require magento-hackathon/magento-composer-installer:*
 $ composer require mavenecommerce/mbootstrap:dev-master
 ```
 
@@ -69,18 +76,24 @@ So you will get something like that:
         }
     ],
     "repositories": {
+        "firegento": {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        },
         "mbootstrap": {
             "type": "vcs",
             "url": "git@github.com:mavenecommerce/mbootstrap.git"
         }
     },
     "require": {
+        "magento-hackathon/magento-composer-installer": "*",
         "mavenecommerce/mbootstrap": "dev-master"
     },
     "extra": {
         "magento-root-dir": "magento"
     }
 }
+
 ```
 
 If you don't use command line and just edit `composer.json` than run `$ composer install` (if you run it in first time) or `$ composer update --no-plugins` for update your dependies.
@@ -97,9 +110,9 @@ Go to your project folder and create `project_folder/node_modules/` folder. You 
 └── vendor          - Composer modules
 ```
 
-The open `magento/` folder and create symlink by command
+The open `magento/` folder and create symlink for `node_modules/` folder by command
 
-```$ ln -s ../node_modules node_modules```
+`$ ln -s ../node_modules node_modules`
 
 It is need for Gulp builder.
 After that just run `$ npm install` in your `magento/` folder to install Gulp dependies. All Gulp dependies should be instaled to `project_folder/node_modules/` folder, example:
