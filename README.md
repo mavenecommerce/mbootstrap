@@ -27,6 +27,25 @@ v0.12.3
 [16:35:34] Local version 3.9.0
 ```
 
+## Complete folders `project_folder/` hierarchy example:
+```
+$ tree -L 2
+.
+├── composer.json
+├── composer.lock
+├── magento
+│   ├── LICENSE.html
+│   ├── ...
+│   ├── gulpconfig.js -> ../vendor/mavenecommerce/mbootstrap/gulpconfig.js
+│   ├── gulpfile.js -> ../vendor/mavenecommerce/mbootstrap/gulpfile.js
+│   ├── ...
+│   ├── node_modules -> ../node_modules
+│   ├── ...
+│   └── var
+├── node_modules
+└── vendor
+```
+
 ## How to install
 ### Step 1. Install theme as Composer module
 
