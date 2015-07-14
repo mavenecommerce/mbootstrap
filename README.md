@@ -31,19 +31,19 @@ v0.12.3
 ```
 $ tree -L 2
 .
-├── composer.json
+├── composer.json       -> composer.json file
 ├── composer.lock
-├── magento
+├── magento             -> magento folder
 │   ├── LICENSE.html
 │   ├── ...
-│   ├── gulpconfig.js -> ../vendor/mavenecommerce/mbootstrap/gulpconfig.js
-│   ├── gulpfile.js -> ../vendor/mavenecommerce/mbootstrap/gulpfile.js
+│   ├── gulpconfig.js   -> ../vendor/mavenecommerce/mbootstrap/gulpconfig.js
+│   ├── gulpfile.js     -> ../vendor/mavenecommerce/mbootstrap/gulpfile.js
 │   ├── ...
-│   ├── node_modules -> ../node_modules
+│   ├── node_modules    -> ../node_modules
 │   ├── ...
 │   └── var
-├── node_modules
-└── vendor
+├── node_modules        -> node_modules folder
+└── vendor              -> installed composer modules
 ```
 
 ## How to install
