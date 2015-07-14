@@ -33,7 +33,7 @@ $ tree -L 2
 .
 ├── composer.json       -> composer.json file
 ├── composer.lock
-├── magento             -> magento folder
+├── magento             -> Magento CMS folder
 │   ├── LICENSE.html
 │   ├── ...
 │   ├── gulpconfig.js   -> ../vendor/mavenecommerce/mbootstrap/gulpconfig.js
