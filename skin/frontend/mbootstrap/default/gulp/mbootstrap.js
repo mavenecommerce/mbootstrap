@@ -16,7 +16,7 @@ module.exports = function(config) {
         plugins:    {},
         url:        {
             live:   'http://mbo.magentolive.nl',
-            dev:    'http://mbootstrap.dev'
+            dev:    'http://mb.dev'
         }
     }
 
@@ -25,16 +25,18 @@ module.exports = function(config) {
         dir: config.path.skin.dir + theme.options.package + '/' + theme.options.theme + '/'
     }
 
-    theme.path.bootstrap = {
-        dir: theme.path.skin.dir + 'bootstrap/',
-
-        css: {
-            dir: theme.path.skin.dir + 'bootstrap/assets/stylesheets/bootstrap/'
-        },
-        js: {
-            dir: theme.path.skin.dir + 'bootstrap/assets/javascripts/bootstrap/'
-        }
+    // Fonts
+    theme.fonts = {
+        dir: theme.path.skin.dir + 'fonts/'
     }
+
+    // Botstrap
+    theme.path.bootstrap = {
+        dir: config.path.vendor.dir + 'twbs/bootstrap-sass/'
+    }
+    theme.path.bootstrap.css    = theme.path.bootstrap.dir + 'assets/stylesheets/bootstrap/';
+    theme.path.bootstrap.js     = theme.path.bootstrap.dir + 'assets/javascripts/bootstrap/';
+    theme.path.bootstrap.fonts  = theme.path.bootstrap.dir + 'assets/fonts/bootstrap/';
 
     // Source
     theme.source = {
@@ -112,6 +114,12 @@ module.exports = function(config) {
         },
         js: {
             dir: config.path.build.js.dir + theme.options.package + '/' + theme.options.theme + '/'
+        },
+        fonts: {
+            bootstrap: {
+                src:    theme.path.bootstrap.fonts + '**/*',
+                dest:   theme.fonts.dir + 'bootstrap/'
+            }
         }
     }
 

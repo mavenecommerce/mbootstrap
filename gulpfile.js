@@ -11,12 +11,12 @@
 // Include gulp and plugins
 // --------------------------------------------------
 var gulp    = require('gulp');
-var plugins = require("gulp-load-plugins")({
-    pattern: ['gulp-*', 'gulp.*'],
-    replaceString: /\bgulp[\-.]/
-});
+var plugins = require("gulp-load-plugins")();
+
+plugins.debug           = require('gulp-debug');
 plugins.del             = require('del');
 plugins.vinylPaths      = require('vinyl-paths');
+
 
 
 // Settings/Configuration
@@ -53,13 +53,14 @@ gulp.task('build-mbootstrap-styles-clean',  require('./skin/frontend/mbootstrap/
 gulp.task('build-mbootstrap-styles',        require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
 gulp.task('build-mbootstrap-styles-ie9',    ['build-mbootstrap-styles'], require('./skin/frontend/mbootstrap/default/gulp/tasks/ie9')(gulp, plugins, config));
 gulp.task('build-mbootstrap-images',        require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
+gulp.task('build-mbootstrap-fonts',         require('./skin/frontend/mbootstrap/default/gulp/tasks/fonts')(gulp, plugins, config));
 
 //
 // Task
 gulp.task('build-mbootstrap', [
     'build-base',
     'build-mbootstrap-scripts', 'build-mbootstrap-styles-clean', 'build-mbootstrap-styles', 'build-mbootstrap-styles-ie9',
-    'build-mbootstrap-images'
+    'build-mbootstrap-images', 'build-mbootstrap-fonts'
 ]);
 
 

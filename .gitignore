@@ -15,5 +15,5 @@ node_modules/
 
 # building sources #
 ######################
-build/css/*.css
-build/css/*.map
+mbootstrap/default/build/css/*.css
+mbootstrap/default/build/css/*.map

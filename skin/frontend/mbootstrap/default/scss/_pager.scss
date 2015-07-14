@@ -50,16 +50,20 @@
 		}
 	}
 }
+
+	// Comment temporary because of SASS error: You may only @extend selectors within the same directive.
+	// @mixin pages-list-sm-buttons() {
+	// 	@media (min-width: $screen-sm-min) {
+	// 		> li {
+	// 			@extend .btn;
+	// 			@extend .btn-default;
+	// 		}
+	// 	}
+	// }
+
 	.pages-list {
 		@extend .list-unstyled;
 		margin-bottom: 0;
-
-		> li {
-			@media (min-width: $screen-sm-min) {
-				@extend .btn;
-				@extend .btn-default;
-			}
-		}
 
 		@media (min-width: $screen-sm-min) {
 			display: none;

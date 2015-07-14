@@ -62,6 +62,9 @@ module.exports = function(root){
                     }
                 }
             }
+        },
+        vendor: {
+            dir: root + '../vendor/'
         }
-    };
-};
+    }
+}
