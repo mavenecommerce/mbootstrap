@@ -27,7 +27,7 @@ v0.12.3
 [16:35:34] Local version 3.9.0
 ```
 
-## Complete folders `project_folder/` hierarchy example:
+## Project_root/ folders hierarchy example:
 ```
 $ tree -L 2
 .
