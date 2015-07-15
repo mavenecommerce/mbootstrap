@@ -17,4 +17,9 @@
         .price-box {
             margin: ($line-height-computed / 2) 0;
         }
+
+        .add-to-cart,
+        .add-to-links {
+            display: inline-block;
+        }
     }
