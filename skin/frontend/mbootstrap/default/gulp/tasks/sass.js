@@ -15,6 +15,7 @@ module.exports = function (gulp, plugins, config) {
                 .pipe(gulp.dest( theme.build.css.dir ))
                 .pipe(plugins.autoprefixer( theme.plugins.autoprefixer ))
                 .pipe(plugins.sourcemaps.write('.', { includeContent: false, sourceRoot: theme.path.skin.dir }))
+                .pipe(plugins.cssBase64( theme.plugins.cssBase64 ))
                 .pipe(gulp.dest( theme.build.css.dir ))
 
                 .pipe(plugins.rename({suffix: '.min'}))

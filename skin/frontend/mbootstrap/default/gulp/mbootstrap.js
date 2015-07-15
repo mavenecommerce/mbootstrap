@@ -135,6 +135,9 @@ module.exports = function(config) {
         },
         minifyCss: {
             keepSpecialComments: 0
+        },
+        cssBase64: {
+            extensionsAllowed:  ['.gif', '.jpg', '.png']
         }
     }
 

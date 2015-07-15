@@ -51,9 +51,9 @@ gulp.task('watch-mbootstrap',               require('./skin/frontend/mbootstrap/
 gulp.task('build-mbootstrap-scripts',       require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
 gulp.task('build-mbootstrap-styles-clean',  require('./skin/frontend/mbootstrap/default/gulp/tasks/clean')(gulp, plugins, config));
 gulp.task('build-mbootstrap-styles',        require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
-gulp.task('build-mbootstrap-styles-ie9',    ['build-mbootstrap-styles'], require('./skin/frontend/mbootstrap/default/gulp/tasks/ie9')(gulp, plugins, config));
 gulp.task('build-mbootstrap-images',        require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
 gulp.task('build-mbootstrap-fonts',         require('./skin/frontend/mbootstrap/default/gulp/tasks/fonts')(gulp, plugins, config));
+gulp.task('build-mbootstrap-styles-ie9',    ['build-mbootstrap-styles'], require('./skin/frontend/mbootstrap/default/gulp/tasks/ie9')(gulp, plugins, config));
 
 //
 // Task
