@@ -8,6 +8,10 @@
     }
 }
 
+.catalog-product-compare-index {
+    padding: $line-height-computed $grid-gutter-width;
+}
+
     .compare-table {
         ul {
             margin: 0 0 0 ($line-height-computed / 2);
