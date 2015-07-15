@@ -213,6 +213,19 @@ label.required {
 	}
 	.dob-full {}
 
+
+// Customer - Name
+// -------------------------
+.customer-name-middlename {
+	&,
+	.fields & {
+		.field {
+			@include make-sm-column(4);
+		}
+	}
+}
+
+
 		/* additional row */
 		.form-list li.additional-row { }
 		.form-list li.additional-row .btn-remove { }
