@@ -130,7 +130,7 @@ Go to your project folder and create `project_folder/node_modules/` folder. You 
 └── vendor          - Composer modules
 ```
 
-The open `magento/` folder and create symlink for `node_modules/` folder by command
+Then open `magento/` folder and create symlink for `node_modules/` folder by command
 
 `$ ln -s ../node_modules node_modules`
 
