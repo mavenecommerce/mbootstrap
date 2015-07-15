@@ -40,6 +40,7 @@ $ tree -L 2
 │   ├── gulpfile.js     -> ../vendor/mavenecommerce/mbootstrap/gulpfile.js
 │   ├── ...
 │   ├── node_modules    -> ../node_modules
+│   ├── package.json    -> ../vendor/mavenecommerce/mbootstrap/package.json
 │   ├── ...
 │   └── var
 ├── node_modules        -> node_modules folder
