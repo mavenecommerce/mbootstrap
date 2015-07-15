@@ -134,6 +134,8 @@ Then open `magento/` folder and create symlink for `node_modules/` folder by com
 
 `$ ln -s ../node_modules node_modules`
 
+*If you are Windows user sorry but i don`t know how to help you with that :(*
+
 It is need for Gulp builder.
 After that just run `$ npm install` in your `magento/` folder to install Gulp dependies. All Gulp dependies should be instaled to `project_folder/node_modules/` folder, example:
 ```
