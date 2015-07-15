@@ -198,7 +198,7 @@
                 <!--This replacement code for block "catalog.leftnav" because of bug described here:-->
                 <!--http://www.magentocommerce.com/bug-tracking/issue/index/id/894-->
                 <remove name="catalog.leftnav"/>
-                <block type="catalog/layer_view" name="maven.catalog.leftnav" as="catalog.leftnav" template="catalog/layer/view.phtml" before="-">
+                <block type="catalog/layer_view" name="mbootstrap.catalog.leftnav" as="catalog.leftnav" template="catalog/layer/view.phtml" before="-">
                     <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
                 </block>
 
