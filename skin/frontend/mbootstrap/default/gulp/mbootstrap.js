@@ -34,9 +34,9 @@ module.exports = function(config) {
     theme.path.bootstrap = {
         dir: config.path.vendor.dir + 'twbs/bootstrap-sass/'
     }
-    theme.path.bootstrap.css    = theme.path.bootstrap.dir + 'assets/stylesheets/bootstrap/';
-    theme.path.bootstrap.js     = theme.path.bootstrap.dir + 'assets/javascripts/bootstrap/';
-    theme.path.bootstrap.fonts  = theme.path.bootstrap.dir + 'assets/fonts/bootstrap/';
+    theme.path.bootstrap.css    = { dir: theme.path.bootstrap.dir + 'assets/stylesheets/bootstrap/' }
+    theme.path.bootstrap.js     = { dir: theme.path.bootstrap.dir + 'assets/javascripts/bootstrap/' }
+    theme.path.bootstrap.fonts  = { dir: theme.path.bootstrap.dir + 'assets/fonts/bootstrap/' }
 
     // Source
     theme.source = {
@@ -59,18 +59,18 @@ module.exports = function(config) {
                 concat: 'bootstrap.js',
                 min:    'bootstrap.min.js',
                 files: [
-                    theme.path.bootstrap.js.dir + 'affix.js'
-                    ,theme.path.bootstrap.js.dir + 'alert.js'
-                    ,theme.path.bootstrap.js.dir + 'button.js'
-                    ,theme.path.bootstrap.js.dir + 'carousel.js'
-                    ,theme.path.bootstrap.js.dir + 'collapse.js'
+                    //theme.path.bootstrap.js.dir + 'affix.js'
+                    //,theme.path.bootstrap.js.dir + 'alert.js'
+                    //,theme.path.bootstrap.js.dir + 'button.js'
+                    //,theme.path.bootstrap.js.dir + 'carousel.js'
+                    theme.path.bootstrap.js.dir + 'collapse.js'
                     ,theme.path.bootstrap.js.dir + 'dropdown.js'
-                    ,theme.path.bootstrap.js.dir + 'tab.js'
+                    //,theme.path.bootstrap.js.dir + 'tab.js'
                     ,theme.path.bootstrap.js.dir + 'transition.js'
-                    ,theme.path.bootstrap.js.dir + 'scrollspy.js'
+                    //,theme.path.bootstrap.js.dir + 'scrollspy.js'
                     ,theme.path.bootstrap.js.dir + 'modal.js'
-                    ,theme.path.bootstrap.js.dir + 'tooltip.js'
-                    ,theme.path.bootstrap.js.dir + 'popover.js'
+                    //,theme.path.bootstrap.js.dir + 'tooltip.js'
+                    //,theme.path.bootstrap.js.dir + 'popover.js'
                 ]
             },
             jquery: {
@@ -117,7 +117,7 @@ module.exports = function(config) {
         },
         fonts: {
             bootstrap: {
-                src:    theme.path.bootstrap.fonts + '**/*',
+                src:    theme.path.bootstrap.fonts.dir + '**/*',
                 dest:   theme.fonts.dir + 'bootstrap/'
             }
         }
