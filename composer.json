@@ -21,8 +21,6 @@
         }
     ],
     "require": {
-        "twbs/bootstrap-sass": "*",
-        "node": "dev-master",
-        "npm": "dev-master"
+        "twbs/bootstrap-sass": "*"
     }
 }
