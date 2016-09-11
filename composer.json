@@ -7,7 +7,7 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Andrey",
+            "name": "Andrey Korolyov",
             "email": "akorolyov@mavenecommerce.com"
         },
         {
@@ -21,6 +21,7 @@
         }
     ],
     "require": {
-        "twbs/bootstrap-sass": "*"
+        "twbs/bootstrap-sass": "*",
+        "maven/cms": "dev-master"
     }
 }
